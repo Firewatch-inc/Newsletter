@@ -1,4 +1,4 @@
-<div class="ui piled segment">
-    <h4 class="ui header">{$date|date_format:"%d.%m.%Y"} | {$header}</h4>
+<div class="ui piled segment news">
+    <h4 class="ui header">{$date|date_format:"%d.%m.%Y"} | {$caption}</h4>
     {$content}    
 </div>

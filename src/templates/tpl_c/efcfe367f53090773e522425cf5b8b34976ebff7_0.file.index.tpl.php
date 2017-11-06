@@ -1,25 +1,26 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-11-06 14:45:59
+/* Smarty version 3.1.29, created on 2017-11-06 18:52:34
   from "E:\OpenServer\domains\Newsletter.mgutm\src\templates\tpl\index.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5a004b77c8b998_64058524',
+  'unifunc' => 'content_5a0085425a7534_03940607',
   'file_dependency' => 
   array (
     'efcfe367f53090773e522425cf5b8b34976ebff7' => 
     array (
       0 => 'E:\\OpenServer\\domains\\Newsletter.mgutm\\src\\templates\\tpl\\index.tpl',
-      1 => 1509968759,
+      1 => 1509983553,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
+    'file:one_news.tpl' => 1,
   ),
 ),false)) {
-function content_5a004b77c8b998_64058524 ($_smarty_tpl) {
+function content_5a0085425a7534_03940607 ($_smarty_tpl) {
 if (!is_callable('smarty_modifier_date_format')) require_once 'E:\\OpenServer\\domains\\Newsletter.mgutm\\src\\engine\\smarty\\plugins\\modifier.date_format.php';
 ?>
 <!DOCTYPE html>
@@ -43,6 +44,14 @@ if (!is_callable('smarty_modifier_date_format')) require_once 'E:\\OpenServer\\d
                 overflow: scroll;
             }
 
+            #news {
+                text-align: center;
+            }
+
+            .news {
+                text-align: left;
+            }
+
         </style>
     </head>
     <body>
@@ -53,27 +62,39 @@ if (!is_callable('smarty_modifier_date_format')) require_once 'E:\\OpenServer\\d
                 </div>
                 <div class="six wide column" id="news">
                     <div id="top"></div>
-                    <div class="ui piled segment">
-                        <h4 class="ui header"><?php echo smarty_modifier_date_format(time(),"%d.%m.%Y");?>
- | A header</h4>
-                        <p>Te eum doming eirmod, nominati pertinacia argumentum ad his. Ex eam alia facete scriptorem, est autem aliquip detraxit at. Usu ocurreret referrentur at, cu epicurei appellantur vix. Cum ea laoreet recteque electram, eos choro alterum definiebas in. Vim dolorum definiebas an. Mei ex natum rebum iisque.</p>
-                        <p>Audiam quaerendum eu sea, pro omittam definiebas ex. Te est latine definitiones. Quot wisi nulla ex duo. Vis sint solet expetenda ne, his te phaedrum referrentur consectetuer. Id vix fabulas oporteat, ei quo vide phaedrum, vim vivendum maiestatis in.</p>
-                        <p>Eu quo homero blandit intellegebat. Incorrupte consequuntur mei id. Mei ut facer dolores adolescens, no illum aperiri quo, usu odio brute at. Qui te porro electram, ea dico facete utroque quo. Populo quodsi te eam, wisi everti eos ex, eum elitr altera utamur at. Quodsi convenire mnesarchum eu per, quas minimum postulant per id.</p>
-                    </div>
-                    <div class="ui piled segment">
-                        <h4 class="ui header"><?php echo smarty_modifier_date_format(time(),"%d.%m.%Y");?>
- | A header</h4>
-                        <p>Te eum doming eirmod, nominati pertinacia argumentum ad his. Ex eam alia facete scriptorem, est autem aliquip detraxit at. Usu ocurreret referrentur at, cu epicurei appellantur vix. Cum ea laoreet recteque electram, eos choro alterum definiebas in. Vim dolorum definiebas an. Mei ex natum rebum iisque.</p>
-                        <p>Audiam quaerendum eu sea, pro omittam definiebas ex. Te est latine definitiones. Quot wisi nulla ex duo. Vis sint solet expetenda ne, his te phaedrum referrentur consectetuer. Id vix fabulas oporteat, ei quo vide phaedrum, vim vivendum maiestatis in.</p>
-                        <p>Eu quo homero blandit intellegebat. Incorrupte consequuntur mei id. Mei ut facer dolores adolescens, no illum aperiri quo, usu odio brute at. Qui te porro electram, ea dico facete utroque quo. Populo quodsi te eam, wisi everti eos ex, eum elitr altera utamur at. Quodsi convenire mnesarchum eu per, quas minimum postulant per id.</p>
-                    </div>
-                    <div class="ui piled segment">
-                        <h4 class="ui header"><?php echo smarty_modifier_date_format(time(),"%d.%m.%Y");?>
- | A header</h4>
-                        <p>Te eum doming eirmod, nominati pertinacia argumentum ad his. Ex eam alia facete scriptorem, est autem aliquip detraxit at. Usu ocurreret referrentur at, cu epicurei appellantur vix. Cum ea laoreet recteque electram, eos choro alterum definiebas in. Vim dolorum definiebas an. Mei ex natum rebum iisque.</p>
-                        <p>Audiam quaerendum eu sea, pro omittam definiebas ex. Te est latine definitiones. Quot wisi nulla ex duo. Vis sint solet expetenda ne, his te phaedrum referrentur consectetuer. Id vix fabulas oporteat, ei quo vide phaedrum, vim vivendum maiestatis in.</p>
-                        <p>Eu quo homero blandit intellegebat. Incorrupte consequuntur mei id. Mei ut facer dolores adolescens, no illum aperiri quo, usu odio brute at. Qui te porro electram, ea dico facete utroque quo. Populo quodsi te eam, wisi everti eos ex, eum elitr altera utamur at. Quodsi convenire mnesarchum eu per, quas minimum postulant per id.</p>
-                    </div>
+                    <?php if ($_smarty_tpl->tpl_vars['news']->value != NULL) {?>
+                        <?php
+$_from = $_smarty_tpl->tpl_vars['news']->value;
+if (!is_array($_from) && !is_object($_from)) {
+settype($_from, 'array');
+}
+$__foreach_one_news_0_saved_item = isset($_smarty_tpl->tpl_vars['one_news']) ? $_smarty_tpl->tpl_vars['one_news'] : false;
+$_smarty_tpl->tpl_vars['one_news'] = new Smarty_Variable();
+$_smarty_tpl->tpl_vars['one_news']->_loop = false;
+foreach ($_from as $_smarty_tpl->tpl_vars['one_news']->value) {
+$_smarty_tpl->tpl_vars['one_news']->_loop = true;
+$__foreach_one_news_0_saved_local_item = $_smarty_tpl->tpl_vars['one_news'];
+?>
+                            <?php $_smarty_tpl->tpl_vars['caption'] = new Smarty_Variable($_smarty_tpl->tpl_vars['one_news']->value->caption(), null);
+$_smarty_tpl->ext->_updateScope->updateScope($_smarty_tpl, 'caption', 0);?>
+                            <?php $_smarty_tpl->tpl_vars['content'] = new Smarty_Variable($_smarty_tpl->tpl_vars['one_news']->value->content(), null);
+$_smarty_tpl->ext->_updateScope->updateScope($_smarty_tpl, 'content', 0);?>
+                            <?php $_smarty_tpl->tpl_vars['date'] = new Smarty_Variable($_smarty_tpl->tpl_vars['one_news']->value->date(), null);
+$_smarty_tpl->ext->_updateScope->updateScope($_smarty_tpl, 'date', 0);?>
+                            <?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:one_news.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, true);
+?>
+
+                        <?php
+$_smarty_tpl->tpl_vars['one_news'] = $__foreach_one_news_0_saved_local_item;
+}
+if ($__foreach_one_news_0_saved_item) {
+$_smarty_tpl->tpl_vars['one_news'] = $__foreach_one_news_0_saved_item;
+}
+?>
+                    <?php } else { ?>
+                        <i class="massive frown icon"></i>
+                        <h3>Новостей пока нет</h3>
+                    <?php }?>
                     <div id="bottom"></div>
                 </div>
             </div>
