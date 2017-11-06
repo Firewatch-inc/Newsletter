@@ -18,4 +18,5 @@
 
     $NM = new NewsManager($DB);
 
+    session_start();
 ?>

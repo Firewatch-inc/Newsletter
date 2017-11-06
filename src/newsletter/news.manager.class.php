@@ -52,6 +52,13 @@
             return $news;
         }
 
+        public function remove($id)
+        {
+            if ($id > 0) {
+                
+            }
+        }
+
     }
 
 ?>

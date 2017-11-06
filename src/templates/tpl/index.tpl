@@ -65,8 +65,18 @@
             }, (scroll_to_down+scroll_to_top));
 
             setInterval(function(){
-                $("#bottom").before('<h4 class="ui header">{$smarty.now|date_format:"%d.%m.%Y"} | A header</h4>');
-            }, 300000);
+                
+                // $.ajax({
+                //     url: "php/get_news.php",
+                //     success: function (replay) {
+                //         alert(replay);
+                //     },
+                //     error: function () {
+                //         alert("ERROROR! SUKA!");
+                //     }
+                // });
+
+            }, 5000);
 
         </script>
 

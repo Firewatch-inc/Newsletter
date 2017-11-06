@@ -1,10 +1,10 @@
 <?php
     require_once "start.php";
 
-    $NM->add(
-        new News(0, "qwert", "cool", date("d.m.Y"))
-    );
+    $news = $NM->get();
+    $last_id = end($news)->id();
+    $_SESSION['last_news_id'] = $last_id;
 
-    $CT->assign("news", $NM->get());
+    $CT->assign("news", $news);
     $CT->Show("index.tpl");
 ?>

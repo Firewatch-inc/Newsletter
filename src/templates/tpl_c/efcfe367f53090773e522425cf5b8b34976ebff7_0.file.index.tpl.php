@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-11-06 18:52:34
+/* Smarty version 3.1.29, created on 2017-11-06 19:27:30
   from "E:\OpenServer\domains\Newsletter.mgutm\src\templates\tpl\index.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5a0085425a7534_03940607',
+  'unifunc' => 'content_5a008d72076ac9_72691532',
   'file_dependency' => 
   array (
     'efcfe367f53090773e522425cf5b8b34976ebff7' => 
     array (
       0 => 'E:\\OpenServer\\domains\\Newsletter.mgutm\\src\\templates\\tpl\\index.tpl',
-      1 => 1509983553,
+      1 => 1509985649,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:one_news.tpl' => 1,
   ),
 ),false)) {
-function content_5a0085425a7534_03940607 ($_smarty_tpl) {
-if (!is_callable('smarty_modifier_date_format')) require_once 'E:\\OpenServer\\domains\\Newsletter.mgutm\\src\\engine\\smarty\\plugins\\modifier.date_format.php';
+function content_5a008d72076ac9_72691532 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -117,9 +116,18 @@ $_smarty_tpl->tpl_vars['one_news'] = $__foreach_one_news_0_saved_item;
             }, (scroll_to_down+scroll_to_top));
 
             setInterval(function(){
-                $("#bottom").before('<h4 class="ui header"><?php echo smarty_modifier_date_format(time(),"%d.%m.%Y");?>
- | A header</h4>');
-            }, 300000);
+                
+                // $.ajax({
+                //     url: "php/get_news.php",
+                //     success: function (replay) {
+                //         alert(replay);
+                //     },
+                //     error: function () {
+                //         alert("ERROROR! SUKA!");
+                //     }
+                // });
+
+            }, 5000);
 
         <?php echo '</script'; ?>
 >
