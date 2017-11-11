@@ -8,6 +8,7 @@ CREATE TABLE IF NOT EXISTS `news` (
 	id_news int PRIMARY KEY AUTO_INCREMENT,
     caption varchar(255) NOT NULL,
     content text NOT NULL,
-    date datetime NOT NULL
-) ENGINE = InnoDB	 CHARACTER SET = UTF8;
+    author varchar(255) NOT NULL,
+    date date NOT NULL
+) ENGINE = InnoDB CHARACTER SET = UTF8;
 
