@@ -5,20 +5,29 @@
         private $news_id;
         private $news_caption;
         private $news_content;
+		private $news_author;
         private $news_date;
 
-        public function __construct($news_id, $news_caption, $news_content, $news_date)
-        {
-            $this->news_id = $news_id;
+        public function __construct($news_caption, $news_content, $news_author, $news_date)
+		{
+            $this->news_id = 0;
             $this->news_caption = $news_caption;
             $this->news_content = $news_content;
-            $this->news_date = $news_date;
+            $this->news_author = $news_author;
+			$this->news_date = $news_date;
         }
 
         public function id()
         {
             return $this->news_id;
         }
+		
+		public function setId($id)
+		{
+			if (($id > 0) && ($this->news_id === 0)) {
+				$this->news_id = $id;
+			}
+		}
 
         public function caption()
         {
@@ -43,17 +52,15 @@
                 $this->news_content = $news_content;
             }
         }
+		
+		public function author()
+		{
+			return $this->author;
+		}
 
         public function date()
         {
             return $this->news_date;
-        }
-
-        public function setDate($new_date)
-        {
-            if (!empty($new_date)) {
-                $this->new_date = $new_date;
-            }
         }
 
     }

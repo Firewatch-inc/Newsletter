@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-11-06 19:27:30
+/* Smarty version 3.1.29, created on 2017-11-11 21:28:30
   from "E:\OpenServer\domains\Newsletter.mgutm\src\templates\tpl\index.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5a008d72076ac9_72691532',
+  'unifunc' => 'content_5a07414e886855_28561966',
   'file_dependency' => 
   array (
     'efcfe367f53090773e522425cf5b8b34976ebff7' => 
     array (
       0 => 'E:\\OpenServer\\domains\\Newsletter.mgutm\\src\\templates\\tpl\\index.tpl',
-      1 => 1509985649,
+      1 => 1510416023,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:one_news.tpl' => 1,
   ),
 ),false)) {
-function content_5a008d72076ac9_72691532 ($_smarty_tpl) {
+function content_5a07414e886855_28561966 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -1,26 +1,15 @@
 <?php
 
-    require_once "data/news.class.php";
+	require_once $_SERVER['DOCUMENT_ROOT']."/src/newsletter/abstract.manager.class.php";
+    require_once $_SERVER['DOCUMENT_ROOT']."/src/newsletter/data/news.class.php";
 
-    class NewsManager
+    class NewsManager extends AbstractManager
     {
-        private $db;
 
-        public function __construct($db)
+        public function __construct($odbc)
         {
-            $this->db = $db;
+			parent::__construct($odbc);
         }
-
-        private function query($sql, $params = array())
-		{
-			if (!empty($params)) {
-                $query = $this->db->prepare($sql);
-                $result = $query->execute($params);
-                return ($result) ? $query->fetchAll(PDO::FETCH_ASSOC) : false;
-            } else {
-                return $this->db->query($sql)->fetchAll(PDO::FETCH_ASSOC);
-            }
-		}
 
         public function add($news)
         {
@@ -41,7 +30,7 @@
 
         public function get()
         {
-            $db_news = $this->query("SELECT * FROM `news` ORDER BY `date`");
+            $db_news = parent::query("SELECT * FROM `news` ORDER BY `date`");
 
             $news = array();
             foreach ($db_news as $one_news) {

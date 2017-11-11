@@ -2,7 +2,7 @@
 
     require_once "engine/ctemplater.php";
     require_once "engine/ctools.php";
-    require_once "newsletter/news.manager.class.php";
+    require_once "newsletter/managers/news.manager.class.php";
 
     $ROOT_PATH = $_SERVER['DOCUMENT_ROOT']."/src";
     $CT = new CTemplater(
