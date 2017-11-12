@@ -55,7 +55,7 @@
 		
 		public function author()
 		{
-			return $this->author;
+			return $this->news_author;
 		}
 
         public function date()

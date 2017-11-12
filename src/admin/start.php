@@ -14,9 +14,14 @@
         $ROOT_PATH."/templates/cache"
     );
 
-    $DB = new PDO("mysql:dbname=newsletter;host=localhost", "root", "");
-    $DB->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $DB->exec("SET NAMES utf8");
+    try
+    {      
+      $DB = new PDO("mysql:dbname=newsletter;host=localhost:3307", "newsletter", "15Letters");
+      $DB->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+      $DB->exec("SET NAMES utf8");
+    } catch (PDOException $e) {
+      die("Не возможно подключиться к базе данных");
+    }
 
     $NewsManager = new NewsManager($DB);
     $NoteManager = new NoteManager($DB);

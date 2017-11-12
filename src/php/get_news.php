@@ -2,8 +2,6 @@
 
     require_once "../start.php";
 
-    header("Content-type: application/json");
-
     if (!empty($DB)) {
 
         $get_new_news = $DB->prepare("SELECT * FROM `news` WHERE `id_news` > :last_news_id");
@@ -15,20 +13,20 @@
             $news = array();
             foreach ($db_news as $one_news) {
                 
-                $CT->assign("caption", $one_news['caption']);
-                $CT->assign("content", $one_news['content']);
-                $CT->assign("date", $one_news['date']);
-
-                $news[] = $CT->fetch("one_news.tpl");
+                $CT->assign("one_news", new News(
+                    $one_news['caption'],
+                    $one_news['content'],
+                    $one_news['author'],
+                    $one_news['date']
+                ));
+                
+                $news .= $CT->fetch("one_news.tpl");
+                $news = str_replace("Array", "", $news);
             }
 
-            echo "<pre>";
-            print_r($db_news);
-            echo "</pre>";
-
+            echo $news;
         }
 
     }
 
 ?>
-

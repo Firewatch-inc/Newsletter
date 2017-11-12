@@ -24,41 +24,6 @@
 				<input type="submit" name="loginButton" value="Войти" class="ui fluid large primary button">
 			</div>
 		</form>
-		<div class="ui message">
-			© Copyright pmswga 2017
-		</div>
 	</div>
 </div>
-
-<!--
-
-<div class="ui grid">
-	<div class="row">
-		<div class="six wide column">
-		
-		</div>
-		<div class="four wide column">
-			<br><br><br>
-			<form name="loginForm" method="POST" class="ui form">
-				<div class="field">
-					<label>Логин:</label>
-					<input type="text" name="login" required>
-				</div>
-				<div class="field">
-					<label>Пароль:</label>
-					<input type="password" name="passwd" required>
-				</div>
-				<div class="field">
-					<input type="submit" name="loginButton" value="Войти" class="ui basic primary button">
-				</div>
-			</form>
-		</div>
-		<div class="six wide column">
-			
-		</div>
-	</div>
-</div>
-
--->
-
 {include file="html/end.tpl"}

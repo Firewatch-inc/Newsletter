@@ -26,14 +26,58 @@
 		$_SESSION['admin']->login() === "admin" &&
 		$_SESSION['admin']->password() === md5("admin")
 	) {
+        $CT->assign("news", $NewsManager->getAll());
 		$CT->Show("index.tpl");
-		
 		
 		if (!empty($_POST['logoutButton'])) {
 			unset($_SESSION['admin']);
 			CTools::Redirect("index.php");
 		}
-		
+    
+        if (!empty($_POST['removeNewsButton'])) {
+            $ids = $_POST['id_news'];
+            
+            if (!empty($ids)) {
+                $result = true;
+                foreach ($ids as $id) {
+                    $result *= $NewsManager->remove($id);
+                }
+                
+                if ($result) {
+                    CTools::Message("Выбранные новости были удалены");
+                } else {
+                    CTools::Message("Произошла ошибка при удалении новостей");
+                }
+                
+                CTools::Redirect("index.php");
+            } else {
+                CTools::Message("Выберете новости для удаления");
+            }
+          
+        }
+        
+        if (!empty($_POST['addNewsButton'])) {
+          $n_caption = $_POST['n_caption'];
+          $n_author = $_POST['n_author'];
+          $n_content = $_POST['n_content'];
+          $n_date = $_POST['n_date'];
+          
+          $news = new News(
+            $n_caption,
+            $n_content,
+            $n_author,
+            $n_date
+          );
+          
+          if ($NewsManager->add($news)) {
+            CTools::Message("Новость успешно опубликована");
+          } else {
+            CTools::Message("Произошла ошибка при публикации новости");
+          }
+          
+          CTools::Redirect("index.php");
+        }
+            
 	}
 	
 ?>
