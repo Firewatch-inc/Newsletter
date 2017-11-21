@@ -13,7 +13,7 @@
                                         {$note->caption()}
                                     </div>
                                     <div class="meta">
-                                        <span class="category">{$note->date()}</span>
+                                        <span class="category">{$note->date()|date_format:"%d.%m.%Y"}</span>
                                     </div>
                                     <div class="description">
                                         <p>{$note->content()}</p>
