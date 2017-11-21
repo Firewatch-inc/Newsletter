@@ -13,7 +13,7 @@
 		
 		public function add($note)
 		{
-			$add_query = $this->odbc->prepare("INSERT INTO `notes` (`caption`, `content`, `date`) VALUES (:caption, :content, :date)");
+			$add_query = $this->odbc->prepare("INSERT INTO `Notes` (`caption`, `content`, `date`) VALUES (:caption, :content, :date)");
 			$add_query->bindValue(":caption", $note->caption());
 			$add_query->bindValue(":content", $note->content());
 			$add_query->bindValue(":date", $note->date());
@@ -23,7 +23,7 @@
 		
 		public function get()
 		{
-			$db_notes = $this->query("SELECT * FROM `notes` ORDER BY `date`");
+			$db_notes = $this->query("SELECT * FROM `Notes` ORDER BY `date`");
 
 			$notes = array();
 			foreach ($db_notes as $db_note) {
