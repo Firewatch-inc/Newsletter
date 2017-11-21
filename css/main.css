@@ -39,3 +39,7 @@ body {
     text-align: center;
 }
 
+#note_content {
+    word-wrap: break-word; 
+    white-space: pre-wrap;
+}

@@ -16,7 +16,7 @@
                                         <span class="category">{$note->date()|date_format:"%d.%m.%Y"}</span>
                                     </div>
                                     <div class="description">
-                                        <p>{$note->content()}</p>
+                                        <p id="note_content">{$note->content()}</p>
                                     </div>
                                 </div>
                             </a>
