@@ -27,7 +27,6 @@
 		$_SESSION['admin']->password() === md5("admin")
 	) {
 
-		
         $CT->assign("notes", $NoteManager->get());
         $CT->assign("schedule", $ScheduleManager->get());
 		$CT->Show("index.tpl");
@@ -83,8 +82,29 @@
 				CTools::Message("Ошибка при добавлении объявления");
 			}
 		}
-        
-            
+		
+		if (!empty($_POST['removeNoteButton'])) {
+			$notes = $_POST['notes'];
+
+			if (!empty($notes)) {
+
+				$result = true;
+				foreach ($notes as $note) {
+					$result *= $NoteManager->remove($note);
+				}
+
+				if ($result) {
+					CTools::Message("Выбранные объявления были удалены");
+					CTools::Redirect("index.php");
+				} else {
+					CTools::Message("Ошибка при удалении объявлений");
+				}
+
+			} else {
+				CTools::Message("Вы не выбрали объявления");
+			}
+		}
+
 	}
 	
 ?>

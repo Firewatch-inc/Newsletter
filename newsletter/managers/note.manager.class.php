@@ -27,7 +27,9 @@
 
 			$notes = array();
 			foreach ($db_notes as $db_note) {
-				$notes[] = new Note($db_note['caption'], $db_note['content'], $db_note['date']);
+				$note = new Note($db_note['caption'], $db_note['content'], $db_note['date']);
+				$note->setId($db_note['id_note']);
+				$notes[] = $note;
 			}
 
 			return $notes;
@@ -35,7 +37,10 @@
 		
 		public function remove($id_note)
 		{
-			
+			$delete_query = $this->odbc->prepare("DELETE FROM `Notes` WHERE `id_note`=:id_note");
+			$delete_query->bindValue(":id_note", $id_note);
+
+			return $delete_query->execute();
 		}
 		
 	}

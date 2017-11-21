@@ -6,21 +6,21 @@
             <div class="row">
                 <div class="sixteen wide column">
                     <div class="ui three cards">
-                            {foreach $notes as $note}
-                                <a class="blue card">
-                                    <div class="content">
-                                        <div class="header">
-                                            {$note->caption()}
-                                        </div>
-                                        <div class="meta">
-                                            <span class="category">{$note->date()}</span>
-                                        </div>
-                                        <div class="description">
-                                            <p>{$note->content()}</p>
-                                        </div>
+                        {foreach $notes as $note}
+                            <a class="blue card">
+                                <div class="content">
+                                    <div class="header">
+                                        {$note->caption()}
                                     </div>
-                                </a>
-                            {/foreach}
+                                    <div class="meta">
+                                        <span class="category">{$note->date()}</span>
+                                    </div>
+                                    <div class="description">
+                                        <p>{$note->content()}</p>
+                                    </div>
+                                </div>
+                            </a>
+                        {/foreach}
                     </div>
                 </div>
             </div>

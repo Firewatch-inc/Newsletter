@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-11-21 18:06:49
+/* Smarty version 3.1.29, created on 2017-11-21 18:35:23
   from "C:\OpenServer\domains\Newsletter.mgutu\admin\templates\tpl\index.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5a1441096f11d2_44950627',
+  'unifunc' => 'content_5a1447bb4fead0_64092513',
   'file_dependency' => 
   array (
     '488aa95ecdb5b358f8627c023af1093f29186ea0' => 
     array (
       0 => 'C:\\OpenServer\\domains\\Newsletter.mgutu\\admin\\templates\\tpl\\index.tpl',
-      1 => 1511276808,
+      1 => 1511278297,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:html/end.tpl' => 1,
   ),
 ),false)) {
-function content_5a1441096f11d2_44950627 ($_smarty_tpl) {
+function content_5a1447bb4fead0_64092513 ($_smarty_tpl) {
 if (!is_callable('smarty_modifier_date_format')) require_once 'C:\\OpenServer\\domains\\Newsletter.mgutu\\engine\\smarty\\plugins\\modifier.date_format.php';
 $_smarty_tpl->tpl_vars['title'] = new Smarty_Variable("Newsletter | Панель управления", null);
 $_smarty_tpl->ext->_updateScope->updateScope($_smarty_tpl, 'title', 0);
@@ -217,19 +217,23 @@ $_smarty_tpl->tpl_vars['time'] = $__foreach_data_0_saved_key;
 					<div class="row">
 						<div class="ten wide column">
 							<?php if ($_smarty_tpl->tpl_vars['notes']->value != NULL) {?>
-								<table class="ui table">
-									<thead>
-										<tr>
-											<th>№</th>
-											<th>Заголовок</th>
-											<th>Дата</th>
-											<th>Выбрать</th>
-										</tr>
-									</thead>
-									<tbody>
-										<?php $_smarty_tpl->tpl_vars['i'] = new Smarty_Variable(1, null);
+								<form name="removeNotesForm" method="POST">
+									<div class="actions">
+										<input type="submit" name="removeNoteButton" value="Удалить" class="ui red button">
+									</div>
+									<table class="ui table">
+										<thead>
+											<tr>
+												<th>№</th>
+												<th>Заголовок</th>
+												<th>Дата</th>
+												<th>Выбрать</th>
+											</tr>
+										</thead>
+										<tbody>
+											<?php $_smarty_tpl->tpl_vars['i'] = new Smarty_Variable(1, null);
 $_smarty_tpl->ext->_updateScope->updateScope($_smarty_tpl, 'i', 0);?>
-										<?php
+											<?php
 $_from = $_smarty_tpl->tpl_vars['notes']->value;
 if (!is_array($_from) && !is_object($_from)) {
 settype($_from, 'array');
@@ -241,31 +245,33 @@ foreach ($_from as $_smarty_tpl->tpl_vars['note']->value) {
 $_smarty_tpl->tpl_vars['note']->_loop = true;
 $__foreach_note_2_saved_local_item = $_smarty_tpl->tpl_vars['note'];
 ?>
-											<tr>
-												<td><?php echo $_smarty_tpl->tpl_vars['i']->value;?>
+												<tr>
+													<td><?php echo $_smarty_tpl->tpl_vars['i']->value;?>
 </td>
-												<td><?php echo $_smarty_tpl->tpl_vars['note']->value->caption();?>
+													<td><?php echo $_smarty_tpl->tpl_vars['note']->value->caption();?>
 </td>
-												<td><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['note']->value->date(),"%d.%m.%Y");?>
+													<td><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['note']->value->date(),"%d.%m.%Y");?>
 </td>
-												<td>
-													<div class="ui checkbox">
-														<input type="checkbox" name="notes[]">
-														<label></label>
-													</div>
-												</td>
-											</tr>
-											<?php $_smarty_tpl->tpl_vars['i'] = new Smarty_Variable($_smarty_tpl->tpl_vars['i']->value+1, null);
+													<td>
+														<div class="ui checkbox">
+															<input type="checkbox" name="notes[]" value="<?php echo $_smarty_tpl->tpl_vars['note']->value->id();?>
+">
+															<label></label>
+														</div>
+													</td>
+												</tr>
+												<?php $_smarty_tpl->tpl_vars['i'] = new Smarty_Variable($_smarty_tpl->tpl_vars['i']->value+1, null);
 $_smarty_tpl->ext->_updateScope->updateScope($_smarty_tpl, 'i', 0);?>
-										<?php
+											<?php
 $_smarty_tpl->tpl_vars['note'] = $__foreach_note_2_saved_local_item;
 }
 if ($__foreach_note_2_saved_item) {
 $_smarty_tpl->tpl_vars['note'] = $__foreach_note_2_saved_item;
 }
 ?>
-									</tbody>
-								</table>
+										</tbody>
+									</table>
+								</form>
 							<?php } else { ?>
 								<h1 align="center">Объявлений нет</h1>
 							<?php }?>

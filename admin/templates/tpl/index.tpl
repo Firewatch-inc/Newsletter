@@ -148,33 +148,38 @@
 					<div class="row">
 						<div class="ten wide column">
 							{if $notes != NULL}
-								<table class="ui table">
-									<thead>
-										<tr>
-											<th>№</th>
-											<th>Заголовок</th>
-											<th>Дата</th>
-											<th>Выбрать</th>
-										</tr>
-									</thead>
-									<tbody>
-										{$i = 1}
-										{foreach $notes as $note}
+								<form name="removeNotesForm" method="POST">
+									<div class="actions">
+										<input type="submit" name="removeNoteButton" value="Удалить" class="ui red button">
+									</div>
+									<table class="ui table">
+										<thead>
 											<tr>
-												<td>{$i}</td>
-												<td>{$note->caption()}</td>
-												<td>{$note->date()|date_format:"%d.%m.%Y"}</td>
-												<td>
-													<div class="ui checkbox">
-														<input type="checkbox" name="notes[]">
-														<label></label>
-													</div>
-												</td>
+												<th>№</th>
+												<th>Заголовок</th>
+												<th>Дата</th>
+												<th>Выбрать</th>
 											</tr>
-											{$i = $i + 1}
-										{/foreach}
-									</tbody>
-								</table>
+										</thead>
+										<tbody>
+											{$i = 1}
+											{foreach $notes as $note}
+												<tr>
+													<td>{$i}</td>
+													<td>{$note->caption()}</td>
+													<td>{$note->date()|date_format:"%d.%m.%Y"}</td>
+													<td>
+														<div class="ui checkbox">
+															<input type="checkbox" name="notes[]" value="{$note->id()}">
+															<label></label>
+														</div>
+													</td>
+												</tr>
+												{$i = $i + 1}
+											{/foreach}
+										</tbody>
+									</table>
+								</form>
 							{else}
 								<h1 align="center">Объявлений нет</h1>
 							{/if}
