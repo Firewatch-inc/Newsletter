@@ -3,14 +3,14 @@
 	class Note
 	{
 		private $note_id;
-		private $note_header;
+		private $note_caption;
 		private $note_content;
 		private $note_date;
 		
-		public function __construct($note_header, $note_content, $note_date)
+		public function __construct($note_caption, $note_content, $note_date)
 		{
 			$this->note_id = 0;
-			$this->note_header = $note_header;
+			$this->note_caption = $note_caption;
 			$this->note_content = $note_content;
 			$this->note_date = $note_date;
 		}
@@ -27,27 +27,27 @@
 			}
 		}
 		
-		public function header()
+		public function caption()
 		{
-			return $this->header;
+			return $this->note_caption;
 		}
 		
-		public function setHeader($header)
+		public function setCaption($note)
 		{
-			if (!empty($header)) {				
-				$this->header = $header;
+			if (!empty($note)) {				
+				$this->note_caption = $note;
 			}
 		}
 		
 		public function content()
 		{
-			return $this->content;
+			return $this->note_content;
 		}
 		
 		public function setContent($content)
 		{
 			if (!empty($content)) {				
-				$this->content = $content;
+				$this->note_content = $content;
 			}
 		}
 		

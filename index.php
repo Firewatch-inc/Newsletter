@@ -1,8 +1,8 @@
 <?php
     require_once "start.php";
 
-    $notes = $NoteManager->get();
-
-    $CT->assign("notes", $notes);
+    $CT->assign("schedule",$ScheduleManager->get());
+    $CT->assign("notes", $NoteManager->get());
     $CT->Show("index.tpl");
+    
 ?>

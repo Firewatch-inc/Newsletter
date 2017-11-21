@@ -26,57 +26,64 @@
 		$_SESSION['admin']->login() === "admin" &&
 		$_SESSION['admin']->password() === md5("admin")
 	) {
-        $CT->assign("news", $NewsManager->getAll());
+
+		
+        $CT->assign("notes", $NoteManager->get());
+        $CT->assign("schedule", $ScheduleManager->get());
 		$CT->Show("index.tpl");
 		
 		if (!empty($_POST['logoutButton'])) {
 			unset($_SESSION['admin']);
 			CTools::Redirect("index.php");
 		}
-    
-        if (!empty($_POST['removeNewsButton'])) {
-            $ids = $_POST['id_news'];
-            
-            if (!empty($ids)) {
-                $result = true;
-                foreach ($ids as $id) {
-                    $result *= $NewsManager->remove($id);
-                }
-                
-                if ($result) {
-                    CTools::Message("Выбранные новости были удалены");
-                } else {
-                    CTools::Message("Произошла ошибка при удалении новостей");
-                }
-                
-                CTools::Redirect("index.php");
-            } else {
-                CTools::Message("Выберете новости для удаления");
-            }
-          
-        }
+		
+		if (!empty($_POST['saveScheduleButton'])) {
+			$schedule_data = $_POST['schedule'];
+
+			$schedule = array();
+			
+
+			for ($i = 0, $j = 0, $current = 0; $i < 90; $i++) {
+				if (empty($schedule_data[$i])) {
+					$schedule_data[$i] = "";
+				}
+
+				$schedule[$current][] = $schedule_data[$i];
+				
+				if ($j < 12) {
+					$j++;
+				} else {
+					$current++;
+					$j = 0;
+				}
+			}
+
+			$schedule_json = json_encode($schedule);
+
+			if ($ScheduleManager->add($schedule_json)) {
+				CTools::Message("Изменения сохранены");
+				CTools::Redirect("index.php");
+			} else {
+				CTools::Message("Ошибка при сохранении изменений");
+			}
+
+		}
+
+		if (!empty($_POST['addNoteButton'])) {
+			$caption = htmlspecialchars($_POST['caption']);
+			$content = htmlspecialchars($_POST['content']);
+			$date = htmlspecialchars($_POST['date']);
+
+			$note = new Note($caption, $content, $date);
+			
+			if ($NoteManager->add($note)) {
+				CTools::Message("Обявление добавлено");
+				CTools::Redirect("index.php");
+			} else {
+				CTools::Message("Ошибка при добавлении объявления");
+			}
+		}
         
-        if (!empty($_POST['addNewsButton'])) {
-          $n_caption = $_POST['n_caption'];
-          $n_author = $_POST['n_author'];
-          $n_content = $_POST['n_content'];
-          $n_date = $_POST['n_date'];
-          
-          $news = new News(
-            $n_caption,
-            $n_content,
-            $n_author,
-            $n_date
-          );
-          
-          if ($NewsManager->add($news)) {
-            CTools::Message("Новость успешно опубликована");
-          } else {
-            CTools::Message("Произошла ошибка при публикации новости");
-          }
-          
-          CTools::Redirect("index.php");
-        }
             
 	}
 	

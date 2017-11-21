@@ -13,12 +13,24 @@
 		
 		public function add($note)
 		{
-			
+			$add_query = $this->odbc->prepare("INSERT INTO `notes` (`caption`, `content`, `date`) VALUES (:caption, :content, :date)");
+			$add_query->bindValue(":caption", $note->caption());
+			$add_query->bindValue(":content", $note->content());
+			$add_query->bindValue(":date", $note->date());
+
+			return $add_query->execute();
 		}
 		
 		public function get()
 		{
-			
+			$db_notes = $this->query("SELECT * FROM `notes` ORDER BY `date`");
+
+			$notes = array();
+			foreach ($db_notes as $db_note) {
+				$notes[] = new Note($db_note['caption'], $db_note['content'], $db_note['date']);
+			}
+
+			return $notes;
 		}
 		
 		public function remove($id_note)

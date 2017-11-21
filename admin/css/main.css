@@ -1,0 +1,9 @@
+
+.date {
+    text-align: center;
+    padding: 5px;
+}
+
+.ui.fixed.table tr th {
+    text-align: center;
+}
