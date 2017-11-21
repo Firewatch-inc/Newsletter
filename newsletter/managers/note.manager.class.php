@@ -1,7 +1,7 @@
 <?php
 	
-	require_once $_SERVER['DOCUMENT_ROOT']."/src/newsletter/abstract.manager.class.php";
-    require_once $_SERVER['DOCUMENT_ROOT']."/src/newsletter/data/note.class.php";
+	require_once $_SERVER['DOCUMENT_ROOT']."/newsletter/abstract.manager.class.php";
+    require_once $_SERVER['DOCUMENT_ROOT']."/newsletter/data/note.class.php";
 
     class NoteManager extends AbstractManager
     {
