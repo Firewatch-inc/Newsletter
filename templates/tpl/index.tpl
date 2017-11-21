@@ -87,7 +87,6 @@
             setTimeout(reload, 300000);
         }, 300000);
 
-/*
         var scroll_to_down = 90000;
         var scroll_to_top = 2500;
         
@@ -101,8 +100,6 @@
 
             setTimeout(step, (scroll_to_down+scroll_to_top));
         }, 1000);
-
-        */
         
     </script>
 {include file="html/end.tpl"}

@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-11-21 18:35:23
+/* Smarty version 3.1.29, created on 2017-11-21 18:45:09
   from "C:\OpenServer\domains\Newsletter.mgutu\admin\templates\tpl\index.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5a1447bb4fead0_64092513',
+  'unifunc' => 'content_5a144a0532c338_01960657',
   'file_dependency' => 
   array (
     '488aa95ecdb5b358f8627c023af1093f29186ea0' => 
     array (
       0 => 'C:\\OpenServer\\domains\\Newsletter.mgutu\\admin\\templates\\tpl\\index.tpl',
-      1 => 1511278297,
+      1 => 1511279107,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:html/end.tpl' => 1,
   ),
 ),false)) {
-function content_5a1447bb4fead0_64092513 ($_smarty_tpl) {
+function content_5a144a0532c338_01960657 ($_smarty_tpl) {
 if (!is_callable('smarty_modifier_date_format')) require_once 'C:\\OpenServer\\domains\\Newsletter.mgutu\\engine\\smarty\\plugins\\modifier.date_format.php';
 $_smarty_tpl->tpl_vars['title'] = new Smarty_Variable("Newsletter | Панель управления", null);
 $_smarty_tpl->ext->_updateScope->updateScope($_smarty_tpl, 'title', 0);
@@ -151,10 +151,10 @@ $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:html/begin.t
 												<th>Актовый зал</th>
 											</tr>
 										</thead>
-										<tbody>
+										<tbody><!--
 											<tr>
 												<td colspan="14"><h2 class="date"><input type="date"></h2></td>
-											</tr>
+											</tr>-->
 											<?php
 $_from = $_smarty_tpl->tpl_vars['schedule']->value;
 if (!is_array($_from) && !is_object($_from)) {
@@ -282,15 +282,15 @@ $_smarty_tpl->tpl_vars['note'] = $__foreach_note_2_saved_item;
 								<form name="addNoteForm" class="ui form" method="POST">
 									<div class="field">
 										<label>Заголовок</label>
-										<input type="text" name="caption">
+										<input type="text" name="caption" required>
 									</div>
 									<div class="field">
 										<label>Содержание</label>
-										<textarea name="content"></textarea>
+										<textarea name="content" required></textarea>
 									</div>
 									<div class="field">
 										<label>Дата</label>
-										<input type="date" name="date">
+										<input type="date" name="date" required>
 									</div>
 									<div class="field">
 										<input type="submit" name="addNoteButton" value="Добавить" class="ui primary button">

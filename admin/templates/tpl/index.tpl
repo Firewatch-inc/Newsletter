@@ -123,10 +123,10 @@
 												<th>Актовый зал</th>
 											</tr>
 										</thead>
-										<tbody>
+										<tbody><!--
 											<tr>
 												<td colspan="14"><h2 class="date"><input type="date"></h2></td>
-											</tr>
+											</tr>-->
 											{foreach $schedule as $time => $data}
 												<tr>
 													<td>{$time}</td>
@@ -190,15 +190,15 @@
 								<form name="addNoteForm" class="ui form" method="POST">
 									<div class="field">
 										<label>Заголовок</label>
-										<input type="text" name="caption">
+										<input type="text" name="caption" required>
 									</div>
 									<div class="field">
 										<label>Содержание</label>
-										<textarea name="content"></textarea>
+										<textarea name="content" required></textarea>
 									</div>
 									<div class="field">
 										<label>Дата</label>
-										<input type="date" name="date">
+										<input type="date" name="date" required>
 									</div>
 									<div class="field">
 										<input type="submit" name="addNoteButton" value="Добавить" class="ui primary button">
