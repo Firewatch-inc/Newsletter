@@ -59,7 +59,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <th colspan="14"><h2 class="date">20.10.2017</h2></th>
+                            <th colspan="14"><h2 class="date">{$smarty.now|date_format:"%d.%m.%Y"}</h2></th>
                         </tr>
                         {foreach $schedule as $time => $data}
                             <tr>
@@ -81,6 +81,12 @@
     <p id="bottom"></p>
 
     <script type="text/javascript">
+    
+        setTimeout(function reload() {
+            location.reload();
+            setTimeout(reload, 300000);
+        }, 300000);
+
 /*
         var scroll_to_down = 90000;
         var scroll_to_top = 2500;

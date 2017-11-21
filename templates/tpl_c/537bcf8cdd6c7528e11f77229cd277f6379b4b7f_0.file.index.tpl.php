@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-11-21 18:00:19
+/* Smarty version 3.1.29, created on 2017-11-21 18:41:02
   from "C:\OpenServer\domains\Newsletter.mgutu\templates\tpl\index.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5a143f83cf0451_93877462',
+  'unifunc' => 'content_5a14490e168363_96165113',
   'file_dependency' => 
   array (
     '537bcf8cdd6c7528e11f77229cd277f6379b4b7f' => 
     array (
       0 => 'C:\\OpenServer\\domains\\Newsletter.mgutu\\templates\\tpl\\index.tpl',
-      1 => 1511276418,
+      1 => 1511278861,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,8 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:html/end.tpl' => 1,
   ),
 ),false)) {
-function content_5a143f83cf0451_93877462 ($_smarty_tpl) {
+function content_5a14490e168363_96165113 ($_smarty_tpl) {
+if (!is_callable('smarty_modifier_date_format')) require_once 'C:\\OpenServer\\domains\\Newsletter.mgutu\\engine\\smarty\\plugins\\modifier.date_format.php';
 $_smarty_tpl->tpl_vars['title'] = new Smarty_Variable("Newsletter | Главная", null);
 $_smarty_tpl->ext->_updateScope->updateScope($_smarty_tpl, 'title', 0);
 $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:html/begin.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
@@ -33,7 +34,7 @@ $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:html/begin.t
             <div class="row">
                 <div class="sixteen wide column">
                     <div class="ui three cards">
-                            <?php
+                        <?php
 $_from = $_smarty_tpl->tpl_vars['notes']->value;
 if (!is_array($_from) && !is_object($_from)) {
 settype($_from, 'array');
@@ -45,23 +46,23 @@ foreach ($_from as $_smarty_tpl->tpl_vars['note']->value) {
 $_smarty_tpl->tpl_vars['note']->_loop = true;
 $__foreach_note_0_saved_local_item = $_smarty_tpl->tpl_vars['note'];
 ?>
-                                <a class="blue card">
-                                    <div class="content">
-                                        <div class="header">
-                                            <?php echo $_smarty_tpl->tpl_vars['note']->value->caption();?>
+                            <a class="blue card">
+                                <div class="content">
+                                    <div class="header">
+                                        <?php echo $_smarty_tpl->tpl_vars['note']->value->caption();?>
 
-                                        </div>
-                                        <div class="meta">
-                                            <span class="category"><?php echo $_smarty_tpl->tpl_vars['note']->value->date();?>
-</span>
-                                        </div>
-                                        <div class="description">
-                                            <p><?php echo $_smarty_tpl->tpl_vars['note']->value->content();?>
-</p>
-                                        </div>
                                     </div>
-                                </a>
-                            <?php
+                                    <div class="meta">
+                                        <span class="category"><?php echo $_smarty_tpl->tpl_vars['note']->value->date();?>
+</span>
+                                    </div>
+                                    <div class="description">
+                                        <p><?php echo $_smarty_tpl->tpl_vars['note']->value->content();?>
+</p>
+                                    </div>
+                                </div>
+                            </a>
+                        <?php
 $_smarty_tpl->tpl_vars['note'] = $__foreach_note_0_saved_local_item;
 }
 if ($__foreach_note_0_saved_item) {
@@ -106,7 +107,8 @@ $_smarty_tpl->tpl_vars['note'] = $__foreach_note_0_saved_item;
                     </thead>
                     <tbody>
                         <tr>
-                            <th colspan="14"><h2 class="date">20.10.2017</h2></th>
+                            <th colspan="14"><h2 class="date"><?php echo smarty_modifier_date_format(time(),"%d.%m.%Y");?>
+</h2></th>
                         </tr>
                         <?php
 $_from = $_smarty_tpl->tpl_vars['schedule']->value;
@@ -171,6 +173,13 @@ $_smarty_tpl->tpl_vars['time'] = $__foreach_data_1_saved_key;
 
     <?php echo '<script'; ?>
  type="text/javascript">
+    
+        setTimeout(function reload() {
+            location.reload();
+
+            setTimeout(reload, 1800000);
+        }, 1800000);
+
 /*
         var scroll_to_down = 90000;
         var scroll_to_top = 2500;
