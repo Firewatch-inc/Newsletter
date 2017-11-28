@@ -4,6 +4,7 @@
     require_once $_SERVER['DOCUMENT_ROOT']."/engine/ctools.php";
     require_once $_SERVER['DOCUMENT_ROOT']."/newsletter/managers/schedule.manager.class.php";
     require_once $_SERVER['DOCUMENT_ROOT']."/newsletter/managers/note.manager.class.php";
+    require_once $_SERVER['DOCUMENT_ROOT']."/newsletter/managers/settings.manager.class.php";
 
     $ROOT_PATH = $_SERVER['DOCUMENT_ROOT'];
     $CT = new CTemplater(
@@ -24,6 +25,7 @@
 
     $ScheduleManager = new ScheduleManager($DB);
     $NoteManager = new NoteManager($DB);
+    $SettingsManager = new SettingsManager($DB);
 
     session_start();
 ?>

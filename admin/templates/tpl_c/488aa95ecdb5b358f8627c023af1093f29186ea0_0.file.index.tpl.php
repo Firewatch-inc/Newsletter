@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-11-21 18:51:53
+/* Smarty version 3.1.29, created on 2017-11-28 10:43:46
   from "C:\OpenServer\domains\Newsletter.mgutu\admin\templates\tpl\index.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5a144b998080f6_90248027',
+  'unifunc' => 'content_5a1d13b2e95046_99095018',
   'file_dependency' => 
   array (
     '488aa95ecdb5b358f8627c023af1093f29186ea0' => 
     array (
       0 => 'C:\\OpenServer\\domains\\Newsletter.mgutu\\admin\\templates\\tpl\\index.tpl',
-      1 => 1511279263,
+      1 => 1511855023,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:html/end.tpl' => 1,
   ),
 ),false)) {
-function content_5a144b998080f6_90248027 ($_smarty_tpl) {
+function content_5a1d13b2e95046_99095018 ($_smarty_tpl) {
 if (!is_callable('smarty_modifier_date_format')) require_once 'C:\\OpenServer\\domains\\Newsletter.mgutu\\engine\\smarty\\plugins\\modifier.date_format.php';
 $_smarty_tpl->tpl_vars['title'] = new Smarty_Variable("Newsletter | Панель управления", null);
 $_smarty_tpl->ext->_updateScope->updateScope($_smarty_tpl, 'title', 0);
@@ -45,8 +45,34 @@ $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:html/begin.t
 					<div class="row">
 						<div class="sixteen wide column">
                             <form name="saveScheduleForm" method="POST" class="ui form">
-								<div class="field">
-									<input type="submit" name="saveScheduleButton" value="Сохранить" class="ui primary button">
+								<div class="two fields">
+									<div class="field">
+										<div class="two fields">
+											<div class="field">
+												<select name="updateInterval">
+													<?php if ($_smarty_tpl->tpl_vars['settings']->value['update_interval'] == 0) {?>
+														<option value="0">Не обновлять</option>
+														<option value="5">5 минут</option>
+														<option value="15">15 минут</option>
+													<?php } elseif ($_smarty_tpl->tpl_vars['settings']->value['update_interval'] == 5) {?>
+														<option value="5">5 минут</option>
+														<option value="0">Не обновлять</option>
+														<option value="15">15 минут</option>
+													<?php } elseif ($_smarty_tpl->tpl_vars['settings']->value['update_interval'] == 15) {?>
+													<option value="15">15 минут</option>
+														<option value="5">5 минут</option>
+														<option value="0">Не обновлять</option>
+													<?php }?>
+												</select>
+											</div>
+											<div class="field">
+												<input type="submit" name="setUpdateIntervalButton" value="Задать интервал обновления" class="ui button">
+											</div>
+										</div>
+									</div>
+									<div class="field">
+										<input type="submit" name="saveScheduleButton" value="Сохранить" class="ui primary button">
+									</div>
 								</div>
 								<div class="field">
 									<table class="ui fixed table">
@@ -149,10 +175,11 @@ $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:html/begin.t
 												<th>Актовый зал</th>
 											</tr>
 										</thead>
-										<tbody><!--
+										<tbody>
 											<tr>
-												<td colspan="14"><h2 class="date"><input type="date"></h2></td>
-											</tr>-->
+												<td colspan="14"><h2 class="date"><?php echo smarty_modifier_date_format(time(),"%d.%m.%Y");?>
+</h2></td>
+											</tr>
 											<?php
 $_from = $_smarty_tpl->tpl_vars['schedule']->value;
 if (!is_array($_from) && !is_object($_from)) {

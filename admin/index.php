@@ -27,6 +27,7 @@
 		$_SESSION['admin']->password() === md5("admin")
 	) {
 
+		$CT->assign("settings", $SettingsManager->get());
         $CT->assign("notes", $NoteManager->get());
         $CT->assign("schedule", $ScheduleManager->get());
 		$CT->Show("index.tpl");
@@ -36,6 +37,22 @@
 			CTools::Redirect("index.php");
 		}
 		
+		if (!empty($_POST['setUpdateIntervalButton'])) {
+			$updateInterval = (int)$_POST['updateInterval'];
+
+			if ($updateInterval >= 0) {
+				if ($SettingsManager->setUpdateInterval($updateInterval)) {
+					CTools::Message("Интервал успешно задан");
+					CTools::Redirect("index.php");
+				} else {
+					CTools::Message("Произошла ошибка");
+				}
+			} else {
+				CTools::Message("Выбран некорректный интервал обновления");
+			}
+
+		}
+
 		if (!empty($_POST['saveScheduleButton'])) {
 			$schedule_data = $_POST['schedule'];
 

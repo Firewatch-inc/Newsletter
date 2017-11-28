@@ -81,12 +81,18 @@
     </div>
     <p id="bottom"></p>
 
+    <input type="hidden" id="updateInterval" value="{$updateInterval}">
     <script type="text/javascript">
-    
-        setTimeout(function reload() {
-            location.reload();
-            setTimeout(reload, 300000);
-        }, 300000);
+
+        let updateInterval = document.getElementById("updateInterval").value;
+        
+        if (updateInterval > 0) {
+            setTimeout(function reload() {
+                location.reload();
+                setTimeout(reload, updateInterval);
+            }, updateInterval);
+        }
+
 
         var scroll_to_down = 90000;
         var scroll_to_top = 2500;

@@ -17,8 +17,34 @@
 					<div class="row">
 						<div class="sixteen wide column">
                             <form name="saveScheduleForm" method="POST" class="ui form">
-								<div class="field">
-									<input type="submit" name="saveScheduleButton" value="Сохранить" class="ui primary button">
+								<div class="two fields">
+									<div class="field">
+										<div class="two fields">
+											<div class="field">
+												<select name="updateInterval">
+													{if $settings['update_interval'] == 0}
+														<option value="0">Не обновлять</option>
+														<option value="5">5 минут</option>
+														<option value="15">15 минут</option>
+													{elseif $settings['update_interval'] == 5}
+														<option value="5">5 минут</option>
+														<option value="0">Не обновлять</option>
+														<option value="15">15 минут</option>
+													{elseif $settings['update_interval'] == 15}
+													<option value="15">15 минут</option>
+														<option value="5">5 минут</option>
+														<option value="0">Не обновлять</option>
+													{/if}
+												</select>
+											</div>
+											<div class="field">
+												<input type="submit" name="setUpdateIntervalButton" value="Задать интервал обновления" class="ui button">
+											</div>
+										</div>
+									</div>
+									<div class="field">
+										<input type="submit" name="saveScheduleButton" value="Сохранить" class="ui primary button">
+									</div>
 								</div>
 								<div class="field">
 									<table class="ui fixed table">
@@ -121,10 +147,10 @@
 												<th>Актовый зал</th>
 											</tr>
 										</thead>
-										<tbody><!--
+										<tbody>
 											<tr>
-												<td colspan="14"><h2 class="date"><input type="date"></h2></td>
-											</tr>-->
+												<td colspan="14"><h2 class="date">{$smarty.now|date_format:"%d.%m.%Y"}</h2></td>
+											</tr>
 											{foreach $schedule as $time => $data}
 												<tr>
 													<td>{$time}</td>
