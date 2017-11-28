@@ -5,7 +5,8 @@
 		<div class="sixteen wide column">
             <div class="ui top attached tabular menu">
               <a class="active item" data-tab="schedule">Расписание</a>
-              <a class="item" data-tab="notes">Объявления</a>
+			  <a class="item" data-tab="notes">Объявления</a>
+			  <a class="item" data-tab="settings">Настройки</a>
 			  <div class="right menu">
 				<form name="logoutForm" method="POST">				
 					<input type="submit" class="item" name="logoutButton" value="Выйти">
@@ -16,153 +17,147 @@
 				<div class="ui internally celled grid">
 					<div class="row">
 						<div class="sixteen wide column">
-                            <form name="saveScheduleForm" method="POST" class="ui form">
-								<div class="two fields">
-									<div class="field">
-										<div class="two fields">
-											<div class="field">
-												<select name="updateInterval">
-													{if $settings['update_interval'] == 0}
-														<option value="0">Не обновлять</option>
-														<option value="5">5 минут</option>
-														<option value="15">15 минут</option>
-													{elseif $settings['update_interval'] == 5}
-														<option value="5">5 минут</option>
-														<option value="0">Не обновлять</option>
-														<option value="15">15 минут</option>
-													{elseif $settings['update_interval'] == 15}
-													<option value="15">15 минут</option>
-														<option value="5">5 минут</option>
-														<option value="0">Не обновлять</option>
-													{/if}
-												</select>
-											</div>
-											<div class="field">
-												<input type="submit" name="setUpdateIntervalButton" value="Задать интервал обновления" class="ui button">
-											</div>
+							{if $schedule != NULL}
+								{foreach $schedule as $date => $data}
+									<div class="ui styled accordion" style="width: 100%;">
+										<div class="title">
+											{$date = (explode("_", $date))}
+											{$date[0]|date_format:"%d.%m.%Y"}
+										</div>
+										<div class="content">
+											<form name="saveScheduleForm" method="POST" class="ui form">
+												<input type="hidden" name="schedule_id" value="{$date[1]}">
+												<div class="field">
+													<input type="submit" name="saveScheduleButton" value="Сохранить" class="ui primary button">
+												</div>
+												<div class="field">
+													<table class="ui fixed table">
+														<thead><!--
+															<tr>
+																<th>Показать/скрыть</th>
+																<th>
+																	<div class="ui checkbox">
+																		<input type="checkbox">
+																		<label></label>
+																	</div>
+																</th>
+																<th>
+																	<div class="ui checkbox">
+																		<input type="checkbox">
+																		<label></label>
+																	</div>
+																</th>
+																<th>
+																	<div class="ui checkbox">
+																		<input type="checkbox">
+																		<label></label>
+																	</div>
+																</th>
+																<th>
+																	<div class="ui checkbox">
+																		<input type="checkbox">
+																		<label></label>
+																	</div>
+																</th>
+																<th>
+																	<div class="ui checkbox">
+																		<input type="checkbox">
+																		<label></label>
+																	</div>
+																</th>
+																<th>
+																	<div class="ui checkbox">
+																		<input type="checkbox">
+																		<label></label>
+																	</div>
+																</th>
+																<th>
+																	<div class="ui checkbox">
+																		<input type="checkbox">
+																		<label></label>
+																	</div>
+																</th>
+																<th>
+																	<div class="ui checkbox">
+																		<input type="checkbox">
+																		<label></label>
+																	</div>
+																</th>
+																<th>
+																	<div class="ui checkbox">
+																		<input type="checkbox">
+																		<label></label>
+																	</div>
+																</th>
+																<th>
+																	<div class="ui checkbox">
+																		<input type="checkbox">
+																		<label></label>
+																	</div>
+																</th>
+																<th>
+																	<div class="ui checkbox">
+																		<input type="checkbox">
+																		<label></label>
+																	</div>
+																</th>
+																<th>
+																	<div class="ui checkbox">
+																		<input type="checkbox">
+																		<label></label>
+																	</div>
+																</th>
+																<th>
+																	<div class="ui checkbox">
+																		<input type="checkbox">
+																		<label></label>
+																	</div>
+																</th>
+															</tr>-->
+															<tr>
+																<th></th>
+																<th>104</th>
+																<th>107</th>
+																<th>109</th>
+																<th>207</th>
+																<th>209</th>
+																<th>201</th>
+																<th>300</th>
+																<th>400</th>
+																<th>401 (мал. акт. зал)</th>
+																<th>405</th>
+																<th>406</th>
+																<th>409</th>
+																<th>Актовый зал</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td colspan="14"><h2 class="date">{$date[0]|date_format:"%d.%m.%Y"}</h2></td>
+															</tr>
+															{foreach $data as $time => $one_entry}
+																<tr>
+																	<td>{$time}</td>
+																	{if $one_entry != NULL}
+																		{foreach $one_entry as $entry}
+																			<td><textarea name="schedule[]">{$entry}</textarea></td>
+																		{/foreach}
+																	{else}
+																		{$columns = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]}
+																		{foreach $columns as $column}
+																			<td><textarea name="schedule[]"></textarea></td>
+																		{/foreach}
+																	{/if}
+																</tr>
+															{/foreach}
+														</tbody>
+													</table>
+												</div>
+											</form>
 										</div>
 									</div>
-									<div class="field">
-										<input type="submit" name="saveScheduleButton" value="Сохранить" class="ui primary button">
-									</div>
-								</div>
-								<div class="field">
-									<table class="ui fixed table">
-										<thead>
-											<tr>
-												<th>Показать/скрыть</th>
-												<th>
-													<div class="ui checkbox">
-														<input type="checkbox">
-														<label></label>
-													</div>
-												</th>
-												<th>
-													<div class="ui checkbox">
-														<input type="checkbox">
-														<label></label>
-													</div>
-												</th>
-												<th>
-													<div class="ui checkbox">
-														<input type="checkbox">
-														<label></label>
-													</div>
-												</th>
-												<th>
-													<div class="ui checkbox">
-														<input type="checkbox">
-														<label></label>
-													</div>
-												</th>
-												<th>
-													<div class="ui checkbox">
-														<input type="checkbox">
-														<label></label>
-													</div>
-												</th>
-												<th>
-													<div class="ui checkbox">
-														<input type="checkbox">
-														<label></label>
-													</div>
-												</th>
-												<th>
-													<div class="ui checkbox">
-														<input type="checkbox">
-														<label></label>
-													</div>
-												</th>
-												<th>
-													<div class="ui checkbox">
-														<input type="checkbox">
-														<label></label>
-													</div>
-												</th>
-												<th>
-													<div class="ui checkbox">
-														<input type="checkbox">
-														<label></label>
-													</div>
-												</th>
-												<th>
-													<div class="ui checkbox">
-														<input type="checkbox">
-														<label></label>
-													</div>
-												</th>
-												<th>
-													<div class="ui checkbox">
-														<input type="checkbox">
-														<label></label>
-													</div>
-												</th>
-												<th>
-													<div class="ui checkbox">
-														<input type="checkbox">
-														<label></label>
-													</div>
-												</th>
-												<th>
-													<div class="ui checkbox">
-														<input type="checkbox">
-														<label></label>
-													</div>
-												</th>
-											</tr>
-											<tr>
-												<th></th>
-												<th>104</th>
-												<th>107</th>
-												<th>109</th>
-												<th>207</th>
-												<th>209</th>
-												<th>201</th>
-												<th>300</th>
-												<th>400</th>
-												<th>401 (мал. акт. зал)</th>
-												<th>405</th>
-												<th>406</th>
-												<th>409</th>
-												<th>Актовый зал</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td colspan="14"><h2 class="date">{$smarty.now|date_format:"%d.%m.%Y"}</h2></td>
-											</tr>
-											{foreach $schedule as $time => $data}
-												<tr>
-													<td>{$time}</td>
-													{foreach $data as $entry}
-														<td><textarea name="schedule[]">{$entry}</textarea></td>
-													{/foreach}
-												</tr>
-											{/foreach}
-										</tbody>
-									</table>
-								</div>
-                            </form>
+								{/foreach}
+							{/if}
 						</div>
 					</div>
 				</div>
@@ -232,7 +227,37 @@
 						</div>
 					</div>
 				</div>
-            </div>
+			</div>
+			<div class="ui bottom attached tab segment" data-tab="settings">
+				<form name="saveSettings" method="POST" class="ui form">
+					<div class="two fields">
+						<div class="field">
+							<div class="two fields">
+								<div class="field">
+									<select name="updateInterval">
+										{if $settings['update_interval'] == 0}
+											<option value="0">Не обновлять</option>
+											<option value="5">5 минут</option>
+											<option value="15">15 минут</option>
+										{elseif $settings['update_interval'] == 5}
+											<option value="5">5 минут</option>
+											<option value="0">Не обновлять</option>
+											<option value="15">15 минут</option>
+										{elseif $settings['update_interval'] == 15}
+										<option value="15">15 минут</option>
+											<option value="5">5 минут</option>
+											<option value="0">Не обновлять</option>
+										{/if}
+									</select>
+								</div>
+								<div class="field">
+									<input type="submit" name="setUpdateIntervalButton" value="Задать интервал обновления" class="ui button">
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
 		</div>
 	</div>
 </div>

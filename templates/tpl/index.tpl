@@ -93,7 +93,6 @@
             }, updateInterval);
         }
 
-
         var scroll_to_down = 90000;
         var scroll_to_top = 2500;
         /*

@@ -54,10 +54,10 @@
 		}
 
 		if (!empty($_POST['saveScheduleButton'])) {
+			$schedule_id = $_POST['schedule_id'];
 			$schedule_data = $_POST['schedule'];
 
 			$schedule = array();
-			
 
 			for ($i = 0, $j = 0, $current = 0; $i < 90; $i++) {
 				if (empty($schedule_data[$i])) {
@@ -76,7 +76,10 @@
 
 			$schedule_json = json_encode($schedule);
 
-			if ($ScheduleManager->add($schedule_json)) {
+			if ($ScheduleManager->add(array(
+				"schedule_id" => $schedule_id,
+				"schedule" => $schedule_json
+			))) {
 				CTools::Message("Изменения сохранены");
 				CTools::Redirect("index.php");
 			} else {
