@@ -1,5 +1,6 @@
 body {
     background-color: #EFF0EA;
+	overflow: hidden;
 }
 
 .six.wide.column {
