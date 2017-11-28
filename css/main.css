@@ -43,3 +43,8 @@ body {
     word-wrap: break-word; 
     white-space: pre-wrap;
 }
+
+p, th {
+    word-wrap: break-word; 
+    white-space: pre-wrap;
+}

@@ -34,10 +34,10 @@
                                 <table width="100%">
                                     <tbody>
                                         <tr>
-                                            <td>Аудитория</td>
+                                            <td><p>Аудитория</p></td>
                                         </tr>
                                         <tr>
-                                            <td>Время</td>
+                                            <td><p>Время</p></td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -58,17 +58,18 @@
                         </tr>
                     </thead>
                     <tbody>
+						<col width="120px">
                         <tr>
                             <th colspan="14"><h2 class="date">{$smarty.now|date_format:"%d.%m.%Y"}</h2></th>
                         </tr>
                         {foreach $schedule as $time => $data}
                             <tr>
-                                <td>{$time}</td>
+                                <td style="text-align: center;">{$time}</td>
                                 {foreach $data as $entry}
                                     {if $entry != ""}
-                                    <td class="ui orange segment">{$entry}</td>
+										<td class="ui orange segment"><p>{$entry}</p></td>
                                     {else}
-                                    <td class="ui segment">{$entry}</td>
+										<td class="ui segment"></td>
                                     {/if}
                                 {/foreach}
                             </tr>
@@ -89,7 +90,7 @@
 
         var scroll_to_down = 90000;
         var scroll_to_top = 2500;
-        
+        /*
         var timeout = setTimeout(function step() {
         
             $("html, body").stop().animate({
@@ -101,5 +102,7 @@
             setTimeout(step, (scroll_to_down+scroll_to_top));
         }, 1000);
         
+		*/
+		
     </script>
 {include file="html/end.tpl"}

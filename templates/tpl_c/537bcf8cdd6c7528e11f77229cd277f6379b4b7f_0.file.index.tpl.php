@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-11-21 18:54:13
+/* Smarty version 3.1.29, created on 2017-11-28 09:58:00
   from "C:\OpenServer\domains\Newsletter.mgutu\templates\tpl\index.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5a144c25dc8dc9_50670323',
+  'unifunc' => 'content_5a1d08f8c61b64_28202541',
   'file_dependency' => 
   array (
     '537bcf8cdd6c7528e11f77229cd277f6379b4b7f' => 
     array (
       0 => 'C:\\OpenServer\\domains\\Newsletter.mgutu\\templates\\tpl\\index.tpl',
-      1 => 1511279647,
+      1 => 1511852279,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:html/end.tpl' => 1,
   ),
 ),false)) {
-function content_5a144c25dc8dc9_50670323 ($_smarty_tpl) {
+function content_5a1d08f8c61b64_28202541 ($_smarty_tpl) {
 if (!is_callable('smarty_modifier_date_format')) require_once 'C:\\OpenServer\\domains\\Newsletter.mgutu\\engine\\smarty\\plugins\\modifier.date_format.php';
 $_smarty_tpl->tpl_vars['title'] = new Smarty_Variable("Newsletter | Главная", null);
 $_smarty_tpl->ext->_updateScope->updateScope($_smarty_tpl, 'title', 0);
@@ -82,10 +82,10 @@ $_smarty_tpl->tpl_vars['note'] = $__foreach_note_0_saved_item;
                                 <table width="100%">
                                     <tbody>
                                         <tr>
-                                            <td>Аудитория</td>
+                                            <td><p>Аудитория</p></td>
                                         </tr>
                                         <tr>
-                                            <td>Время</td>
+                                            <td><p>Время</p></td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -106,6 +106,7 @@ $_smarty_tpl->tpl_vars['note'] = $__foreach_note_0_saved_item;
                         </tr>
                     </thead>
                     <tbody>
+						<col width="120px">
                         <tr>
                             <th colspan="14"><h2 class="date"><?php echo smarty_modifier_date_format(time(),"%d.%m.%Y");?>
 </h2></th>
@@ -125,7 +126,7 @@ $_smarty_tpl->tpl_vars['data']->_loop = true;
 $__foreach_data_1_saved_local_item = $_smarty_tpl->tpl_vars['data'];
 ?>
                             <tr>
-                                <td><?php echo $_smarty_tpl->tpl_vars['time']->value;?>
+                                <td style="text-align: center;"><?php echo $_smarty_tpl->tpl_vars['time']->value;?>
 </td>
                                 <?php
 $_from = $_smarty_tpl->tpl_vars['data']->value;
@@ -140,11 +141,10 @@ $_smarty_tpl->tpl_vars['entry']->_loop = true;
 $__foreach_entry_2_saved_local_item = $_smarty_tpl->tpl_vars['entry'];
 ?>
                                     <?php if ($_smarty_tpl->tpl_vars['entry']->value != '') {?>
-                                    <td class="ui orange segment"><?php echo $_smarty_tpl->tpl_vars['entry']->value;?>
-</td>
+										<td class="ui orange segment"><p><?php echo $_smarty_tpl->tpl_vars['entry']->value;?>
+</p></td>
                                     <?php } else { ?>
-                                    <td class="ui segment"><?php echo $_smarty_tpl->tpl_vars['entry']->value;?>
-</td>
+										<td class="ui segment"></td>
                                     <?php }?>
                                 <?php
 $_smarty_tpl->tpl_vars['entry'] = $__foreach_entry_2_saved_local_item;
@@ -181,7 +181,7 @@ $_smarty_tpl->tpl_vars['time'] = $__foreach_data_1_saved_key;
 
         var scroll_to_down = 90000;
         var scroll_to_top = 2500;
-        
+        /*
         var timeout = setTimeout(function step() {
         
             $("html, body").stop().animate({
@@ -193,6 +193,8 @@ $_smarty_tpl->tpl_vars['time'] = $__foreach_data_1_saved_key;
             setTimeout(step, (scroll_to_down+scroll_to_top));
         }, 1000);
         
+		*/
+		
     <?php echo '</script'; ?>
 >
 <?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:html/end.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
