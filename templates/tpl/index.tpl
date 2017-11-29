@@ -10,7 +10,7 @@
             <a class="ui positive button" id="main_schedule">Основное</a>
           </div>
           <div class="column">
-            <a class="ui orange button">Изменения</a>
+            <a class="ui orange button" id="change_schedule">Изменения</a>
           </div>
           <div class="column">
             <a class="ui primary button">Элективные курсы</a>
@@ -21,12 +21,17 @@
     <p id="bottom"></p>
 
     {include file="modals/modal.pair.tpl"}
+    {include file="modals/modal.change_schedule.tpl"}
 
     <input type="hidden" id="updateInterval" value="{$updateInterval}">
     <script type="text/javascript">
 
         $("#main_schedule").on("click", function () {
             $("#schedule").modal("show");
+        });
+
+        $("#change_schedule").on("click", function () {
+            $("#c_schedule").modal("show");
         });
 
 

@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-11-29 13:21:49
+/* Smarty version 3.1.29, created on 2017-11-29 13:26:56
   from "C:\OpenServer\domains\Newsletter.mgutu\templates\tpl\modals\modal.pair.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5a1e8a3dd92706_85050477',
+  'unifunc' => 'content_5a1e8b70e0f706_14932227',
   'file_dependency' => 
   array (
     'f80801c6d0e74499c949b4c935ef0ac676572fe7' => 
     array (
       0 => 'C:\\OpenServer\\domains\\Newsletter.mgutu\\templates\\tpl\\modals\\modal.pair.tpl',
-      1 => 1511950907,
+      1 => 1511951215,
       2 => 'file',
     ),
   ),
@@ -19,11 +19,11 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_5a1e8a3dd92706_85050477 ($_smarty_tpl) {
+function content_5a1e8b70e0f706_14932227 ($_smarty_tpl) {
 ?>
 <div class="ui modal" id="schedule">
     <div class="header">
-        Подробная информация
+        Показать основной расписание
     </div>
     <div class="content">
         <form class="ui form">
@@ -52,9 +52,19 @@ function content_5a1e8a3dd92706_85050477 ($_smarty_tpl) {
                 </select>
             </div>
             <div class="field" style="text-align: center;">
-                <a class="ui primary button">Показать</a>
+                <a id="cl" class="ui primary button">Показать</a>
             </div>
         </form>
     </div>
-</div><?php }
+</div>
+
+<?php echo '<script'; ?>
+>
+
+    $("#cl").on("click", function(){
+        alert("На данный момент расписание находиться на модерации");
+    });
+
+<?php echo '</script'; ?>
+><?php }
 }

@@ -1,6 +1,6 @@
 <div class="ui modal" id="schedule">
     <div class="header">
-        Подробная информация
+        Показать основной расписание
     </div>
     <div class="content">
         <form class="ui form">
@@ -29,8 +29,16 @@
                 </select>
             </div>
             <div class="field" style="text-align: center;">
-                <a class="ui primary button">Показать</a>
+                <a id="cl" class="ui primary button">Показать</a>
             </div>
         </form>
     </div>
 </div>
+
+<script>
+
+    $("#cl").on("click", function(){
+        alert("На данный момент расписание находиться на модерации");
+    });
+
+</script>
