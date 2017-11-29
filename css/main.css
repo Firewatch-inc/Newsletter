@@ -55,3 +55,12 @@ p, th {
     height: 85px;
     font-size: 32px;
 }
+
+.ui.table tr th {
+    text-align: center;
+}
+
+#add_schedule {
+    margin-left: -45%;
+    width: 90%;
+}
