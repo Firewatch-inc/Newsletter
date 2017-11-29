@@ -1,33 +1,37 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-11-28 16:30:55
+/* Smarty version 3.1.29, created on 2017-11-29 10:55:24
   from "C:\OpenServer\domains\Newsletter.mgutu\templates\tpl\index.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5a1d650f999709_16290786',
+  'unifunc' => 'content_5a1e67ece9add7_40753736',
   'file_dependency' => 
   array (
     '537bcf8cdd6c7528e11f77229cd277f6379b4b7f' => 
     array (
       0 => 'C:\\OpenServer\\domains\\Newsletter.mgutu\\templates\\tpl\\index.tpl',
-      1 => 1511875752,
+      1 => 1511942124,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
     'file:html/begin.tpl' => 1,
+    'file:modals/modal.pair.tpl' => 1,
     'file:html/end.tpl' => 1,
   ),
 ),false)) {
-function content_5a1d650f999709_16290786 ($_smarty_tpl) {
+function content_5a1e67ece9add7_40753736 ($_smarty_tpl) {
 if (!is_callable('smarty_modifier_date_format')) require_once 'C:\\OpenServer\\domains\\Newsletter.mgutu\\engine\\smarty\\plugins\\modifier.date_format.php';
 $_smarty_tpl->tpl_vars['title'] = new Smarty_Variable("Newsletter | Главная", null);
 $_smarty_tpl->ext->_updateScope->updateScope($_smarty_tpl, 'title', 0);
 $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:html/begin.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
+    <h1 align="center">Расписание на <?php echo smarty_modifier_date_format(time(),"%d.%m.%Y");?>
+</h1>
+    <h2 align="center">ул. Земляной Вал д. 73</h2>
     <p id="top"></p>
     <div class="ui internally celled grid">
         <?php if ($_smarty_tpl->tpl_vars['notes']->value != NULL) {?>
@@ -107,10 +111,6 @@ $_smarty_tpl->tpl_vars['note'] = $__foreach_note_0_saved_item;
                     </thead>
                     <tbody>
 						<col width="120px">
-                        <tr>
-                            <th colspan="14"><h2 class="date"><?php echo smarty_modifier_date_format(time(),"%d.%m.%Y");?>
-</h2></th>
-                        </tr>
                         <?php
 $_from = $_smarty_tpl->tpl_vars['schedule']->value;
 if (!is_array($_from) && !is_object($_from)) {
@@ -171,10 +171,19 @@ $_smarty_tpl->tpl_vars['time'] = $__foreach_data_1_saved_key;
     </div>
     <p id="bottom"></p>
 
+    <?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:modals/modal.pair.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
+
     <input type="hidden" id="updateInterval" value="<?php echo $_smarty_tpl->tpl_vars['updateInterval']->value;?>
 ">
     <?php echo '<script'; ?>
  type="text/javascript">
+
+        $(".ui.orange.segment").on("click", function () {
+            $(".ui.modal").modal("show");
+        });
+
 
         let updateInterval = document.getElementById("updateInterval").value;
         

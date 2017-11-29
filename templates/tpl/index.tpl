@@ -1,5 +1,7 @@
 {$title = "Newsletter | Главная"}
 {include file="html/begin.tpl"}
+    <h1 align="center">Расписание на {$smarty.now|date_format:"%d.%m.%Y"}</h1>
+    <h2 align="center">ул. Земляной Вал д. 73</h2>
     <p id="top"></p>
     <div class="ui internally celled grid">
         {if $notes != NULL}
@@ -59,9 +61,6 @@
                     </thead>
                     <tbody>
 						<col width="120px">
-                        <tr>
-                            <th colspan="14"><h2 class="date">{$smarty.now|date_format:"%d.%m.%Y"}</h2></th>
-                        </tr>
                         {foreach $schedule as $time => $data}
                             <tr>
                                 <td style="text-align: center;">{$time}</td>
@@ -81,8 +80,15 @@
     </div>
     <p id="bottom"></p>
 
+    {include file="modals/modal.pair.tpl"}
+
     <input type="hidden" id="updateInterval" value="{$updateInterval}">
     <script type="text/javascript">
+
+        $(".ui.orange.segment").on("click", function () {
+            $(".ui.modal").modal("show");
+        });
+
 
         let updateInterval = document.getElementById("updateInterval").value;
         
