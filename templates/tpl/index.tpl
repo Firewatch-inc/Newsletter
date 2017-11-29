@@ -1,13 +1,10 @@
 {$title = "Newsletter | Главная"}
 {include file="html/begin.tpl"}
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <div class="ui two column centered grid">
-        <div class="column">
-            <h1 align="center">Расписание</h1>
-        </div>
         <div class="four column centered row">
           <div class="column">
-            <a class="ui positive button" id="main_schedule">Основное</a>
+            <a class="ui positive button" id="main_schedule">Расписание</a>
           </div>
           <div class="column">
             <a class="ui orange button" id="change_schedule">Изменения</a>

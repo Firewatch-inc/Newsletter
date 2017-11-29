@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-11-29 13:25:59
+/* Smarty version 3.1.29, created on 2017-11-29 13:30:56
   from "C:\OpenServer\domains\Newsletter.mgutu\templates\tpl\index.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5a1e8b3767df00_75780965',
+  'unifunc' => 'content_5a1e8c60a81483_22251470',
   'file_dependency' => 
   array (
     '537bcf8cdd6c7528e11f77229cd277f6379b4b7f' => 
     array (
       0 => 'C:\\OpenServer\\domains\\Newsletter.mgutu\\templates\\tpl\\index.tpl',
-      1 => 1511951158,
+      1 => 1511951456,
       2 => 'file',
     ),
   ),
@@ -23,20 +23,17 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:html/end.tpl' => 1,
   ),
 ),false)) {
-function content_5a1e8b3767df00_75780965 ($_smarty_tpl) {
+function content_5a1e8c60a81483_22251470 ($_smarty_tpl) {
 $_smarty_tpl->tpl_vars['title'] = new Smarty_Variable("Newsletter | Главная", null);
 $_smarty_tpl->ext->_updateScope->updateScope($_smarty_tpl, 'title', 0);
 $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:html/begin.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <div class="ui two column centered grid">
-        <div class="column">
-            <h1 align="center">Расписание</h1>
-        </div>
         <div class="four column centered row">
           <div class="column">
-            <a class="ui positive button" id="main_schedule">Основное</a>
+            <a class="ui positive button" id="main_schedule">Расписание</a>
           </div>
           <div class="column">
             <a class="ui orange button" id="change_schedule">Изменения</a>

@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-11-29 13:26:56
+/* Smarty version 3.1.29, created on 2017-11-29 13:30:51
   from "C:\OpenServer\domains\Newsletter.mgutu\templates\tpl\modals\modal.pair.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5a1e8b70e0f706_14932227',
+  'unifunc' => 'content_5a1e8c5b55ce06_11203403',
   'file_dependency' => 
   array (
     'f80801c6d0e74499c949b4c935ef0ac676572fe7' => 
     array (
       0 => 'C:\\OpenServer\\domains\\Newsletter.mgutu\\templates\\tpl\\modals\\modal.pair.tpl',
-      1 => 1511951215,
+      1 => 1511951333,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_5a1e8b70e0f706_14932227 ($_smarty_tpl) {
+function content_5a1e8c5b55ce06_11203403 ($_smarty_tpl) {
 ?>
 <div class="ui modal" id="schedule">
     <div class="header">
@@ -33,6 +33,7 @@ function content_5a1e8b70e0f706_14932227 ($_smarty_tpl) {
                     <option>БИРХ</option>
                     <option>ТПП</option>
                     <option>САИТП</option>
+                    <option>СГТ</option>
                 </select>
             </div>
             <div class="field">
