@@ -1,6 +1,6 @@
 <div class="ui modal" id="c_schedule">
     <div class="header">
-        Показать изменеия в расписании
+        Изменения
     </div>
     <div class="content">
         <h1 align="center">Изменеия в расписании временно не доступны</h1>

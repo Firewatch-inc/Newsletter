@@ -10,6 +10,7 @@
                     <option>БИРХ</option>
                     <option>ТПП</option>
                     <option>САИТП</option>
+                    <option>СГТ</option>
                 </select>
             </div>
             <div class="field">
