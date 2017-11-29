@@ -7,7 +7,7 @@
         </div>
         <div class="four column centered row">
           <div class="column">
-            <a class="ui positive button">Основное</a>
+            <a class="ui positive button" id="main_schedule">Основное</a>
           </div>
           <div class="column">
             <a class="ui orange button">Изменения</a>
@@ -25,8 +25,8 @@
     <input type="hidden" id="updateInterval" value="{$updateInterval}">
     <script type="text/javascript">
 
-        $(".ui.orange.segment").on("click", function () {
-            $(".ui.modal").modal("show");
+        $("#main_schedule").on("click", function () {
+            $("#schedule").modal("show");
         });
 
 

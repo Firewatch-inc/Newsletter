@@ -1,38 +1,36 @@
-<div class="ui modal" id="pair">
+<div class="ui modal" id="schedule">
     <div class="header">
         Подробная информация
     </div>
     <div class="content">
-        <table class="ui table">
-            <thead>
-                
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="collapsing">Адрес</td>
-                    <td>ул. Земляной Вал д. 73</td>
-                </tr>
-                <tr>
-                    <td class="collapsing">Время</td>
-                    <td>9:00 - 10:30</td>
-                </tr>
-                <tr>
-                    <td class="collapsing">Пара</td>
-                    <td>1</td>
-                </tr>
-                <tr>
-                    <td class="collapsing">Предмет</td>
-                    <td>Защита информации в техногенной сфере</td>
-                </tr>
-                <tr>
-                    <td class="collapsing">Комментарий</td>
-                    <td>Супер пупер</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <div class="ui bottom attached warning message">
-      <i class="warning sign icon"></i>
-      Внесены изменения в расписание
+        <form class="ui form">
+            <div class="field">
+                <label>Институт</label>
+                <select>
+                    <option>БИРХ</option>
+                    <option>ТПП</option>
+                    <option>САИТП</option>
+                </select>
+            </div>
+            <div class="field">
+                <label>Курс</label>
+                <select>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
+            <div class="field">
+                <label>Группа</label>
+                <select>
+                    <option>16.03.03</option>
+                </select>
+            </div>
+            <div class="field" style="text-align: center;">
+                <a class="ui primary button">Показать</a>
+            </div>
+        </form>
     </div>
 </div>
