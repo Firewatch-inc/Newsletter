@@ -1,83 +1,23 @@
 {$title = "Newsletter | Главная"}
 {include file="html/begin.tpl"}
-    <h1 align="center">Расписание на {$smarty.now|date_format:"%d.%m.%Y"}</h1>
-    <h2 align="center">ул. Земляной Вал д. 73</h2>
-    <p id="top"></p>
-    <div class="ui internally celled grid">
-        {if $notes != NULL}
-            <div class="row">
-                <div class="sixteen wide column">
-                    <div class="ui three cards">
-                        {foreach $notes as $note}
-                            <a class="blue card">
-                                <div class="content">
-                                    <div class="header">
-                                        {$note->caption()}
-                                    </div>
-                                    <div class="meta">
-                                        <span class="category">{$note->date()|date_format:"%d.%m.%Y"}</span>
-                                    </div>
-                                    <div class="description">
-                                        <p id="note_content">{$note->content()}</p>
-                                    </div>
-                                </div>
-                            </a>
-                        {/foreach}
-                    </div>
-                </div>
-            </div>
-        {/if}
-        <div class="row">
-            <div class="sixteen wide column" id="notes">
-                <table class="ui fixed table" border="1">
-                    <thead>
-                        <tr id="header">
-                            <th>
-                                <table width="100%">
-                                    <tbody>
-                                        <tr>
-                                            <td><p>Аудитория</p></td>
-                                        </tr>
-                                        <tr>
-                                            <td><p>Время</p></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </th>
-                            <th>104</th>
-                            <th>107</th>
-                            <th>109</th>
-                            <th>207</th>
-                            <th>209</th>
-                            <th>201</th>
-                            <th>300</th>
-                            <th>400</th>
-                            <th>401 (мал. акт. зал)</th>
-                            <th>405</th>
-                            <th>406</th>
-                            <th>409</th>
-                            <th>Актовый зал</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-						<col width="120px">
-                        {foreach $schedule as $time => $data}
-                            <tr>
-                                <td style="text-align: center;">{$time}</td>
-                                {foreach $data as $entry}
-                                    {if $entry != ""}
-										<td class="ui orange segment"><p>{$entry}</p></td>
-                                    {else}
-										<td class="ui segment"></td>
-                                    {/if}
-                                {/foreach}
-                            </tr>
-                        {/foreach}
-                    </tbody>
-                </table>
-            </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div class="ui two column centered grid">
+        <div class="column">
+            <h1 align="center">Расписание</h1>
         </div>
-    </div>
+        <div class="four column centered row">
+          <div class="column">
+            <a class="ui positive button">Основное</a>
+          </div>
+          <div class="column">
+            <a class="ui orange button">Изменения</a>
+          </div>
+          <div class="column">
+            <a class="ui primary button">Элективные курсы</a>
+          </div>
+        </div>
+      </div>
+
     <p id="bottom"></p>
 
     {include file="modals/modal.pair.tpl"}

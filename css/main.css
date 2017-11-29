@@ -50,3 +50,8 @@ p, th {
     white-space: pre-wrap;
 }
 
+.ui.button {
+    width: 400px;
+    height: 85px;
+    font-size: 32px;
+}
