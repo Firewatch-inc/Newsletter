@@ -68,14 +68,16 @@
             foreach ($schedules as $schedule) {
                 
                 foreach ($schedule->days() as $number => $day) {
-                    $result = $this->query("SELECT * FROM `ScheduleCourses` WHERE `id_course`=:id_course AND `day`=:day", [
-                        ":id_course" => $schedule->course()->id(),
-                        ":day" => ($number+1)
-                    ]);
-                    
                     $time = explode("-", $day);
                     $start_time = $time[0];
                     $end_time = $time[1];
+
+                    $result = $this->query("SELECT * FROM `ScheduleCourses` WHERE `id_course`=:id_course AND `day`=:day AND `start_time`=:s_time AND `end_time`=:e_time", [
+                        ":id_course" => $schedule->course()->id(),
+                        ":day" => ($number+1),
+                        ":s_time" => $start_time,
+                        ":e_time" => $end_time
+                    ]);
 
                     if (empty($result)) {
                         $insert_query = $this->odbc->prepare("INSERT INTO `ScheduleCourses` (`id_course`, `day`, `start_time`, `end_time`) VALUES (:id_course, :day, :s_time, :e_time)");
@@ -87,7 +89,6 @@
 
                         $return_result *= $insert_query->execute();
                     } else {
-
                         $update_query = $this->odbc->prepare("UPDATE `ScheduleCourses` SET `start_time`=:s_time, `end_time`=:e_time WHERE `id_course`=:id_course AND `day`=:day");
 
                         $update_query->bindValue(":s_time", (string)$start_time);
