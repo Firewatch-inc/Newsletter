@@ -3,6 +3,7 @@
     require_once $_SERVER['DOCUMENT_ROOT']."/engine/ctemplater.php";
     require_once $_SERVER['DOCUMENT_ROOT']."/engine/ctools.php";
     require_once $_SERVER['DOCUMENT_ROOT']."/newsletter/managers/schedule.manager.class.php";
+    require_once $_SERVER['DOCUMENT_ROOT']."/newsletter/managers/courses.manager.class.php";
     require_once $_SERVER['DOCUMENT_ROOT']."/newsletter/managers/settings.manager.class.php";
 
     $ROOT_PATH = $_SERVER['DOCUMENT_ROOT'];
@@ -23,6 +24,7 @@
     }
 
     $ScheduleManager = new ScheduleManager($DB);
+    $CoursesManager = new CoursesManager($DB);
     $SettingsManager = new SettingsManager($DB);
 
     session_start();

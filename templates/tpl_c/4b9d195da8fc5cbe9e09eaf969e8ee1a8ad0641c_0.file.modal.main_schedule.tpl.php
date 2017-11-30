@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-11-30 12:26:44
+/* Smarty version 3.1.29, created on 2017-11-30 15:47:00
   from "C:\OpenServer\domains\Newsletter.mgutu\templates\tpl\modals\modal.main_schedule.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5a1fced42b8a70_03666164',
+  'unifunc' => 'content_5a1ffdc42120c7_72981044',
   'file_dependency' => 
   array (
     '4b9d195da8fc5cbe9e09eaf969e8ee1a8ad0641c' => 
     array (
       0 => 'C:\\OpenServer\\domains\\Newsletter.mgutu\\templates\\tpl\\modals\\modal.main_schedule.tpl',
-      1 => 1512033994,
+      1 => 1512046016,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_5a1fced42b8a70_03666164 ($_smarty_tpl) {
+function content_5a1ffdc42120c7_72981044 ($_smarty_tpl) {
 ?>
 <div class="ui modal" id="main_schedule">
     <div class="header">
@@ -77,5 +77,6 @@ $_smarty_tpl->tpl_vars['institute'] = $__foreach_institute_0_saved_item;
                 <h3 align="center">На данный момент расписание не доступно</h3>
             <?php }?>
         </form>
-    </div><?php }
+    </div>
+</div><?php }
 }

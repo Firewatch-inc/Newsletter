@@ -4,8 +4,9 @@
 	<div class="row">
 		<div class="sixteen wide column">
             <div class="ui top attached tabular menu">
-              <a class="active item" data-tab="schedule">Расписание</a>
-			  <a class="item" data-tab="notes">Объявления</a>
+              <a class="active item" data-tab="schedule">Основное расписание</a>
+			  <a class="item" data-tab="change_schedule">Изменения в расписании</a>
+			  <a class="item" data-tab="dop_schedule">Элективные курсы</a>
 			  <a class="item" data-tab="settings">Настройки</a>
 			  <div class="right menu">
 				<form name="logoutForm" method="POST">				
@@ -14,249 +15,16 @@
 			  </div>
             </div>
             <div class="ui bottom attached active tab segment" data-tab="schedule">
-				<div class="ui internally celled grid">
-					<div class="row">
-						<div class="sixteen wide column">
-							{if $schedule != NULL}
-								{foreach $schedule as $date => $data}
-									<div class="ui styled accordion" style="width: 100%;">
-										<div class="title">
-											{$date = (explode("_", $date))}
-											{$date[0]|date_format:"%d.%m.%Y"}
-										</div>
-										<div class="content">
-											<form name="saveScheduleForm" method="POST" class="ui form">
-												<input type="hidden" name="schedule_id" value="{$date[1]}">
-												<div class="field">
-													<input type="submit" name="saveScheduleButton" value="Сохранить" class="ui primary button">
-												</div>
-												<div class="field">
-													<table class="ui fixed table">
-														<thead><!--
-															<tr>
-																<th>Показать/скрыть</th>
-																<th>
-																	<div class="ui checkbox">
-																		<input type="checkbox">
-																		<label></label>
-																	</div>
-																</th>
-																<th>
-																	<div class="ui checkbox">
-																		<input type="checkbox">
-																		<label></label>
-																	</div>
-																</th>
-																<th>
-																	<div class="ui checkbox">
-																		<input type="checkbox">
-																		<label></label>
-																	</div>
-																</th>
-																<th>
-																	<div class="ui checkbox">
-																		<input type="checkbox">
-																		<label></label>
-																	</div>
-																</th>
-																<th>
-																	<div class="ui checkbox">
-																		<input type="checkbox">
-																		<label></label>
-																	</div>
-																</th>
-																<th>
-																	<div class="ui checkbox">
-																		<input type="checkbox">
-																		<label></label>
-																	</div>
-																</th>
-																<th>
-																	<div class="ui checkbox">
-																		<input type="checkbox">
-																		<label></label>
-																	</div>
-																</th>
-																<th>
-																	<div class="ui checkbox">
-																		<input type="checkbox">
-																		<label></label>
-																	</div>
-																</th>
-																<th>
-																	<div class="ui checkbox">
-																		<input type="checkbox">
-																		<label></label>
-																	</div>
-																</th>
-																<th>
-																	<div class="ui checkbox">
-																		<input type="checkbox">
-																		<label></label>
-																	</div>
-																</th>
-																<th>
-																	<div class="ui checkbox">
-																		<input type="checkbox">
-																		<label></label>
-																	</div>
-																</th>
-																<th>
-																	<div class="ui checkbox">
-																		<input type="checkbox">
-																		<label></label>
-																	</div>
-																</th>
-																<th>
-																	<div class="ui checkbox">
-																		<input type="checkbox">
-																		<label></label>
-																	</div>
-																</th>
-															</tr>-->
-															<tr>
-																<th></th>
-																<th>104</th>
-																<th>107</th>
-																<th>109</th>
-																<th>207</th>
-																<th>209</th>
-																<th>201</th>
-																<th>300</th>
-																<th>400</th>
-																<th>401 (мал. акт. зал)</th>
-																<th>405</th>
-																<th>406</th>
-																<th>409</th>
-																<th>Актовый зал</th>
-															</tr>
-														</thead>
-														<tbody>
-															<tr>
-																<td colspan="14"><h2 class="date">{$date[0]|date_format:"%d.%m.%Y"}</h2></td>
-															</tr>
-															{foreach $data as $time => $one_entry}
-																<tr>
-																	<td>{$time}</td>
-																	{if $one_entry != NULL}
-																		{foreach $one_entry as $entry}
-																			<td><textarea name="schedule[]">{$entry}</textarea></td>
-																		{/foreach}
-																	{else}
-																		{$columns = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]}
-																		{foreach $columns as $column}
-																			<td><textarea name="schedule[]"></textarea></td>
-																		{/foreach}
-																	{/if}
-																</tr>
-															{/foreach}
-														</tbody>
-													</table>
-												</div>
-											</form>
-										</div>
-									</div>
-								{/foreach}
-							{/if}
-						</div>
-					</div>
-				</div>
+				{include file="tabs/tab.main_schedule.tpl"}
             </div>
-            <div class="ui bottom attached tab segment" data-tab="notes">
-				<div class="ui stackable grid">
-					<div class="row">
-						<div class="ten wide column">
-							{if $notes != NULL}
-								<form name="removeNotesForm" method="POST">
-									<div class="actions">
-										<input type="submit" name="removeNoteButton" value="Удалить" class="ui red button">
-									</div>
-									<table class="ui table">
-										<thead>
-											<tr>
-												<th>№</th>
-												<th>Заголовок</th>
-												<th>Дата</th>
-												<th>Выбрать</th>
-											</tr>
-										</thead>
-										<tbody>
-											{$i = 1}
-											{foreach $notes as $note}
-												<tr>
-													<td>{$i}</td>
-													<td>{$note->caption()}</td>
-													<td>{$note->date()|date_format:"%d.%m.%Y"}</td>
-													<td>
-														<div class="ui checkbox">
-															<input type="checkbox" name="notes[]" value="{$note->id()}">
-															<label></label>
-														</div>
-													</td>
-												</tr>
-												{$i = $i + 1}
-											{/foreach}
-										</tbody>
-									</table>
-								</form>
-							{else}
-								<h1 align="center">Объявлений нет</h1>
-							{/if}
-						</div>
-						<div class="six wide column">
-							<fieldset>
-								<legend>Добавление Объявления</legend>
-								<form name="addNoteForm" class="ui form" method="POST">
-									<div class="field">
-										<label>Заголовок</label>
-										<input type="text" name="caption" required>
-									</div>
-									<div class="field">
-										<label>Содержание</label>
-										<textarea name="content" required></textarea>
-									</div>
-									<div class="field">
-										<label>Дата</label>
-										<input type="date" name="date" required>
-									</div>
-									<div class="field">
-										<input type="submit" name="addNoteButton" value="Добавить" class="ui primary button">
-									</div>
-								</form>
-							</fieldset>
-						</div>
-					</div>
-				</div>
+            <div class="ui bottom attached tab segment" data-tab="change_schedule">
+				{include file="tabs/tab.change_schedule.tpl"}
+			</div>
+            <div class="ui bottom attached tab segment" data-tab="dop_schedule">
+				{include file="tabs/tab.dop_schedule.tpl"}
 			</div>
 			<div class="ui bottom attached tab segment" data-tab="settings">
-				<form name="saveSettings" method="POST" class="ui form">
-					<div class="two fields">
-						<div class="field">
-							<div class="two fields">
-								<div class="field">
-									<select name="updateInterval">
-										{if $settings['update_interval'] == 0}
-											<option value="0">Не обновлять</option>
-											<option value="5">5 минут</option>
-											<option value="15">15 минут</option>
-										{elseif $settings['update_interval'] == 5}
-											<option value="5">5 минут</option>
-											<option value="0">Не обновлять</option>
-											<option value="15">15 минут</option>
-										{elseif $settings['update_interval'] == 15}
-										<option value="15">15 минут</option>
-											<option value="5">5 минут</option>
-											<option value="0">Не обновлять</option>
-										{/if}
-									</select>
-								</div>
-								<div class="field">
-									<input type="submit" name="setUpdateIntervalButton" value="Задать интервал обновления" class="ui button">
-								</div>
-							</div>
-						</div>
-					</div>
-				</form>
+				{include file="tabs/tab.settings.tpl"}
 			</div>
 		</div>
 	</div>
