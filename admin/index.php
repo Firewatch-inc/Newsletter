@@ -81,9 +81,15 @@
 
 					echo $course->caption()."<br>";
 
-					print_r($_POST['start_time_row_'.$course->id()]);
+					$days = array();
+
+					for ($i = 0; $i < 7; $i++) {
+						$days[] = $_POST['start_time_row_'.$course->id()][$i]." - ".$_POST['end_time_row_'.$course->id()][$i];
+					}
+
+					print_r($days);
 					echo "<br>";
-					print_r($_POST['end_time_row_'.$course->id()]);
+					
 
 					echo "<hr>";
 				}
