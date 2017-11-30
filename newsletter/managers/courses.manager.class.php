@@ -54,11 +54,7 @@
 
                 $schedule[] = $course_schedule;
             }
-
-            echo "<pre>";
-            print_r($schedule);
-            echo "</pre>";
-
+            
             return $schedule;
         }
 
