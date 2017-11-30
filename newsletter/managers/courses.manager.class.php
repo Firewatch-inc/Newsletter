@@ -13,7 +13,7 @@
         
         public function add($course)
         {
-            $add_query = $this->odbc->prepare("INSERT INTO `courses` (`caption`, `address`, `contactor`) VALUES (:caption, :address, :contactor) ");
+            $add_query = $this->odbc->prepare("INSERT INTO `Courses` (`caption`, `address`, `contactor`) VALUES (:caption, :address, :contactor) ");
             $add_query->bindValue(":caption", $course->caption());
             $add_query->bindValue(":address", $course->address());
             $add_query->bindValue(":contactor", $course->contactor());
@@ -23,7 +23,7 @@
 
 		public function get()
 		{
-            $db_courses = $this->query("SELECT * FROM `courses` ORDER BY `caption`");
+            $db_courses = $this->query("SELECT * FROM `Courses` ORDER BY `caption`");
 
             $courses = array();
             foreach ($db_courses as $db_course) {
@@ -41,7 +41,7 @@
 
             $schedule = array();
             foreach ($courses as $course) {
-                $db_courses_schedule = $this->query("SELECT * FROM `vcoursesschedule` WHERE `id_course`=:id_course", [":id_course" => $course->id()]);
+                $db_courses_schedule = $this->query("SELECT * FROM `vCoursesschedule` WHERE `id_course`=:id_course", [":id_course" => $course->id()]);
                 
 
                 $course_schedule = new CourseSchedule($course);
@@ -54,13 +54,13 @@
 
                 $schedule[] = $course_schedule;
             }
-            
+
             return $schedule;
         }
 
         public function remove($course_id)
         {
-            $add_query = $this->odbc->prepare("DELETE FROM `courses` WHERE `id_course`=:id");
+            $add_query = $this->odbc->prepare("DELETE FROM `Courses` WHERE `id_course`=:id");
             $add_query->bindValue(":id", $course_id);
 
             return $add_query->execute();
