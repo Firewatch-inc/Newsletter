@@ -49,6 +49,10 @@
                         <input type="text" name="caption" required>
                     </div>
                     <div class="field">
+                        <label>Адрес</label>
+                        <input type="text" name="address" required>
+                    </div>
+                    <div class="field">
                         <label>Ответственный</label>
                         <input type="text" name="contactor" required>
                     </div>

@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-11-30 19:04:44
+/* Smarty version 3.1.29, created on 2017-11-30 19:38:15
   from "C:\OpenServer\domains\Newsletter.mgutu\admin\templates\tpl\tabs\tab.dop_schedule.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5a202c1c9d65a8_62463674',
+  'unifunc' => 'content_5a2033f76bd990_88024862',
   'file_dependency' => 
   array (
     '0e3d03279c4d064d64f7387467112e4d100c9514' => 
     array (
       0 => 'C:\\OpenServer\\domains\\Newsletter.mgutu\\admin\\templates\\tpl\\tabs\\tab.dop_schedule.tpl',
-      1 => 1512057807,
+      1 => 1512059893,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_5a202c1c9d65a8_62463674 ($_smarty_tpl) {
+function content_5a2033f76bd990_88024862 ($_smarty_tpl) {
 ?>
 <div class="ui stackable grid">
     <div class="row">
@@ -94,6 +94,10 @@ $_smarty_tpl->tpl_vars['course'] = $__foreach_course_0_saved_item;
                     <div class="field">
                         <label>Название</label>
                         <input type="text" name="caption" required>
+                    </div>
+                    <div class="field">
+                        <label>Адрес</label>
+                        <input type="text" name="address" required>
                     </div>
                     <div class="field">
                         <label>Ответственный</label>

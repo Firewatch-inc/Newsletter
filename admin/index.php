@@ -46,10 +46,11 @@
 			
 			if (!empty($_POST['addCourseButton'])) {
 				$caption = htmlspecialchars($_POST['caption']);
+				$address = htmlspecialchars($_POST['address']);
 				$contactor = htmlspecialchars($_POST['contactor']);
 	
 				if ($CoursesManager->add(
-					new Course($caption, $contactor)
+					new Course($caption, $address, $contactor)
 				)) {
 					CTools::Message("Курс успешно добавлен");
 					CTools::Redirect("index.php");
@@ -77,21 +78,30 @@
 
 			if (!empty($_POST['saveCoursesScheduleButton'])) {
 				
+				$schedules = array();
 				foreach ($CoursesManager->get() as $course) {
 
-					echo $course->caption()."<br>";
-
-					$days = array();
-
+					$course_schedule = new CourseSchedule($course);
+					$days = array("", "", "", "", "", "", "");
 					for ($i = 0; $i < 7; $i++) {
-						$days[] = $_POST['start_time_row_'.$course->id()][$i]." - ".$_POST['end_time_row_'.$course->id()][$i];
+						if (!empty($_POST['start_time_row_'.$course->id()][$i]) &&
+							!empty($_POST['end_time_row_'.$course->id()][$i])
+						) {
+							$days[$i] = $_POST['start_time_row_'.$course->id()][$i]." - ".$_POST['end_time_row_'.$course->id()][$i];
+						} else {
+							$days[$i] = "";
+						}
 					}
-
-					print_r($days);
-					echo "<br>";
-					
-
-					echo "<hr>";
+	
+					$course_schedule->setDays($days);
+					$schedules[] = $course_schedule;
+				}
+				
+				if ($CoursesManager->setSchedule($schedules)) {
+					CTools::Message("Расписание сохранено");
+					CTools::Redirect("index.php");
+				} else {
+					CTools::Message("Не удалось сохранить расписание");
 				}
 
 			}
