@@ -1,4 +1,4 @@
-<div class="ui modal" id="add_schedule">
+<div class="ui modal" id="dop_schedule">
     <div class="header">
         Расписание элективных курсов по физической культуре
     </div>

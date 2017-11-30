@@ -3,51 +3,8 @@ body {
 	overflow: hidden;
 }
 
-.six.wide.column {
-    height: 100vh;
-    overflow: scroll;
-}
-
-#news {
+.ui.table tr th {
     text-align: center;
-}
-
-@keyframes fade {
-    from {
-        opacity: 0;
-        margin-top: -100px;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-.news {
-    text-align: left;
-    word-wrap: break-word;
-    animation-name: fade;
-    animation-duration: 1.5s;
-    animation-iteration-count: 1;
-    animation-timing-function: ease;
-}
-
-.date {
-    text-align: center;
-    padding: 5px;
-}
-
-.ui.fixed.table tr th {
-    text-align: center;
-}
-
-#note_content {
-    word-wrap: break-word; 
-    white-space: pre-wrap;
-}
-
-p, th {
-    word-wrap: break-word; 
-    white-space: pre-wrap;
 }
 
 .ui.button {
@@ -56,11 +13,7 @@ p, th {
     font-size: 32px;
 }
 
-.ui.table tr th {
-    text-align: center;
-}
-
-#add_schedule {
+#dop_schedule {
     margin-left: -45%;
     width: 90%;
 }
