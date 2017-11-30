@@ -41,7 +41,7 @@
 
             $schedule = array();
             foreach ($courses as $course) {
-                $db_courses_schedule = $this->query("SELECT * FROM `vCoursesschedule` WHERE `id_course`=:id_course", [":id_course" => $course->id()]);
+                $db_courses_schedule = $this->query("SELECT * FROM `vCoursesSchedule` WHERE `id_course`=:id_course", [":id_course" => $course->id()]);
                 
 
                 $course_schedule = new CourseSchedule($course);
