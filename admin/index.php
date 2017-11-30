@@ -28,6 +28,7 @@
 	) {
 
 		$CT->assign("courses", $CoursesManager->get());
+		$CT->assign("courses_schedule", $CoursesManager->getSchedule());
 		$CT->Show("index.tpl");
 		
 		if (!empty($_POST['logoutButton'])) {
@@ -72,6 +73,21 @@
 				} else {
 					CTools::Message("Не удалось удалить выбранные курсы");
 				}
+			}
+
+			if (!empty($_POST['saveCoursesScheduleButton'])) {
+				
+				foreach ($CoursesManager->get() as $course) {
+
+					echo $course->caption()."<br>";
+
+					print_r($_POST['start_time_row_'.$course->id()]);
+					echo "<br>";
+					print_r($_POST['end_time_row_'.$course->id()]);
+
+					echo "<hr>";
+				}
+
 			}
 	
 			/* ----------------------------------------------------- */

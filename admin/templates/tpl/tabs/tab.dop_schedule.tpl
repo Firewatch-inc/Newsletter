@@ -11,6 +11,7 @@
                             <tr>
                                 <th>№</th>
                                 <th>Название курса</th>
+                                <th>Адрес</th>
                                 <th>Ответственный</th>
                                 <th>Выбрать</th>
                             </tr>
@@ -21,6 +22,7 @@
                                 <tr>
                                     <td>{$i}</td>
                                     <td>{$course->caption()}</td>
+                                    <td>{$course->address()}</td>
                                     <td>{$course->contactor()}</td>
                                     <td>
                                         <div class="ui checkbox">
@@ -55,6 +57,57 @@
                     </div>
                 </form>
             </fieldset>
+        </div>
+    </div>
+    <div class="row">
+        <div class="sixteen wide column">
+            <form name="saveCoursesScheduleForm" method="POST" class="ui form">
+                <div class="field">
+                    {if $courses_schedule != NULL}
+                        <table class="ui celled table">
+                            <thead>
+                                <tr>
+                                    <th>Курс</th>
+                                    <th>ПН</th>
+                                    <th>ВТ</th>
+                                    <th>СР</th>
+                                    <th>ЧТ</th>
+                                    <th>ПТ</th>
+                                    <th>СБ</th>
+                                    <th>ВС</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {foreach $courses_schedule as $course}
+                                    <tr>
+                                        <td>
+                                            {$course->course()->caption()}
+                                        </td>
+                                        {foreach $course->days() as $day}
+                                            <td>
+                                                {$time = explode("-", $day)}
+                                                <div class="two fields">
+                                                    <div class="field">            
+                                                        <input type="text" name="start_time_row_{$course->course()->id()}[]" value="{$time[0]}">
+                                                    </div>
+                                                    <div class="field">
+                                                        <input type="text" name="end_time_row_{$course->course()->id()}[]" value="{$time[1]}">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        {/foreach}
+                                    </tr>
+                                {/foreach}
+                            </tbody>
+                        </table>
+                    {else}
+                        <h3 align="center">Расписание курсов временно недоступно</h3>
+                    {/if}
+                </div>
+                <div class="field">
+                    <input type="submit" name="saveCoursesScheduleButton" value="Сохранить" class="ui primary button">
+                </div>
+            </form>
         </div>
     </div>
 </div>

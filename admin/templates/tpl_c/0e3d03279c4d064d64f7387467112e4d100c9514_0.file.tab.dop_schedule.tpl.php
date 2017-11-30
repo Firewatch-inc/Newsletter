@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-11-30 16:12:09
+/* Smarty version 3.1.29, created on 2017-11-30 19:04:44
   from "C:\OpenServer\domains\Newsletter.mgutu\admin\templates\tpl\tabs\tab.dop_schedule.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5a2003a90776f6_29168573',
+  'unifunc' => 'content_5a202c1c9d65a8_62463674',
   'file_dependency' => 
   array (
     '0e3d03279c4d064d64f7387467112e4d100c9514' => 
     array (
       0 => 'C:\\OpenServer\\domains\\Newsletter.mgutu\\admin\\templates\\tpl\\tabs\\tab.dop_schedule.tpl',
-      1 => 1512047528,
+      1 => 1512057807,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_5a2003a90776f6_29168573 ($_smarty_tpl) {
+function content_5a202c1c9d65a8_62463674 ($_smarty_tpl) {
 ?>
 <div class="ui stackable grid">
     <div class="row">
@@ -34,6 +34,7 @@ function content_5a2003a90776f6_29168573 ($_smarty_tpl) {
                             <tr>
                                 <th>№</th>
                                 <th>Название курса</th>
+                                <th>Адрес</th>
                                 <th>Ответственный</th>
                                 <th>Выбрать</th>
                             </tr>
@@ -57,6 +58,8 @@ $__foreach_course_0_saved_local_item = $_smarty_tpl->tpl_vars['course'];
                                     <td><?php echo $_smarty_tpl->tpl_vars['i']->value;?>
 </td>
                                     <td><?php echo $_smarty_tpl->tpl_vars['course']->value->caption();?>
+</td>
+                                    <td><?php echo $_smarty_tpl->tpl_vars['course']->value->address();?>
 </td>
                                     <td><?php echo $_smarty_tpl->tpl_vars['course']->value->contactor();?>
 </td>
@@ -101,6 +104,97 @@ $_smarty_tpl->tpl_vars['course'] = $__foreach_course_0_saved_item;
                     </div>
                 </form>
             </fieldset>
+        </div>
+    </div>
+    <div class="row">
+        <div class="sixteen wide column">
+            <form name="saveCoursesScheduleForm" method="POST" class="ui form">
+                <div class="field">
+                    <?php if ($_smarty_tpl->tpl_vars['courses_schedule']->value != NULL) {?>
+                        <table class="ui celled table">
+                            <thead>
+                                <tr>
+                                    <th>Курс</th>
+                                    <th>ПН</th>
+                                    <th>ВТ</th>
+                                    <th>СР</th>
+                                    <th>ЧТ</th>
+                                    <th>ПТ</th>
+                                    <th>СБ</th>
+                                    <th>ВС</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+$_from = $_smarty_tpl->tpl_vars['courses_schedule']->value;
+if (!is_array($_from) && !is_object($_from)) {
+settype($_from, 'array');
+}
+$__foreach_course_1_saved_item = isset($_smarty_tpl->tpl_vars['course']) ? $_smarty_tpl->tpl_vars['course'] : false;
+$_smarty_tpl->tpl_vars['course'] = new Smarty_Variable();
+$_smarty_tpl->tpl_vars['course']->_loop = false;
+foreach ($_from as $_smarty_tpl->tpl_vars['course']->value) {
+$_smarty_tpl->tpl_vars['course']->_loop = true;
+$__foreach_course_1_saved_local_item = $_smarty_tpl->tpl_vars['course'];
+?>
+                                    <tr>
+                                        <td>
+                                            <?php echo $_smarty_tpl->tpl_vars['course']->value->course()->caption();?>
+
+                                        </td>
+                                        <?php
+$_from = $_smarty_tpl->tpl_vars['course']->value->days();
+if (!is_array($_from) && !is_object($_from)) {
+settype($_from, 'array');
+}
+$__foreach_day_2_saved_item = isset($_smarty_tpl->tpl_vars['day']) ? $_smarty_tpl->tpl_vars['day'] : false;
+$_smarty_tpl->tpl_vars['day'] = new Smarty_Variable();
+$_smarty_tpl->tpl_vars['day']->_loop = false;
+foreach ($_from as $_smarty_tpl->tpl_vars['day']->value) {
+$_smarty_tpl->tpl_vars['day']->_loop = true;
+$__foreach_day_2_saved_local_item = $_smarty_tpl->tpl_vars['day'];
+?>
+                                            <td>
+                                                <?php $_smarty_tpl->tpl_vars['time'] = new Smarty_Variable(explode("-",$_smarty_tpl->tpl_vars['day']->value), null);
+$_smarty_tpl->ext->_updateScope->updateScope($_smarty_tpl, 'time', 0);?>
+                                                <div class="two fields">
+                                                    <div class="field">            
+                                                        <input type="text" name="start_time_row_<?php echo $_smarty_tpl->tpl_vars['course']->value->course()->id();?>
+[]" value="<?php echo $_smarty_tpl->tpl_vars['time']->value[0];?>
+">
+                                                    </div>
+                                                    <div class="field">
+                                                        <input type="text" name="end_time_row_<?php echo $_smarty_tpl->tpl_vars['course']->value->course()->id();?>
+[]" value="<?php echo $_smarty_tpl->tpl_vars['time']->value[1];?>
+">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        <?php
+$_smarty_tpl->tpl_vars['day'] = $__foreach_day_2_saved_local_item;
+}
+if ($__foreach_day_2_saved_item) {
+$_smarty_tpl->tpl_vars['day'] = $__foreach_day_2_saved_item;
+}
+?>
+                                    </tr>
+                                <?php
+$_smarty_tpl->tpl_vars['course'] = $__foreach_course_1_saved_local_item;
+}
+if ($__foreach_course_1_saved_item) {
+$_smarty_tpl->tpl_vars['course'] = $__foreach_course_1_saved_item;
+}
+?>
+                            </tbody>
+                        </table>
+                    <?php } else { ?>
+                        <h3 align="center">Расписание курсов временно недоступно</h3>
+                    <?php }?>
+                </div>
+                <div class="field">
+                    <input type="submit" name="saveCoursesScheduleButton" value="Сохранить" class="ui primary button">
+                </div>
+            </form>
         </div>
     </div>
 </div><?php }
