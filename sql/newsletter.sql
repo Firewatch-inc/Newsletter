@@ -3,13 +3,11 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Дек 01 2017 г., 10:39
+-- Время создания: Дек 01 2017 г., 10:47
 -- Версия сервера: 5.5.50-log
 -- Версия PHP: 7.0.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -30,7 +28,6 @@ USE `newsletter`;
 -- Структура таблицы `Courses`
 --
 
-DROP TABLE IF EXISTS `Courses`;
 CREATE TABLE IF NOT EXISTS `Courses` (
   `id_course` int(10) unsigned NOT NULL COMMENT 'Идентификатор',
   `caption` varchar(255) NOT NULL COMMENT 'Название',
@@ -38,11 +35,6 @@ CREATE TABLE IF NOT EXISTS `Courses` (
   `contactor` varchar(255) NOT NULL COMMENT 'Ответственный'
 ) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8 COMMENT='Курсы';
 
---
--- Очистить таблицу перед добавлением данных `Courses`
---
-
-TRUNCATE TABLE `Courses`;
 --
 -- Дамп данных таблицы `Courses`
 --
@@ -71,18 +63,12 @@ INSERT INTO `Courses` (`id_course`, `caption`, `address`, `contactor`) VALUES
 -- Структура таблицы `ListOfDays`
 --
 
-DROP TABLE IF EXISTS `ListOfDays`;
 CREATE TABLE IF NOT EXISTS `ListOfDays` (
   `id_day` int(10) unsigned NOT NULL COMMENT 'Идентификатор',
   `caption` varchar(255) NOT NULL COMMENT 'Полное название дня',
   `short_caption` varchar(255) NOT NULL COMMENT 'Сокращённое название дня'
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COMMENT='Дни недели';
 
---
--- Очистить таблицу перед добавлением данных `ListOfDays`
---
-
-TRUNCATE TABLE `ListOfDays`;
 --
 -- Дамп данных таблицы `ListOfDays`
 --
@@ -102,7 +88,6 @@ INSERT INTO `ListOfDays` (`id_day`, `caption`, `short_caption`) VALUES
 -- Структура таблицы `ListOfInstitute`
 --
 
-DROP TABLE IF EXISTS `ListOfInstitute`;
 CREATE TABLE IF NOT EXISTS `ListOfInstitute` (
   `id_institute` int(11) unsigned NOT NULL COMMENT 'Идентификатор',
   `caption` varchar(255) NOT NULL COMMENT 'Название',
@@ -110,11 +95,6 @@ CREATE TABLE IF NOT EXISTS `ListOfInstitute` (
   `address` varchar(255) NOT NULL COMMENT 'Адрес'
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COMMENT='Институты';
 
---
--- Очистить таблицу перед добавлением данных `ListOfInstitute`
---
-
-TRUNCATE TABLE `ListOfInstitute`;
 --
 -- Дамп данных таблицы `ListOfInstitute`
 --
@@ -133,7 +113,6 @@ INSERT INTO `ListOfInstitute` (`id_institute`, `caption`, `short_caption`, `addr
 -- Структура таблицы `ScheduleCourses`
 --
 
-DROP TABLE IF EXISTS `ScheduleCourses`;
 CREATE TABLE IF NOT EXISTS `ScheduleCourses` (
   `id_course_schedule` int(11) unsigned NOT NULL,
   `id_course` int(10) unsigned NOT NULL,
@@ -142,11 +121,6 @@ CREATE TABLE IF NOT EXISTS `ScheduleCourses` (
   `end_time` varchar(255) NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=801 DEFAULT CHARSET=utf8;
 
---
--- Очистить таблицу перед добавлением данных `ScheduleCourses`
---
-
-TRUNCATE TABLE `ScheduleCourses`;
 --
 -- Дамп данных таблицы `ScheduleCourses`
 --
@@ -273,17 +247,11 @@ INSERT INTO `ScheduleCourses` (`id_course_schedule`, `id_course`, `day`, `start_
 -- Структура таблицы `Settings`
 --
 
-DROP TABLE IF EXISTS `Settings`;
 CREATE TABLE IF NOT EXISTS `Settings` (
   `id_settings` int(10) unsigned NOT NULL,
   `update_interval` int(11) NOT NULL COMMENT 'Интервал обновления главной страницы'
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
---
--- Очистить таблицу перед добавлением данных `Settings`
---
-
-TRUNCATE TABLE `Settings`;
 --
 -- Дамп данных таблицы `Settings`
 --
@@ -296,7 +264,6 @@ INSERT INTO `Settings` (`id_settings`, `update_interval`) VALUES
 --
 -- Дублирующая структура для представления `vcoursesschedule`
 --
-DROP VIEW IF EXISTS `vCoursesSchedule`;
 CREATE TABLE IF NOT EXISTS `vcoursesschedule` (
 `id_course` int(10) unsigned
 ,`course_caption` varchar(255)
@@ -311,9 +278,9 @@ CREATE TABLE IF NOT EXISTS `vcoursesschedule` (
 --
 -- Структура для представления `vcoursesschedule`
 --
-DROP TABLE IF EXISTS `vCoursesSchedule`;
+DROP TABLE IF EXISTS `vcoursesschedule`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`%` SQL SECURITY DEFINER VIEW `vCoursesSchedule` AS select `sc`.`id_course` AS `id_course`,`ld`.`caption` AS `course_caption`,`ld`.`short_caption` AS `course_short_caption`,`sc`.`day` AS `day`,`sc`.`start_time` AS `start_time`,`sc`.`end_time` AS `end_time` from ((`schedulecourses` `sc` join `courses` `c` on((`sc`.`id_course` = `c`.`id_course`))) join `listofdays` `ld` on((`sc`.`day` = `ld`.`id_day`)));
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`%` SQL SECURITY DEFINER VIEW `vcoursesschedule` AS select `sc`.`id_course` AS `id_course`,`ld`.`caption` AS `course_caption`,`ld`.`short_caption` AS `course_short_caption`,`sc`.`day` AS `day`,`sc`.`start_time` AS `start_time`,`sc`.`end_time` AS `end_time` from ((`schedulecourses` `sc` join `courses` `c` on((`sc`.`id_course` = `c`.`id_course`))) join `listofdays` `ld` on((`sc`.`day` = `ld`.`id_day`)));
 
 --
 -- Индексы сохранённых таблиц
@@ -396,7 +363,6 @@ ALTER TABLE `Settings`
 ALTER TABLE `ScheduleCourses`
   ADD CONSTRAINT `schedulecourses_ibfk_1` FOREIGN KEY (`day`) REFERENCES `ListOfDays` (`id_day`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `schedulecourses_ibfk_3` FOREIGN KEY (`id_course`) REFERENCES `Courses` (`id_course`) ON DELETE CASCADE ON UPDATE CASCADE;
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
