@@ -91,8 +91,13 @@
                     } else {
                         $update_query = $this->odbc->prepare("UPDATE `ScheduleCourses` SET `start_time`=:s_time, `end_time`=:e_time WHERE `id_course`=:id_course AND `day`=:day" );
 
-                        $update_query->bindValue(":s_time", (string)$start_time);
-                        $update_query->bindValue(":e_time", (string)$end_time);
+                        $update_query->bindValue(":s_time", 
+                             empty($start_time) ? " " : $start_time
+                        );
+                        $update_query->bindValue(":e_time", 
+                             empty($end_time) ? " " : $end_time
+                        );
+                        // $update_query->bindValue(":e_time", (string)$end_time);
                         $update_query->bindValue(":id_course", $schedule->course()->id());
                         $update_query->bindValue(":day", ($number+1));
 

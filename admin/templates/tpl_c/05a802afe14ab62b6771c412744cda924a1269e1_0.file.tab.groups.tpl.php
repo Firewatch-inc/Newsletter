@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-12-01 14:08:41
+/* Smarty version 3.1.29, created on 2017-12-01 14:48:56
   from "C:\OpenServer\domains\Newsletter.mgutu\admin\templates\tpl\tabs\tab.groups.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5a2138393f97a7_65247342',
+  'unifunc' => 'content_5a2141a88b3647_54592820',
   'file_dependency' => 
   array (
     '05a802afe14ab62b6771c412744cda924a1269e1' => 
     array (
       0 => 'C:\\OpenServer\\domains\\Newsletter.mgutu\\admin\\templates\\tpl\\tabs\\tab.groups.tpl',
-      1 => 1512126520,
+      1 => 1512126546,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_5a2138393f97a7_65247342 ($_smarty_tpl) {
+function content_5a2141a88b3647_54592820 ($_smarty_tpl) {
 ?>
 <div class="ui stackable grid">
     <div class="row">

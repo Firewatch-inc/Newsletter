@@ -30,6 +30,10 @@
 		$CT->assign("courses", $CoursesManager->get());
 		$CT->assign("courses_schedule", $CoursesManager->getSchedule());
 		$CT->assign("institutes", $InstitutesManager->get());
+		$CT->assign("subjects", $SubjectsManager->get());
+		$CT->assign("pairs", $PairsManager->get());
+		$CT->assign("days", $DaysManager->getStudyDays());
+		$CT->assign("groups", $GroupsManager->get());
 		$CT->assign("educationCourses", $EducationCoursesManager->get());
 		$CT->Show("index.tpl");
 		

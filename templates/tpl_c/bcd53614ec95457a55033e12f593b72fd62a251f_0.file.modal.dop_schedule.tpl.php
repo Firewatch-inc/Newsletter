@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-12-01 13:01:45
+/* Smarty version 3.1.29, created on 2017-12-01 15:59:19
   from "C:\OpenServer\domains\Newsletter.mgutu\templates\tpl\modals\modal.dop_schedule.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5a212889a392f1_73907484',
+  'unifunc' => 'content_5a2152279feab7_45873408',
   'file_dependency' => 
   array (
     'bcd53614ec95457a55033e12f593b72fd62a251f' => 
     array (
       0 => 'C:\\OpenServer\\domains\\Newsletter.mgutu\\templates\\tpl\\modals\\modal.dop_schedule.tpl',
-      1 => 1512113460,
+      1 => 1512133158,
       2 => 'file',
     ),
   ),
@@ -19,9 +19,9 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_5a212889a392f1_73907484 ($_smarty_tpl) {
+function content_5a2152279feab7_45873408 ($_smarty_tpl) {
 ?>
-<div class="ui modal" id="dop_schedule">
+<div class="ui fullscreen longer modal" id="dop_schedule">
     <div class="header">
         Расписание элективных курсов
     </div>
@@ -111,6 +111,9 @@ $_smarty_tpl->tpl_vars['course'] = $__foreach_course_0_saved_item;
         <?php } else { ?>
             <h3 align="center">Расписание курсов временно недоступно</h3>
         <?php }?>
+    </div>
+    <div class="actions">
+        <div class="ui cancel red button">Закрыть</div>
     </div>
 </div><?php }
 }

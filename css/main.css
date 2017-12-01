@@ -11,15 +11,10 @@ body {
     text-align: center;
 }
 
-.ui.button {
+#main_schedule_button, #change_schedule_button, #dop_schedule_button {
     width: 400px;
     height: 85px;
     font-size: 32px;
-}
-
-#dop_schedule {
-    margin-left: -45%;
-    width: 90%;
 }
 
 .ui.styled.accordion {

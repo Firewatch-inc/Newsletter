@@ -1,4 +1,4 @@
-<div class="ui modal" id="dop_schedule">
+<div class="ui fullscreen longer modal" id="dop_schedule">
     <div class="header">
         Расписание элективных курсов
     </div>
@@ -47,5 +47,8 @@
         {else}
             <h3 align="center">Расписание курсов временно недоступно</h3>
         {/if}
+    </div>
+    <div class="actions">
+        <div class="ui cancel red button">Закрыть</div>
     </div>
 </div>
