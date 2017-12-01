@@ -3,7 +3,7 @@
         Основное расписание
     </div>
     <div class="content">
-        <form class="ui form">
+        <form name="showMainScheduleForm" class="ui form">
             {if $institutes != NULL && $courses != NULL && $groups != NULL}
                 <div class="field">
                     <label>Институт</label>
@@ -34,7 +34,7 @@
                     <div class="three fields">
                         {foreach $educationForms as $educationForm}
                             <div class="field">
-                                <div class="ui toggle checkbox" style="width: 50px; height: 50px;">
+                                <div class="ui toggle checkbox">
                                     <input type="radio" name="educationForm" value="{$educationForm->id()}" required>
                                     <label>{$educationForm->caption()}</label>
                                 </div>
@@ -42,12 +42,12 @@
                         {/foreach}
                     </div>
                 </div>
-                <div class="field" style="text-align: center;">
-                    <input type="submit" name="showSchedule" value="Показать" class="ui primary button">
-                </div>
             {else}
                 <h3 align="center">На данный момент расписание не доступно</h3>
             {/if}
+            <div class="field" style="text-align: center;">
+                <input type="submit" name="showMainScheduleButton" value="Показать" id="showMainSchedule"  class="ui primary button">
+            </div>
         </form>
     </div>
 </div>

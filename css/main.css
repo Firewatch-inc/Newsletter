@@ -11,7 +11,7 @@ body {
     text-align: center;
 }
 
-#main_schedule_button, #change_schedule_button, #dop_schedule_button {
+#main_schedule_button, #change_schedule_button, #dop_schedule_button, #showMainSchedule {
     width: 400px;
     height: 85px;
     font-size: 32px;
