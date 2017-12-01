@@ -27,3 +27,7 @@ body {
     text-align: center;
     line-height: 50px;
 }
+
+.ui.radio.checkbox {
+    font-size: 25px;
+}
