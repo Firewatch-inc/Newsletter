@@ -1,6 +1,7 @@
 <?php
 
     require_once $_SERVER['DOCUMENT_ROOT']."/newsletter/abstract.manager.class.php";
+    require_once $_SERVER['DOCUMENT_ROOT']."/newsletter/data/education_form.class.php";
 
     class EducationFormsManager extends AbstractManager
     {
@@ -20,35 +21,7 @@
 
             $education_forms = array();
             foreach ($db_education_forms as $db_education_form) {
-                $education_form = new class ($db_education_form['caption']) {
-
-                    private $id;
-                    private $caption;
-
-                    public function __construct($caption)
-                    {
-                        $this->caption = $caption;
-                        $this->id = 0;
-                    }
-
-                    public function id()
-                    {
-                        return $this->id;
-                    }
-
-                    public function setId($id)
-                    {
-                        if ($this->id === 0 && $id > 0) {
-                            $this->id = $id;
-                        }
-                    }
-
-                    public function caption()
-                    {
-                        return $this->caption;
-                    }
-
-                };
+                $education_form = new EducationForm($db_education_form['caption']);
                 $education_form->setId((int)$db_education_form['id_education_form']);
                 $education_forms[] = $education_form;
             }

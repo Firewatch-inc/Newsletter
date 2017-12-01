@@ -1,6 +1,7 @@
 <?php
 
     require_once $_SERVER['DOCUMENT_ROOT']."/newsletter/abstract.manager.class.php";
+    require_once $_SERVER['DOCUMENT_ROOT']."/newsletter/data/day.class.php";
 
     class DaysManager extends AbstractManager
     {
@@ -27,42 +28,7 @@
 
             $days = array();
             foreach ($db_days as $db_day) {
-                $day = new class ($db_day['caption'], $db_day['short_caption']) {
-
-                    private $id;
-                    private $caption;
-                    private $short_caption;
-
-                    public function __construct($caption, $short_caption)
-                    {
-                        $this->caption = $caption;
-                        $this->short_caption = $short_caption;
-                        $this->id = 0;
-                    }
-
-                    public function id()
-                    {
-                        return $this->id;
-                    }
-
-                    public function setId($id)
-                    {
-                        if ($this->id === 0 && $id > 0) {
-                            $this->id = $id;
-                        }
-                    }
-
-                    public function caption()
-                    {
-                        return $this->caption;
-                    }
-
-                    public function shortCaption()
-                    {
-                        return $this->short_caption;
-                    }
-
-                };
+                $day = new Day($db_day['caption'], $db_day['short_caption']);
                 $day->setId((int)$db_days['id_day']);
                 $days[] = $day;
             }
