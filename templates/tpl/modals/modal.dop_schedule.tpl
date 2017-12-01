@@ -1,10 +1,10 @@
 <div class="ui modal" id="dop_schedule">
     <div class="header">
-        Расписание элективных курсов по физической культуре
+        Расписание элективных курсов
     </div>
     <div class="content">
         {if $courses != NULL}
-            <table class="ui celled table">
+            <table class="ui striped table">
                 <thead>
                     <tr>
                         <th>№</th>
