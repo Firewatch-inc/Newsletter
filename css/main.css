@@ -1,6 +1,6 @@
 body {
     background-color: #EFF0EA;
-	overflow: hidden;
+	/* overflow: hidden; */
 }
 
 .ui.table tr th {
@@ -16,4 +16,15 @@ body {
 #dop_schedule {
     margin-left: -45%;
     width: 90%;
+}
+
+.ui.styled.accordion {
+    width: 100%;
+}
+
+.ui.styled.accordion > .title {
+    height: 100px; 
+    font-size: 32px;
+    text-align: center;
+    line-height: 50px;
 }
