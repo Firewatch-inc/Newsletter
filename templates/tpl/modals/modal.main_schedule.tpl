@@ -3,7 +3,7 @@
         Основное расписание
     </div>
     <div class="content">
-        <form name="showMainScheduleForm" class="ui form">
+        <form name="showMainScheduleForm" method="POST" class="ui form">
             {if $institutes != NULL && $courses != NULL && $groups != NULL}
                 <div class="field">
                     <label>Институт</label>
