@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-12-01 18:39:58
+/* Smarty version 3.1.29, created on 2017-12-01 18:48:47
   from "C:\OpenServer\domains\Newsletter.mgutu\templates\tpl\main_schedule.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5a2177ce98f694_15143205',
+  'unifunc' => 'content_5a2179df7fc9d2_99352928',
   'file_dependency' => 
   array (
     '239023d9f3327299e65bc1f29a26d62e80520c9e' => 
     array (
       0 => 'C:\\OpenServer\\domains\\Newsletter.mgutu\\templates\\tpl\\main_schedule.tpl',
-      1 => 1512142716,
+      1 => 1512143326,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:html/end.tpl' => 1,
   ),
 ),false)) {
-function content_5a2177ce98f694_15143205 ($_smarty_tpl) {
+function content_5a2179df7fc9d2_99352928 ($_smarty_tpl) {
 $_smarty_tpl->tpl_vars['title'] = new Smarty_Variable("Newsletter | Основное расписание", null);
 $_smarty_tpl->ext->_updateScope->updateScope($_smarty_tpl, 'title', 0);
 $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:html/begin.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
@@ -37,6 +37,7 @@ $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:html/begin.t
             <div class="sixteen wide column">
                 <h1 align="center"><?php echo $_smarty_tpl->tpl_vars['data']->value['institute'];?>
 . Группа <?php echo $_smarty_tpl->tpl_vars['data']->value['group'];?>
+. Форма обучения: <?php echo $_smarty_tpl->tpl_vars['data']->value['education_form'];?>
 </h1>
             </div>
         </div>
@@ -67,6 +68,20 @@ $__foreach_day_0_saved_local_item = $_smarty_tpl->tpl_vars['day'];
                                         <th>Предмет</th>
                                         <th>Аудитория</th>
                                     </tr>
+                                    <tr>
+                                        <th></th>
+                                        <th>
+                                            <table width="100%">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Чётная</th>
+                                                        <th>Нечётная</th>
+                                                    </tr>
+                                                </thead>
+                                            </table>
+                                        </th>
+                                        <th></th>
+                                    </tr>
                                 </thead>
                                 <tbody>
                                     <?php
@@ -86,6 +101,20 @@ $__foreach_pair_1_saved_local_item = $_smarty_tpl->tpl_vars['pair'];
  (<?php echo $_smarty_tpl->tpl_vars['pair']->value->startTime();?>
  - <?php echo $_smarty_tpl->tpl_vars['pair']->value->endTime();?>
 )</td>
+                                            <td>
+                                                <table width="100%">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                Предмет 1
+                                                            </td>
+                                                            <td>
+                                                                Предмет 2
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
                                             <td>
 
                                             </td>

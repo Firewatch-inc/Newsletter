@@ -8,7 +8,7 @@
             </div>
         <div class="row">
             <div class="sixteen wide column">
-                <h1 align="center">{$data['institute']}. Группа {$data['group']}</h1>
+                <h1 align="center">{$data['institute']}. Группа {$data['group']}. Форма обучения: {$data['education_form']}</h1>
             </div>
         </div>
         <div class="row" style="padding: 15px;">
@@ -26,11 +26,39 @@
                                         <th>Предмет</th>
                                         <th>Аудитория</th>
                                     </tr>
+                                    <tr>
+                                        <th></th>
+                                        <th>
+                                            <table width="100%">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Чётная</th>
+                                                        <th>Нечётная</th>
+                                                    </tr>
+                                                </thead>
+                                            </table>
+                                        </th>
+                                        <th></th>
+                                    </tr>
                                 </thead>
                                 <tbody>
                                     {foreach $pairs as $pair}
                                         <tr>
                                             <td>{$pair->number()} ({$pair->startTime()} - {$pair->endTime()})</td>
+                                            <td>
+                                                <table width="100%">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                Предмет 1
+                                                            </td>
+                                                            <td>
+                                                                Предмет 2
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
                                             <td>
 
                                             </td>
