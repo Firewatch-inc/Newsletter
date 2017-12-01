@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-12-01 18:27:32
+/* Smarty version 3.1.29, created on 2017-12-01 19:13:02
   from "C:\OpenServer\domains\Newsletter.mgutu\templates\tpl\modals\modal.main_schedule.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5a2174e478db18_81494173',
+  'unifunc' => 'content_5a217f8ece4116_93013945',
   'file_dependency' => 
   array (
     '4b9d195da8fc5cbe9e09eaf969e8ee1a8ad0641c' => 
     array (
       0 => 'C:\\OpenServer\\domains\\Newsletter.mgutu\\templates\\tpl\\modals\\modal.main_schedule.tpl',
-      1 => 1512141930,
+      1 => 1512144781,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_5a2174e478db18_81494173 ($_smarty_tpl) {
+function content_5a217f8ece4116_93013945 ($_smarty_tpl) {
 ?>
 <div class="ui modal" id="main_schedule">
     <div class="header">
@@ -125,7 +125,7 @@ $_smarty_tpl->tpl_vars['educationForm']->_loop = true;
 $__foreach_educationForm_3_saved_local_item = $_smarty_tpl->tpl_vars['educationForm'];
 ?>
                             <div class="field">
-                                <div class="ui toggle checkbox">
+                                <div class="ui checkbox">
                                     <input type="radio" name="educationForm" value="<?php echo $_smarty_tpl->tpl_vars['educationForm']->value->id();?>
 " required>
                                     <label><?php echo $_smarty_tpl->tpl_vars['educationForm']->value->caption();?>

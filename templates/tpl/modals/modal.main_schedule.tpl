@@ -34,7 +34,7 @@
                     <div class="three fields">
                         {foreach $educationForms as $educationForm}
                             <div class="field">
-                                <div class="ui toggle checkbox">
+                                <div class="ui checkbox">
                                     <input type="radio" name="educationForm" value="{$educationForm->id()}" required>
                                     <label>{$educationForm->caption()}</label>
                                 </div>
