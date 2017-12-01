@@ -8,7 +8,7 @@
         </div>
         <div class="row">
             <div class="sixteen wide column">
-                <h2 align="center">Даты недели: 27.11 - 01.12</h2>
+                <h2 align="center">Даты недели: {$smarty.now|date_format:"%d.%m.%Y"} - 01.12</h2>
             </div>
         </div>
         <div class="row">
@@ -122,47 +122,47 @@
                     </div>
                     <div class="content">
 
-                            <table class="ui fixed table">
-                                    <thead>
-                                        <tr>
-                                            <th>Пара</th>
-                                            <th>Предмет</th>
-                                            <th>Аудитория</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>ПН</td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>ВТ</td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>СР</td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>ЧТ</td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>ПТ</td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>СБ</td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                        <table class="ui fixed table">
+                            <thead>
+                                <tr>
+                                    <th>Пара</th>
+                                    <th>Предмет</th>
+                                    <th>Аудитория</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>ПН</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>ВТ</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>СР</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>ЧТ</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>ПТ</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>СБ</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>

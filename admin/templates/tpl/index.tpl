@@ -6,7 +6,8 @@
             <div class="ui top attached tabular menu">
               <a class="active item" data-tab="schedule">Основное расписание</a>
 			  <a class="item" data-tab="change_schedule">Изменения в расписании</a>
-			  <a class="item" data-tab="dop_schedule">Элективные курсы</a>
+			  <a class="item" data-tab="courses">Элективные курсы</a>
+			  <a class="item" data-tab="groups">Группы</a>
 			  <a class="item" data-tab="settings">Настройки</a>
 			  <div class="right menu">
 				<form name="logoutForm" method="POST">				
@@ -20,8 +21,11 @@
             <div class="ui bottom attached tab segment" data-tab="change_schedule">
 				{include file="tabs/tab.change_schedule.tpl"}
 			</div>
-            <div class="ui bottom attached tab segment" data-tab="dop_schedule">
+            <div class="ui bottom attached tab segment" data-tab="courses">
 				{include file="tabs/tab.dop_schedule.tpl"}
+			</div>
+            <div class="ui bottom attached tab segment" data-tab="groups">
+				{include file="tabs/tab.groups.tpl"}
 			</div>
 			<div class="ui bottom attached tab segment" data-tab="settings">
 				{include file="tabs/tab.settings.tpl"}

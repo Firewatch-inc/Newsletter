@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-11-30 15:43:05
+/* Smarty version 3.1.29, created on 2017-12-01 14:07:31
   from "C:\OpenServer\domains\Newsletter.mgutu\admin\templates\tpl\index.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5a1ffcd9c45a52_60430566',
+  'unifunc' => 'content_5a2137f30405a9_54606890',
   'file_dependency' => 
   array (
     '488aa95ecdb5b358f8627c023af1093f29186ea0' => 
     array (
       0 => 'C:\\OpenServer\\domains\\Newsletter.mgutu\\admin\\templates\\tpl\\index.tpl',
-      1 => 1512045782,
+      1 => 1512126449,
       2 => 'file',
     ),
   ),
@@ -21,11 +21,12 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:tabs/tab.main_schedule.tpl' => 1,
     'file:tabs/tab.change_schedule.tpl' => 1,
     'file:tabs/tab.dop_schedule.tpl' => 1,
+    'file:tabs/tab.groups.tpl' => 1,
     'file:tabs/tab.settings.tpl' => 1,
     'file:html/end.tpl' => 1,
   ),
 ),false)) {
-function content_5a1ffcd9c45a52_60430566 ($_smarty_tpl) {
+function content_5a2137f30405a9_54606890 ($_smarty_tpl) {
 $_smarty_tpl->tpl_vars['title'] = new Smarty_Variable("Newsletter | Панель управления", null);
 $_smarty_tpl->ext->_updateScope->updateScope($_smarty_tpl, 'title', 0);
 $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:html/begin.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
@@ -37,7 +38,8 @@ $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:html/begin.t
             <div class="ui top attached tabular menu">
               <a class="active item" data-tab="schedule">Основное расписание</a>
 			  <a class="item" data-tab="change_schedule">Изменения в расписании</a>
-			  <a class="item" data-tab="dop_schedule">Элективные курсы</a>
+			  <a class="item" data-tab="courses">Элективные курсы</a>
+			  <a class="item" data-tab="groups">Группы</a>
 			  <a class="item" data-tab="settings">Настройки</a>
 			  <div class="right menu">
 				<form name="logoutForm" method="POST">				
@@ -55,8 +57,13 @@ $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:html/begin.t
 ?>
 
 			</div>
-            <div class="ui bottom attached tab segment" data-tab="dop_schedule">
+            <div class="ui bottom attached tab segment" data-tab="courses">
 				<?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:tabs/tab.dop_schedule.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
+			</div>
+            <div class="ui bottom attached tab segment" data-tab="groups">
+				<?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:tabs/tab.groups.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
 			</div>

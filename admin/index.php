@@ -29,14 +29,15 @@
 
 		$CT->assign("courses", $CoursesManager->get());
 		$CT->assign("courses_schedule", $CoursesManager->getSchedule());
+		$CT->assign("institutes", $InstitutesManager->get());
+		$CT->assign("educationCourses", $EducationCoursesManager->get());
 		$CT->Show("index.tpl");
 		
 		if (!empty($_POST['logoutButton'])) {
 			unset($_SESSION['admin']);
 			CTools::Redirect("index.php");
 		}
-	
-		
+
 		try
 		{
 	

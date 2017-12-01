@@ -4,6 +4,8 @@
     require_once $_SERVER['DOCUMENT_ROOT']."/engine/ctools.php";
     require_once $_SERVER['DOCUMENT_ROOT']."/newsletter/managers/schedule.manager.class.php";
     require_once $_SERVER['DOCUMENT_ROOT']."/newsletter/managers/courses.manager.class.php";
+    require_once $_SERVER['DOCUMENT_ROOT']."/newsletter/managers/institutes.manager.class.php";
+    require_once $_SERVER['DOCUMENT_ROOT']."/newsletter/managers/education_courses.manager.class.php";
     require_once $_SERVER['DOCUMENT_ROOT']."/newsletter/managers/settings.manager.class.php";
     require_once $_SERVER['DOCUMENT_ROOT']."/newsletter/data/user.class.php";
 
@@ -26,6 +28,8 @@
 
     $ScheduleManager = new ScheduleManager($DB);
     $CoursesManager = new CoursesManager($DB);
+    $InstitutesManager = new InstitutesManager($DB);
+    $EducationCoursesManager = new EducationCoursesManager($DB);
     $SettingsManager = new SettingsManager($DB);
 
     session_start();

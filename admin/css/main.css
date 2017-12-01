@@ -7,3 +7,7 @@
 .ui.fixed.table tr th {
     text-align: center;
 }
+
+.ui.styled.accordion {
+    width: 100%;
+}
