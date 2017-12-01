@@ -3,6 +3,10 @@ body {
 	/* overflow: hidden; */
 }
 
+#wrapper {
+    padding-top: 25%;
+}
+
 .ui.table tr th {
     text-align: center;
 }

@@ -1,6 +1,6 @@
 {$title = "Newsletter | Главная"}
 {include file="html/begin.tpl"}
-    <div id="wrapper" class="ui two column centered grid" style="margin-top: 25%;"> <!-- FIXME: -->
+    <div id="wrapper" class="ui two column centered grid"> <!-- FIXME: -->
         <div class="four column centered row">
             <div class="column">
                 <a class="ui positive button" id="main_schedule_button">Расписание</a>
