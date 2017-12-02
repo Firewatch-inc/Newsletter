@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-12-02 12:48:14
+/* Smarty version 3.1.29, created on 2017-12-02 18:50:03
   from "E:\OpenServer\domains\Newsletter.mgutm\admin\templates\tpl\tabs\tab.main_schedule.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5a2276de6c4109_98858466',
+  'unifunc' => 'content_5a22cbabb3a236_04288865',
   'file_dependency' => 
   array (
     '2cfe67428798ed0859d27d3d7753027c92f57222' => 
     array (
       0 => 'E:\\OpenServer\\domains\\Newsletter.mgutm\\admin\\templates\\tpl\\tabs\\tab.main_schedule.tpl',
-      1 => 1512208091,
+      1 => 1512229685,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_5a2276de6c4109_98858466 ($_smarty_tpl) {
+function content_5a22cbabb3a236_04288865 ($_smarty_tpl) {
 ?>
 <form name="saveMainScheduleForm" method="POST" class="ui form">
     <datalist id="subjects">
@@ -121,7 +121,7 @@ $_smarty_tpl->tpl_vars['educationForm'] = $__foreach_educationForm_2_saved_item;
             </div>
         </div>
         <div class="row">
-            <div class="sixteen wide column">                
+            <div class="sixteen wide column">
                 <?php
 $_from = $_smarty_tpl->tpl_vars['days']->value;
 if (!is_array($_from) && !is_object($_from)) {
@@ -134,6 +134,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['day']->value) {
 $_smarty_tpl->tpl_vars['day']->_loop = true;
 $__foreach_day_3_saved_local_item = $_smarty_tpl->tpl_vars['day'];
 ?>
+                    <br>
                     <div class="ui styled accordion">
                         <div class="title">
                             <?php echo $_smarty_tpl->tpl_vars['day']->value->caption();?>
@@ -168,12 +169,27 @@ $__foreach_pair_4_saved_local_item = $_smarty_tpl->tpl_vars['pair'];
 )</td>
                                             <td>
                                                 <div class="two fields">
-                                                    <div class="field">
-                                                        <input type="text" list="subjects">
-                                                    </div>
-                                                    <div class="field">
-                                                        <input type="text" list="subjects">
-                                                    </div>
+                                                    <?php if ($_smarty_tpl->tpl_vars['main_schedule']->value[$_smarty_tpl->tpl_vars['day']->value->id()][$_smarty_tpl->tpl_vars['pair']->value->number()] != NULL) {?>
+                                                        <?php $_smarty_tpl->tpl_vars['subj_1'] = new Smarty_Variable($_smarty_tpl->tpl_vars['main_schedule']->value[$_smarty_tpl->tpl_vars['day']->value->id()][$_smarty_tpl->tpl_vars['pair']->value->number()]->first_subject()->caption(), null);
+$_smarty_tpl->ext->_updateScope->updateScope($_smarty_tpl, 'subj_1', 0);?>
+                                                        <?php $_smarty_tpl->tpl_vars['subj_2'] = new Smarty_Variable($_smarty_tpl->tpl_vars['main_schedule']->value[$_smarty_tpl->tpl_vars['day']->value->id()][$_smarty_tpl->tpl_vars['pair']->value->number()]->second_subject()->caption(), null);
+$_smarty_tpl->ext->_updateScope->updateScope($_smarty_tpl, 'subj_2', 0);?>
+                                                        <div class="field">
+                                                            <input type="text" value="<?php echo $_smarty_tpl->tpl_vars['subj_1']->value;?>
+" list="subjects">
+                                                        </div>
+                                                        <div class="field">
+                                                            <input type="text" value="<?php echo $_smarty_tpl->tpl_vars['subj_2']->value;?>
+" list="subjects">
+                                                        </div>
+                                                    <?php } else { ?>
+                                                        <div class="field">
+                                                            <input type="text" value="" list="subjects">
+                                                        </div>
+                                                        <div class="field">
+                                                            <input type="text" value="" list="subjects">
+                                                        </div>
+                                                    <?php }?>
                                                 </div>
                                             </td>
                                             <td>

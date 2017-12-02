@@ -3,6 +3,7 @@
     class Day
     {
         private $id;
+        private $number;
         private $caption;
         private $short_caption;
 
@@ -23,6 +24,16 @@
             if ($this->id === 0 && $id > 0) {
                 $this->id = $id;
             }
+        }
+
+        public function number()
+        {
+            return $this->number;
+        }
+
+        public function setNumber($number)
+        {
+            $this->number = $number;
         }
 
         public function caption()

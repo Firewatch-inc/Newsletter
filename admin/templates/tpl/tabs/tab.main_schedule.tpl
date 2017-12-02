@@ -45,8 +45,9 @@
             </div>
         </div>
         <div class="row">
-            <div class="sixteen wide column">                
+            <div class="sixteen wide column">
                 {foreach $days as $day}
+                    <br>
                     <div class="ui styled accordion">
                         <div class="title">
                             {$day->caption()}
@@ -66,12 +67,23 @@
                                             <td>{$pair->number()} ({$pair->startTime()} - {$pair->endTime()})</td>
                                             <td>
                                                 <div class="two fields">
-                                                    <div class="field">
-                                                        <input type="text" list="subjects">
-                                                    </div>
-                                                    <div class="field">
-                                                        <input type="text" list="subjects">
-                                                    </div>
+                                                    {if $main_schedule[$day->id()][$pair->number()] != NULL}
+                                                        {$subj_1 = $main_schedule[$day->id()][$pair->number()]->first_subject()->caption()}
+                                                        {$subj_2 = $main_schedule[$day->id()][$pair->number()]->second_subject()->caption()}
+                                                        <div class="field">
+                                                            <input type="text" value="{$subj_1}" list="subjects">
+                                                        </div>
+                                                        <div class="field">
+                                                            <input type="text" value="{$subj_2}" list="subjects">
+                                                        </div>
+                                                    {else}
+                                                        <div class="field">
+                                                            <input type="text" value="" list="subjects">
+                                                        </div>
+                                                        <div class="field">
+                                                            <input type="text" value="" list="subjects">
+                                                        </div>
+                                                    {/if}
                                                 </div>
                                             </td>
                                             <td>

@@ -29,7 +29,8 @@
             $days = array();
             foreach ($db_days as $db_day) {
                 $day = new Day($db_day['caption'], $db_day['short_caption']);
-                $day->setId((int)$db_days['id_day']);
+                $day->setId((int)$db_day['id_day']);
+//                $dat->setNumber($db_days['']);
                 $days[] = $day;
             }
 

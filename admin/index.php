@@ -28,6 +28,7 @@
 	) {
 
 		$CT->assign("courses", $CoursesManager->get());
+		$CT->assign("main_schedule", $_SESSION['current_schedule']);
 		$CT->assign("courses_schedule", $CoursesManager->getSchedule());
 		$CT->assign("institutes", $InstitutesManager->get());
 		$CT->assign("subjects", $SubjectsManager->get());
@@ -45,6 +46,12 @@
 
 		try
 		{
+
+			if (!empty($_POST['selectGroupScheduleButton'])) {
+			    $id_group = $_POST['group'];
+                $_SESSION['current_schedule'] = $ScheduleManager->getSchedule($id_group);
+                CTools::Redirect("index.php");
+            }
 	
 			/*!
 				Обработка событий для работы с курсами
