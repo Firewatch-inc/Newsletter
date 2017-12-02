@@ -15,7 +15,7 @@
                 </div>
                 <div class="field">
                     <label>Курс</label>
-                    <select name="educationCourse" required>
+                    <select name="education_course" required>
                         {foreach $educationCourses as $educationCourse}
                             <option value="{$educationCourse->id()}">{$educationCourse->number()}</option>
                         {/foreach}
@@ -24,23 +24,16 @@
                 <div class="field">
                     <label>Группа</label>
                     <select name="group" required>
-                        {foreach $groups as $group}
-                            <option value="{$group->id()}">{$group->caption()}</option>
-                        {/foreach}
+
                     </select>
                 </div>
                 <div class="field">
                     <label>Форма обучения</label>
-                    <div class="three fields">
+                    <select name="education_form" required>
                         {foreach $educationForms as $educationForm}
-                            <div class="field">
-                                <div class="ui checkbox">
-                                    <input type="radio" name="educationForm" value="{$educationForm->id()}" required>
-                                    <label>{$educationForm->caption()}</label>
-                                </div>
-                            </div>
+                            <option value="{$educationForm->id()}">{$educationForm->caption()}</option>
                         {/foreach}
-                    </div>
+                    </select>
                 </div>
             {else}
                 <h3 align="center">На данный момент расписание не доступно</h3>

@@ -34,6 +34,21 @@
             return $groups;
         }
 
+        public function getGroups($institute, $education_course, $education_form)
+        {
+            $db_groups = $this->query("SELECT * FROM `vGroups` WHERE `institute`=:institute AND `education_form`=:education_form AND `education_course`=:education_course",
+                [":institute" => $institute, ":education_form" => $education_form,  ":education_course" => $education_course]);
+
+            $groups = array();
+            foreach ($db_groups as $db_group) {
+                $group = new Group($db_group['group_caption'], $db_group['education_form_caption'], $db_group['education_course'], $db_group['specialty_caption']);
+                $group->setId($db_group['id_group']);
+                $groups[] = $group;
+            }
+
+            return $groups;
+        }
+
         public function remove($group_id)
         {
             $remove_query = $this->odbc->prepare("DELETE FROM `Groups` WHERE `id_group`=:id");

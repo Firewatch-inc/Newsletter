@@ -35,6 +35,7 @@
 		$CT->assign("days", $DaysManager->getStudyDays());
 		$CT->assign("groups", $GroupsManager->get());
 		$CT->assign("educationCourses", $EducationCoursesManager->get());
+		$CT->assign("educationForms", $EducationFormsManager->get());
 		$CT->Show("index.tpl");
 		
 		if (!empty($_POST['logoutButton'])) {
