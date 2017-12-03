@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-12-02 13:25:17
+/* Smarty version 3.1.29, created on 2017-12-03 12:47:13
   from "E:\OpenServer\domains\Newsletter.mgutm\templates\tpl\modals\modal.main_schedule.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5a227f8da04b80_39582544',
+  'unifunc' => 'content_5a23c8212e3681_28685608',
   'file_dependency' => 
   array (
     '2825e1e76ba014b50d6e9469b6b226984282e45f' => 
     array (
       0 => 'E:\\OpenServer\\domains\\Newsletter.mgutm\\templates\\tpl\\modals\\modal.main_schedule.tpl',
-      1 => 1512210315,
+      1 => 1512294432,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_5a227f8da04b80_39582544 ($_smarty_tpl) {
+function content_5a23c8212e3681_28685608 ($_smarty_tpl) {
 ?>
 <div class="ui modal" id="main_schedule">
     <div class="header">
@@ -30,6 +30,7 @@ function content_5a227f8da04b80_39582544 ($_smarty_tpl) {
             <?php if ($_smarty_tpl->tpl_vars['institutes']->value != NULL && $_smarty_tpl->tpl_vars['courses']->value != NULL && $_smarty_tpl->tpl_vars['groups']->value != NULL) {?>
                 <div class="field">
                     <label>Институт</label>
+                    <input type="hidden" name="institute_caption" value="">
                     <select name="institute" required>
                         <?php
 $_from = $_smarty_tpl->tpl_vars['institutes']->value;
@@ -84,9 +85,7 @@ $_smarty_tpl->tpl_vars['educationCourse'] = $__foreach_educationCourse_1_saved_i
                 </div>
                 <div class="field">
                     <label>Группа</label>
-                    <select name="group" required>
-
-                    </select>
+                    <select name="group" required></select>
                 </div>
                 <div class="field">
                     <label>Форма обучения</label>

@@ -12,7 +12,7 @@
 
         $result_str = "";
         foreach ($groups as $group) {
-            $result_str .= "<option value='".$group->id()."'>".$group->caption()."</option>";
+            $result_str .= "<option value='".$group->id()."'>".$group->caption()." | ".$group->specialty()."</option>";
         }
 
         echo $result_str;

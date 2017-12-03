@@ -29,6 +29,12 @@
             return $education_forms;
         }
 
+        public function getEducationFormCaption($education_form_id)
+        {
+            return $this->query("SELECT `caption` FROM `ListOfEducationForm` WHERE `id_education_form`=:id", [":id" => $education_form_id])[0]['caption'];
+        }
+
+
         public function remove($education_course_id)
         {
             $remove_query = $this->odbc->prepare("DELETE FROM `ListOfEducationCourse` WHERE `id_education_course`=:id");

@@ -3,8 +3,8 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Дек 01 2017 г., 18:10
--- Версия сервера: 5.5.50-log
+-- Время создания: Дек 03 2017 г., 13:11
+-- Версия сервера: 5.6.31-log
 -- Версия PHP: 7.0.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -31,9 +31,9 @@ USE `newsletter`;
 CREATE TABLE IF NOT EXISTS `Courses` (
   `id_course` int(10) unsigned NOT NULL COMMENT 'Идентификатор',
   `caption` varchar(255) NOT NULL COMMENT 'Название',
-  `address` varchar(255) NOT NULL,
+  `address` varchar(255) NOT NULL COMMENT 'Адрес проведения',
   `contactor` varchar(255) NOT NULL COMMENT 'Ответственный'
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8 COMMENT='Курсы';
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8 COMMENT='Курсы';
 
 --
 -- Дамп данных таблицы `Courses`
@@ -55,7 +55,8 @@ INSERT INTO `Courses` (`id_course`, `caption`, `address`, `contactor`) VALUES
 (14, 'Шахматы  (юноши, девушки)', 'ул.Земляной Вал, 71', 'Лахтин Артем Юрьевич '),
 (15, 'Скандинавская ходьба, ЛФК', 'ул.Народного Ополчения, 38', 'Колокатова Лариса Федоровна'),
 (16, 'Оздоровительное плавание и СМГ', 'ул.Земляной Вал, 71', 'Инструкторы бассейна'),
-(17, 'ОФП по институтам (элективные курсы)', 'по учебному расписанию', 'Преподаватели физкультуры');
+(17, 'ОФП по институтам (элективные курсы)', 'по учебному расписанию', 'Преподаватели физкультуры'),
+(20, 'ывпывп', 'ывпыв', 'пывп');
 
 -- --------------------------------------------------------
 
@@ -66,17 +67,20 @@ INSERT INTO `Courses` (`id_course`, `caption`, `address`, `contactor`) VALUES
 CREATE TABLE IF NOT EXISTS `Groups` (
   `id_group` int(10) unsigned NOT NULL COMMENT 'Идентификатор',
   `caption` varchar(255) NOT NULL COMMENT 'Название группы',
+  `id_institute` int(10) unsigned NOT NULL COMMENT 'Институт',
   `id_education_form` int(11) unsigned NOT NULL COMMENT 'Форма обучения',
   `id_education_course` int(11) unsigned NOT NULL COMMENT 'Курс обучения',
   `specialty` int(10) unsigned NOT NULL COMMENT 'Специализация'
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='Группы';
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COMMENT='Группы';
 
 --
 -- Дамп данных таблицы `Groups`
 --
 
-INSERT INTO `Groups` (`id_group`, `caption`, `id_education_form`, `id_education_course`, `specialty`) VALUES
-(1, '09.03.01', 1, 1, 1);
+INSERT INTO `Groups` (`id_group`, `caption`, `id_institute`, `id_education_form`, `id_education_course`, `specialty`) VALUES
+(1, '09.03.01', 1, 1, 1, 1),
+(2, '09.03.02', 1, 1, 1, 2),
+(3, '15.03.02', 1, 1, 2, 5);
 
 -- --------------------------------------------------------
 
@@ -89,7 +93,7 @@ CREATE TABLE IF NOT EXISTS `ListOfDays` (
   `number` int(10) unsigned NOT NULL,
   `caption` varchar(255) NOT NULL COMMENT 'Полное название дня',
   `short_caption` varchar(255) NOT NULL COMMENT 'Сокращённое название дня'
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COMMENT='Дни недели';
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COMMENT='Дни недели';
 
 --
 -- Дамп данных таблицы `ListOfDays`
@@ -2005,7 +2009,7 @@ CREATE TABLE IF NOT EXISTS `ScheduleCourses` (
   `day` int(10) unsigned NOT NULL,
   `start_time` varchar(255) NOT NULL,
   `end_time` varchar(255) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=831 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=840 DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `ScheduleCourses`
@@ -2136,7 +2140,16 @@ INSERT INTO `ScheduleCourses` (`id_course_schedule`, `id_course`, `day`, `start_
 (827, 2, 2, ' ', ' '),
 (828, 2, 3, ' ', ' '),
 (829, 2, 4, ' ', ' '),
-(830, 2, 4, ' ', ' ');
+(830, 2, 4, ' ', ' '),
+(831, 13, 2, ' ', ' '),
+(832, 13, 3, ' ', ' '),
+(833, 20, 1, '', ''),
+(834, 20, 2, '16:00', '18:00'),
+(835, 20, 3, '', ''),
+(836, 20, 4, '16:00', '18:00'),
+(837, 20, 5, '', ''),
+(838, 20, 6, '', ''),
+(839, 20, 7, '', '');
 
 -- --------------------------------------------------------
 
@@ -2148,10 +2161,19 @@ CREATE TABLE IF NOT EXISTS `ScheduleMain` (
   `id_schedule_main` int(10) unsigned NOT NULL COMMENT 'Идентификатор',
   `id_group` int(10) unsigned NOT NULL COMMENT 'Группа',
   `day` int(10) unsigned NOT NULL COMMENT 'День',
+  `id_pair` int(10) unsigned NOT NULL,
   `id_subject_1` int(10) unsigned NOT NULL COMMENT 'Предмет на чётной неделе',
   `id_subject_2` int(10) unsigned NOT NULL COMMENT 'Предмет на нечётной неделе',
   `lecture_hall` varchar(255) NOT NULL COMMENT 'Аудитория и адрес'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Основное расписание';
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COMMENT='Основное расписание';
+
+--
+-- Дамп данных таблицы `ScheduleMain`
+--
+
+INSERT INTO `ScheduleMain` (`id_schedule_main`, `id_group`, `day`, `id_pair`, `id_subject_1`, `id_subject_2`, `lecture_hall`) VALUES
+(1, 1, 1, 1, 1, 2, ''),
+(2, 1, 1, 2, 1, 1, '');
 
 -- --------------------------------------------------------
 
@@ -2192,10 +2214,28 @@ CREATE TABLE IF NOT EXISTS `vcoursesschedule` (
 --
 CREATE TABLE IF NOT EXISTS `vgroups` (
 `id_group` int(10) unsigned
+,`institute` int(10) unsigned
 ,`group_caption` varchar(255)
 ,`education_form_caption` varchar(255)
+,`education_form` int(11) unsigned
 ,`education_course` int(10) unsigned
 ,`specialty_caption` varchar(255)
+);
+
+-- --------------------------------------------------------
+
+--
+-- Дублирующая структура для представления `vmainschedule`
+--
+CREATE TABLE IF NOT EXISTS `vmainschedule` (
+`id_group` int(10) unsigned
+,`day` int(10) unsigned
+,`pair` int(10) unsigned
+,`pair_start` varchar(255)
+,`pair_end` varchar(255)
+,`subject_1` varchar(255)
+,`subject_2` varchar(255)
+,`lecture_hall` varchar(255)
 );
 
 -- --------------------------------------------------------
@@ -2214,7 +2254,16 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`%` SQL SECURITY DEFINER VIEW `vcourse
 --
 DROP TABLE IF EXISTS `vgroups`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`%` SQL SECURITY DEFINER VIEW `vgroups` AS select `g`.`id_group` AS `id_group`,`g`.`caption` AS `group_caption`,`lef`.`caption` AS `education_form_caption`,`lec`.`number` AS `education_course`,`ls`.`caption` AS `specialty_caption` from (((`groups` `g` join `listofeducationform` `lef` on((`g`.`id_education_form` = `lef`.`id_education_form`))) join `listofeducationcourse` `lec` on((`g`.`id_education_course` = `lec`.`id_education_course`))) join `listofspecialty` `ls` on((`g`.`specialty` = `ls`.`id_specialty`)));
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`%` SQL SECURITY DEFINER VIEW `vgroups` AS select `g`.`id_group` AS `id_group`,`g`.`id_institute` AS `institute`,`g`.`caption` AS `group_caption`,`lef`.`caption` AS `education_form_caption`,`g`.`id_education_form` AS `education_form`,`lec`.`number` AS `education_course`,`ls`.`caption` AS `specialty_caption` from (((`groups` `g` join `listofeducationform` `lef` on((`g`.`id_education_form` = `lef`.`id_education_form`))) join `listofeducationcourse` `lec` on((`g`.`id_education_course` = `lec`.`id_education_course`))) join `listofspecialty` `ls` on((`g`.`specialty` = `ls`.`id_specialty`)));
+
+-- --------------------------------------------------------
+
+--
+-- Структура для представления `vmainschedule`
+--
+DROP TABLE IF EXISTS `vmainschedule`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`%` SQL SECURITY DEFINER VIEW `vmainschedule` AS select `g`.`id_group` AS `id_group`,`sm`.`day` AS `day`,`lp`.`number` AS `pair`,`lp`.`start_time` AS `pair_start`,`lp`.`end_time` AS `pair_end`,`ls_1`.`caption` AS `subject_1`,`ls_2`.`caption` AS `subject_2`,`sm`.`lecture_hall` AS `lecture_hall` from ((((`schedulemain` `sm` join `groups` `g` on((`sm`.`id_group` = `g`.`id_group`))) join `listofpair` `lp` on((`sm`.`id_pair` = `lp`.`id_pair`))) join `listofsubject` `ls_1` on((`sm`.`id_subject_1` = `ls_1`.`id_subject`))) join `listofsubject` `ls_2` on((`sm`.`id_subject_2` = `ls_2`.`id_subject`))) order by `sm`.`id_pair`;
 
 --
 -- Индексы сохранённых таблиц
@@ -2235,7 +2284,8 @@ ALTER TABLE `Groups`
   ADD KEY `id_group` (`id_group`),
   ADD KEY `id_education_form` (`id_education_form`),
   ADD KEY `id_education_course` (`id_education_course`),
-  ADD KEY `id_specialty` (`specialty`);
+  ADD KEY `id_specialty` (`specialty`),
+  ADD KEY `id_institute` (`id_institute`);
 
 --
 -- Индексы таблицы `ListOfDays`
@@ -2301,7 +2351,12 @@ ALTER TABLE `ScheduleCourses`
 -- Индексы таблицы `ScheduleMain`
 --
 ALTER TABLE `ScheduleMain`
-  ADD PRIMARY KEY (`id_schedule_main`);
+  ADD PRIMARY KEY (`id_schedule_main`),
+  ADD KEY `id_group` (`id_group`,`day`,`id_subject_1`,`id_subject_2`),
+  ADD KEY `day` (`day`),
+  ADD KEY `id_pair` (`id_pair`),
+  ADD KEY `id_subject_1` (`id_subject_1`),
+  ADD KEY `id_subject_2` (`id_subject_2`);
 
 --
 -- Индексы таблицы `Settings`
@@ -2317,17 +2372,17 @@ ALTER TABLE `Settings`
 -- AUTO_INCREMENT для таблицы `Courses`
 --
 ALTER TABLE `Courses`
-  MODIFY `id_course` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Идентификатор',AUTO_INCREMENT=20;
+  MODIFY `id_course` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Идентификатор',AUTO_INCREMENT=21;
 --
 -- AUTO_INCREMENT для таблицы `Groups`
 --
 ALTER TABLE `Groups`
-  MODIFY `id_group` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Идентификатор',AUTO_INCREMENT=2;
+  MODIFY `id_group` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Идентификатор',AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT для таблицы `ListOfDays`
 --
 ALTER TABLE `ListOfDays`
-  MODIFY `id_day` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Идентификатор',AUTO_INCREMENT=9;
+  MODIFY `id_day` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Идентификатор',AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT для таблицы `ListOfEducationCourse`
 --
@@ -2362,12 +2417,12 @@ ALTER TABLE `ListOfSubject`
 -- AUTO_INCREMENT для таблицы `ScheduleCourses`
 --
 ALTER TABLE `ScheduleCourses`
-  MODIFY `id_course_schedule` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=831;
+  MODIFY `id_course_schedule` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=840;
 --
 -- AUTO_INCREMENT для таблицы `ScheduleMain`
 --
 ALTER TABLE `ScheduleMain`
-  MODIFY `id_schedule_main` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Идентификатор';
+  MODIFY `id_schedule_main` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Идентификатор',AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT для таблицы `Settings`
 --
@@ -2381,9 +2436,10 @@ ALTER TABLE `Settings`
 -- Ограничения внешнего ключа таблицы `Groups`
 --
 ALTER TABLE `Groups`
-  ADD CONSTRAINT `groups_ibfk_3` FOREIGN KEY (`specialty`) REFERENCES `ListOfSpecialty` (`id_specialty`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `groups_ibfk_1` FOREIGN KEY (`id_education_form`) REFERENCES `ListOfEducationForm` (`id_education_form`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `groups_ibfk_2` FOREIGN KEY (`id_education_course`) REFERENCES `ListOfEducationCourse` (`id_education_course`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `groups_ibfk_2` FOREIGN KEY (`id_education_course`) REFERENCES `ListOfEducationCourse` (`id_education_course`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `groups_ibfk_3` FOREIGN KEY (`specialty`) REFERENCES `ListOfSpecialty` (`id_specialty`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `groups_ibfk_4` FOREIGN KEY (`id_institute`) REFERENCES `ListOfInstitute` (`id_institute`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Ограничения внешнего ключа таблицы `ScheduleCourses`
@@ -2391,6 +2447,16 @@ ALTER TABLE `Groups`
 ALTER TABLE `ScheduleCourses`
   ADD CONSTRAINT `schedulecourses_ibfk_1` FOREIGN KEY (`day`) REFERENCES `ListOfDays` (`id_day`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `schedulecourses_ibfk_3` FOREIGN KEY (`id_course`) REFERENCES `Courses` (`id_course`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Ограничения внешнего ключа таблицы `ScheduleMain`
+--
+ALTER TABLE `ScheduleMain`
+  ADD CONSTRAINT `schedulemain_ibfk_1` FOREIGN KEY (`day`) REFERENCES `ListOfDays` (`id_day`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `schedulemain_ibfk_2` FOREIGN KEY (`id_group`) REFERENCES `Groups` (`id_group`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `schedulemain_ibfk_3` FOREIGN KEY (`id_pair`) REFERENCES `ListOfPair` (`id_pair`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `schedulemain_ibfk_4` FOREIGN KEY (`id_subject_1`) REFERENCES `ListOfSubject` (`id_subject`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `schedulemain_ibfk_5` FOREIGN KEY (`id_subject_2`) REFERENCES `ListOfSubject` (`id_subject`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

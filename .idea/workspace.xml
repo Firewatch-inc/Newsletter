@@ -3,17 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="4d9e31e9-b682-4f25-a551-3bc130e20dda" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/index.php" afterPath="$PROJECT_DIR$/admin/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/templates/tpl/tabs/tab.main_schedule.tpl" afterPath="$PROJECT_DIR$/admin/templates/tpl/tabs/tab.main_schedule.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/templates/tpl_c/2cfe67428798ed0859d27d3d7753027c92f57222_0.file.tab.main_schedule.tpl.php" afterPath="$PROJECT_DIR$/admin/templates/tpl_c/2cfe67428798ed0859d27d3d7753027c92f57222_0.file.tab.main_schedule.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/php/get_groups.php" afterPath="$PROJECT_DIR$/admin/php/get_groups.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/main.css" afterPath="$PROJECT_DIR$/css/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/diagrams/Схема базы данных.xml" afterPath="$PROJECT_DIR$/docs/diagrams/Схема базы данных.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_schedule.php" afterPath="$PROJECT_DIR$/main_schedule.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/newsletter/data/day.class.php" afterPath="$PROJECT_DIR$/newsletter/data/day.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/newsletter/data/main_schedule.class.php" afterPath="$PROJECT_DIR$/newsletter/data/main_schedule.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/newsletter/managers/days.manager.class.php" afterPath="$PROJECT_DIR$/newsletter/managers/days.manager.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/newsletter/managers/schedule.manager.class.php" afterPath="$PROJECT_DIR$/newsletter/managers/schedule.manager.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sql/views.sql" afterPath="$PROJECT_DIR$/sql/views.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/newsletter/managers/education_forms.manager.class.php" afterPath="$PROJECT_DIR$/newsletter/managers/education_forms.manager.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/newsletter/managers/groups.manager.class.php" afterPath="$PROJECT_DIR$/newsletter/managers/groups.manager.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/newsletter/managers/institutes.manager.class.php" afterPath="$PROJECT_DIR$/newsletter/managers/institutes.manager.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/tpl/index.tpl" afterPath="$PROJECT_DIR$/templates/tpl/index.tpl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/tpl/main_schedule.tpl" afterPath="$PROJECT_DIR$/templates/tpl/main_schedule.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/tpl/modals/modal.main_schedule.tpl" afterPath="$PROJECT_DIR$/templates/tpl/modals/modal.main_schedule.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/tpl_c/105d8f3ffb46286c0007770ad29c8f9e2d40c617_0.file.index.tpl.php" afterPath="$PROJECT_DIR$/templates/tpl_c/105d8f3ffb46286c0007770ad29c8f9e2d40c617_0.file.index.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/tpl_c/2825e1e76ba014b50d6e9469b6b226984282e45f_0.file.modal.main_schedule.tpl.php" afterPath="$PROJECT_DIR$/templates/tpl_c/2825e1e76ba014b50d6e9469b6b226984282e45f_0.file.modal.main_schedule.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/tpl_c/bd1434573de9c3ff49208a57c56711805184360e_0.file.main_schedule.tpl.php" afterPath="$PROJECT_DIR$/templates/tpl_c/bd1434573de9c3ff49208a57c56711805184360e_0.file.main_schedule.tpl.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,22 +36,12 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="views.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sql/views.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="14" column="36" lean-forward="false" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="schedule.manager.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/newsletter/managers/schedule.manager.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="31" column="70" lean-forward="true" selection-start-line="31" selection-start-column="70" selection-end-line="31" selection-end-column="70" />
+            <state relative-caret-position="431">
+              <caret line="31" column="70" lean-forward="false" selection-start-line="31" selection-start-column="70" selection-end-line="31" selection-end-column="70" />
               <folding>
                 <marker date="1512229610444" expanded="true" signature="643:699" ph="SELECT * FRO... vMainSchedule" />
               </folding>
@@ -57,21 +49,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/index.php">
+      <file leaf-file-name="main_schedule.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main_schedule.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="30" column="34" lean-forward="false" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tab.main_schedule.tpl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/templates/tpl/tabs/tab.main_schedule.tpl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="74" column="62" lean-forward="true" selection-start-line="74" selection-start-column="62" selection-end-line="74" selection-end-column="62" />
+            <state relative-caret-position="32">
+              <caret line="2" column="29" lean-forward="true" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -80,19 +62,39 @@
       <file leaf-file-name="main_schedule.tpl" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/tpl/main_schedule.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="560">
-              <caret line="46" column="66" lean-forward="true" selection-start-line="46" selection-start-column="66" selection-end-line="46" selection-end-column="66" />
-              <folding />
+            <state relative-caret-position="272">
+              <caret line="17" column="45" lean-forward="true" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
+              <folding>
+                <element signature="e#253#290#0#HTML" expanded="true" />
+                <element signature="e#1692#1719#0#HTML" expanded="true" />
+                <element signature="e#4749#4786#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main_schedule.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main_schedule.php">
+      <file leaf-file-name="education_forms.manager.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/newsletter/managers/education_forms.manager.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="7" column="87" lean-forward="false" selection-start-line="7" selection-start-column="87" selection-end-line="7" selection-end-column="87" />
-              <folding />
+            <state relative-caret-position="576">
+              <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+              <folding>
+                <marker date="1512295687138" expanded="true" signature="497:532" ph="SELECT * FRO... ListOfEducationForm" />
+                <marker date="1512295687138" expanded="true" signature="1041:1114" ph="SELECT `capt... ListOfEducationForm" />
+                <marker date="1512295687138" expanded="true" signature="1288:1355" ph="DELETE FROM " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.tpl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/tpl/index.tpl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="143">
+              <caret line="58" column="28" lean-forward="true" selection-start-line="58" selection-start-column="28" selection-end-line="58" selection-end-column="28" />
+              <folding>
+                <element signature="e#1101#1139#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -100,11 +102,9 @@
       <file leaf-file-name="modal.main_schedule.tpl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/tpl/modals/modal.main_schedule.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="9" column="54" lean-forward="true" selection-start-line="9" selection-start-column="54" selection-end-line="9" selection-end-column="54" />
-              <folding>
-                <element signature="n#style#0;n#div#4;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="144">
+              <caret line="9" column="64" lean-forward="false" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="64" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -118,10 +118,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/sql/select.sql" />
-        <option value="$PROJECT_DIR$/admin/php/get_groups.php" />
-        <option value="$PROJECT_DIR$/newsletter/managers/groups.manager.class.php" />
-        <option value="$PROJECT_DIR$/templates/tpl/index.tpl" />
-        <option value="$PROJECT_DIR$/templates/tpl/modals/modal.main_schedule.tpl" />
         <option value="$PROJECT_DIR$/sql/views.sql" />
         <option value="$PROJECT_DIR$/admin/start.php" />
         <option value="$PROJECT_DIR$/admin/index.php" />
@@ -131,6 +127,14 @@
         <option value="$PROJECT_DIR$/newsletter/managers/schedule.manager.class.php" />
         <option value="$PROJECT_DIR$/admin/templates/tpl/tabs/tab.main_schedule.tpl" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/css/main.css" />
+        <option value="$PROJECT_DIR$/admin/php/get_groups.php" />
+        <option value="$PROJECT_DIR$/js/getDay.js" />
+        <option value="$PROJECT_DIR$/templates/tpl/modals/modal.main_schedule.tpl" />
+        <option value="$PROJECT_DIR$/templates/tpl/index.tpl" />
+        <option value="$PROJECT_DIR$/newsletter/managers/institutes.manager.class.php" />
+        <option value="$PROJECT_DIR$/newsletter/managers/groups.manager.class.php" />
+        <option value="$PROJECT_DIR$/newsletter/managers/education_forms.manager.class.php" />
         <option value="$PROJECT_DIR$/main_schedule.php" />
         <option value="$PROJECT_DIR$/templates/tpl/main_schedule.tpl" />
       </list>
@@ -167,6 +171,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -182,34 +188,7 @@
             <path>
               <item name="Newsletter.mgutm" type="b2602c69:ProjectViewProjectNode" />
               <item name="Newsletter.mgutm" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Newsletter.mgutm" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Newsletter.mgutm" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="tpl" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Newsletter.mgutm" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Newsletter.mgutm" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="tpl" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="tabs" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Newsletter.mgutm" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Newsletter.mgutm" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="newsletter" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Newsletter.mgutm" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Newsletter.mgutm" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="newsletter" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="data" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="Newsletter.mgutm" type="b2602c69:ProjectViewProjectNode" />
@@ -244,13 +223,12 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -274,33 +252,34 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1512200883910</updated>
-      <workItem from="1512200885762" duration="12432000" />
+      <workItem from="1512200885762" duration="13040000" />
+      <workItem from="1512291174587" duration="4604000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12432000" />
+    <option name="totallyTimeSpent" value="17644000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1614" height="884" extended-state="6" />
+    <frame x="-8" y="-8" width="1616" height="886" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -315,6 +294,68 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/sql/views.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="14" column="36" lean-forward="false" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/newsletter/managers/schedule.manager.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="496">
+          <caret line="31" column="70" lean-forward="true" selection-start-line="31" selection-start-column="70" selection-end-line="31" selection-end-column="70" />
+          <folding>
+            <marker date="1512229610444" expanded="true" signature="643:699" ph="SELECT * FRO... vMainSchedule" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="30" column="34" lean-forward="false" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/templates/tpl/tabs/tab.main_schedule.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1184">
+          <caret line="74" column="62" lean-forward="true" selection-start-line="74" selection-start-column="62" selection-end-line="74" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main_schedule.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="7" column="87" lean-forward="false" selection-start-line="7" selection-start-column="87" selection-end-line="7" selection-end-column="87" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/tpl/modals/modal.main_schedule.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="9" column="54" lean-forward="true" selection-start-line="9" selection-start-column="54" selection-end-line="9" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/tpl/main_schedule.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="736">
+          <caret line="46" column="66" lean-forward="true" selection-start-line="46" selection-start-column="66" selection-end-line="46" selection-end-column="66" />
+          <folding>
+            <element signature="e#253#290#0#HTML" expanded="true" />
+            <element signature="e#1692#1719#0#HTML" expanded="true" />
+            <element signature="e#4749#4786#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/newsletter/data/course_schedule.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
@@ -323,43 +364,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/tpl/index.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="524">
-          <caret line="38" column="29" lean-forward="true" selection-start-line="38" selection-start-column="29" selection-end-line="38" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/php/get_groups.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="17" column="25" lean-forward="true" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/newsletter/managers/groups.manager.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="31" column="13" lean-forward="true" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
-          <folding>
-            <marker date="1512207380472" expanded="true" signature="408:521" ph="INSERT INTO `ListOfInstitute`... " />
-            <marker date="1512207380472" expanded="true" signature="868:916" ph="SELECT * FRO... vGroups" />
-            <marker date="1512207380472" expanded="true" signature="1444:1518" ph="SELECT * FRO... vGroups" />
-            <marker date="1512207380472" expanded="true" signature="1444:1520" ph="SELECT * FRO... vGroups" />
-            <marker date="1512207380472" expanded="true" signature="1444:1574" ph="SELECT * FRO... vGroups" />
-            <marker date="1512207380472" expanded="true" signature="1444:1703" ph="SELECT * FRO... vGroups" />
-            <marker date="1512207380472" expanded="true" signature="2195:2236" ph="DELETE FROM " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sql/select.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="64">
           <caret line="4" column="11" lean-forward="false" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -373,8 +381,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/templates/tpl/tabs/tab.main_schedule.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="74" column="62" lean-forward="true" selection-start-line="74" selection-start-column="62" selection-end-line="74" selection-end-column="62" />
+        <state relative-caret-position="1184">
+          <caret line="74" column="62" lean-forward="false" selection-start-line="74" selection-start-column="62" selection-end-line="74" selection-end-column="62" />
           <folding />
         </state>
       </provider>
@@ -391,24 +399,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
           <caret line="14" column="36" lean-forward="false" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/newsletter/managers/schedule.manager.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="31" column="70" lean-forward="true" selection-start-line="31" selection-start-column="70" selection-end-line="31" selection-end-column="70" />
-          <folding>
-            <marker date="1512229610444" expanded="true" signature="643:699" ph="SELECT * FRO... vMainSchedule" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="30" column="34" lean-forward="false" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="34" />
           <folding />
         </state>
       </provider>
@@ -431,48 +421,158 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/tpl/modals/modal.main_schedule.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="9" column="54" lean-forward="true" selection-start-line="9" selection-start-column="54" selection-end-line="9" selection-end-column="54" />
-          <folding>
-            <element signature="n#style#0;n#div#4;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="48">
             <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/admin/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="24" column="42" lean-forward="false" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../EDUKIT/templates/tpl/schedule.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="24" column="27" lean-forward="true" selection-start-line="24" selection-start-column="27" selection-end-line="63" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="5" column="10" lean-forward="true" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/newsletter/data/group.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/getDay.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/php/get_groups.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/tpl/modals/modal.main_schedule.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="9" column="64" lean-forward="false" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/newsletter/managers/schedule.manager.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="431">
+          <caret line="31" column="70" lean-forward="false" selection-start-line="31" selection-start-column="70" selection-end-line="31" selection-end-column="70" />
+          <folding>
+            <marker date="1512229610444" expanded="true" signature="643:699" ph="SELECT * FRO... vMainSchedule" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/newsletter/managers/institutes.manager.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding>
+            <marker date="1512294953804" expanded="true" signature="416:529" ph="INSERT INTO `ListOfInstitute`... " />
+            <marker date="1512294953804" expanded="true" signature="880:930" ph="SELECT * FRO... ListOfInstitute" />
+            <marker date="1512294953804" expanded="true" signature="1429:1493" ph="SELECT `capt... ListOfInstitute" />
+            <marker date="1512294953804" expanded="true" signature="1654:1708" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/newsletter/managers/groups.manager.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="430">
+          <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+          <folding>
+            <marker date="1512295213212" expanded="true" signature="408:521" ph="INSERT INTO `ListOfInstitute`... " />
+            <marker date="1512295213212" expanded="true" signature="868:916" ph="SELECT * FRO... vGroups" />
+            <marker date="1512295213212" expanded="true" signature="1444:1518" ph="SELECT * FRO... vGroups" />
+            <marker date="1512295213212" expanded="true" signature="1444:1520" ph="SELECT * FRO... vGroups" />
+            <marker date="1512295213212" expanded="true" signature="1444:1574" ph="SELECT * FRO... vGroups" />
+            <marker date="1512295213212" expanded="true" signature="2187:2292" ph="SELECT `capt... ListOfInstitute" />
+            <marker date="1512295213212" expanded="true" signature="2445:2486" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/tpl/index.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="58" column="28" lean-forward="true" selection-start-line="58" selection-start-column="28" selection-end-line="58" selection-end-column="28" />
+          <folding>
+            <element signature="e#1101#1139#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/newsletter/managers/education_forms.manager.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding>
+            <marker date="1512295687138" expanded="true" signature="497:532" ph="SELECT * FRO... ListOfEducationForm" />
+            <marker date="1512295687138" expanded="true" signature="1041:1114" ph="SELECT `capt... ListOfEducationForm" />
+            <marker date="1512295687138" expanded="true" signature="1288:1355" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/start.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="30" column="42" lean-forward="false" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="42" />
+        <state relative-caret-position="576">
+          <caret line="36" column="54" lean-forward="false" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="54" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main_schedule.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="7" column="87" lean-forward="false" selection-start-line="7" selection-start-column="87" selection-end-line="7" selection-end-column="87" />
+        <state relative-caret-position="32">
+          <caret line="2" column="29" lean-forward="true" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/tpl/main_schedule.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="46" column="66" lean-forward="true" selection-start-line="46" selection-start-column="66" selection-end-line="46" selection-end-column="66" />
-          <folding />
+        <state relative-caret-position="272">
+          <caret line="17" column="45" lean-forward="true" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
+          <folding>
+            <element signature="e#253#290#0#HTML" expanded="true" />
+            <element signature="e#1692#1719#0#HTML" expanded="true" />
+            <element signature="e#4749#4786#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

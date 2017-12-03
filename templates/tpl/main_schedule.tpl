@@ -1,29 +1,50 @@
 {$title = "Newsletter | Основное расписание"}
 {include file="html/begin.tpl"}
     <div class="ui grid">
-            <div class="row">
-                <div class="sixteen wide column">
-                    <a class="ui primary button" href="index.php">Назад</a>
-                </div>
-            </div>
         <div class="row">
             <div class="sixteen wide column">
-                <h1 align="center">{$data['institute']}. Группа {$data['group']}. Форма обучения: {$data['education_form']}</h1>
+                <!-- FIXME: -->
+                <a class="ui primary button" style="width: 100%; font-size: 25px;" href="index.php">Назад</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="sixteen wide column">
+                <h1 align="center">{$institute}</h1>
+                <h2 align="center">Группа: <u>{$group}</u></h2>
+                <h3 align="center">Форма обучения: <b>{$education_form}</b></h3>
             </div>
         </div>
         <div class="row">
             <div class="sixteen wide column">
                 {foreach $days as $day}
                     <div class="ui styled accordion">
-                        <div class="title">
+                        <div class="active title">
                             {$day->caption()}
                         </div>
-                        <div class="content">
+                        <div class="active content">
                             <table class="ui fixed table">
                                 <thead>
                                 <tr>
                                     <th>Пара</th>
-                                    <th>Предмет</th>
+                                    <th>
+                                        <table class="ui table">
+                                            <thead>
+                                                <tr>
+                                                    <th colspan="2">Предмет</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr style="text-align: center;">
+                                                    <td>
+                                                        Чётная
+                                                    </td>
+                                                    <td>
+                                                        Нечётная
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </th>
                                     <th>Аудитория</th>
                                 </tr>
                                 </thead>
@@ -62,6 +83,12 @@
                         </div>
                     </div>
                 {/foreach}
+            </div>
+        </div>
+        <div class="row">
+            <div class="sixteen wide column">
+                <!-- FIXME: -->
+                <a class="ui primary button" style="width: 100%; font-size: 25px;" href="index.php">Назад</a>
             </div>
         </div>
     </div>

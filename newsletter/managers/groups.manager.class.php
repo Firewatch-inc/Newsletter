@@ -49,6 +49,11 @@
             return $groups;
         }
 
+        public function getGroupCaption($group_id)
+        {
+            return $this->query("SELECT CONCAT(`group_caption`, ' | ', `specialty_caption`) as caption FROM `vGroups` WHERE `id_group`=:id", [":id" => $group_id])[0]['caption'];
+        }
+
         public function remove($group_id)
         {
             $remove_query = $this->odbc->prepare("DELETE FROM `Groups` WHERE `id_group`=:id");

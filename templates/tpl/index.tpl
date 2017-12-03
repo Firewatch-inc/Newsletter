@@ -1,6 +1,11 @@
 {$title = "Newsletter | Главная"}
 {include file="html/begin.tpl"}
     <div id="wrapper" class="ui two column centered grid"> <!-- FIXME: -->
+        <div class="one column centered row" id="background">
+            <div class="column">
+                <h1><i class="book icon"></i>Система Электронного Расписания</h1>
+            </div>
+        </div>
         <div class="four column centered row">
             <div class="column">
                 <a class="ui positive button" id="main_schedule_button">Расписание</a>
@@ -10,6 +15,15 @@
             </div>
             <div class="column">
                 <a class="ui primary button" id="dop_schedule_button">Элективные курсы</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="ui vertical footer segment">
+                <div class="ui center aligned container">
+                    <div class="ui horizontal inverted small divided link list">
+                        <a class="item" href="#" style="font-size: 32px; color: black;">Сегодня {$smarty.now|date_format:"%d.%m.%Y"}</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -65,6 +79,7 @@
 
         $("[name='institute'], [name='education_course'], [name='education_form']").on("change", function() {
             getGroups($("[name='institute']").val(), $("[name='education_course']").val(), $("[name='education_form']").val());
+
             localStorage.setItem("current_institute", $("[name='institute']").val());
             localStorage.setItem("current_education_course", $("[name='education_course']").val());
             localStorage.setItem("current_education_form", $("[name='education_form']").val());

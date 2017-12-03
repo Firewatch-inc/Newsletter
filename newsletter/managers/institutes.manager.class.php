@@ -34,6 +34,11 @@
             return $institutes;
         }
 
+        public function getInstituteCaption($institute_id)
+        {
+            return $this->query("SELECT `caption` FROM `ListOfInstitute` WHERE `id_institute`=:id", [":id" => $institute_id])[0]['caption'];
+        }
+
         public function remove($institute_id)
         {
             $remove_query = $this->odbc->prepare("DELETE FROM `ListOfInstitute` WHERE `id_institute`=:id");

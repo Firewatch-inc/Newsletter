@@ -7,6 +7,7 @@
             {if $institutes != NULL && $courses != NULL && $groups != NULL}
                 <div class="field">
                     <label>Институт</label>
+                    <input type="hidden" name="institute_caption" value="">
                     <select name="institute" required>
                         {foreach $institutes as $institute}
                             <option value="{$institute->id()}">{$institute->caption()}</option>
@@ -23,9 +24,7 @@
                 </div>
                 <div class="field">
                     <label>Группа</label>
-                    <select name="group" required>
-
-                    </select>
+                    <select name="group" required></select>
                 </div>
                 <div class="field">
                     <label>Форма обучения</label>

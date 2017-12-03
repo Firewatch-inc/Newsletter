@@ -4,7 +4,11 @@ body {
 }
 
 #wrapper {
-    padding-top: 25%;
+    padding-top: 18%;
+}
+
+#background h1 {
+    text-align: center;
 }
 
 .ui.table tr th {
