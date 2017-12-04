@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Дек 04 2017 г., 11:39
+-- Время создания: Дек 04 2017 г., 15:23
 -- Версия сервера: 5.5.50-log
 -- Версия PHP: 7.0.8
 
@@ -71,7 +71,7 @@ CREATE TABLE IF NOT EXISTS `Groups` (
   `id_education_form` int(11) unsigned NOT NULL COMMENT 'Форма обучения',
   `id_education_course` int(11) unsigned NOT NULL COMMENT 'Курс обучения',
   `specialty` int(10) unsigned NOT NULL COMMENT 'Специализация'
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COMMENT='Группы';
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8 COMMENT='Группы';
 
 --
 -- Дамп данных таблицы `Groups`
@@ -84,7 +84,9 @@ INSERT INTO `Groups` (`id_group`, `caption`, `id_institute`, `id_education_form`
 (4, '27.03.04', 1, 1, 1, 1),
 (5, '09.03.01', 1, 1, 2, 4),
 (6, '09.03.01', 1, 1, 3, 4),
-(7, '15.03.02', 1, 1, 1, 74);
+(7, '15.03.02', 1, 1, 1, 74),
+(12, '09.03.01', 1, 1, 4, 4),
+(14, '38.04.01', 5, 1, 1, 13);
 
 -- --------------------------------------------------------
 
@@ -216,7 +218,7 @@ CREATE TABLE IF NOT EXISTS `ListOfSpecialty` (
   `id_specialty` int(10) unsigned NOT NULL COMMENT 'Идентификатор',
   `caption` varchar(255) NOT NULL,
   `code` varchar(255) NOT NULL COMMENT 'Код'
-) ENGINE=InnoDB AUTO_INCREMENT=223 DEFAULT CHARSET=utf8 COMMENT='Специализации';
+) ENGINE=InnoDB AUTO_INCREMENT=224 DEFAULT CHARSET=utf8 COMMENT='Специализации';
 
 --
 -- Дамп данных таблицы `ListOfSpecialty`
@@ -2169,16 +2171,17 @@ CREATE TABLE IF NOT EXISTS `ScheduleMain` (
   `id_pair` int(10) unsigned NOT NULL,
   `id_subject_1` int(10) unsigned NOT NULL COMMENT 'Предмет на чётной неделе',
   `id_subject_2` int(10) unsigned NOT NULL COMMENT 'Предмет на нечётной неделе',
-  `lecture_hall` varchar(255) NOT NULL COMMENT 'Аудитория и адрес'
+  `lecture_hall` varchar(255) NOT NULL COMMENT 'Аудитория и адрес',
+  `teacher` varchar(255) NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COMMENT='Основное расписание';
 
 --
 -- Дамп данных таблицы `ScheduleMain`
 --
 
-INSERT INTO `ScheduleMain` (`id_schedule_main`, `id_group`, `day`, `id_pair`, `id_subject_1`, `id_subject_2`, `lecture_hall`) VALUES
-(1, 1, 1, 1, 1, 2, ''),
-(2, 1, 1, 2, 1, 1, '');
+INSERT INTO `ScheduleMain` (`id_schedule_main`, `id_group`, `day`, `id_pair`, `id_subject_1`, `id_subject_2`, `lecture_hall`, `teacher`) VALUES
+(1, 1, 1, 1, 1, 2, '109', '4554'),
+(2, 1, 1, 2, 1, 1, '201', '88');
 
 -- --------------------------------------------------------
 
@@ -2242,6 +2245,7 @@ CREATE TABLE IF NOT EXISTS `vmainschedule` (
 ,`subject_1` varchar(255)
 ,`subject_2` varchar(255)
 ,`lecture_hall` varchar(255)
+,`teacher` varchar(255)
 );
 
 -- --------------------------------------------------------
@@ -2269,7 +2273,7 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`%` SQL SECURITY DEFINER VIEW `vgroups
 --
 DROP TABLE IF EXISTS `vmainschedule`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`%` SQL SECURITY DEFINER VIEW `vmainschedule` AS select `g`.`id_group` AS `id_group`,`sm`.`day` AS `day`,`lp`.`number` AS `pair`,`lp`.`start_time` AS `pair_start`,`lp`.`end_time` AS `pair_end`,`ls_1`.`caption` AS `subject_1`,`ls_2`.`caption` AS `subject_2`,`sm`.`lecture_hall` AS `lecture_hall` from ((((`schedulemain` `sm` join `groups` `g` on((`sm`.`id_group` = `g`.`id_group`))) join `listofpair` `lp` on((`sm`.`id_pair` = `lp`.`id_pair`))) join `listofsubject` `ls_1` on((`sm`.`id_subject_1` = `ls_1`.`id_subject`))) join `listofsubject` `ls_2` on((`sm`.`id_subject_2` = `ls_2`.`id_subject`))) order by `sm`.`id_pair`;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`%` SQL SECURITY DEFINER VIEW `vmainschedule` AS select `g`.`id_group` AS `id_group`,`sm`.`day` AS `day`,`lp`.`number` AS `pair`,`lp`.`start_time` AS `pair_start`,`lp`.`end_time` AS `pair_end`,`ls_1`.`caption` AS `subject_1`,`ls_2`.`caption` AS `subject_2`,`sm`.`lecture_hall` AS `lecture_hall`,`sm`.`teacher` AS `teacher` from ((((`schedulemain` `sm` join `groups` `g` on((`sm`.`id_group` = `g`.`id_group`))) join `listofpair` `lp` on((`sm`.`id_pair` = `lp`.`id_pair`))) join `listofsubject` `ls_1` on((`sm`.`id_subject_1` = `ls_1`.`id_subject`))) join `listofsubject` `ls_2` on((`sm`.`id_subject_2` = `ls_2`.`id_subject`))) order by `sm`.`id_pair`;
 
 --
 -- Индексы сохранённых таблиц
@@ -2383,7 +2387,7 @@ ALTER TABLE `Courses`
 -- AUTO_INCREMENT для таблицы `Groups`
 --
 ALTER TABLE `Groups`
-  MODIFY `id_group` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Идентификатор',AUTO_INCREMENT=8;
+  MODIFY `id_group` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Идентификатор',AUTO_INCREMENT=15;
 --
 -- AUTO_INCREMENT для таблицы `ListOfDays`
 --
@@ -2413,7 +2417,7 @@ ALTER TABLE `ListOfPair`
 -- AUTO_INCREMENT для таблицы `ListOfSpecialty`
 --
 ALTER TABLE `ListOfSpecialty`
-  MODIFY `id_specialty` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Идентификатор',AUTO_INCREMENT=223;
+  MODIFY `id_specialty` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Идентификатор',AUTO_INCREMENT=224;
 --
 -- AUTO_INCREMENT для таблицы `ListOfSubject`
 --
