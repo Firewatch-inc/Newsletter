@@ -36,6 +36,14 @@
             return $groups;
         }
 
+        public function count()
+        {
+            $count =  $this->query("SELECT COUNT(*) as result FROM `Groups`");
+            $count = $count[0]['result'];
+            return $count;
+        }
+
+
         public function getGroups($institute, $education_course, $education_form)
         {
             $db_groups = $this->query("SELECT * FROM `vGroups` WHERE `institute`=:institute AND `education_form`=:education_form AND `education_course`=:education_course",
