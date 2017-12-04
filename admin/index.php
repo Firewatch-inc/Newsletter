@@ -54,6 +54,50 @@
                 CTools::Redirect("index.php");
             }
 
+
+            /*!
+            	Обработка событий для работы с группами
+            */
+
+            if (!empty($_POST['addGroupButton'])) {
+            	$caption = htmlspecialchars($_POST['caption']);
+            	$education_form = htmlspecialchars($_POST['educationForm']);
+                $education_course = htmlspecialchars($_POST['educationCourse']);
+                $specialty = htmlspecialchars($_POST['specialty']);
+                $institute = htmlspecialchars($_POST['institute']);
+
+            	if ($GroupsManager->add(
+            		new Group($caption, $education_form, $education_course, $specialty, $institute)
+				)) {
+                    CTools::Message("Группа добавлена");
+                    CTools::Redirect("index.php");
+				} else {
+                    CTools::Message("Не удалось добавить группу");
+				}
+			}
+
+            if (!empty($_POST['removeGroupButton'])) {
+                $groups = $_POST['groups'];
+
+                if (!empty($groups)) {
+                    $result = true;
+                    foreach ($groups as $groups_id) {
+                        $result *= $GroupsManager->remove($groups_id);
+                    }
+
+                    if ($result) {
+                        CTools::Message("Выбранные группы были удалены");
+                        CTools::Redirect("index.php");
+                    } else {
+                        CTools::Message("Не удалось удалить выбранные группы");
+                    }
+                } else {
+                    CTools::Message("Вы не выбрали специальности");
+                }
+
+            }
+
+
             /*!
             	Обработка событий для работы со специальностями
             */
@@ -115,19 +159,24 @@
 
 			if (!empty($_POST['removeCourseButton'])) {
 				$courses = $_POST['courses'];
-				
-				$result = true;
-				foreach ($courses as $course_id) {
-					$result *= $CoursesManager->remove($course_id);
+
+				if (!empty($courses)) {
+                    $result = true;
+                    foreach ($courses as $course_id) {
+                        $result *= $CoursesManager->remove($course_id);
+                    }
+
+                    if ($result) {
+                        CTools::Message("Выбранные курсы были удалены");
+                        CTools::Redirect("index.php");
+                    } else {
+                        CTools::Message("Не удалось удалить выбранные курсы");
+                    }
+                } else {
+					// FIXME:
 				}
 
-				if ($result) {
-					CTools::Message("Выбранные курсы были удалены");
-					CTools::Redirect("index.php");
-				} else {
-					CTools::Message("Не удалось удалить выбранные курсы");
-				}
-			}
+            }
 
 			if (!empty($_POST['saveCoursesScheduleButton'])) {
 				

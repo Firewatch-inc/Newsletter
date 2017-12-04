@@ -10,12 +10,14 @@
 			parent::__construct($odbc);
 		}
         
-        public function add($institute)
+        public function add($group)
         {
-            $add_query = $this->odbc->prepare("INSERT INTO `ListOfInstitute` (`caption`, `short_caption`, `address`) VALUES (:caption, :short_caption, :address) ");
-            $add_query->bindValue(":caption", $institute->caption());
-            $add_query->bindValue(":short_caption", $institute->shortCaption());
-            $add_query->bindValue(":address", $institute->address());
+            $add_query = $this->odbc->prepare("INSERT INTO `Groups` (`caption`, `id_institute`, `id_education_form`, `id_education_course`, `specialty`) VALUES (:caption, :id_institute, :id_education_form, :id_education_course, :specialty) ");
+            $add_query->bindValue(":caption", $group->caption());
+            $add_query->bindValue(":id_institute", $group->institute());
+            $add_query->bindValue(":id_education_form", $group->educationForm());
+            $add_query->bindValue(":id_education_course", $group->educationCourse());
+            $add_query->bindValue(":specialty", $group->specialty());
 
             return $add_query->execute();
         }
@@ -28,7 +30,7 @@
             foreach ($db_groups as $db_group) {
                 $group = new Group($db_group['group_caption'], $db_group['education_form_caption'], $db_group['education_course'], $db_group['specialty_caption'], $db_group['institute_caption']);
                 $group->setId((int)$db_group['id_group']);
-                $groups[$db_group['institute_caption']][] = $group;
+                $groups[$db_group['institute_caption']][$db_group['education_course']][] = $group;
             }
 
             return $groups;
