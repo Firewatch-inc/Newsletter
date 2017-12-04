@@ -1,8 +1,8 @@
 <?php
 
     require_once $_SERVER['DOCUMENT_ROOT']."/newsletter/abstract.manager.class.php";
+    require_once $_SERVER['DOCUMENT_ROOT']."/newsletter/data/specialty.class.php";
 
-    
     class SpecialtiesManager extends AbstractManager
     {
         
@@ -17,9 +17,26 @@
         
         public function get()
         {
-            
+            $db_specialties = $this->query("SELECT * FROM `ListOfSpecialty`");
+
+            $specialties = array();
+            foreach ($db_specialties as $db_specialty) {
+                $specialty = new Specialty($db_specialty['caption'], $db_specialty['code']);
+                $specialty->setId($db_specialty['id_specialty']);
+                $specialties[] = $specialty;
+            }
+
+            return $specialties;
         }
-        
+
+        public function remove($specialty_id)
+        {
+            $remove_query = $this->odbc->prepare("DELETE FROM `ListOfSpecialty` WHERE `id_specialty`=:id");
+            $remove_query->bindValue(":id", $specialty_id);
+
+            return $remove_query->execute();
+        }
+
     }
 
 ?>

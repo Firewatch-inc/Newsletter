@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-12-04 10:23:33
+/* Smarty version 3.1.29, created on 2017-12-04 12:14:17
   from "C:\OpenServer\domains\Newsletter.mgutu\admin\templates\tpl\tabs\tab.main_schedule.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5a24f7f54f3404_62272080',
+  'unifunc' => 'content_5a2511e9c54f49_64893047',
   'file_dependency' => 
   array (
     'b7ca3e1d7d983b95da762128261231320d19fdf7' => 
     array (
       0 => 'C:\\OpenServer\\domains\\Newsletter.mgutu\\admin\\templates\\tpl\\tabs\\tab.main_schedule.tpl',
-      1 => 1512295967,
+      1 => 1512378853,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_5a24f7f54f3404_62272080 ($_smarty_tpl) {
+function content_5a2511e9c54f49_64893047 ($_smarty_tpl) {
 ?>
 <form name="saveMainScheduleForm" method="POST" class="ui form">
     <datalist id="subjects">
@@ -147,6 +147,7 @@ $__foreach_day_3_saved_local_item = $_smarty_tpl->tpl_vars['day'];
                                         <th>Пара</th>
                                         <th>Предмет</th>
                                         <th>Аудитория</th>
+                                        <th>Преподаватели</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -194,6 +195,15 @@ $_smarty_tpl->ext->_updateScope->updateScope($_smarty_tpl, 'subj_2', 0);?>
                                             </td>
                                             <td>
                                                 <input type="text">
+                                            </td>
+                                            <td>
+                                                <?php if ($_smarty_tpl->tpl_vars['main_schedule']->value[$_smarty_tpl->tpl_vars['day']->value->id()][$_smarty_tpl->tpl_vars['pair']->value->number()] != NULL) {?>
+                                                    <input type="text" value="<?php echo $_smarty_tpl->tpl_vars['main_schedule']->value[$_smarty_tpl->tpl_vars['day']->value->id()][$_smarty_tpl->tpl_vars['pair']->value->number()]->teacher();?>
+">
+                                                    
+                                                <?php } else { ?>
+                                                <input type="text">
+                                                <?php }?>
                                             </td>
                                         </tr>
                                     <?php

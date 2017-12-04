@@ -33,7 +33,7 @@
                     new Subject(trim($db_main_schedule['subject_2']))
                 );
 
-                $main_schedules[$db_main_schedule['day']][$pair] = new MainSchedule($subjects, $db_main_schedule['lecture_hall']);
+                $main_schedules[$db_main_schedule['day']][$pair] = new MainSchedule($subjects, $db_main_schedule['lecture_hall'], $db_main_schedule['teacher']);
                 $pair++;
             }
 

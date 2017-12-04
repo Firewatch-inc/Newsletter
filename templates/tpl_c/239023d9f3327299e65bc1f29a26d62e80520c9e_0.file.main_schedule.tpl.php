@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-12-04 11:44:16
+/* Smarty version 3.1.29, created on 2017-12-04 12:10:28
   from "C:\OpenServer\domains\Newsletter.mgutu\templates\tpl\main_schedule.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5a250ae0d5bfa8_76522092',
+  'unifunc' => 'content_5a251104d7b008_22917754',
   'file_dependency' => 
   array (
     '239023d9f3327299e65bc1f29a26d62e80520c9e' => 
     array (
       0 => 'C:\\OpenServer\\domains\\Newsletter.mgutu\\templates\\tpl\\main_schedule.tpl',
-      1 => 1512377055,
+      1 => 1512378556,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:html/end.tpl' => 1,
   ),
 ),false)) {
-function content_5a250ae0d5bfa8_76522092 ($_smarty_tpl) {
+function content_5a251104d7b008_22917754 ($_smarty_tpl) {
 $_smarty_tpl->tpl_vars['title'] = new Smarty_Variable("Newsletter | Основное расписание", null);
 $_smarty_tpl->ext->_updateScope->updateScope($_smarty_tpl, 'title', 0);
 $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:html/begin.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
@@ -116,7 +116,6 @@ $__foreach_pair_1_saved_local_item = $_smarty_tpl->tpl_vars['pair'];
 $_smarty_tpl->ext->_updateScope->updateScope($_smarty_tpl, 'subj_1', 0);?>
                                                     <?php $_smarty_tpl->tpl_vars['subj_2'] = new Smarty_Variable($_smarty_tpl->tpl_vars['main_schedule']->value[$_smarty_tpl->tpl_vars['day']->value->id()][$_smarty_tpl->tpl_vars['pair']->value->number()]->second_subject()->caption(), null);
 $_smarty_tpl->ext->_updateScope->updateScope($_smarty_tpl, 'subj_2', 0);?>
-
                                                     <?php if ($_smarty_tpl->tpl_vars['subj_1']->value === $_smarty_tpl->tpl_vars['subj_2']->value) {?>
                                                         <div class="field">
                                                             <?php echo $_smarty_tpl->tpl_vars['subj_1']->value;?>
@@ -143,7 +142,10 @@ $_smarty_tpl->ext->_updateScope->updateScope($_smarty_tpl, 'subj_2', 0);?>
                                                 <?php }?>
                                             </td>
                                             <td>
-                                                
+                                                <?php if ($_smarty_tpl->tpl_vars['main_schedule']->value[$_smarty_tpl->tpl_vars['day']->value->id()][$_smarty_tpl->tpl_vars['pair']->value->number()] != NULL) {?>
+                                                    <?php echo $_smarty_tpl->tpl_vars['main_schedule']->value[$_smarty_tpl->tpl_vars['day']->value->id()][$_smarty_tpl->tpl_vars['pair']->value->number()]->teacher();?>
+
+                                                <?php }?>
                                             </td>
                                         </tr>
                                     <?php

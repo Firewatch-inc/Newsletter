@@ -34,7 +34,8 @@
 		$CT->assign("subjects", $SubjectsManager->get());
 		$CT->assign("pairs", $PairsManager->get());
 		$CT->assign("days", $DaysManager->getStudyDays());
-		$CT->assign("groups", $GroupsManager->get());     
+		$CT->assign("groups", $GroupsManager->get());
+		$CT->assign("specialties", $SpecialtiesManager->get());
 		$CT->assign("educationCourses", $EducationCoursesManager->get());
 		$CT->assign("educationForms", $EducationFormsManager->get());
 		$CT->Show("index.tpl");
@@ -51,6 +52,45 @@
 			    $id_group = $_POST['group'];
                 $_SESSION['current_schedule'] = $ScheduleManager->getSchedule($id_group);
                 CTools::Redirect("index.php");
+            }
+
+            /*!
+            	Обработка событий для работы со специальностями
+            */
+
+            if (!empty($_POST['addSpecialtyButton'])) {
+            	$caption = htmlspecialchars($_POST['caption']);
+            	$code = htmlspecialchars($_POST['code']);
+
+                if ($SpecialtiesManager->add(
+                    new Specialty($caption, $code)
+                )) {
+                    CTools::Message("Специальность добавлена");
+                    CTools::Redirect("index.php");
+                } else {
+                    CTools::Message("Не удалось добавить специальность");
+                }
+			}
+
+			if (!empty($_POST['removeSpecialtyButton'])) {
+                $specialties = $_POST['specialties'];
+
+                if (!empty($specialties)) {
+                    $result = true;
+                    foreach ($specialties as $specialty_id) {
+                        $result *= $SpecialtiesManager->remove($specialty_id);
+                    }
+
+                    if ($result) {
+                        CTools::Message("Выбранные специальности были удалены");
+                        CTools::Redirect("index.php");
+                    } else {
+                        CTools::Message("Не удалось удалить выбранные специальности");
+                    }
+                } else {
+                	CTools::Message("Вы не выбрали специальности");
+				}
+
             }
 	
 			/*!

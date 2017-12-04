@@ -59,6 +59,7 @@
                                         <th>Пара</th>
                                         <th>Предмет</th>
                                         <th>Аудитория</th>
+                                        <th>Преподаватели</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -88,6 +89,14 @@
                                             </td>
                                             <td>
                                                 <input type="text">
+                                            </td>
+                                            <td>
+                                                {if $main_schedule[$day->id()][$pair->number()] != NULL}
+                                                    <input type="text" value="{$main_schedule[$day->id()][$pair->number()]->teacher()}">
+                                                    
+                                                {else}
+                                                <input type="text">
+                                                {/if}
                                             </td>
                                         </tr>
                                     {/foreach}

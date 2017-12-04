@@ -58,7 +58,6 @@
                                                 {if $main_schedule[$day->id()][$pair->number()] != NULL}
                                                     {$subj_1 = $main_schedule[$day->id()][$pair->number()]->first_subject()->caption()}
                                                     {$subj_2 = $main_schedule[$day->id()][$pair->number()]->second_subject()->caption()}
-
                                                     {if $subj_1 === $subj_2}
                                                         <div class="field">
                                                             {$subj_1}
@@ -81,7 +80,9 @@
                                                 {/if}
                                             </td>
                                             <td>
-                                                
+                                                {if $main_schedule[$day->id()][$pair->number()] != NULL}
+                                                    {$main_schedule[$day->id()][$pair->number()]->teacher()}
+                                                {/if}
                                             </td>
                                         </tr>
                                     {/foreach}
