@@ -22,13 +22,13 @@
 
 		public function get()
 		{
-            $db_groups = $this->query("SELECT * FROM `vGroups` ORDER BY `group_caption`");
+            $db_groups = $this->query("SELECT * FROM `vGroups` ORDER BY `group_caption`, `education_course`");
 
             $groups = array();
             foreach ($db_groups as $db_group) {
-                $group = new Group($db_group['group_caption'], $db_group['education_form_caption'], $db_group['education_course'], $db_group['specialty_caption']);
+                $group = new Group($db_group['group_caption'], $db_group['education_form_caption'], $db_group['education_course'], $db_group['specialty_caption'], $db_group['institute_caption']);
                 $group->setId((int)$db_group['id_group']);
-                $groups[] = $group;
+                $groups[$db_group['institute_caption']][] = $group;
             }
 
             return $groups;

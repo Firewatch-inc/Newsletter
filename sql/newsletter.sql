@@ -3,8 +3,8 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Дек 03 2017 г., 13:11
--- Версия сервера: 5.6.31-log
+-- Время создания: Дек 04 2017 г., 11:39
+-- Версия сервера: 5.5.50-log
 -- Версия PHP: 7.0.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -71,16 +71,20 @@ CREATE TABLE IF NOT EXISTS `Groups` (
   `id_education_form` int(11) unsigned NOT NULL COMMENT 'Форма обучения',
   `id_education_course` int(11) unsigned NOT NULL COMMENT 'Курс обучения',
   `specialty` int(10) unsigned NOT NULL COMMENT 'Специализация'
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COMMENT='Группы';
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COMMENT='Группы';
 
 --
 -- Дамп данных таблицы `Groups`
 --
 
 INSERT INTO `Groups` (`id_group`, `caption`, `id_institute`, `id_education_form`, `id_education_course`, `specialty`) VALUES
-(1, '09.03.01', 1, 1, 1, 1),
-(2, '09.03.02', 1, 1, 1, 2),
-(3, '15.03.02', 1, 1, 2, 5);
+(1, '09.03.01', 1, 1, 1, 4),
+(2, '09.03.02', 1, 1, 1, 131),
+(3, '15.03.02', 1, 1, 2, 74),
+(4, '27.03.04', 1, 1, 1, 1),
+(5, '09.03.01', 1, 1, 2, 4),
+(6, '09.03.01', 1, 1, 3, 4),
+(7, '15.03.02', 1, 1, 1, 74);
 
 -- --------------------------------------------------------
 
@@ -212,14 +216,14 @@ CREATE TABLE IF NOT EXISTS `ListOfSpecialty` (
   `id_specialty` int(10) unsigned NOT NULL COMMENT 'Идентификатор',
   `caption` varchar(255) NOT NULL,
   `code` varchar(255) NOT NULL COMMENT 'Код'
-) ENGINE=InnoDB AUTO_INCREMENT=222 DEFAULT CHARSET=utf8 COMMENT='Специализации';
+) ENGINE=InnoDB AUTO_INCREMENT=223 DEFAULT CHARSET=utf8 COMMENT='Специализации';
 
 --
 -- Дамп данных таблицы `ListOfSpecialty`
 --
 
 INSERT INTO `ListOfSpecialty` (`id_specialty`, `caption`, `code`) VALUES
-(1, 'SMART-технологии в образовании и психологии                                                                              ', '44.04.02'),
+(1, 'Нет профиля', '00.00.00'),
 (2, 'Автоматизация процессов и производств текстильной и легкой промышленности                                               ', '220301.6'),
 (3, 'Автоматизация технологических процессов и производств пищевой промышленности с применением энергоэффективных технологий  ', '15.04.04'),
 (4, 'Автоматизированные системы обработки информации и управления                                                             ', '09.03.01'),
@@ -439,7 +443,8 @@ INSERT INTO `ListOfSpecialty` (`id_specialty`, `caption`, `code`) VALUES
 (218, 'Электроснабжение                                                                                                         ', '13.03.02'),
 (219, 'Юрист в сфере государственного и муниципального управления                                                               ', '40.04.01'),
 (220, 'Юрист в сфере уголовного судопроизводства и экономической безопасности                                                   ', '40.04.01'),
-(221, 'Юрист с сфере недвижимости                                                                                               ', '40.04.01');
+(221, 'Юрист с сфере недвижимости                                                                                               ', '40.04.01'),
+(222, 'SMART-технологии в образовании и психологии', '44.04.02');
 
 -- --------------------------------------------------------
 
@@ -2215,6 +2220,7 @@ CREATE TABLE IF NOT EXISTS `vcoursesschedule` (
 CREATE TABLE IF NOT EXISTS `vgroups` (
 `id_group` int(10) unsigned
 ,`institute` int(10) unsigned
+,`institute_caption` varchar(255)
 ,`group_caption` varchar(255)
 ,`education_form_caption` varchar(255)
 ,`education_form` int(11) unsigned
@@ -2254,7 +2260,7 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`%` SQL SECURITY DEFINER VIEW `vcourse
 --
 DROP TABLE IF EXISTS `vgroups`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`%` SQL SECURITY DEFINER VIEW `vgroups` AS select `g`.`id_group` AS `id_group`,`g`.`id_institute` AS `institute`,`g`.`caption` AS `group_caption`,`lef`.`caption` AS `education_form_caption`,`g`.`id_education_form` AS `education_form`,`lec`.`number` AS `education_course`,`ls`.`caption` AS `specialty_caption` from (((`groups` `g` join `listofeducationform` `lef` on((`g`.`id_education_form` = `lef`.`id_education_form`))) join `listofeducationcourse` `lec` on((`g`.`id_education_course` = `lec`.`id_education_course`))) join `listofspecialty` `ls` on((`g`.`specialty` = `ls`.`id_specialty`)));
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`%` SQL SECURITY DEFINER VIEW `vgroups` AS select `g`.`id_group` AS `id_group`,`g`.`id_institute` AS `institute`,`li`.`caption` AS `institute_caption`,`g`.`caption` AS `group_caption`,`lef`.`caption` AS `education_form_caption`,`g`.`id_education_form` AS `education_form`,`lec`.`number` AS `education_course`,`ls`.`caption` AS `specialty_caption` from ((((`groups` `g` join `listofeducationform` `lef` on((`g`.`id_education_form` = `lef`.`id_education_form`))) join `listofeducationcourse` `lec` on((`g`.`id_education_course` = `lec`.`id_education_course`))) join `listofspecialty` `ls` on((`g`.`specialty` = `ls`.`id_specialty`))) join `listofinstitute` `li` on((`g`.`id_institute` = `li`.`id_institute`)));
 
 -- --------------------------------------------------------
 
@@ -2377,7 +2383,7 @@ ALTER TABLE `Courses`
 -- AUTO_INCREMENT для таблицы `Groups`
 --
 ALTER TABLE `Groups`
-  MODIFY `id_group` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Идентификатор',AUTO_INCREMENT=4;
+  MODIFY `id_group` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Идентификатор',AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT для таблицы `ListOfDays`
 --
@@ -2407,7 +2413,7 @@ ALTER TABLE `ListOfPair`
 -- AUTO_INCREMENT для таблицы `ListOfSpecialty`
 --
 ALTER TABLE `ListOfSpecialty`
-  MODIFY `id_specialty` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Идентификатор',AUTO_INCREMENT=222;
+  MODIFY `id_specialty` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Идентификатор',AUTO_INCREMENT=223;
 --
 -- AUTO_INCREMENT для таблицы `ListOfSubject`
 --

@@ -7,13 +7,15 @@
         private $education_form;
         private $education_course;
         private $specialty;
+        private $institute;
 
-        public function __construct($caption, $education_form, $education_course, $specialty)
+        public function __construct($caption, $education_form, $education_course, $specialty, $institute)
         {
             $this->caption = $caption;
             $this->education_form = $education_form;
             $this->education_course = $education_course;
             $this->specialty = $specialty;
+            $this->institute = $institute;
             $this->id = 0;
         }
 
@@ -47,6 +49,11 @@
         public function specialty()
         {
             return $this->specialty;
+        }
+
+        public function institute()
+        {
+            return $this->institute;
         }
 
     }

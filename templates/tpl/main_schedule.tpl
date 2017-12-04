@@ -24,34 +24,36 @@
                         <div class="active content">
                             <table class="ui fixed table">
                                 <thead>
-                                <tr>
-                                    <th>Пара</th>
-                                    <th>
-                                        <table class="ui table">
-                                            <thead>
-                                                <tr>
-                                                    <th colspan="2">Предмет</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr style="text-align: center;">
-                                                    <td>
-                                                        Чётная
-                                                    </td>
-                                                    <td>
-                                                        Нечётная
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </th>
-                                    <th>Аудитория</th>
-                                </tr>
+                                    <tr>
+                                        <th>Пара</th>
+                                        <th>
+                                            <table class="ui table">
+                                                <thead>
+                                                    <tr>
+                                                        <th colspan="2">Предмет</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr style="text-align: center;">
+                                                        <td>
+                                                            Чётная
+                                                        </td>
+                                                        <td>
+                                                            Нечётная
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </th>
+                                        <th>Аудитория</th>
+                                        <th>Преподаватель</th>
+                                    </tr>
                                 </thead>
                                 <tbody>
                                     {foreach $pairs as $pair}
                                         <tr>
-                                            <td>{$pair->number()} ({$pair->startTime()} - {$pair->endTime()})</td>
+                                            <!-- FIXME: -->
+                                            <td style="text-align: center;">{$pair->number()} ({$pair->startTime()} - {$pair->endTime()})</td>
                                             <td class="ui form">
                                                 {if $main_schedule[$day->id()][$pair->number()] != NULL}
                                                     {$subj_1 = $main_schedule[$day->id()][$pair->number()]->first_subject()->caption()}
@@ -74,7 +76,12 @@
                                                 {/if}
                                             </td>
                                             <td>
-
+                                                {if $main_schedule[$day->id()][$pair->number()] != NULL}
+													{$main_schedule[$day->id()][$pair->number()]->lectureHall()}
+                                                {/if}
+                                            </td>
+                                            <td>
+                                                
                                             </td>
                                         </tr>
                                     {/foreach}

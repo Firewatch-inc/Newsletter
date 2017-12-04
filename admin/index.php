@@ -21,8 +21,8 @@
 			}
 			
 		}
-		
-	} elseif(($_SESSION['admin'] instanceof User) &&
+
+	} elseif (($_SESSION['admin'] instanceof User) &&
 		$_SESSION['admin']->login() === "admin" &&
 		$_SESSION['admin']->password() === md5("admin")
 	) {
@@ -34,11 +34,11 @@
 		$CT->assign("subjects", $SubjectsManager->get());
 		$CT->assign("pairs", $PairsManager->get());
 		$CT->assign("days", $DaysManager->getStudyDays());
-		$CT->assign("groups", $GroupsManager->get());
+		$CT->assign("groups", $GroupsManager->get());     
 		$CT->assign("educationCourses", $EducationCoursesManager->get());
 		$CT->assign("educationForms", $EducationFormsManager->get());
 		$CT->Show("index.tpl");
-		
+
 		if (!empty($_POST['logoutButton'])) {
 			unset($_SESSION['admin']);
 			CTools::Redirect("index.php");
