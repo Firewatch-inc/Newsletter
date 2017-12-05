@@ -51,7 +51,7 @@
 
             $groups = array();
             foreach ($db_groups as $db_group) {
-                $group = new Group($db_group['group_caption'], $db_group['education_form_caption'], $db_group['education_course'], $db_group['specialty_caption']);
+                $group = new Group($db_group['group_caption'], $db_group['education_form_caption'], $db_group['education_course'], $db_group['specialty_caption'], $db_group['institute']);
                 $group->setId($db_group['id_group']);
                 $groups[] = $group;
             }

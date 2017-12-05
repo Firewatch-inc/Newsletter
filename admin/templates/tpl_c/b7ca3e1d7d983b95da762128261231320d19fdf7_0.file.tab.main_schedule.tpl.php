@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-12-05 11:32:23
+/* Smarty version 3.1.29, created on 2017-12-05 17:58:49
   from "C:\OpenServer\domains\Newsletter.mgutu\admin\templates\tpl\tabs\tab.main_schedule.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5a265997b3d689_80694701',
+  'unifunc' => 'content_5a26b429d92724_81337950',
   'file_dependency' => 
   array (
     'b7ca3e1d7d983b95da762128261231320d19fdf7' => 
     array (
       0 => 'C:\\OpenServer\\domains\\Newsletter.mgutu\\admin\\templates\\tpl\\tabs\\tab.main_schedule.tpl',
-      1 => 1512462742,
+      1 => 1512485929,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_5a265997b3d689_80694701 ($_smarty_tpl) {
+function content_5a26b429d92724_81337950 ($_smarty_tpl) {
 ?>
 <form name="saveMainScheduleForm" method="POST" class="ui form">
     <datalist id="subjects"></datalist>
@@ -111,10 +111,17 @@ $_smarty_tpl->tpl_vars['educationForm'] = $__foreach_educationForm_2_saved_item;
                     <div class="field">
                         <label>Группа</label>
                         <select name="group"></select>
+                        <input type="hidden" name="group_caption" value="">
                     </div>
                 </div>
-                <div class="field">
-                    <input type="submit" name="selectGroupScheduleButton" value="Выбрать" class="ui primary button">
+                <div class="two fields">
+                    <div class="field">
+                        <input type="submit" name="selectGroupScheduleButton" value="Выбрать" class="ui primary button">
+                    </div>
+                    <div class="field">
+                        <?php echo $_smarty_tpl->tpl_vars['group_caption']->value;?>
+
+                    </div>
                 </div>
             </div>
         </div>
@@ -134,8 +141,8 @@ $__foreach_day_3_saved_local_item = $_smarty_tpl->tpl_vars['day'];
 ?>
                     <div class="ui styled accordion">
                         <div class="active title">
-                            <?php echo $_smarty_tpl->tpl_vars['day']->value->caption();?>
-
+                            <h2 align="center"><?php echo $_smarty_tpl->tpl_vars['day']->value->caption();?>
+</h2>
                         </div>
                         <div class="active content">
                             <table class="ui fixed table">
@@ -161,7 +168,7 @@ $_smarty_tpl->tpl_vars['pair']->_loop = true;
 $__foreach_pair_4_saved_local_item = $_smarty_tpl->tpl_vars['pair'];
 ?>
                                         <tr>
-                                            <td>
+                                            <td style="text-align: center;"> <!-- FIXME -->
                                                 <?php echo $_smarty_tpl->tpl_vars['pair']->value->number();?>
  (<?php echo $_smarty_tpl->tpl_vars['pair']->value->startTime();?>
  - <?php echo $_smarty_tpl->tpl_vars['pair']->value->endTime();?>
@@ -222,7 +229,6 @@ $_smarty_tpl->tpl_vars['pair'] = $__foreach_pair_4_saved_item;
                             </table>
                         </div>
                     </div>
-                    <br>
                 <?php
 $_smarty_tpl->tpl_vars['day'] = $__foreach_day_3_saved_local_item;
 }
@@ -275,7 +281,12 @@ $_smarty_tpl->tpl_vars['day'] = $__foreach_day_3_saved_item;
             localStorage.setItem("current_education_form", $("[name='education_form']").val());
         });
 
-        $("[name='subject_1'], [name='subject_2']").on("keyup", function () {
+        $("[name='group']").on('change', function () {
+            alert($(this).text());
+            $("[name='group_caption']").val();
+        });
+
+        $("[name='subject_1'], [name='subject_2']").on("change", function () {
            let subject = $(this).val();
 
            if (subject !== "") {

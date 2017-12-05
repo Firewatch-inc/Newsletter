@@ -31,10 +31,16 @@
                     <div class="field">
                         <label>Группа</label>
                         <select name="group"></select>
+                        <input type="hidden" name="group_caption" value="">
                     </div>
                 </div>
-                <div class="field">
-                    <input type="submit" name="selectGroupScheduleButton" value="Выбрать" class="ui primary button">
+                <div class="two fields">
+                    <div class="field">
+                        <input type="submit" name="selectGroupScheduleButton" value="Выбрать" class="ui primary button">
+                    </div>
+                    <div class="field">
+                        {$group_caption}
+                    </div>
                 </div>
             </div>
         </div>
@@ -43,7 +49,7 @@
                 {foreach $days as $day}
                     <div class="ui styled accordion">
                         <div class="active title">
-                            {$day->caption()}
+                            <h2 align="center">{$day->caption()}</h2>
                         </div>
                         <div class="active content">
                             <table class="ui fixed table">
@@ -58,7 +64,7 @@
                                 <tbody>
                                     {foreach $pairs as $pair}
                                         <tr>
-                                            <td>
+                                            <td style="text-align: center;"> <!-- FIXME -->
                                                 {$pair->number()} ({$pair->startTime()} - {$pair->endTime()})
                                                 <input type="hidden" name="pair" value="{$pair->number()}">
                                             </td>
@@ -103,7 +109,6 @@
                             </table>
                         </div>
                     </div>
-                    <br>
                 {/foreach}
             </div>
         </div>
@@ -149,7 +154,7 @@
             localStorage.setItem("current_education_form", $("[name='education_form']").val());
         });
 
-        $("[name='subject_1'], [name='subject_2']").on("keyup", function () {
+        $("[name='subject_1'], [name='subject_2']").on("change", function () {
            let subject = $(this).val();
 
            if (subject !== "") {

@@ -29,6 +29,7 @@
 
 		$CT->assign("courses", $CoursesManager->get());
 		$CT->assign("main_schedule", $_SESSION['current_schedule']);
+		$CT->assign("group_caption", $_SESSION['current_group']);
 		$CT->assign("courses_schedule", $CoursesManager->getSchedule());
 		$CT->assign("institutes", $InstitutesManager->get());
 		$CT->assign("subjects", $SubjectsManager->get());
@@ -52,9 +53,46 @@
 			if (!empty($_POST['selectGroupScheduleButton'])) {
 			    $id_group = $_POST['group'];
                 $_SESSION['current_schedule'] = $ScheduleManager->getSchedule($id_group);
+                $_SESSION['current_group'] = $_POST['group_caption'];
                 CTools::Redirect("index.php");
             }
 
+            /*!
+				Обработка событий для работы с предметами
+            */
+
+            if (!empty($_POST['addSubjectButton'])) {
+            	$caption = $_POST['caption'];
+
+                if ($SubjectsManager->add(
+                    new Subject($caption)
+                )) {
+                    CTools::Message("Предмет добавлен");
+                    CTools::Redirect("index.php");
+                } else {
+                    CTools::Message("Не удалось добавить предмет");
+                }
+			}
+
+			if (!empty($_POST['removeSubjectsButton'])) {
+                $subjects = $_POST['subjects'];
+
+                if (!empty($subjects)) {
+                    $result = true;
+                    foreach ($subjects as $subject_id) {
+                        $result *= $SubjectsManager->remove($subject_id);
+                    }
+
+                    if ($result) {
+                        CTools::Message("Выбранные предметы были удалены");
+                        CTools::Redirect("index.php");
+                    } else {
+                        CTools::Message("Не удалось удалить выбранные предметы");
+                    }
+                } else {
+                    CTools::Message("Вы не выбрали специальности");
+                }
+			}
 
             /*!
             	Обработка событий для работы с группами

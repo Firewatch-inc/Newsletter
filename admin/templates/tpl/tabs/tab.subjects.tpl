@@ -4,8 +4,12 @@
             <form name="removeSubjectsForm" method="POST" class="ui form">
                 <div class="actinos">
                     <div class="ui borderless menu">
-                        <a class="item"><input type="number" name="s_limit" placeholder="С" min="0"></a>
-                        <a class="item"><input type="number" name="e_limit" placeholder="По" min="0"></a>
+                        {*<a class="item"><input type="number" name="s_limit" placeholder="С" min="0"></a>*}
+                        {*<a class="item"><input type="number" name="e_limit" placeholder="По" min="0"></a>*}
+                        <a class="item">
+                            <i class="search icon"></i>
+                            <input type="text" name="search_subjects" placeholder="Поиск">
+                        </a>
                         <div class="right menu">
                             <a class="item"><input type="button" name="showSubjects" value="Показать" class="ui positive button"></a>
                             <a class="item"><input type="submit" name="removeSubjectsButton" value="Удалить" class="ui red button"></a>
@@ -44,6 +48,7 @@
 </div>
 <script type="text/javascript">
 
+    /*
     $("[name='showSubjects']").on("click", function(){
         let start = $("[name='s_limit']").val();
         let end = $("[name='e_limit']").val();
@@ -59,6 +64,27 @@
                 },
                 error: function (replay) {
                     
+                }
+            });
+        }
+
+    });
+    */
+
+    $("[name='search_subjects']").on('keyup', function () {
+        let subject = $(this).val();
+
+        if (subject !== "") {
+            $.ajax({
+                url: "php/get_limit_subjects.php",
+                type: "POST",
+                data: { subject: subject },
+                success: function (replay) {
+                    $("#subjects_table_body").html("");
+                    $("#subjects_table_body").html(replay);
+                },
+                error: function (replay) {
+
                 }
             });
         }

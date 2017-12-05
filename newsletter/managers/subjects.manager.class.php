@@ -12,7 +12,7 @@
         
         public function add($subject)
         {
-            $add_query = $this->odbc->prepare("INSERT INTO `ListOfSubjects` (`caption`) VALUES (:caption) ");
+            $add_query = $this->odbc->prepare("INSERT INTO `ListOfSubject` (`caption`) VALUES (:caption) ");
             $add_query->bindValue(":caption", $subject->caption());
 
             return $add_query->execute();
@@ -62,7 +62,7 @@
 
         public function remove($subject_id)
         {
-            $remove_query = $this->odbc->prepare("DELETE FROM `ListOfSubjects` WHERE `id_subject`=:id");
+            $remove_query = $this->odbc->prepare("DELETE FROM `ListOfSubject` WHERE `id_subject`=:id");
             $remove_query->bindValue(":id", $subject_id);
 
             return $remove_query->execute();
