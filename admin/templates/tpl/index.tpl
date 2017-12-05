@@ -9,6 +9,7 @@
 			  <a class="item" data-tab="courses">Элективные курсы</a>
 			  <a class="item" data-tab="groups">Группы</a>
 			  <a class="item" data-tab="specialties">Специальности</a>
+			  <a class="item" data-tab="subjects">Предметы</a>
 			  <a class="item" data-tab="settings">Настройки</a>
 			  <div class="right menu">
 				<form name="logoutForm" method="POST">				
@@ -30,6 +31,9 @@
 			</div>
 			<div class="ui bottom attached tab segment" data-tab="specialties">
 				{include file="tabs/tab.specialties.tpl"}
+			</div>
+			<div class="ui bottom attached tab segment" data-tab="subjects">
+                {include file="tabs/tab.subjects.tpl"}
 			</div>
 			<div class="ui bottom attached tab segment" data-tab="settings">
 				{include file="tabs/tab.settings.tpl"}

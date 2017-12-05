@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-12-04 14:19:25
+/* Smarty version 3.1.29, created on 2017-12-05 11:41:28
   from "C:\OpenServer\domains\Newsletter.mgutu\admin\templates\tpl\index.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5a252f3def0957_02249895',
+  'unifunc' => 'content_5a265bb80716f2_67116357',
   'file_dependency' => 
   array (
     '488aa95ecdb5b358f8627c023af1093f29186ea0' => 
     array (
       0 => 'C:\\OpenServer\\domains\\Newsletter.mgutu\\admin\\templates\\tpl\\index.tpl',
-      1 => 1512386363,
+      1 => 1512463286,
       2 => 'file',
     ),
   ),
@@ -23,11 +23,12 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:tabs/tab.dop_schedule.tpl' => 1,
     'file:tabs/tab.groups.tpl' => 1,
     'file:tabs/tab.specialties.tpl' => 1,
+    'file:tabs/tab.subjects.tpl' => 1,
     'file:tabs/tab.settings.tpl' => 1,
     'file:html/end.tpl' => 1,
   ),
 ),false)) {
-function content_5a252f3def0957_02249895 ($_smarty_tpl) {
+function content_5a265bb80716f2_67116357 ($_smarty_tpl) {
 $_smarty_tpl->tpl_vars['title'] = new Smarty_Variable("Newsletter | Панель управления", null);
 $_smarty_tpl->ext->_updateScope->updateScope($_smarty_tpl, 'title', 0);
 $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:html/begin.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
@@ -42,6 +43,7 @@ $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:html/begin.t
 			  <a class="item" data-tab="courses">Элективные курсы</a>
 			  <a class="item" data-tab="groups">Группы</a>
 			  <a class="item" data-tab="specialties">Специальности</a>
+			  <a class="item" data-tab="subjects">Предметы</a>
 			  <a class="item" data-tab="settings">Настройки</a>
 			  <div class="right menu">
 				<form name="logoutForm" method="POST">				
@@ -71,6 +73,11 @@ $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:html/begin.t
 			</div>
 			<div class="ui bottom attached tab segment" data-tab="specialties">
 				<?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:tabs/tab.specialties.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
+			</div>
+			<div class="ui bottom attached tab segment" data-tab="subjects">
+                <?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:tabs/tab.subjects.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
 			</div>

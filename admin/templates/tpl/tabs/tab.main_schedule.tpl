@@ -1,11 +1,5 @@
 <form name="saveMainScheduleForm" method="POST" class="ui form">
-    <datalist id="subjects">
-        {*
-        {foreach $subjects as $subject}
-            <option value="{$subject->id()}">{$subject->caption()}</option>
-        {/foreach}
-        *}
-    </datalist>
+    <datalist id="subjects"></datalist>
     <div class="ui internally celled grid">
         <div class="row">
             <div class="sixteen wide column">
@@ -47,12 +41,11 @@
         <div class="row">
             <div class="sixteen wide column">
                 {foreach $days as $day}
-                    <br>
                     <div class="ui styled accordion">
-                        <div class="title">
+                        <div class="active title">
                             {$day->caption()}
                         </div>
-                        <div class="content">
+                        <div class="active content">
                             <table class="ui fixed table">
                                 <thead>
                                     <tr>
@@ -65,37 +58,43 @@
                                 <tbody>
                                     {foreach $pairs as $pair}
                                         <tr>
-                                            <td>{$pair->number()} ({$pair->startTime()} - {$pair->endTime()})</td>
                                             <td>
-                                                <div class="two fields">
+                                                {$pair->number()} ({$pair->startTime()} - {$pair->endTime()})
+                                                <input type="hidden" name="pair" value="{$pair->number()}">
+                                            </td>
+                                            <td>
+                                                <div class="two fields" style="margin-bottom: 0px;">
                                                     {if $main_schedule[$day->id()][$pair->number()] != NULL}
                                                         {$subj_1 = $main_schedule[$day->id()][$pair->number()]->first_subject()->caption()}
                                                         {$subj_2 = $main_schedule[$day->id()][$pair->number()]->second_subject()->caption()}
                                                         <div class="field">
-                                                            <input type="text" value="{$subj_1}" list="subjects">
+                                                            <input type="text" name="subject_1" value="{$subj_1}" list="subjects">
                                                         </div>
                                                         <div class="field">
-                                                            <input type="text" value="{$subj_2}" list="subjects">
+                                                            <input type="text" name="subject_2" value="{$subj_2}" list="subjects">
                                                         </div>
                                                     {else}
                                                         <div class="field">
-                                                            <input type="text" value="" list="subjects">
+                                                            <input type="text" name="subject_1" value="" list="subjects">
                                                         </div>
                                                         <div class="field">
-                                                            <input type="text" value="" list="subjects">
+                                                            <input type="text" name="subject_2" value="" list="subjects">
                                                         </div>
                                                     {/if}
                                                 </div>
                                             </td>
                                             <td>
-                                                <input type="text">
+                                                {if $main_schedule[$day->id()][$pair->number()] != NULL}
+                                                    <input type="text" name="lecture_hall" value="{$main_schedule[$day->id()][$pair->number()]->lectureHall()}">
+                                                {else}
+                                                    <input type="text" name="lecture_hall" value="">
+                                                {/if}
                                             </td>
                                             <td>
                                                 {if $main_schedule[$day->id()][$pair->number()] != NULL}
-                                                    <input type="text" value="{$main_schedule[$day->id()][$pair->number()]->teacher()}">
-                                                    
+                                                    <input type="text" name="teacher" value="{$main_schedule[$day->id()][$pair->number()]->teacher()}">
                                                 {else}
-                                                <input type="text">
+                                                    <input type="text" name="teacher" value="">
                                                 {/if}
                                             </td>
                                         </tr>
@@ -104,6 +103,7 @@
                             </table>
                         </div>
                     </div>
+                    <br>
                 {/foreach}
             </div>
         </div>
@@ -147,6 +147,27 @@
             localStorage.setItem("current_institute", $("[name='institute']").val());
             localStorage.setItem("current_education_course", $("[name='education_course']").val());
             localStorage.setItem("current_education_form", $("[name='education_form']").val());
+        });
+
+        $("[name='subject_1'], [name='subject_2']").on("keyup", function () {
+           let subject = $(this).val();
+
+           if (subject !== "") {
+               $.ajax({
+                   url: "php/get_subjects.php",
+                   type: "POST",
+                   data: "subject=" + subject,
+                   success: function (replay) {
+                       $("#subjects").html("");
+                       $("#subjects").html(replay);
+                   },
+                   error: function (replay) {
+
+                   }
+               });
+           }
+
+
         });
 
     </script>

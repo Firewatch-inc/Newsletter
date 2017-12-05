@@ -4,7 +4,7 @@
             {if $courses != NULL}
                 <form name="removeCoursesForm" method="POST">
                     <div class="actions">
-                        <input type="submit" name="removeCourseButton" value="Удалить" class="ui red button">
+                        <input type="submit" name="removeCourseButton" value="Удалить" class="ui red button" style="width: 100%;">
                     </div>
                     <table class="ui table">
                         <thead>
@@ -24,7 +24,7 @@
                                     <td>{$course->caption()}</td>
                                     <td>{$course->address()}</td>
                                     <td>{$course->contactor()}</td>
-                                    <td>
+                                    <td style="text-align: center;"> <!-- FIXME: -->
                                         <div class="ui checkbox">
                                             <input type="checkbox" name="courses[]" value="{$course->id()}">
                                             <label></label>

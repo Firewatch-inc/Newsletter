@@ -28,6 +28,14 @@
                 </div>
                 <div class="statistic">
                     <div class="value">
+                        {count($subjects)}
+                    </div>
+                    <div class="label">
+                        Предметов
+                    </div>
+                </div>
+                <div class="statistic">
+                    <div class="value">
                         0
                     </div>
                     <div class="label">

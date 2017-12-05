@@ -32,6 +32,34 @@
             return $subjects;
         }
 
+        public function getSubjects($subj)
+        {
+            $db_subjects = $this->query("SELECT * FROM `ListOfSubject` WHERE `caption` LIKE '%".$subj."%' LIMIT 10");
+
+            $subjects = array();
+            foreach ($db_subjects as $db_subject) {
+                $subject = new Subject($db_subject['caption']);
+                $subject->setId($db_subject['id_subject']);
+                $subjects[] = $subject;
+            }
+
+            return $subjects;
+        }
+
+        public  function getLimitSubjects($start, $end)
+        {
+            $db_subjects = $this->query("SELECT * FROM `ListOfSubject` ORDER BY `caption` LIMIT ".$start.", ".$end);
+
+            $subjects = array();
+            foreach ($db_subjects as $db_subject) {
+                $subject = new Subject($db_subject['caption']);
+                $subject->setId($db_subject['id_subject']);
+                $subjects[] = $subject;
+            }
+
+            return $subjects;
+        }
+
         public function remove($subject_id)
         {
             $remove_query = $this->odbc->prepare("DELETE FROM `ListOfSubjects` WHERE `id_subject`=:id");

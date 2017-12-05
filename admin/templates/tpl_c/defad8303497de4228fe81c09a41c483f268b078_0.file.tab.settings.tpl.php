@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-12-04 15:56:39
+/* Smarty version 3.1.29, created on 2017-12-05 11:33:36
   from "C:\OpenServer\domains\Newsletter.mgutu\admin\templates\tpl\tabs\tab.settings.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5a254607ce2ae2_59134104',
+  'unifunc' => 'content_5a2659e07eaed1_46819189',
   'file_dependency' => 
   array (
     'defad8303497de4228fe81c09a41c483f268b078' => 
     array (
       0 => 'C:\\OpenServer\\domains\\Newsletter.mgutu\\admin\\templates\\tpl\\tabs\\tab.settings.tpl',
-      1 => 1512392199,
+      1 => 1512462815,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_5a254607ce2ae2_59134104 ($_smarty_tpl) {
+function content_5a2659e07eaed1_46819189 ($_smarty_tpl) {
 ?>
 <div class="ui stackable grid">
     <div class="row">
@@ -50,6 +50,15 @@ function content_5a254607ce2ae2_59134104 ($_smarty_tpl) {
                     </div>
                     <div class="label">
                         Специальностей
+                    </div>
+                </div>
+                <div class="statistic">
+                    <div class="value">
+                        <?php echo count($_smarty_tpl->tpl_vars['subjects']->value);?>
+
+                    </div>
+                    <div class="label">
+                        Предметов
                     </div>
                 </div>
                 <div class="statistic">
