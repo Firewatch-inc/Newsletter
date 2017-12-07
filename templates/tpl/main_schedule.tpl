@@ -22,9 +22,9 @@
                             {$day->caption()}
                         </div>
                         <div class="active content">
-                            <table class="ui fixed table">
+                            <table class="ui fixed celled table">
                                 <thead>
-                                    <tr>
+                                    <tr> <!-- FIXME -->
                                         <th>Пара</th>
                                         <th>
                                             <table class="ui table">
@@ -51,13 +51,13 @@
                                 </thead>
                                 <tbody>
                                     {foreach $pairs as $pair}
-                                        <tr>
+                                        <tr style="text-align: center;">
                                             <!-- FIXME: -->
                                             <td style="text-align: center;">{$pair->number()} ({$pair->startTime()} - {$pair->endTime()})</td>
                                             <td class="ui form">
-                                                {if $main_schedule[$day->id()][$pair->number()] != NULL}
-                                                    {$subj_1 = $main_schedule[$day->id()][$pair->number()]->first_subject()->caption()}
-                                                    {$subj_2 = $main_schedule[$day->id()][$pair->number()]->second_subject()->caption()}
+                                                {if $main_schedule[$day->id()][$pair->number()-1] != NULL}
+                                                    {$subj_1 = $main_schedule[$day->id()][$pair->number()-1]->first_subject()->caption()}
+                                                    {$subj_2 = $main_schedule[$day->id()][$pair->number()-1]->second_subject()->caption()}
                                                     {if $subj_1 === $subj_2}
                                                         <div class="field">
                                                             {$subj_1}
@@ -75,13 +75,13 @@
                                                 {/if}
                                             </td>
                                             <td>
-                                                {if $main_schedule[$day->id()][$pair->number()] != NULL}
-													{$main_schedule[$day->id()][$pair->number()]->lectureHall()}
+                                                {if $main_schedule[$day->id()][$pair->number()-1] != NULL}
+													{$main_schedule[$day->id()][$pair->number()-1]->lectureHall()}
                                                 {/if}
                                             </td>
                                             <td>
-                                                {if $main_schedule[$day->id()][$pair->number()] != NULL}
-                                                    {$main_schedule[$day->id()][$pair->number()]->teacher()}
+                                                {if $main_schedule[$day->id()][$pair->number()-1] != NULL}
+                                                    {$main_schedule[$day->id()][$pair->number()-1]->teacher()}
                                                 {/if}
                                             </td>
                                         </tr>

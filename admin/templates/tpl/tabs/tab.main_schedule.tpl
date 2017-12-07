@@ -34,12 +34,56 @@
                         <input type="hidden" name="group_caption" value="">
                     </div>
                 </div>
-                <div class="two fields">
+                <div class="four fields">
                     <div class="field">
-                        <input type="submit" name="selectGroupScheduleButton" value="Выбрать" class="ui primary button">
+                        <label>День недели</label>
+                        <select name="day">
+                            {foreach $days as $day}
+                                <option value="{$day->id()}">{$day->caption()}</option>
+                            {/foreach}
+                        </select>
                     </div>
                     <div class="field">
-                        {$group_caption}
+                        <label>Пара</label>
+                        <select name="pair">
+                            {foreach $pairs as $pair}
+                                <option value="{$pair->id()}">{$pair->number()} ({$pair->startTime()} - {$pair->endTime()})</option>
+                            {/foreach}
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label>Пара (чётная неделя)</label>
+                        <select name="subject_1">
+                            {foreach $subjects as $subject}
+                                <option value="{$subject->id()}">{$subject->caption()}</option>
+                            {/foreach}
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label>Пара (нечётная неделя)</label>
+                        <select name="subject_2">
+                            {foreach $subjects as $subject}
+                                <option value="{$subject->id()}">{$subject->caption()}</option>
+                            {/foreach}
+                        </select>
+                    </div>
+                </div>
+                <div class="two fields">
+                    <div class="field">
+                        <label>Аудитория</label>
+                        <input type="text" name="lecture_hall">
+                    </div>
+                    <div class="field">
+                        <label>Преподаватель</label>
+                        <input type="text" name="teacher">
+                    </div>
+                </div>
+                <div class="two fields">
+                    <div class="field">
+                        <input type="submit" name="selectGroupScheduleButton" value="Просмотреть расписание группы" class="ui positive button" style="width: 100%;">
+                    </div>
+                    <div class="field">
+                        <input type="submit" name="saveGroupScheduleButton" value="Сохранить" class="ui primary button" style="width: 100%;">
                     </div>
                 </div>
             </div>
@@ -49,62 +93,73 @@
                 {foreach $days as $day}
                     <div class="ui styled accordion">
                         <div class="active title">
-                            <h2 align="center">{$day->caption()}</h2>
+                            {$day->caption()}
                         </div>
                         <div class="active content">
-                            <table class="ui fixed table">
+                            <table class="ui fixed celled table">
                                 <thead>
-                                    <tr>
-                                        <th>Пара</th>
-                                        <th>Предмет</th>
-                                        <th>Аудитория</th>
-                                        <th>Преподаватели</th>
-                                    </tr>
+                                <tr>
+                                    <th>Пара</th>
+                                    <th>
+                                        <table class="ui table">
+                                            <thead>
+                                                <tr>
+                                                    <th colspan="2">Предмет</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr style="text-align: center;"> <!-- FIXME: -->
+                                                    <td>
+                                                        Чётная
+                                                    </td>
+                                                    <td>
+                                                        Нечётная
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </th>
+                                    <th>Аудитория</th>
+                                    <th>Преподаватель</th>
+                                </tr>
                                 </thead>
                                 <tbody>
-                                    {foreach $pairs as $pair}
-                                        <tr>
-                                            <td style="text-align: center;"> <!-- FIXME -->
-                                                {$pair->number()} ({$pair->startTime()} - {$pair->endTime()})
-                                                <input type="hidden" name="pair" value="{$pair->number()}">
-                                            </td>
-                                            <td>
-                                                <div class="two fields" style="margin-bottom: 0px;">
-                                                    {if $main_schedule[$day->id()][$pair->number()] != NULL}
-                                                        {$subj_1 = $main_schedule[$day->id()][$pair->number()]->first_subject()->caption()}
-                                                        {$subj_2 = $main_schedule[$day->id()][$pair->number()]->second_subject()->caption()}
-                                                        <div class="field">
-                                                            <input type="text" name="subject_1" value="{$subj_1}" list="subjects">
-                                                        </div>
-                                                        <div class="field">
-                                                            <input type="text" name="subject_2" value="{$subj_2}" list="subjects">
-                                                        </div>
-                                                    {else}
-                                                        <div class="field">
-                                                            <input type="text" name="subject_1" value="" list="subjects">
-                                                        </div>
-                                                        <div class="field">
-                                                            <input type="text" name="subject_2" value="" list="subjects">
-                                                        </div>
-                                                    {/if}
-                                                </div>
-                                            </td>
-                                            <td>
-                                                {if $main_schedule[$day->id()][$pair->number()] != NULL}
-                                                    <input type="text" name="lecture_hall" value="{$main_schedule[$day->id()][$pair->number()]->lectureHall()}">
+                                {foreach $pairs as $pair}
+                                    <tr style="text-align: center;">
+                                        <!-- FIXME: -->
+                                        <td style="text-align: center;">{$pair->number()} ({$pair->startTime()} - {$pair->endTime()})</td>
+                                        <td class="ui form">
+                                            {if $main_schedule[$day->id()][$pair->number()-1] != NULL}
+                                                {$subj_1 = $main_schedule[$day->id()][$pair->number()-1]->first_subject()->caption()}
+                                                {$subj_2 = $main_schedule[$day->id()][$pair->number()-1]->second_subject()->caption()}
+                                                {if $subj_1 === $subj_2}
+                                                    <div class="field">
+                                                        {$subj_1}
+                                                    </div>
                                                 {else}
-                                                    <input type="text" name="lecture_hall" value="">
+                                                    <div class="two fields">
+                                                        <div class="field">
+                                                            {$subj_1}
+                                                        </div>
+                                                        <div class="field">
+                                                            {$subj_2}
+                                                        </div>
+                                                    </div>
                                                 {/if}
-                                            </td>
-                                            <td>
-                                                {if $main_schedule[$day->id()][$pair->number()] != NULL}
-                                                    <input type="text" name="teacher" value="{$main_schedule[$day->id()][$pair->number()]->teacher()}">
-                                                {else}
-                                                    <input type="text" name="teacher" value="">
-                                                {/if}
-                                            </td>
-                                        </tr>
-                                    {/foreach}
+                                            {/if}
+                                        </td>
+                                        <td>
+                                            {if $main_schedule[$day->id()][$pair->number()-1] != NULL}
+                                                {$main_schedule[$day->id()][$pair->number()-1]->lectureHall()}
+                                            {/if}
+                                        </td>
+                                        <td>
+                                            {if $main_schedule[$day->id()][$pair->number()-1] != NULL}
+                                                {$main_schedule[$day->id()][$pair->number()-1]->teacher()}
+                                            {/if}
+                                        </td>
+                                    </tr>
+                                {/foreach}
                                 </tbody>
                             </table>
                         </div>
@@ -126,6 +181,7 @@
                     if (replay !== "") {
                         $("[name='group']").html("");
                         $("[name='group']").html(replay);
+                        $("[name='group']").val(localStorage.getItem("current_group"));
                     } else {
                         $("[name='group']").html("");
                     }
@@ -136,15 +192,16 @@
             });
         }
 
+
         $(document).ready(function(){
-            $("[name='institute']").val(localStorage.getItem("current_institute"));
-            $("[name='education_course']").val(localStorage.getItem("current_education_course"));
-            $("[name='education_form']").val(localStorage.getItem("current_education_form"));
             getGroups(
                 localStorage.getItem("current_institute"),
                 localStorage.getItem("current_education_course"),
                 localStorage.getItem("current_education_form")
             );
+            $("[name='institute']").val(localStorage.getItem("current_institute"));
+            $("[name='education_course']").val(localStorage.getItem("current_education_course"));
+            $("[name='education_form']").val(localStorage.getItem("current_education_form"));
         });
 
         $("[name='institute'], [name='education_course'], [name='education_form']").on("change", function() {
@@ -154,26 +211,31 @@
             localStorage.setItem("current_education_form", $("[name='education_form']").val());
         });
 
-        $("[name='subject_1'], [name='subject_2']").on("change", function () {
-           let subject = $(this).val();
-
-           if (subject !== "") {
-               $.ajax({
-                   url: "php/get_subjects.php",
-                   type: "POST",
-                   data: "subject=" + subject,
-                   success: function (replay) {
-                       $("#subjects").html("");
-                       $("#subjects").html(replay);
-                   },
-                   error: function (replay) {
-
-                   }
-               });
-           }
-
-
+        $("[name='group']").on('change', function(){
+            localStorage.setItem("current_group", $("[name='group']").val());
         });
+        /*
+                $("[name='subject_1'], [name='subject_2']").on("change", function () {
+                    alert("change");
+                   let subject = $(this).val();
+
+                   if (subject !== "") {
+                       $.ajax({
+                           url: "php/get_subjects.php",
+                           type: "POST",
+                           data: "subject=" + subject,
+                           success: function (replay) {
+                               $("#subjects").html("");
+                               $("#subjects").html(replay);
+                           },
+                           error: function (replay) {
+
+                           }
+                       });
+                   }
+
+
+                });*/
 
     </script>
 

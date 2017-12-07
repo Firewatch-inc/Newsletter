@@ -28,8 +28,7 @@
 	) {
 
 		$CT->assign("courses", $CoursesManager->get());
-		$CT->assign("main_schedule", $_SESSION['current_schedule']);
-		$CT->assign("group_caption", $_SESSION['current_group']);
+		$CT->assign("main_schedule", $ScheduleManager->getSchedule($_SESSION['current_group']));
 		$CT->assign("courses_schedule", $CoursesManager->getSchedule());
 		$CT->assign("institutes", $InstitutesManager->get());
 		$CT->assign("subjects", $SubjectsManager->get());
@@ -52,10 +51,35 @@
 
 			if (!empty($_POST['selectGroupScheduleButton'])) {
 			    $id_group = $_POST['group'];
-                $_SESSION['current_schedule'] = $ScheduleManager->getSchedule($id_group);
-                $_SESSION['current_group'] = $_POST['group_caption'];
+                $_SESSION['current_group'] = $id_group;
+
                 CTools::Redirect("index.php");
             }
+
+            if (!empty($_POST['saveGroupScheduleButton'])) {
+                $id_group = $_POST['group'];
+                $day = $_POST['day'];
+                $pair = $_POST['pair'];
+                $subject_1 = $_POST['subject_1'];
+                $subject_2 = $_POST['subject_2'];
+                $lecture_hall = $_POST['lecture_hall'];
+                $teacher = $_POST['teacher'];
+
+                if ($ScheduleManager->add([
+                    "group" => $id_group,
+                    "day" => $day,
+                    "pair" => $pair,
+                    "subject_1" => $subject_1,
+                    "subject_2" => $subject_2,
+					"lecture_hall" => $lecture_hall,
+					"teacher" => $teacher
+                ])) {
+                    CTools::Message("Расписание сохранено");
+                    CTools::Redirect("index.php");
+                } else {
+                    CTools::Message("Не удалось сохранить расписание");
+                }
+			}
 
             /*!
 				Обработка событий для работы с предметами

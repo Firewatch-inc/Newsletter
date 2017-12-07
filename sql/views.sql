@@ -15,8 +15,9 @@ CREATE VIEW vCoursesSchedule (id_course, course_caption, course_short_caption, d
        INNER JOIN `Courses` c ON sc.id_course=c.id_course
        INNER JOIN `ListOfDays` ld ON sc.day=ld.id_day;
 	
-CREATE VIEW vMainSchedule (id_group, day, pair, pair_start, pair_end, subject_1, subject_2, lecture_hall, teacher)
-  AS SELECT g.id_group,
+CREATE VIEW vMainSchedule (id_schedule_main, id_group, day, pair, pair_start, pair_end, subject_1, subject_2, lecture_hall, teacher)
+  AS SELECT sm.id_schedule_main,
+	   g.id_group,
        sm.day,
        lp.number,
        lp.start_time,
