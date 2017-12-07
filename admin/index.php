@@ -273,6 +273,42 @@
 	
 			/* ----------------------------------------------------- */
 
+			if (!empty($_POST['addInstituteButton'])) {
+				$caption = htmlspecialchars($_POST['caption']);
+				$short_caption = htmlspecialchars($_POST['shortCaption']);
+				$address = htmlspecialchars($_POST['address']);
+
+                if ($InstitutesManager->add(
+                    new Institute($caption, $short_caption, $address)
+                )) {
+                    CTools::Message("Институт успешно добавлен");
+                    CTools::Redirect("index.php");
+                } else {
+                    CTools::Message("Не удалось добавить институт");
+                }
+			}
+
+			if (!empty($_POST['removeInstituteButton'])) {
+				$institutes = $_POST['institutes'];
+
+                if (!empty($institutes)) {
+                    $result = true;
+                    foreach ($institutes as $institute_id) {
+                        $result *= $InstitutesManager->remove($institute_id);
+                    }
+
+                    if ($result) {
+                        CTools::Message("Выбранные институты были удалены");
+                        CTools::Redirect("index.php");
+                    } else {
+                        CTools::Message("Не удалось удалить выбранные институты");
+                    }
+                } else {
+                    // FIXME:
+                }
+
+			}
+
 		} catch (Exception $e) {
 			CTools::Message($e->getMessage());
 			CTools::Redirect("index.php");

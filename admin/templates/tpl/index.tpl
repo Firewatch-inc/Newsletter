@@ -7,6 +7,7 @@
               <a class="active item" data-tab="schedule">Основное расписание</a>
 			  <a class="item" data-tab="change_schedule">Изменения в расписании</a>
 			  <a class="item" data-tab="courses">Элективные курсы</a>
+			  <a class="item" data-tab="institutes">Институты</a>
 			  <a class="item" data-tab="groups">Группы</a>
 			  <a class="item" data-tab="specialties">Специальности</a>
 			  <a class="item" data-tab="subjects">Предметы</a>
@@ -25,6 +26,9 @@
 			</div>
             <div class="ui bottom attached tab segment" data-tab="courses">
 				{include file="tabs/tab.dop_schedule.tpl"}
+			</div>
+			<div class="ui bottom attached tab segment" data-tab="institutes">
+                {include file="tabs/tab.institutes.tpl"}
 			</div>
             <div class="ui bottom attached tab segment" data-tab="groups">
 				{include file="tabs/tab.groups.tpl"}

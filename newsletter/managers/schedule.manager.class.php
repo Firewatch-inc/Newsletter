@@ -21,7 +21,16 @@
             echo "</pre>";
 
             if (!empty($check_query)) {
+                $update = $this->odbc->prepare("UPDATE `ScheduleMain` SET `id_subject_1`=:subject_1, `id_subject_2`=:subject_2, `lecture_hall`=:lecture_hall, `teacher`=:teacher  WHERE `id_group`=:group AND `day`=:day AND `id_pair`=:pair");
+                $update->bindValue(":group", $main_schedule['group']);
+                $update->bindValue(":day", $main_schedule['day']);
+                $update->bindValue(":pair", $main_schedule['pair']);
+                $update->bindValue(":subject_1", $main_schedule['subject_1']);
+                $update->bindValue(":subject_2", $main_schedule['subject_2']);
+                $update->bindValue(":lecture_hall", $main_schedule['lecture_hall']);
+                $update->bindValue(":teacher", $main_schedule['teacher']);
 
+                return $update->execute();
             } else {
                 $insert_into = $this->odbc->prepare("INSERT INTO `ScheduleMain` (`id_group`, `day`, `id_pair`, `id_subject_1`, `id_subject_2`, `lecture_hall`, `teacher`) VALUES (:group, :day, :pair, :subject_1, :subject_2, :lecture_hall, :teacher)");
                 $insert_into->bindValue(":group", $main_schedule['group']);
