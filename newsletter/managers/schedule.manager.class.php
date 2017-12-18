@@ -16,10 +16,6 @@
             $check_query = $this->query("SELECT * FROM `ScheduleMain` WHERE `id_group`=:group AND `day`=:day AND `id_pair`=:pair",
                 [":group" => $main_schedule['group'], ":day" => $main_schedule['day'], ":pair" => $main_schedule['pair']]);
 
-            echo "<pre>";
-            print_r($check_query);
-            echo "</pre>";
-
             if (!empty($check_query)) {
                 $update = $this->odbc->prepare("UPDATE `ScheduleMain` SET `id_subject_1`=:subject_1, `id_subject_2`=:subject_2, `lecture_hall`=:lecture_hall, `teacher`=:teacher  WHERE `id_group`=:group AND `day`=:day AND `id_pair`=:pair");
                 $update->bindValue(":group", $main_schedule['group']);
@@ -60,8 +56,12 @@
                     new Subject(trim($db_main_schedule['subject_1'])),
                     new Subject(trim($db_main_schedule['subject_2']))
                 );
+                $lecture_halls = array(
+                    $db_main_schedule['lecture_hall_1'],
+                    $db_main_schedule['lecture_hall_2'],
+                );
 
-                $main_schedule =  new MainSchedule($subjects, $db_main_schedule['lecture_hall'], $db_main_schedule['teacher']);
+                $main_schedule =  new MainSchedule($subjects, $lecture_halls, $db_main_schedule['teacher']);
                 $main_schedule->setId($db_main_schedule['id_schedule_main']);
 
                 $main_schedules[$db_main_schedule['day']][] = $main_schedule;

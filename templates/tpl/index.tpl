@@ -46,8 +46,7 @@
             $("#dop_schedule").modal("show");
         });
 
-        function getGroups(institute, education_course, education_form)
-        {
+        function getGroups(institute, education_course, education_form) {
             $.ajax({
                 url: "admin/php/get_groups.php",
                 type: "POST",
@@ -66,7 +65,7 @@
             });
         }
 
-        $(document).ready(function(){
+        $(document).ready(function() {
             $("[name='institute']").val(localStorage.getItem("current_institute"));
             $("[name='education_course']").val(localStorage.getItem("current_education_course"));
             $("[name='education_form']").val(localStorage.getItem("current_education_form"));

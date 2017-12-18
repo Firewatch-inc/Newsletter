@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4d9e31e9-b682-4f25-a551-3bc130e20dda" name="Default" comment="" />
+    <list default="true" id="4d9e31e9-b682-4f25-a551-3bc130e20dda" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,18 +23,7 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="test.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="Git.Settings">
     <option name="ROOT_SYNC" value="DONT_SYNC" />
@@ -118,73 +109,6 @@
               <item name="Newsletter.mgutu" type="b2602c69:ProjectViewProjectNode" />
               <item name="Newsletter.mgutu" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
-            <path>
-              <item name="Newsletter.mgutu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Newsletter.mgutu" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Newsletter.mgutu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Newsletter.mgutu" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="php" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Newsletter.mgutu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Newsletter.mgutu" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Newsletter.mgutu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Newsletter.mgutu" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="tpl" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Newsletter.mgutu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Newsletter.mgutu" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="tpl" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="tabs" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Newsletter.mgutu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Newsletter.mgutu" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="newsletter" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Newsletter.mgutu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Newsletter.mgutu" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="newsletter" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="data" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Newsletter.mgutu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Newsletter.mgutu" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="newsletter" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="managers" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Newsletter.mgutu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Newsletter.mgutu" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Newsletter.mgutu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Newsletter.mgutu" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="tpl" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Newsletter.mgutu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Newsletter.mgutu" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="tpl" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="modals" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -228,17 +152,18 @@
       <workItem from="1512472094539" duration="38000" />
       <workItem from="1512477786625" duration="5106000" />
       <workItem from="1512642527531" duration="11270000" />
+      <workItem from="1512739700532" duration="18000" />
+      <workItem from="1513584103580" duration="51000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48966000" />
+    <option name="totallyTimeSpent" value="49035000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1592" y="-8" width="1616" height="1216" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.201875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.201875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -308,13 +233,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="496">
           <caret line="31" column="70" lean-forward="true" selection-start-line="31" selection-start-column="70" selection-end-line="31" selection-end-column="70" />
-          <folding>
-            <marker date="1512652568715" expanded="true" signature="497:584" ph="SELECT * FRO... ScheduleMain" />
-            <marker date="1512652568715" expanded="true" signature="889:1077" ph="UPDATE `ScheduleMain`... " />
-            <marker date="1512652568715" expanded="true" signature="1724:1868" ph="INSERT INTO `ScheduleMain`... " />
-            <marker date="1512652568715" expanded="true" signature="1724:1918" ph="INSERT INTO `ScheduleMain`... " />
-            <marker date="1512652568715" expanded="true" signature="2719:2775" ph="SELECT * FRO... vMainSchedule" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -322,7 +240,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
           <caret line="30" column="34" lean-forward="false" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -330,12 +247,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1184">
           <caret line="74" column="62" lean-forward="true" selection-start-line="74" selection-start-column="62" selection-end-line="74" selection-end-column="62" />
-          <folding>
-            <element signature="n#style#0;n#input#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#0;n#form#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#input#0;n#div#1;n#div#3;n#div#0;n#div#0;n#div#0;n#form#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#tr#0;n#tbody#0;n#table#0;n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#form#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#form#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -364,7 +275,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
           <caret line="10" column="35" lean-forward="true" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -386,7 +296,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
           <caret line="12" column="34" lean-forward="true" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -425,7 +334,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="576">
           <caret line="36" column="54" lean-forward="false" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="54" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -440,11 +348,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
           <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding>
-            <marker date="1512295967775" expanded="true" signature="497:532" ph="SELECT * FRO... ListOfEducationForm" />
-            <marker date="1512295967775" expanded="true" signature="1041:1114" ph="SELECT `capt... ListOfEducationForm" />
-            <marker date="1512295967775" expanded="true" signature="1288:1355" ph="DELETE FROM `ListOfEducationCourse`... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -459,7 +362,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
           <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -467,11 +369,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="52" lean-forward="true" selection-start-line="5" selection-start-column="52" selection-end-line="5" selection-end-column="52" />
-          <folding>
-            <marker date="1512386844692" expanded="true" signature="341:415" ph="INSERT INTO `ListOfSpecialty`... " />
-            <marker date="1512386844692" expanded="true" signature="711:742" ph="SELECT * FRO... ListOfSpecialty" />
-            <marker date="1512386844692" expanded="true" signature="1209:1263" ph="DELETE FROM `ListOfSpecialty`... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -514,7 +411,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="646">
           <caret line="38" column="20" lean-forward="false" selection-start-line="38" selection-start-column="4" selection-end-line="38" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -522,7 +418,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="25" column="33" lean-forward="true" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -530,21 +425,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="782">
           <caret line="46" column="9" lean-forward="false" selection-start-line="46" selection-start-column="9" selection-end-line="46" selection-end-column="9" />
-          <folding>
-            <marker date="1512481597692" expanded="true" signature="410:467" ph="INSERT INTO `ListOfSubjects`... " />
-            <marker date="1512481597692" expanded="true" signature="663:711" ph="SELECT * FRO... ListOfSubject" />
-            <marker date="1512481597692" expanded="true" signature="1120:1172" ph="SELECT * FRO... ListOfSubject" />
-            <marker date="1512481597692" expanded="true" signature="1120:1173" ph="SELECT * FRO... ListOfSubject" />
-            <marker date="1512481597692" expanded="true" signature="1120:1184" ph="SELECT * FRO... ListOfSubjects" />
-            <marker date="1512481597692" expanded="true" signature="1120:1192" ph="SELECT * FRO... ListOfSubject" />
-            <marker date="1512481597692" expanded="true" signature="1120:1193" ph="SELECT * FRO... ListOfSubject" />
-            <marker date="1512481597692" expanded="true" signature="1610:1658" ph="SELECT * FRO... ListOfSubject" />
-            <marker date="1512481597692" expanded="true" signature="1610:1664" ph="SELECT * FRO... ListOfSubject" />
-            <marker date="1512481597692" expanded="true" signature="1610:1676" ph="SELECT * FRO... ListOfSubject" />
-            <marker date="1512481597692" expanded="true" signature="1610:1677" ph="SELECT * FRO... ListOfSubject" />
-            <marker date="1512481597692" expanded="true" signature="1610:1678" ph="SELECT * FRO... ListOfSubject" />
-            <marker date="1512481597692" expanded="true" signature="2096:2146" ph="DELETE FROM `ListOfSubjects`... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -552,7 +432,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
           <caret line="29" column="41" lean-forward="false" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -560,7 +439,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="103" lean-forward="false" selection-start-line="11" selection-start-column="103" selection-end-line="11" selection-end-column="103" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -568,7 +446,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="22" column="31" lean-forward="false" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -576,14 +453,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="691">
           <caret line="61" column="39" lean-forward="false" selection-start-line="61" selection-start-column="24" selection-end-line="61" selection-end-column="39" />
-          <folding>
-            <marker date="1512485782969" expanded="true" signature="404:596" ph="INSERT INTO `Groups`... " />
-            <marker date="1512485782969" expanded="true" signature="1099:1167" ph="SELECT * FRO... vGroups" />
-            <marker date="1512485782969" expanded="true" signature="1737:1776" ph="SELECT COUNT... Groups" />
-            <marker date="1512485782969" expanded="true" signature="1992:2122" ph="SELECT * FRO... vGroups" />
-            <marker date="1512485782969" expanded="true" signature="2759:2864" ph="SELECT CONCA... vGroups" />
-            <marker date="1512485782969" expanded="true" signature="3017:3058" ph="DELETE FROM `Groups`... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -591,7 +460,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="4" lean-forward="false" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -599,7 +467,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="748">
           <caret line="44" column="6" lean-forward="true" selection-start-line="44" selection-start-column="6" selection-end-line="44" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -607,7 +474,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="663">
           <caret line="54" column="59" lean-forward="true" selection-start-line="54" selection-start-column="59" selection-end-line="54" selection-end-column="59" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -615,12 +481,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="104">
           <caret line="109" column="51" lean-forward="true" selection-start-line="109" selection-start-column="51" selection-end-line="109" selection-end-column="51" />
-          <folding>
-            <element signature="n#style#0;n#input#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#0;n#form#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#input#0;n#div#1;n#div#3;n#div#0;n#div#0;n#div#0;n#form#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#tr#0;n#tbody#0;n#table#0;n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#form#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#form#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -628,13 +488,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="413">
           <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding>
-            <marker date="1512652568715" expanded="true" signature="497:584" ph="SELECT * FRO... ScheduleMain" />
-            <marker date="1512652568715" expanded="true" signature="889:1077" ph="UPDATE `ScheduleMain`... " />
-            <marker date="1512652568715" expanded="true" signature="1724:1868" ph="INSERT INTO `ScheduleMain`... " />
-            <marker date="1512652568715" expanded="true" signature="1724:1918" ph="INSERT INTO `ScheduleMain`... " />
-            <marker date="1512652568715" expanded="true" signature="2719:2775" ph="SELECT * FRO... vMainSchedule" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -642,7 +495,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="5" lean-forward="true" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -658,7 +510,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1045">
           <caret line="75" column="0" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -666,7 +517,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="27" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="57" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -674,12 +524,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="23" column="9" lean-forward="true" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
-          <folding>
-            <marker date="1512295967776" expanded="true" signature="416:529" ph="INSERT INTO `ListOfInstitute`... " />
-            <marker date="1512295967776" expanded="true" signature="880:930" ph="SELECT * FRO... ListOfInstitute" />
-            <marker date="1512295967776" expanded="true" signature="1429:1493" ph="SELECT `capt... ListOfInstitute" />
-            <marker date="1512295967776" expanded="true" signature="1654:1708" ph="DELETE FROM `ListOfInstitute`... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -687,7 +531,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="21" column="39" lean-forward="false" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -695,7 +538,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="25" column="32" lean-forward="true" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -703,7 +545,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
           <caret line="271" column="13" lean-forward="true" selection-start-line="271" selection-start-column="13" selection-end-line="271" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -711,17 +552,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="835">
           <caret line="50" column="39" lean-forward="true" selection-start-line="50" selection-start-column="39" selection-end-line="50" selection-end-column="39" />
-          <folding>
-            <element signature="n#style#0;n#td#4;n#tr#0;n#tbody#0;n#table#0;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
         </state>
       </provider>
     </entry>

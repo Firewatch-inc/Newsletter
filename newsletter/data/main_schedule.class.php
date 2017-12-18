@@ -41,6 +41,16 @@
         {
             return $this->subjects[1];
         }
+        
+        public function lectureHall_1()
+        {
+            return $this->lecture_hall[0];
+        }
+        
+        public function lectureHall_2()
+        {
+            return $this->lecture_hall[1];
+        }
 
         public function lectureHall()
         {
