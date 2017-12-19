@@ -23,12 +23,11 @@
                         </div>
                         <div class="active content">
                             <table class="ui fixed celled table">
-                            
                                 <thead>
                                     <tr> <!-- FIXME -->
                                         <th>Пара</th>
                                         <th>
-                                            <table class="ui table">
+                                            <table class="ui celled table">
                                                 <thead>
                                                     <tr>
                                                         <th colspan="2">Нечётная</th>

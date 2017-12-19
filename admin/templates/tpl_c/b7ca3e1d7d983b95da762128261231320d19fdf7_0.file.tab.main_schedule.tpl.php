@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-12-07 15:02:02
+/* Smarty version 3.1.29, created on 2017-12-19 11:44:45
   from "C:\OpenServer\domains\Newsletter.mgutu\admin\templates\tpl\tabs\tab.main_schedule.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5a292dbacffc49_14809879',
+  'unifunc' => 'content_5a38d17d5a9814_25296169',
   'file_dependency' => 
   array (
     'b7ca3e1d7d983b95da762128261231320d19fdf7' => 
     array (
       0 => 'C:\\OpenServer\\domains\\Newsletter.mgutu\\admin\\templates\\tpl\\tabs\\tab.main_schedule.tpl',
-      1 => 1512648122,
+      1 => 1513673083,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_5a292dbacffc49_14809879 ($_smarty_tpl) {
+function content_5a38d17d5a9814_25296169 ($_smarty_tpl) {
 ?>
 <form name="saveMainScheduleForm" method="POST" class="ui form">
     <datalist id="subjects"></datalist>
@@ -172,7 +172,7 @@ $_smarty_tpl->tpl_vars['pair'] = $__foreach_pair_4_saved_item;
                         </select>
                     </div>
                     <div class="field">
-                        <label>Пара (чётная неделя)</label>
+                        <label>Пара (нечётная неделя)</label>
                         <select name="subject_1">
                             <?php
 $_from = $_smarty_tpl->tpl_vars['subjects']->value;
@@ -199,7 +199,7 @@ $_smarty_tpl->tpl_vars['subject'] = $__foreach_subject_5_saved_item;
                         </select>
                     </div>
                     <div class="field">
-                        <label>Пара (нечётная неделя)</label>
+                        <label>Пара (чётная неделя)</label>
                         <select name="subject_2">
                             <?php
 $_from = $_smarty_tpl->tpl_vars['subjects']->value;
@@ -226,10 +226,14 @@ $_smarty_tpl->tpl_vars['subject'] = $__foreach_subject_6_saved_item;
                         </select>
                     </div>
                 </div>
-                <div class="two fields">
+                <div class="three fields">
                     <div class="field">
-                        <label>Аудитория</label>
-                        <input type="text" name="lecture_hall">
+                        <label>Аудитория (Нечётная)</label>
+                        <input type="text" name="lecture_hall_1">
+                    </div>
+                    <div class="field">
+                        <label>Аудитория (Чётная)</label>
+                        <input type="text" name="lecture_hall_2">
                     </div>
                     <div class="field">
                         <label>Преподаватель</label>
@@ -268,33 +272,34 @@ $__foreach_day_7_saved_local_item = $_smarty_tpl->tpl_vars['day'];
                         <div class="active content">
                             <table class="ui fixed celled table">
                                 <thead>
-                                <tr>
-                                    <th>Пара</th>
-                                    <th>
-                                        <table class="ui table">
-                                            <thead>
-                                                <tr>
-                                                    <th colspan="2">Предмет</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr style="text-align: center;"> <!-- FIXME: -->
-                                                    <td>
-                                                        Чётная
-                                                    </td>
-                                                    <td>
-                                                        Нечётная
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </th>
-                                    <th>Аудитория</th>
-                                    <th>Преподаватель</th>
-                                </tr>
+                                    <tr> <!-- FIXME -->
+                                        <th>Пара</th>
+                                        <th>
+                                            <table class="ui celled table">
+                                                <thead>
+                                                    <tr>
+                                                        <th colspan="2">Нечётная</th>
+                                                        <th colspan="2">Чётная</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr style="text-align: center;">
+                                                        <td>Пара</td>
+                                                        <td>Аудитория</td>
+                                                        <td>Пара</td>
+                                                        <td>Аудитория</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </th>
+                                        <th>Преподаватель</th>
+                                    </tr>
                                 </thead>
                                 <tbody>
-                                <?php
+                                    <col width="10%">
+                                    <col width="80%">
+                                    <col width="10%">
+                                    <?php
 $_from = $_smarty_tpl->tpl_vars['pairs']->value;
 if (!is_array($_from) && !is_object($_from)) {
 settype($_from, 'array');
@@ -306,51 +311,67 @@ foreach ($_from as $_smarty_tpl->tpl_vars['pair']->value) {
 $_smarty_tpl->tpl_vars['pair']->_loop = true;
 $__foreach_pair_8_saved_local_item = $_smarty_tpl->tpl_vars['pair'];
 ?>
-                                    <tr style="text-align: center;">
-                                        <!-- FIXME: -->
-                                        <td style="text-align: center;"><?php echo $_smarty_tpl->tpl_vars['pair']->value->number();?>
+                                        <tr>
+                                            <!-- FIXME: -->
+                                            <td style="text-align: center;"><?php echo $_smarty_tpl->tpl_vars['pair']->value->number();?>
  (<?php echo $_smarty_tpl->tpl_vars['pair']->value->startTime();?>
  - <?php echo $_smarty_tpl->tpl_vars['pair']->value->endTime();?>
 )</td>
-                                        <td class="ui form">
-                                            <?php if ($_smarty_tpl->tpl_vars['main_schedule']->value[$_smarty_tpl->tpl_vars['day']->value->id()][$_smarty_tpl->tpl_vars['pair']->value->number()-1] != NULL) {?>
-                                                <?php $_smarty_tpl->tpl_vars['subj_1'] = new Smarty_Variable($_smarty_tpl->tpl_vars['main_schedule']->value[$_smarty_tpl->tpl_vars['day']->value->id()][$_smarty_tpl->tpl_vars['pair']->value->number()-1]->first_subject()->caption(), null);
+                                            <td class="ui form">
+                                                <?php if ($_smarty_tpl->tpl_vars['main_schedule']->value[$_smarty_tpl->tpl_vars['day']->value->id()][$_smarty_tpl->tpl_vars['pair']->value->number()-1] != NULL) {?>
+                                                    <?php $_smarty_tpl->tpl_vars['subj_1'] = new Smarty_Variable($_smarty_tpl->tpl_vars['main_schedule']->value[$_smarty_tpl->tpl_vars['day']->value->id()][$_smarty_tpl->tpl_vars['pair']->value->number()-1]->first_subject()->caption(), null);
 $_smarty_tpl->ext->_updateScope->updateScope($_smarty_tpl, 'subj_1', 0);?>
-                                                <?php $_smarty_tpl->tpl_vars['subj_2'] = new Smarty_Variable($_smarty_tpl->tpl_vars['main_schedule']->value[$_smarty_tpl->tpl_vars['day']->value->id()][$_smarty_tpl->tpl_vars['pair']->value->number()-1]->second_subject()->caption(), null);
+                                                    <?php $_smarty_tpl->tpl_vars['subj_2'] = new Smarty_Variable($_smarty_tpl->tpl_vars['main_schedule']->value[$_smarty_tpl->tpl_vars['day']->value->id()][$_smarty_tpl->tpl_vars['pair']->value->number()-1]->second_subject()->caption(), null);
 $_smarty_tpl->ext->_updateScope->updateScope($_smarty_tpl, 'subj_2', 0);?>
-                                                <?php if ($_smarty_tpl->tpl_vars['subj_1']->value === $_smarty_tpl->tpl_vars['subj_2']->value) {?>
-                                                    <div class="field">
-                                                        <?php echo $_smarty_tpl->tpl_vars['subj_1']->value;?>
+                                                    <?php if ($_smarty_tpl->tpl_vars['subj_1']->value === $_smarty_tpl->tpl_vars['subj_2']->value) {?>
+                                                        <div class="four fields">
+                                                            <div class="field">
+                                                                <?php echo $_smarty_tpl->tpl_vars['subj_1']->value;?>
 
-                                                    </div>
-                                                <?php } else { ?>
-                                                    <div class="two fields">
-                                                        <div class="field">
-                                                            <?php echo $_smarty_tpl->tpl_vars['subj_1']->value;?>
+                                                            </div>
+                                                            <div class="field"  style="text-align: center;">
+                                                                <?php echo $_smarty_tpl->tpl_vars['main_schedule']->value[$_smarty_tpl->tpl_vars['day']->value->id()][$_smarty_tpl->tpl_vars['pair']->value->number()-1]->lectureHall_1();?>
 
+                                                            </div>
+                                                            <div class="field">
+                                                                <?php echo $_smarty_tpl->tpl_vars['subj_2']->value;?>
+
+                                                            </div>
+                                                            <div class="field"  style="text-align: center;">
+                                                                <?php echo $_smarty_tpl->tpl_vars['main_schedule']->value[$_smarty_tpl->tpl_vars['day']->value->id()][$_smarty_tpl->tpl_vars['pair']->value->number()-1]->lectureHall_2();?>
+
+                                                            </div>
                                                         </div>
-                                                        <div class="field">
-                                                            <?php echo $_smarty_tpl->tpl_vars['subj_2']->value;?>
+                                                    <?php } else { ?>
+                                                        <div class="four fields">
+                                                            <div class="field">
+                                                                <?php echo $_smarty_tpl->tpl_vars['subj_1']->value;?>
 
+                                                            </div>
+                                                            <div class="field"  style="text-align: center;">
+                                                                <?php echo $_smarty_tpl->tpl_vars['main_schedule']->value[$_smarty_tpl->tpl_vars['day']->value->id()][$_smarty_tpl->tpl_vars['pair']->value->number()-1]->lectureHall_1();?>
+
+                                                            </div>
+                                                            <div class="field">
+                                                                <?php echo $_smarty_tpl->tpl_vars['subj_2']->value;?>
+
+                                                            </div>
+                                                            <div class="field"  style="text-align: center;">
+                                                                <?php echo $_smarty_tpl->tpl_vars['main_schedule']->value[$_smarty_tpl->tpl_vars['day']->value->id()][$_smarty_tpl->tpl_vars['pair']->value->number()-1]->lectureHall_2();?>
+
+                                                            </div>
                                                         </div>
-                                                    </div>
+                                                    <?php }?>
                                                 <?php }?>
-                                            <?php }?>
-                                        </td>
-                                        <td>
-                                            <?php if ($_smarty_tpl->tpl_vars['main_schedule']->value[$_smarty_tpl->tpl_vars['day']->value->id()][$_smarty_tpl->tpl_vars['pair']->value->number()-1] != NULL) {?>
-                                                <?php echo $_smarty_tpl->tpl_vars['main_schedule']->value[$_smarty_tpl->tpl_vars['day']->value->id()][$_smarty_tpl->tpl_vars['pair']->value->number()-1]->lectureHall();?>
+                                            </td>
+                                            <td>
+                                                <?php if ($_smarty_tpl->tpl_vars['main_schedule']->value[$_smarty_tpl->tpl_vars['day']->value->id()][$_smarty_tpl->tpl_vars['pair']->value->number()-1] != NULL) {?>
+                                                    <?php echo $_smarty_tpl->tpl_vars['main_schedule']->value[$_smarty_tpl->tpl_vars['day']->value->id()][$_smarty_tpl->tpl_vars['pair']->value->number()-1]->teacher();?>
 
-                                            <?php }?>
-                                        </td>
-                                        <td>
-                                            <?php if ($_smarty_tpl->tpl_vars['main_schedule']->value[$_smarty_tpl->tpl_vars['day']->value->id()][$_smarty_tpl->tpl_vars['pair']->value->number()-1] != NULL) {?>
-                                                <?php echo $_smarty_tpl->tpl_vars['main_schedule']->value[$_smarty_tpl->tpl_vars['day']->value->id()][$_smarty_tpl->tpl_vars['pair']->value->number()-1]->teacher();?>
-
-                                            <?php }?>
-                                        </td>
-                                    </tr>
-                                <?php
+                                                <?php }?>
+                                            </td>
+                                        </tr>
+                                    <?php
 $_smarty_tpl->tpl_vars['pair'] = $__foreach_pair_8_saved_local_item;
 }
 if ($__foreach_pair_8_saved_item) {

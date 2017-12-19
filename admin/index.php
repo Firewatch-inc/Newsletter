@@ -62,7 +62,8 @@
                 $pair = $_POST['pair'];
                 $subject_1 = $_POST['subject_1'];
                 $subject_2 = $_POST['subject_2'];
-                $lecture_hall = $_POST['lecture_hall'];
+                $lecture_hall_1 = $_POST['lecture_hall_1'];
+                $lecture_hall_2 = $_POST['lecture_hall_2'];
                 $teacher = $_POST['teacher'];
 
                 if ($ScheduleManager->add([
@@ -71,7 +72,8 @@
                     "pair" => $pair,
                     "subject_1" => $subject_1,
                     "subject_2" => $subject_2,
-					"lecture_hall" => $lecture_hall,
+					"lecture_hall_1" => $lecture_hall_1,
+					"lecture_hall_2" => $lecture_hall_2,
 					"teacher" => $teacher
                 ])) {
                     CTools::Message("Расписание сохранено");

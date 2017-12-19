@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-12-18 12:24:19
+/* Smarty version 3.1.29, created on 2017-12-19 11:22:09
   from "C:\OpenServer\domains\Newsletter.mgutu\templates\tpl\main_schedule.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5a3789434d8ca1_30320194',
+  'unifunc' => 'content_5a38cc317076c4_85355781',
   'file_dependency' => 
   array (
     '239023d9f3327299e65bc1f29a26d62e80520c9e' => 
     array (
       0 => 'C:\\OpenServer\\domains\\Newsletter.mgutu\\templates\\tpl\\main_schedule.tpl',
-      1 => 1513589058,
+      1 => 1513671725,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:html/end.tpl' => 1,
   ),
 ),false)) {
-function content_5a3789434d8ca1_30320194 ($_smarty_tpl) {
+function content_5a38cc317076c4_85355781 ($_smarty_tpl) {
 $_smarty_tpl->tpl_vars['title'] = new Smarty_Variable("Newsletter | Основное расписание", null);
 $_smarty_tpl->ext->_updateScope->updateScope($_smarty_tpl, 'title', 0);
 $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:html/begin.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
@@ -65,12 +65,11 @@ $__foreach_day_0_saved_local_item = $_smarty_tpl->tpl_vars['day'];
                         </div>
                         <div class="active content">
                             <table class="ui fixed celled table">
-                            
                                 <thead>
                                     <tr> <!-- FIXME -->
                                         <th>Пара</th>
                                         <th>
-                                            <table class="ui table">
+                                            <table class="ui celled table">
                                                 <thead>
                                                     <tr>
                                                         <th colspan="2">Нечётная</th>
