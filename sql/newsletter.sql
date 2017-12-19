@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Дек 04 2017 г., 15:23
+-- Время создания: Дек 19 2017 г., 12:44
 -- Версия сервера: 5.5.50-log
 -- Версия PHP: 7.0.8
 
@@ -218,7 +218,7 @@ CREATE TABLE IF NOT EXISTS `ListOfSpecialty` (
   `id_specialty` int(10) unsigned NOT NULL COMMENT 'Идентификатор',
   `caption` varchar(255) NOT NULL,
   `code` varchar(255) NOT NULL COMMENT 'Код'
-) ENGINE=InnoDB AUTO_INCREMENT=224 DEFAULT CHARSET=utf8 COMMENT='Специализации';
+) ENGINE=InnoDB AUTO_INCREMENT=223 DEFAULT CHARSET=utf8 COMMENT='Специализации';
 
 --
 -- Дамп данных таблицы `ListOfSpecialty`
@@ -464,8 +464,8 @@ CREATE TABLE IF NOT EXISTS `ListOfSubject` (
 --
 
 INSERT INTO `ListOfSubject` (`id_subject`, `caption`) VALUES
-(1, 'Event-менеджмент                                                                                                                                     '),
-(2, 'HTML5                                                                                                                                                '),
+(1, 'Event-менеджмент'),
+(2, 'HTML5'),
 (3, 'Internet-технологии                                                                                                                                  '),
 (4, 'Smart  - технологии  в образовании и психологии                                                                                                      '),
 (5, 'SQL программирование                                                                                                                                 '),
@@ -779,10 +779,10 @@ INSERT INTO `ListOfSubject` (`id_subject`, `caption`) VALUES
 (313, 'Инфраструктура муниципальных образований                                                                                                             '),
 (314, 'Искусственное воспроизводство рыб                                                                                                                    '),
 (315, 'Исполнительская                                                                                                                                      '),
-(316, 'Исполнительская практика                                                                                                                             ');
-INSERT INTO `ListOfSubject` (`id_subject`, `caption`) VALUES
+(316, 'Исполнительская практика                                                                                                                             '),
 (317, 'Использование вторичных ресурсов виноделия                                                                                                           '),
-(318, 'Исследование операций                                                                                                                                '),
+(318, 'Исследование операций                                                                                                                                ');
+INSERT INTO `ListOfSubject` (`id_subject`, `caption`) VALUES
 (319, 'Исследование систем управления                                                                                                                       '),
 (320, 'Исследование социально-экономических и политических процессов                                                                                        '),
 (321, 'Историко-культурные аспекты средового проектирования                                                                                                 '),
@@ -1096,10 +1096,10 @@ INSERT INTO `ListOfSubject` (`id_subject`, `caption`) VALUES
 (629, 'Организационно-экономическое проектирование инновационных процессов                                                                                  '),
 (630, 'Организация взаимодействия с предприятиями АПК и индустрии питания                                                                                   '),
 (631, 'Организация внешнеэкономической деятельности                                                                                                         '),
-(632, 'Организация и планирование автоматизированных производств                                                                                            ');
-INSERT INTO `ListOfSubject` (`id_subject`, `caption`) VALUES
+(632, 'Организация и планирование автоматизированных производств                                                                                            '),
 (633, 'Организация и планирование деятельности местной администрации                                                                                        '),
-(634, 'Организация и планирование деятельности предприятий сервиса                                                                                          '),
+(634, 'Организация и планирование деятельности предприятий сервиса                                                                                          ');
+INSERT INTO `ListOfSubject` (`id_subject`, `caption`) VALUES
 (635, 'Организация и планирование научно-исследовательской работы                                                                                           '),
 (636, 'Организация и планирование производства                                                                                                              '),
 (637, 'Организация и планирование швейного производства                                                                                                     '),
@@ -1413,10 +1413,10 @@ INSERT INTO `ListOfSubject` (`id_subject`, `caption`) VALUES
 (945, 'Психология управления человеческими ресурсами                                                                                                        '),
 (946, 'Психология управленческой деятельности                                                                                                               '),
 (947, 'Психология формирования команды                                                                                                                      '),
-(948, 'Психолого-педагогическая диагностика                                                                                                                 ');
-INSERT INTO `ListOfSubject` (`id_subject`, `caption`) VALUES
+(948, 'Психолого-педагогическая диагностика                                                                                                                 '),
 (949, 'Психолого-педагогические аспекты управления                                                                                                          '),
-(950, 'Психолого-педагогический практикум                                                                                                                   '),
+(950, 'Психолого-педагогический практикум                                                                                                                   ');
+INSERT INTO `ListOfSubject` (`id_subject`, `caption`) VALUES
 (951, 'Психолого-педагогическое взаимодействие участников образовательного процесса                                                                         '),
 (952, 'Психофизиология профессиональной деятельности                                                                                                        '),
 (953, 'Пути интенсификации процессов и совершенствования технологического оборудования пищевых производств                                                  '),
@@ -1728,10 +1728,10 @@ INSERT INTO `ListOfSubject` (`id_subject`, `caption`) VALUES
 (1259, 'Технология хлеба, кондитерских и макаронных изделий                                                                                                  '),
 (1260, 'Технология швейных изделий                                                                                                                           '),
 (1261, 'Технохимический контроль и учет в консервном и пищеконцентратном производстве                                                                        '),
-(1262, 'Технохимический контроль и учет в сахарном производстве                                                                                              ');
-INSERT INTO `ListOfSubject` (`id_subject`, `caption`) VALUES
+(1262, 'Технохимический контроль и учет в сахарном производстве                                                                                              '),
 (1263, 'Технохимический контроль и учет на парфюмерно-косметических предприятиях                                                                             '),
-(1264, 'Технохимический контроль и учет на предприятиях отрасли хлебопродуктов                                                                               '),
+(1264, 'Технохимический контроль и учет на предприятиях отрасли хлебопродуктов                                                                               ');
+INSERT INTO `ListOfSubject` (`id_subject`, `caption`) VALUES
 (1265, 'Технохимический контроль и учет на предприятиях хлебопекарного, кондитерского и макаронного производств                                              '),
 (1266, 'Технохимический контроль и учет на хлебопекарных предприятиях                                                                                        '),
 (1267, 'Технохимический контроль отрасли                                                                                                                     '),
@@ -2171,17 +2171,24 @@ CREATE TABLE IF NOT EXISTS `ScheduleMain` (
   `id_pair` int(10) unsigned NOT NULL,
   `id_subject_1` int(10) unsigned NOT NULL COMMENT 'Предмет на чётной неделе',
   `id_subject_2` int(10) unsigned NOT NULL COMMENT 'Предмет на нечётной неделе',
-  `lecture_hall` varchar(255) NOT NULL COMMENT 'Аудитория и адрес',
+  `lecture_hall_1` varchar(255) NOT NULL COMMENT 'Аудитория и адрес',
+  `lecture_hall_2` varchar(255) NOT NULL,
   `teacher` varchar(255) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COMMENT='Основное расписание';
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COMMENT='Основное расписание';
 
 --
 -- Дамп данных таблицы `ScheduleMain`
 --
 
-INSERT INTO `ScheduleMain` (`id_schedule_main`, `id_group`, `day`, `id_pair`, `id_subject_1`, `id_subject_2`, `lecture_hall`, `teacher`) VALUES
-(1, 1, 1, 1, 1, 2, '109', '4554'),
-(2, 1, 1, 2, 1, 1, '201', '88');
+INSERT INTO `ScheduleMain` (`id_schedule_main`, `id_group`, `day`, `id_pair`, `id_subject_1`, `id_subject_2`, `lecture_hall_1`, `lecture_hall_2`, `teacher`) VALUES
+(1, 1, 1, 1, 2, 1, '', '', ''),
+(2, 1, 1, 2, 1, 1, '201', '', ''),
+(4, 1, 1, 3, 1, 1, '', '', ''),
+(5, 1, 2, 1, 3, 6, '', '', ''),
+(6, 1, 2, 2, 10, 8, '', '', ''),
+(7, 1, 1, 4, 7, 6, '', '', ''),
+(8, 1, 1, 5, 15, 2, '', '', ''),
+(9, 1, 1, 6, 5, 5, 'Test', '', 'test');
 
 -- --------------------------------------------------------
 
@@ -2237,14 +2244,16 @@ CREATE TABLE IF NOT EXISTS `vgroups` (
 -- Дублирующая структура для представления `vmainschedule`
 --
 CREATE TABLE IF NOT EXISTS `vmainschedule` (
-`id_group` int(10) unsigned
+`id_schedule_main` int(10) unsigned
+,`id_group` int(10) unsigned
 ,`day` int(10) unsigned
 ,`pair` int(10) unsigned
 ,`pair_start` varchar(255)
 ,`pair_end` varchar(255)
 ,`subject_1` varchar(255)
 ,`subject_2` varchar(255)
-,`lecture_hall` varchar(255)
+,`lecture_hall_1` varchar(255)
+,`lecture_hall_2` varchar(255)
 ,`teacher` varchar(255)
 );
 
@@ -2273,7 +2282,7 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`%` SQL SECURITY DEFINER VIEW `vgroups
 --
 DROP TABLE IF EXISTS `vmainschedule`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`%` SQL SECURITY DEFINER VIEW `vmainschedule` AS select `g`.`id_group` AS `id_group`,`sm`.`day` AS `day`,`lp`.`number` AS `pair`,`lp`.`start_time` AS `pair_start`,`lp`.`end_time` AS `pair_end`,`ls_1`.`caption` AS `subject_1`,`ls_2`.`caption` AS `subject_2`,`sm`.`lecture_hall` AS `lecture_hall`,`sm`.`teacher` AS `teacher` from ((((`schedulemain` `sm` join `groups` `g` on((`sm`.`id_group` = `g`.`id_group`))) join `listofpair` `lp` on((`sm`.`id_pair` = `lp`.`id_pair`))) join `listofsubject` `ls_1` on((`sm`.`id_subject_1` = `ls_1`.`id_subject`))) join `listofsubject` `ls_2` on((`sm`.`id_subject_2` = `ls_2`.`id_subject`))) order by `sm`.`id_pair`;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`%` SQL SECURITY DEFINER VIEW `vmainschedule` AS select `sm`.`id_schedule_main` AS `id_schedule_main`,`g`.`id_group` AS `id_group`,`sm`.`day` AS `day`,`lp`.`number` AS `pair`,`lp`.`start_time` AS `pair_start`,`lp`.`end_time` AS `pair_end`,`ls_1`.`caption` AS `subject_1`,`ls_2`.`caption` AS `subject_2`,`sm`.`lecture_hall_1` AS `lecture_hall_1`,`sm`.`lecture_hall_2` AS `lecture_hall_2`,`sm`.`teacher` AS `teacher` from ((((`schedulemain` `sm` join `groups` `g` on((`sm`.`id_group` = `g`.`id_group`))) join `listofpair` `lp` on((`sm`.`id_pair` = `lp`.`id_pair`))) join `listofsubject` `ls_1` on((`sm`.`id_subject_1` = `ls_1`.`id_subject`))) join `listofsubject` `ls_2` on((`sm`.`id_subject_2` = `ls_2`.`id_subject`))) order by `sm`.`id_pair`;
 
 --
 -- Индексы сохранённых таблиц
@@ -2417,7 +2426,7 @@ ALTER TABLE `ListOfPair`
 -- AUTO_INCREMENT для таблицы `ListOfSpecialty`
 --
 ALTER TABLE `ListOfSpecialty`
-  MODIFY `id_specialty` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Идентификатор',AUTO_INCREMENT=224;
+  MODIFY `id_specialty` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Идентификатор',AUTO_INCREMENT=223;
 --
 -- AUTO_INCREMENT для таблицы `ListOfSubject`
 --
@@ -2432,7 +2441,7 @@ ALTER TABLE `ScheduleCourses`
 -- AUTO_INCREMENT для таблицы `ScheduleMain`
 --
 ALTER TABLE `ScheduleMain`
-  MODIFY `id_schedule_main` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Идентификатор',AUTO_INCREMENT=3;
+  MODIFY `id_schedule_main` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Идентификатор',AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT для таблицы `Settings`
 --
