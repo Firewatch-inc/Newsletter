@@ -34,18 +34,17 @@ CREATE VIEW vMainSchedule (id_schedule_main, id_group, day, pair, pair_start, pa
        INNER JOIN `ListOfSubject` ls_2 ON sm.id_subject_2=ls_2.id_subject
      ORDER BY sm.id_pair;
 
-
-CREATE VIEW vGroups (id_group, institute, institute_caption, group_caption, education_form_caption, education_form, education_course, specialty_caption)
+CREATE VIEW vGroups (id_group, institute, institute_caption, group_caption, education_direction, specialty, education_form_caption, education_form, education_course)
   AS SELECT g.id_group,
        g.id_institute as institute,
 	   li.caption as institute_caption,
        g.caption as group_caption,
+       g.education_direction as education_direction,
+       g.specialty as specialty,
        lef.caption as education_form_caption,
        g.id_education_form as education_form,
-       lec.number as education_course,
-       ls.caption as specialty_caption
+       lec.number as education_course
      FROM `Groups` g
        INNER JOIN `ListOfEducationForm` lef ON g.id_education_form=lef.id_education_form
        INNER JOIN `ListOfEducationCourse` lec ON g.id_education_course=lec.id_education_course
-       INNER JOIN `ListOfSpecialty` ls ON g.specialty=ls.id_specialty
 	   INNER JOIN `ListOfInstitute` li ON g.id_institute=li.id_institute

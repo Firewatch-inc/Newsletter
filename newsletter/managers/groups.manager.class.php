@@ -28,7 +28,7 @@
 
             $groups = array();
             foreach ($db_groups as $db_group) {
-                $group = new Group($db_group['group_caption'], $db_group['education_form_caption'], $db_group['education_course'], $db_group['specialty_caption'], $db_group['institute_caption']);
+                $group = new Group($db_group['group_caption'], $db_group['education_form_caption'], $db_group['education_course'], $db_group['education_direction'], $db_group['specialty'], $db_group['institute']);
                 $group->setId((int)$db_group['id_group']);
                 $groups[$db_group['institute_caption']][$db_group['education_course']][] = $group;
             }
@@ -43,7 +43,6 @@
             return $count;
         }
 
-
         public function getGroups($institute, $education_course, $education_form)
         {
             $db_groups = $this->query("SELECT * FROM `vGroups` WHERE `institute`=:institute AND `education_form`=:education_form AND `education_course`=:education_course",
@@ -51,7 +50,7 @@
 
             $groups = array();
             foreach ($db_groups as $db_group) {
-                $group = new Group($db_group['group_caption'], $db_group['education_form_caption'], $db_group['education_course'], $db_group['specialty_caption'], $db_group['institute']);
+                $group = new Group($db_group['group_caption'], $db_group['education_form_caption'], $db_group['education_course'], $db_group['education_direction'], $db_group['specialty'], $db_group['institute']);
                 $group->setId($db_group['id_group']);
                 $groups[] = $group;
             }
@@ -61,7 +60,7 @@
 
         public function getGroupCaption($group_id)
         {
-            return $this->query("SELECT CONCAT(`group_caption`, ' | ', `specialty_caption`) as caption FROM `vGroups` WHERE `id_group`=:id", [":id" => $group_id])[0]['caption'];
+            return $this->query("SELECT CONCAT(`group_caption`, ' | ', `education_direction` , ' | ', `specialty`) as caption FROM `vGroups` WHERE `id_group`=:id", [":id" => $group_id])[0]['caption'];
         }
 
         public function remove($group_id)

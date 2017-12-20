@@ -15,9 +15,9 @@
     if (!empty($_POST['showMainScheduleButton'])) {
         $_SESSION['data'] = array(
             "institute" => $_POST['institute'],
-            "education_course" => $_POST['educationCourse'],
+            "education_course" => $_POST['education_course'],
             "group" => $_POST['group'],
-            "education_form" => $_POST['group']
+            "education_form" => $_POST['education_form']
         );
 
         CTools::redirect("main_schedule.php");

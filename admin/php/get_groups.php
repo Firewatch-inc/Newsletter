@@ -12,7 +12,8 @@
 
         $result_str = "";
         foreach ($groups as $group) {
-            $result_str .= "<option value='".$group->id()."'>".$group->caption()." | ".$group->specialty()."</option>";
+            print_r($group);
+            $result_str .= "<option value='".$group->id()."'>".$group->caption()." | ".$group->educationDirection()." | ".$group->specialty()."</option>";
         }
 
         echo $result_str;
