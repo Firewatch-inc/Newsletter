@@ -52,7 +52,7 @@
                         </select>
                     </div>
                     <div class="field">
-                        <label>Пара (нечётная неделя)</label>
+                        <label>Предмет (нечётная неделя)</label>
                         <select name="subject_1">
                             {foreach $subjects as $subject}
                                 <option value="{$subject->id()}">{$subject->caption()}</option>
@@ -60,7 +60,7 @@
                         </select>
                     </div>
                     <div class="field">
-                        <label>Пара (чётная неделя)</label>
+                        <label>Предмет (чётная неделя)</label>
                         <select name="subject_2">
                             {foreach $subjects as $subject}
                                 <option value="{$subject->id()}">{$subject->caption()}</option>
@@ -68,7 +68,7 @@
                         </select>
                     </div>
                 </div>
-                <div class="three fields">
+                <div class="four fields">
                     <div class="field">
                         <label>Аудитория (Нечётная)</label>
                         <input type="text" name="lecture_hall_1">
@@ -78,8 +78,12 @@
                         <input type="text" name="lecture_hall_2">
                     </div>
                     <div class="field">
-                        <label>Преподаватель</label>
-                        <input type="text" name="teacher">
+                        <label>Преподаватель (Нечётная)</label>
+                        <input type="text" name="teacher_1">
+                    </div>
+                    <div class="field">
+                        <label>Преподаватель (Чётная)</label>
+                        <input type="text" name="teacher_2">
                     </div>
                 </div>
                 <div class="two fields">
@@ -102,79 +106,36 @@
                         <div class="active content">
                             <table class="ui fixed celled table">
                                 <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th colspan="3">Нечётная</th>
+                                        <th colspan="3">Чётная</th>
+                                    </tr>
                                     <tr> <!-- FIXME -->
                                         <th>Пара</th>
-                                        <th>
-                                            <table class="ui celled table">
-                                                <thead>
-                                                    <tr>
-                                                        <th colspan="2">Нечётная</th>
-                                                        <th colspan="2">Чётная</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr style="text-align: center;">
-                                                        <td>Пара</td>
-                                                        <td>Аудитория</td>
-                                                        <td>Пара</td>
-                                                        <td>Аудитория</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </th>
+                                        <th>Предмет</th>
+                                        <th>Аудитория</th>
+                                        <th>Преподаватель</th>
+                                        <th>Предмет</th>
+                                        <th>Аудитория</th>
                                         <th>Преподаватель</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <col width="10%">
-                                    <col width="80%">
-                                    <col width="10%">
                                     {foreach $pairs as $pair}
                                         <tr>
                                             <!-- FIXME: -->
                                             <td style="text-align: center;">{$pair->number()} ({$pair->startTime()} - {$pair->endTime()})</td>
-                                            <td class="ui form">
-                                                {if $main_schedule[$day->id()][$pair->number()-1] != NULL}
-                                                    {$subj_1 = $main_schedule[$day->id()][$pair->number()-1]->first_subject()->caption()}
-                                                    {$subj_2 = $main_schedule[$day->id()][$pair->number()-1]->second_subject()->caption()}
-                                                    {if $subj_1 === $subj_2}
-                                                        <div class="four fields">
-                                                            <div class="field">
-                                                                {$subj_1}
-                                                            </div>
-                                                            <div class="field"  style="text-align: center;">
-                                                                {$main_schedule[$day->id()][$pair->number()-1]->lectureHall_1()}
-                                                            </div>
-                                                            <div class="field">
-                                                                {$subj_2}
-                                                            </div>
-                                                            <div class="field"  style="text-align: center;">
-                                                                {$main_schedule[$day->id()][$pair->number()-1]->lectureHall_2()}
-                                                            </div>
-                                                        </div>
-                                                    {else}
-                                                        <div class="four fields">
-                                                            <div class="field">
-                                                                {$subj_1}
-                                                            </div>
-                                                            <div class="field"  style="text-align: center;">
-                                                                {$main_schedule[$day->id()][$pair->number()-1]->lectureHall_1()}
-                                                            </div>
-                                                            <div class="field">
-                                                                {$subj_2}
-                                                            </div>
-                                                            <div class="field"  style="text-align: center;">
-                                                                {$main_schedule[$day->id()][$pair->number()-1]->lectureHall_2()}
-                                                            </div>
-                                                        </div>
-                                                    {/if}
-                                                {/if}
-                                            </td>
-                                            <td>
-                                                {if $main_schedule[$day->id()][$pair->number()-1] != NULL}
-                                                    {$main_schedule[$day->id()][$pair->number()-1]->teacher()}
-                                                {/if}
-                                            </td>
+                                            {if $main_schedule[$day->id()][$pair->number()-1] != NULL}
+                                                {$subj_1 = $main_schedule[$day->id()][$pair->number()-1]->first_subject()->caption()}
+                                                {$subj_2 = $main_schedule[$day->id()][$pair->number()-1]->second_subject()->caption()}
+                                                <td>{$subj_1}</td>
+                                                <td>{$main_schedule[$day->id()][$pair->number()-1]->lectureHall_1()}</td>
+                                                <td>{$main_schedule[$day->id()][$pair->number()-1]->teacher_1()}</td>
+                                                <td>{$subj_2}</td>
+                                                <td>{$main_schedule[$day->id()][$pair->number()-1]->lectureHall_2()}</td>
+                                                <td>{$main_schedule[$day->id()][$pair->number()-1]->teacher_2()}</td>
+                                            {/if}
                                         </tr>
                                     {/foreach}
                                 </tbody>

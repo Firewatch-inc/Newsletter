@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-12-18 12:15:27
+/* Smarty version 3.1.29, created on 2017-12-21 09:58:33
   from "C:\OpenServer\domains\Newsletter.mgutu\templates\tpl\index.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5a37872f26ce07_57817263',
+  'unifunc' => 'content_5a3b5b99e814f9_74021611',
   'file_dependency' => 
   array (
     '537bcf8cdd6c7528e11f77229cd277f6379b4b7f' => 
     array (
       0 => 'C:\\OpenServer\\domains\\Newsletter.mgutu\\templates\\tpl\\index.tpl',
-      1 => 1513586760,
+      1 => 1513834050,
       2 => 'file',
     ),
   ),
@@ -24,7 +24,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:html/end.tpl' => 1,
   ),
 ),false)) {
-function content_5a37872f26ce07_57817263 ($_smarty_tpl) {
+function content_5a3b5b99e814f9_74021611 ($_smarty_tpl) {
 if (!is_callable('smarty_modifier_date_format')) require_once 'C:\\OpenServer\\domains\\Newsletter.mgutu\\engine\\smarty\\plugins\\modifier.date_format.php';
 $_smarty_tpl->tpl_vars['title'] = new Smarty_Variable("Newsletter | Главная", null);
 $_smarty_tpl->ext->_updateScope->updateScope($_smarty_tpl, 'title', 0);
@@ -122,6 +122,14 @@ $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:html/begin.t
             localStorage.setItem("current_education_course", $("[name='education_course']").val());
             localStorage.setItem("current_education_form", $("[name='education_form']").val());
         });
+        
+        
+        var updateInterval = 900000;
+        setTimeout(function update() {
+            document.location.href = "index.php";
+            setTimeout(update, updateInterval);
+        }, updateInterval);
+        
 		
     <?php echo '</script'; ?>
 >

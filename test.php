@@ -1,5 +1,6 @@
 <?php
 
+exit;
     require_once "newsletter/libs/classes/phpexcel.php";
     
     $DB = new PDO("mysql:dbname=newsletter;host=localhost", "root", "57RbhCjy");

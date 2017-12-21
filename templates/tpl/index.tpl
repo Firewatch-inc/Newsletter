@@ -83,6 +83,14 @@
             localStorage.setItem("current_education_course", $("[name='education_course']").val());
             localStorage.setItem("current_education_form", $("[name='education_form']").val());
         });
+        
+        
+        var updateInterval = 900000;
+        setTimeout(function update() {
+            document.location.href = "index.php";
+            setTimeout(update, updateInterval);
+        }, updateInterval);
+        
 		
     </script>
 

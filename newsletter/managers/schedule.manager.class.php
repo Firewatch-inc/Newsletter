@@ -17,7 +17,7 @@
                 [":group" => $main_schedule['group'], ":day" => $main_schedule['day'], ":pair" => $main_schedule['pair']]);
 
             if (!empty($check_query)) {
-                $update = $this->odbc->prepare("UPDATE `ScheduleMain` SET `id_subject_1`=:subject_1, `id_subject_2`=:subject_2, `lecture_hall_1`=:lecture_hall_1, `lecture_hall_2`=:lecture_hall_2, `teacher`=:teacher  WHERE `id_group`=:group AND `day`=:day AND `id_pair`=:pair");
+                $update = $this->odbc->prepare("UPDATE `ScheduleMain` SET `id_subject_1`=:subject_1, `id_subject_2`=:subject_2, `lecture_hall_1`=:lecture_hall_1, `lecture_hall_2`=:lecture_hall_2, `teacher_1`=:teacher_1, `teacher_2`=:teacher_2  WHERE `id_group`=:group AND `day`=:day AND `id_pair`=:pair");
                 $update->bindValue(":group", $main_schedule['group']);
                 $update->bindValue(":day", $main_schedule['day']);
                 $update->bindValue(":pair", $main_schedule['pair']);
@@ -25,11 +25,12 @@
                 $update->bindValue(":subject_2", $main_schedule['subject_2']);
                 $update->bindValue(":lecture_hall_1", $main_schedule['lecture_hall_1']);
                 $update->bindValue(":lecture_hall_2", $main_schedule['lecture_hall_2']);
-                $update->bindValue(":teacher", $main_schedule['teacher']);
+                $update->bindValue(":teacher_1", $main_schedule['teacher_1']);
+                $update->bindValue(":teacher_2", $main_schedule['teacher_2']);
 
                 return $update->execute();
             } else {
-                $insert_into = $this->odbc->prepare("INSERT INTO `ScheduleMain` (`id_group`, `day`, `id_pair`, `id_subject_1`, `id_subject_2`, `lecture_hall_1`, `lecture_hall_2`, `teacher`) VALUES (:group, :day, :pair, :subject_1, :subject_2, :lecture_hall_1, :lecture_hall_2, :teacher)");
+                $insert_into = $this->odbc->prepare("INSERT INTO `ScheduleMain` (`id_group`, `day`, `id_pair`, `id_subject_1`, `id_subject_2`, `lecture_hall_1`, `lecture_hall_2`, `teacher_1`, `teacher_2`) VALUES (:group, :day, :pair, :subject_1, :subject_2, :lecture_hall_1, :lecture_hall_2, :teacher_1, :teacher_2)");
                 $insert_into->bindValue(":group", $main_schedule['group']);
                 $insert_into->bindValue(":day", $main_schedule['day']);
                 $insert_into->bindValue(":pair", $main_schedule['pair']);
@@ -37,10 +38,15 @@
                 $insert_into->bindValue(":subject_2", $main_schedule['subject_2']);
                 $insert_into->bindValue(":lecture_hall_1", $main_schedule['lecture_hall_1']);
                 $insert_into->bindValue(":lecture_hall_2", $main_schedule['lecture_hall_2']);
-                $insert_into->bindValue(":teacher", $main_schedule['teacher']);
+                $insert_into->bindValue(":teacher_1", $main_schedule['teacher_1']);
+                $insert_into->bindValue(":teacher_2", $main_schedule['teacher_2']);
 
                 return $insert_into->execute();
             }
+            
+            echo __LINE__;
+            exit;
+            
         }
 
 		public function get()
@@ -60,10 +66,14 @@
                 );
                 $lecture_halls = array(
                     $db_main_schedule['lecture_hall_1'],
-                    $db_main_schedule['lecture_hall_2'],
+                    $db_main_schedule['lecture_hall_2']
+                );
+                $teachers = array(
+                    $db_main_schedule['teacher_1'],
+                    $db_main_schedule['teacher_2']
                 );
 
-                $main_schedule =  new MainSchedule($subjects, $lecture_halls, $db_main_schedule['teacher']);
+                $main_schedule =  new MainSchedule($subjects, $lecture_halls, $teachers);
                 $main_schedule->setId($db_main_schedule['id_schedule_main']);
 
                 $main_schedules[$db_main_schedule['day']][] = $main_schedule;

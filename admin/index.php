@@ -36,7 +36,6 @@
 		$CT->assign("days", $DaysManager->getStudyDays());
 		$CT->assign("groups", $GroupsManager->get());
 		$CT->assign("count_groups", $GroupsManager->count());
-		// $CT->assign("specialties", $SpecialtiesManager->get());
 		$CT->assign("educationCourses", $EducationCoursesManager->get());
 		$CT->assign("educationForms", $EducationFormsManager->get());
 		$CT->Show("index.tpl");
@@ -64,8 +63,9 @@
                 $subject_2 = $_POST['subject_2'];
                 $lecture_hall_1 = $_POST['lecture_hall_1'];
                 $lecture_hall_2 = $_POST['lecture_hall_2'];
-                $teacher = $_POST['teacher'];
-
+                $teacher_1 = $_POST['teacher_1'];
+                $teacher_2 = $_POST['teacher_2'];
+                
                 if ($ScheduleManager->add([
                     "group" => $id_group,
                     "day" => $day,
@@ -74,7 +74,8 @@
                     "subject_2" => $subject_2,
 					"lecture_hall_1" => $lecture_hall_1,
 					"lecture_hall_2" => $lecture_hall_2,
-					"teacher" => $teacher
+					"teacher_1" => $teacher_1,
+					"teacher_2" => $teacher_2,
                 ])) {
                     CTools::Message("Расписание сохранено");
                     CTools::Redirect("index.php");
