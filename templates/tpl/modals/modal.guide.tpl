@@ -1,4 +1,4 @@
-<div class="ui modal" id="guide">
+<div class="ui fullscreen modal" id="guide">
     <div class="header">
         Справочная информация
     </div>
@@ -7,7 +7,7 @@
             <div class="title">
                 Не нашли свою группу?
             </div>
-            <div class="content">
+            <div class="scrolling content">
                 <form class="ui form">
                     <div class="field">
                         <label>Код</label>

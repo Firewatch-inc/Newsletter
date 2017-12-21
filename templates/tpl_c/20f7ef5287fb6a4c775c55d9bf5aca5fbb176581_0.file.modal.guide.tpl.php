@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-12-21 11:03:59
+/* Smarty version 3.1.29, created on 2017-12-21 11:06:21
   from "C:\OpenServer\domains\Newsletter.mgutu\templates\tpl\modals\modal.guide.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5a3b6aef85b7d5_87496158',
+  'unifunc' => 'content_5a3b6b7db6a6f3_50706569',
   'file_dependency' => 
   array (
     '20f7ef5287fb6a4c775c55d9bf5aca5fbb176581' => 
     array (
       0 => 'C:\\OpenServer\\domains\\Newsletter.mgutu\\templates\\tpl\\modals\\modal.guide.tpl',
-      1 => 1513843436,
+      1 => 1513843580,
       2 => 'file',
     ),
   ),
@@ -19,9 +19,9 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_5a3b6aef85b7d5_87496158 ($_smarty_tpl) {
+function content_5a3b6b7db6a6f3_50706569 ($_smarty_tpl) {
 ?>
-<div class="ui modal" id="guide">
+<div class="ui fullscreen modal" id="guide">
     <div class="header">
         Справочная информация
     </div>
@@ -30,7 +30,7 @@ function content_5a3b6aef85b7d5_87496158 ($_smarty_tpl) {
             <div class="title">
                 Не нашли свою группу?
             </div>
-            <div class="content">
+            <div class="scrolling content">
                 <form class="ui form">
                     <div class="field">
                         <label>Код</label>
