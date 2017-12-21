@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-12-21 11:03:16
+/* Smarty version 3.1.29, created on 2017-12-21 11:47:45
   from "C:\OpenServer\domains\Newsletter.mgutu\templates\tpl\index.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5a3b6ac4868c71_59878593',
+  'unifunc' => 'content_5a3b75317a3f65_88479324',
   'file_dependency' => 
   array (
     '537bcf8cdd6c7528e11f77229cd277f6379b4b7f' => 
     array (
       0 => 'C:\\OpenServer\\domains\\Newsletter.mgutu\\templates\\tpl\\index.tpl',
-      1 => 1513843394,
+      1 => 1513846064,
       2 => 'file',
     ),
   ),
@@ -25,7 +25,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:html/end.tpl' => 1,
   ),
 ),false)) {
-function content_5a3b6ac4868c71_59878593 ($_smarty_tpl) {
+function content_5a3b75317a3f65_88479324 ($_smarty_tpl) {
 if (!is_callable('smarty_modifier_date_format')) require_once 'C:\\OpenServer\\domains\\Newsletter.mgutu\\engine\\smarty\\plugins\\modifier.date_format.php';
 $_smarty_tpl->tpl_vars['title'] = new Smarty_Variable("Newsletter | Главная", null);
 $_smarty_tpl->ext->_updateScope->updateScope($_smarty_tpl, 'title', 0);
@@ -67,7 +67,9 @@ $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:html/begin.t
             </div>
         </a>
         <div class="right menu">
-            <a class="item" id="guideButton"><i class="circle question large icon"></i></a>
+            <!-- <a class="item" id="guideButton"><i class="circle question large icon"></i></a> -->
+            <a class="item">Сегодня: <b><?php echo smarty_modifier_date_format(time(),"%d.%m.%Y");?>
+</b></a>
         </div>
     </div>
     <div id="wrapper" class="ui two column centered grid"> <!-- FIXME: -->
@@ -85,16 +87,6 @@ $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:html/begin.t
             </div>
             <div class="column">
                 <a class="ui primary button" id="dop_schedule_button">Элективные курсы</a>
-            </div>
-        </div>
-        <div class="row">
-            <div class="ui vertical footer segment">
-                <div class="ui center aligned container">
-                    <div class="ui horizontal inverted small divided link list">
-                        <a class="item" href="#" style="font-size: 32px; color: black;">Сегодня: <?php echo smarty_modifier_date_format(time(),"%d.%m.%Y");?>
-</a>
-                    </div>
-                </div>
             </div>
         </div>
     </div>

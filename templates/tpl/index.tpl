@@ -32,7 +32,8 @@
             </div>
         </a>
         <div class="right menu">
-            <a class="item" id="guideButton"><i class="circle question large icon"></i></a>
+            <!-- <a class="item" id="guideButton"><i class="circle question large icon"></i></a> -->
+            <a class="item">Сегодня: <b>{$smarty.now|date_format:"%d.%m.%Y"}</b></a>
         </div>
     </div>
     <div id="wrapper" class="ui two column centered grid"> <!-- FIXME: -->
@@ -50,15 +51,6 @@
             </div>
             <div class="column">
                 <a class="ui primary button" id="dop_schedule_button">Элективные курсы</a>
-            </div>
-        </div>
-        <div class="row">
-            <div class="ui vertical footer segment">
-                <div class="ui center aligned container">
-                    <div class="ui horizontal inverted small divided link list">
-                        <a class="item" href="#" style="font-size: 32px; color: black;">Сегодня: {$smarty.now|date_format:"%d.%m.%Y"}</a>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
