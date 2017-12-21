@@ -43,10 +43,6 @@
 
                 return $insert_into->execute();
             }
-            
-            echo __LINE__;
-            exit;
-            
         }
 
 		public function get()

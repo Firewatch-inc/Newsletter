@@ -1,5 +1,40 @@
 {$title = "Newsletter | Главная"}
 {include file="html/begin.tpl"}
+    <div class="ui menu">
+        <a class="item">
+            <div class="ui mini statistic">
+                <div class="value">
+                    {$count_institutes}
+                </div>
+                <div class="label">
+                    Институтов
+                </div>
+            </div>
+        </a>
+        <a class="item">        
+            <div class="ui mini statistic">
+                <div class="value">
+                    {$count_groups}
+                </div>
+                <div class="label">
+                    Групп
+                </div>
+            </div>
+        </a>
+        <a class="item">
+            <div class="ui mini statistic">
+                <div class="value">
+                    {$count_subjects}
+                </div>
+                <div class="label">
+                    Предметов
+                </div>
+            </div>
+        </a>
+        <div class="right menu">
+            <a class="item" id="guideButton"><i class="circle question large icon"></i></a>
+        </div>
+    </div>
     <div id="wrapper" class="ui two column centered grid"> <!-- FIXME: -->
         <div class="one column centered row" id="background">
             <div class="column">
@@ -21,7 +56,7 @@
             <div class="ui vertical footer segment">
                 <div class="ui center aligned container">
                     <div class="ui horizontal inverted small divided link list">
-                        <a class="item" href="#" style="font-size: 32px; color: black;">Сегодня {$smarty.now|date_format:"%d.%m.%Y"}</a>
+                        <a class="item" href="#" style="font-size: 32px; color: black;">Сегодня: {$smarty.now|date_format:"%d.%m.%Y"}</a>
                     </div>
                 </div>
             </div>
@@ -31,6 +66,7 @@
     {include file="modals/modal.main_schedule.tpl"}
     {include file="modals/modal.change_schedule.tpl"}
     {include file="modals/modal.dop_schedule.tpl"}
+    {include file="modals/modal.guide.tpl"}
 
     <script type="text/javascript">
 
@@ -46,6 +82,12 @@
             $("#dop_schedule").modal("show");
         });
 
+        $("#guideButton").on('click', function() {
+            $("#guide").modal("show");
+        });
+        
+        $(".ui.accordion").accordion();
+        
         function getGroups(institute, education_course, education_form) {
             $.ajax({
                 url: "admin/php/get_groups.php",

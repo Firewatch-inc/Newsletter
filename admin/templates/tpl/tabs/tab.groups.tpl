@@ -10,43 +10,47 @@
                     </div>
                     <div class="field">
                         {foreach $groups as $institute => $courses}
-                            <fieldset>
-                                <legend><b>{$institute}</b></legend>
-                                {foreach $courses as $course => $groups}
-                                    <fieldset>
-                                        <legend><u>{$course}</u> курс</legend>
-                                        <table class="ui table">
-                                            <thead>
-                                            <tr>
-                                                <th>№</th>
-                                                <th>Шифр группы</th>
-                                                <th>Специальность</th>
-                                                <th>Форма обучения</th>
-                                                <th>Выбрать</th>
-                                            </tr>
-                                            </thead>
-                                            <tbody>
-                                            {$i = 1}
-                                            {foreach $groups as $g}
+                            <div class="ui styled accordion">
+                                <div class="title">
+                                    <b>{$institute}</b>
+                                </div>
+                                <div class="content">
+                                    {foreach $courses as $course => $groups}
+                                        <fieldset>
+                                            <legend><u>{$course}</u> курс</legend>
+                                            <table class="ui table">
+                                                <thead>
                                                 <tr>
-                                                    <td>{$i}</td>
-                                                    <td>{$g->caption()}</td>
-                                                    <td>{$g->specialty()}</td>
-                                                    <td>{$g->educationForm()}</td>
-                                                    <td style="text-align: center"> <!-- FIXME:  -->
-                                                        <div class="ui checkbox">
-                                                            <input type="checkbox" name="groups[]" value="{$g->id()}">
-                                                            <label></label>
-                                                        </div>
-                                                    </td>
+                                                    <th>№</th>
+                                                    <th>Шифр группы</th>
+                                                    <th>Специальность</th>
+                                                    <th>Форма обучения</th>
+                                                    <th>Выбрать</th>
                                                 </tr>
-                                                {$i = $i + 1}
-                                            {/foreach}
-                                            </tbody>
-                                        </table>
-                                    </fieldset>
-                                {/foreach}
-                            </fieldset>
+                                                </thead>
+                                                <tbody>
+                                                {$i = 1}
+                                                {foreach $groups as $g}
+                                                    <tr>
+                                                        <td>{$i}</td>
+                                                        <td>{$g->caption()}</td>
+                                                        <td>{$g->specialty()}</td>
+                                                        <td>{$g->educationForm()}</td>
+                                                        <td style="text-align: center"> <!-- FIXME:  -->
+                                                            <div class="ui checkbox">
+                                                                <input type="checkbox" name="groups[]" value="{$g->id()}">
+                                                                <label></label>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    {$i = $i + 1}
+                                                {/foreach}
+                                                </tbody>
+                                            </table>
+                                        </fieldset>
+                                    {/foreach}
+                                </div>
+                            </div>
                             <br>
                         {/foreach}
                     </div>
@@ -72,12 +76,12 @@
                         </select>
                     </div>
                     <div class="field">
+                        <label>Направление подготовки</label>
+                        <input type="text" name="educaionDirection">
+                    </div>
+                    <div class="field">
                         <label>Специализация</label>
-                        <select name="specialty">
-                            {foreach $specialties as $specialty}
-                                <option value="{$specialty->id()}">{$specialty->code()} | {$specialty->caption()}</option>
-                            {/foreach}
-                        </select>
+                        <input type="text" name="specialty">
                     </div>
                     <div class="field">
                         <label>Форма обучения</label>

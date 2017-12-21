@@ -6,6 +6,11 @@
     $CT->assign("groups", $GroupsManager->get());
     $CT->assign("educationForms", $EducationFormsManager->get());
     $CT->assign("educationCourses", $EducationCoursesManager->get());
+    
+    $CT->assign("count_institutes", $DB->query("SELECT COUNT(*) as count FROM `ListOfInstitute`")->fetchAll()[0]['count']);
+    $CT->assign("count_groups", $DB->query("SELECT COUNT(*) as count FROM `Groups`")->fetchAll()[0]['count']);
+    $CT->assign("count_subjects", $DB->query("SELECT COUNT(*) as count FROM `ListOfSubject`;")->fetchAll()[0]['count']);
+    
     $CT->Show("index.tpl");
 
     if (!empty($_SESSION['data'])) {

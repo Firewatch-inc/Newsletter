@@ -129,11 +129,12 @@
             	$caption = htmlspecialchars($_POST['caption']);
             	$education_form = htmlspecialchars($_POST['educationForm']);
                 $education_course = htmlspecialchars($_POST['educationCourse']);
+                $educationDirection = htmlspecialchars($_POST['educationDirection']);
                 $specialty = htmlspecialchars($_POST['specialty']);
                 $institute = htmlspecialchars($_POST['institute']);
 
             	if ($GroupsManager->add(
-            		new Group($caption, $education_form, $education_course, $specialty, $institute)
+            		new Group($caption, $education_form, $education_course, $educationDirection, $specialty, $institute)
 				)) {
                     CTools::Message("Группа добавлена");
                     CTools::Redirect("index.php");

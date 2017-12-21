@@ -4,6 +4,7 @@
     require_once $_SERVER['DOCUMENT_ROOT']."/newsletter/managers/schedule.manager.class.php";
     require_once $_SERVER['DOCUMENT_ROOT']."/newsletter/managers/courses.manager.class.php";
     require_once $_SERVER['DOCUMENT_ROOT']."/newsletter/managers/institutes.manager.class.php";
+    require_once $_SERVER['DOCUMENT_ROOT']."/newsletter/managers/subjects.manager.class.php";
     require_once $_SERVER['DOCUMENT_ROOT']."/newsletter/managers/groups.manager.class.php";
     require_once $_SERVER['DOCUMENT_ROOT']."/newsletter/managers/days.manager.class.php";
     require_once $_SERVER['DOCUMENT_ROOT']."/newsletter/managers/pairs.manager.class.php";
@@ -31,6 +32,7 @@
     $ScheduleManager = new ScheduleManager($DB);
     $CoursesManager = new CoursesManager($DB);
     $InstitutesManager = new InstitutesManager($DB);
+    $SubjectsManager = new SubjectsManager($DB);
     $GroupsManager = new GroupsManager($DB);
     $DaysManager = new DaysManager($DB);
     $PairsManager = new PairsManager($DB);

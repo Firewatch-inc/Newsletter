@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-12-21 10:21:53
+/* Smarty version 3.1.29, created on 2017-12-21 10:36:34
   from "C:\OpenServer\domains\Newsletter.mgutu\admin\templates\tpl\tabs\tab.main_schedule.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5a3b61111a5cd4_23209702',
+  'unifunc' => 'content_5a3b64823deb53_59827152',
   'file_dependency' => 
   array (
     'b7ca3e1d7d983b95da762128261231320d19fdf7' => 
     array (
       0 => 'C:\\OpenServer\\domains\\Newsletter.mgutu\\admin\\templates\\tpl\\tabs\\tab.main_schedule.tpl',
-      1 => 1513840912,
+      1 => 1513840916,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_5a3b61111a5cd4_23209702 ($_smarty_tpl) {
+function content_5a3b64823deb53_59827152 ($_smarty_tpl) {
 ?>
 <form name="saveMainScheduleForm" method="POST" class="ui form">
     <datalist id="subjects"></datalist>
@@ -274,7 +274,7 @@ $__foreach_day_7_saved_local_item = $_smarty_tpl->tpl_vars['day'];
 
                         </div>
                         <div class="active content">
-                            <table class="ui fixed table">
+                            <table class="ui fixed celled table">
                                 <thead>
                                     <tr>
                                         <th></th>
