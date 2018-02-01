@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-12-21 11:47:45
+/* Smarty version 3.1.29, created on 2018-02-01 18:12:23
   from "C:\OpenServer\domains\Newsletter.mgutu\templates\tpl\index.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5a3b75317a3f65_88479324',
+  'unifunc' => 'content_5a732e57559832_95838677',
   'file_dependency' => 
   array (
     '537bcf8cdd6c7528e11f77229cd277f6379b4b7f' => 
     array (
       0 => 'C:\\OpenServer\\domains\\Newsletter.mgutu\\templates\\tpl\\index.tpl',
-      1 => 1513846064,
+      1 => 1517497942,
       2 => 'file',
     ),
   ),
@@ -25,7 +25,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:html/end.tpl' => 1,
   ),
 ),false)) {
-function content_5a3b75317a3f65_88479324 ($_smarty_tpl) {
+function content_5a732e57559832_95838677 ($_smarty_tpl) {
 if (!is_callable('smarty_modifier_date_format')) require_once 'C:\\OpenServer\\domains\\Newsletter.mgutu\\engine\\smarty\\plugins\\modifier.date_format.php';
 $_smarty_tpl->tpl_vars['title'] = new Smarty_Variable("Newsletter | Главная", null);
 $_smarty_tpl->ext->_updateScope->updateScope($_smarty_tpl, 'title', 0);
@@ -78,15 +78,21 @@ $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:html/begin.t
                 <h1><i class="book icon"></i>Система Электронного Расписания</h1>
             </div>
         </div>
-        <div class="four column centered row">
+        <div class="two column centered row">
             <div class="column">
-                <a class="ui positive button" id="main_schedule_button">Расписание</a>
+                <a class="ui positive button" id="main_schedule_button" style="width: 100%;">Расписание</a>
             </div>
+            <br>
+            <br>
+            <br>
             <div class="column">
-                <a class="ui orange button" id="change_schedule_button">Изменения</a>
+                <a class="ui orange button" id="change_schedule_button" style="width: 100%;">Изменения</a>
             </div>
+            <br>
+            <br>
+            <br>
             <div class="column">
-                <a class="ui primary button" id="dop_schedule_button">Элективные курсы</a>
+                <a class="ui primary button" id="dop_schedule_button" style="width: 100%;">Элективные курсы</a>
             </div>
         </div>
     </div>
