@@ -42,8 +42,7 @@
             </div>
         </a>
         <div class="right menu">
-            <!-- <a class="item" id="guideButton"><i class="circle question large icon"></i></a> -->
-            <a class="item">Сегодня: <b>{$smarty.now|date_format:"%d.%m.%Y"}</b></a>
+            <a class="item"><h3>{$smarty.now|date_format:"%d.%m.%Y"}</h3></a>
         </div>
     </div>
     <div id="wrapper" class="ui two column centered grid"> <!-- FIXME: -->
