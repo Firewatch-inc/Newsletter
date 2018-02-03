@@ -9,6 +9,7 @@
     
     $CT->assign("count_institutes", $DB->query("SELECT COUNT(*) as count FROM `ListOfInstitute`")->fetchAll()[0]['count']);
     $CT->assign("count_groups", $DB->query("SELECT COUNT(*) as count FROM `Groups`")->fetchAll()[0]['count']);
+    $CT->assign("count_specs", count($DB->query("SELECT DISTINCT `specialty` as co FROM `Groups`")->fetchAll(PDO::FETCH_ASSOC)));
     $CT->assign("count_subjects", $DB->query("SELECT COUNT(*) as count FROM `ListOfSubject`;")->fetchAll()[0]['count']);
     
     $CT->Show("index.tpl");

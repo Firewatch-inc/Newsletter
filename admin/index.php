@@ -6,25 +6,38 @@
 		$CT->Show("login.tpl");
 		
 		if (!empty($_POST['loginButton'])) {
-			$login = $_POST['login'];
-			$password = $_POST['passwd'];
+			$login = htmlspecialchars($_POST['login']);
+			$password = md5($_POST['passwd']);
 			
 			if ((!empty($login)) && (!empty($password))) {
-				if (($login === "admin") && (md5($password) === md5("admin"))) {
-					$_SESSION['admin'] = new User($login, md5($password));
+                
+                $get_admin_data = $DB->prepare("SELECT * FROM `admins` WHERE `email`=:email AND `password`=:password");
+                
+                $get_admin_data->bindValue(":email", $login);
+                $get_admin_data->bindValue(":password", $password);
+                
+                $admin_data = array();
+                if ($get_admin_data->execute()) {
+                    $admin_data = $get_admin_data->fetchAll(PDO::FETCH_ASSOC);
+                    $admin_data = $admin_data[0];
+                } else {
+                    die("Произошла ошибка при аутентификации");
+                }
+                
+                if (!empty($admin_data)) {
+					$_SESSION['admin'] = new User($login, $password);
 					CTools::redirect("index.php");
-				} else {					
-					CTools::Message("Неверные аутентификационные данные");
-				}
+                } else {
+                    CTools::Message("Пользователь не найден");
+                }
 			} else {
 				CTools::Message("Поля с логином и паролем не могут быть пустыми");
 			}
 			
 		}
 
-	} elseif (($_SESSION['admin'] instanceof User) &&
-		$_SESSION['admin']->login() === "admin" &&
-		$_SESSION['admin']->password() === md5("admin")
+	} elseif (($_SESSION['admin'] instanceof User) && 
+                isAdmin($_SESSION['admin']->login(), $_SESSION['admin']->password())
 	) {
 
 		$CT->assign("courses", $CoursesManager->get());
@@ -36,6 +49,7 @@
 		$CT->assign("days", $DaysManager->getStudyDays());
 		$CT->assign("groups", $GroupsManager->get());
 		$CT->assign("count_groups", $GroupsManager->count());
+        $CT->assign("specialties", $DB->query("SELECT DISTINCT `specialty` as co FROM `Groups`")->fetchAll(PDO::FETCH_ASSOC));
 		$CT->assign("educationCourses", $EducationCoursesManager->get());
 		$CT->assign("educationForms", $EducationFormsManager->get());
 		$CT->Show("index.tpl");

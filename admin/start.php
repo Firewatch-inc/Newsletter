@@ -32,17 +32,43 @@
       die("Не возможно подключиться к базе данных");
     }
 
-    $ScheduleManager = new ScheduleManager($DB);
-    $CoursesManager = new CoursesManager($DB);
-    $InstitutesManager = new InstitutesManager($DB);
-    $GroupsManager = new GroupsManager($DB);
-    $SubjectsManager = new SubjectsManager($DB);
-    $PairsManager = new PairsManager($DB);
-    $DaysManager = new DaysManager($DB);
-    $SpecialtiesManager = new SpecialtiesManager($DB);
+    $ScheduleManager         = new ScheduleManager($DB);
+    $CoursesManager          = new CoursesManager($DB);
+    $InstitutesManager       = new InstitutesManager($DB);
+    $GroupsManager           = new GroupsManager($DB);
+    $SubjectsManager         = new SubjectsManager($DB);
+    $PairsManager            = new PairsManager($DB);
+    $DaysManager             = new DaysManager($DB);
+    $SpecialtiesManager      = new SpecialtiesManager($DB);
     $EducationCoursesManager = new EducationCoursesManager($DB);
-    $EducationFormsManager = new EducationFormsManager($DB);
-    $SettingsManager = new SettingsManager($DB);
+    $EducationFormsManager   = new EducationFormsManager($DB);
+    $SettingsManager         = new SettingsManager($DB);
 
+    function isAdmin($login, $password) {
+        global $DB;
+        $admin_data = array();
+        
+        $get_admin_data = $DB->prepare("SELECT * FROM `admins` WHERE `email`=:email AND `password`=:password");
+        
+        $get_admin_data->bindValue(":email", $login);
+        $get_admin_data->bindValue(":password", $password);
+        
+        if ($get_admin_data->execute()) {
+            $admin_data = $get_admin_data->fetchAll(PDO::FETCH_ASSOC);
+            $admin_data = $admin_data[0];
+        } else {
+            die("Произошла ошибка при аутентификации");
+        }
+        
+        if (
+            $admin_data["email"]    === $login &&
+            $admin_data["password"] === $password
+        ) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
     session_start();
 ?>

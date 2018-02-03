@@ -21,6 +21,16 @@
                 </div>
             </div>
         </a>
+        <a class="item">        
+            <div class="ui mini statistic">
+                <div class="value">
+                    {$count_specs}
+                </div>
+                <div class="label">
+                    Специальностей
+                </div>
+            </div>
+        </a>
         <a class="item">
             <div class="ui mini statistic">
                 <div class="value">
