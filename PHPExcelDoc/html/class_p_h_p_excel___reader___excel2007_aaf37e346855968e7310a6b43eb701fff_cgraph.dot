@@ -1,0 +1,13 @@
+digraph "canRead"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node3 [label="canRead",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="PHPExcel_Settings\\getZip\lClass",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___settings.html#ab762d975fa2aefcbd1e0c33af7167299"];
+  Node3 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="PHPExcel_Reader_Abstract\l\\securityScan",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___reader___abstract.html#aa67490da9755835fd16df194cab68d0b"];
+  Node3 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="PHPExcel_Settings\\getLib\lXmlLoaderOptions",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___settings.html#aab0e46bef6b830bdb82228d72c349c9a"];
+}

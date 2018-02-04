@@ -1,0 +1,15 @@
+digraph "setTitle"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node682 [label="setTitle",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node682 -> Node683 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node683 [label="getTitle",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___worksheet.html#a95e859a4588a39a1824b717378a84c29"];
+  Node682 -> Node684 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node684 [label="PHPExcel_Shared_String\l\\CountCharacters",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___shared___string.html#a23824c62b6aee1f2be9c1bb05ebe5c5d"];
+  Node682 -> Node685 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node685 [label="PHPExcel_Shared_String\l\\Substring",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___shared___string.html#a1730a00561eccc5552cc038d1f55832a"];
+  Node682 -> Node686 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node686 [label="PHPExcel_ReferenceHelper\l\\getInstance",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___reference_helper.html#ac93fbec81f07e5d15f80db907e63dc10"];
+}

@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['dataseries_5ftype_5fnumber',['DATASERIES_TYPE_NUMBER',['../class_p_h_p_excel___chart___data_series_values.html#a260212bea454cc14988ddbc475d42dd7',1,'PHPExcel_Chart_DataSeriesValues']]],
+  ['dataseries_5ftype_5fstring',['DATASERIES_TYPE_STRING',['../class_p_h_p_excel___chart___data_series_values.html#aaed6233d247e9c7e00b0a8cebbdeab2d',1,'PHPExcel_Chart_DataSeriesValues']]],
+  ['default_5frange',['DEFAULT_RANGE',['../class_p_h_p_excel___cell.html#adc27e24b698ced17be0fcb48e04038f3',1,'PHPExcel_Cell']]],
+  ['dg',['DG',['../class_p_h_p_excel___reader___excel5___escher.html#a4de08f2d059d168904df42ecb091db88',1,'PHPExcel_Reader_Excel5_Escher']]],
+  ['dgcontainer',['DGCONTAINER',['../class_p_h_p_excel___reader___excel5___escher.html#aecdc3ce058dc577dac63865a7a451d89',1,'PHPExcel_Reader_Excel5_Escher']]],
+  ['dgg',['DGG',['../class_p_h_p_excel___reader___excel5___escher.html#afd921d9614c6d3ca65607ab8a72c90d2',1,'PHPExcel_Reader_Excel5_Escher']]],
+  ['dggcontainer',['DGGCONTAINER',['../class_p_h_p_excel___reader___excel5___escher.html#aa8ae155027ba75937201bca7789be0be',1,'PHPExcel_Reader_Excel5_Escher']]],
+  ['diagonal_5fboth',['DIAGONAL_BOTH',['../class_p_h_p_excel___style___borders.html#a287a29619d69d041a88fa0e52a1ad3d1',1,'PHPExcel_Style_Borders']]],
+  ['diagonal_5fdown',['DIAGONAL_DOWN',['../class_p_h_p_excel___style___borders.html#ad800f11b7ce4247ffb769c4cdf48e6d0',1,'PHPExcel_Style_Borders']]],
+  ['diagonal_5fnone',['DIAGONAL_NONE',['../class_p_h_p_excel___style___borders.html#aec39a9a470d8abeb096046e1c4179052',1,'PHPExcel_Style_Borders']]],
+  ['diagonal_5fup',['DIAGONAL_UP',['../class_p_h_p_excel___style___borders.html#a8d980fa908c2cd58d643225fb75e8565',1,'PHPExcel_Style_Borders']]],
+  ['direction_5fbar',['DIRECTION_BAR',['../class_p_h_p_excel___chart___data_series.html#a54a73e6b5d3790080eeb336d6aaf85f0',1,'PHPExcel_Chart_DataSeries']]],
+  ['direction_5fcol',['DIRECTION_COL',['../class_p_h_p_excel___chart___data_series.html#a4a13dbabdc63c6482b1fa45e6f311296',1,'PHPExcel_Chart_DataSeries']]],
+  ['direction_5fcolumn',['DIRECTION_COLUMN',['../class_p_h_p_excel___chart___data_series.html#a7b7c4fb0af866543e9023dc85a8e8bb4',1,'PHPExcel_Chart_DataSeries']]],
+  ['direction_5fhorizontal',['DIRECTION_HORIZONTAL',['../class_p_h_p_excel___chart___data_series.html#a0ed046eccc777a6d1ad0266dd634aacc',1,'PHPExcel_Chart_DataSeries']]],
+  ['direction_5fvertical',['DIRECTION_VERTICAL',['../class_p_h_p_excel___chart___data_series.html#a9dce3857017367a406b9308fad45dbcf',1,'PHPExcel_Chart_DataSeries']]]
+];

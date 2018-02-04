@@ -1,0 +1,18 @@
+digraph "setIndent"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node102 [label="setIndent",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node102 -> Node103 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node103 [label="getHorizontal",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___style___alignment.html#a4f6993457027c2e85be7d4aa9c3c1c7c"];
+  Node103 -> Node104 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node104 [label="getSharedComponent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___style___alignment.html#a49e6e514d1dce7982e6864942bcb1f5d"];
+  Node102 -> Node105 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node105 [label="getStyleArray",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___style___alignment.html#af6c54f6a9dcec97e4b2e1bf4fb4d9092"];
+  Node102 -> Node106 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node106 [label="PHPExcel_Style_Supervisor\l\\getActiveSheet",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___style___supervisor.html#aec8f52691db1a69bb76b089bdae0c8e6"];
+  Node102 -> Node107 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node107 [label="PHPExcel_Style_Supervisor\l\\getSelectedCells",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___style___supervisor.html#ab17aa77ef10e750a08120fbf6f965eb2"];
+  Node107 -> Node106 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

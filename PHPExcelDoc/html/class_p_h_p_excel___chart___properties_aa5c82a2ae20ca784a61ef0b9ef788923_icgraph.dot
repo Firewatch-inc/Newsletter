@@ -1,0 +1,19 @@
+digraph "setColorProperties"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node46 [label="setColorProperties",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node46 -> Node47 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node47 [label="PHPExcel_Chart_Axis\l\\setFillParameters",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___chart___axis.html#a650462f0b89452442a07c0b08e2a6575"];
+  Node46 -> Node48 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node48 [label="PHPExcel_Chart_Axis\l\\setLineParameters",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___chart___axis.html#a8de9049daeebb0cb8c58e123e31336c7"];
+  Node46 -> Node49 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node49 [label="PHPExcel_Chart_Axis\l\\setShadowProperties",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___chart___axis.html#a7b5e7738f6f9043a714a35d2ba1aef6c"];
+  Node46 -> Node50 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node50 [label="PHPExcel_Chart_Axis\l\\getGlowProperty",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___chart___axis.html#a332f285b9e38cb4bfe0df86a4c799c42"];
+  Node50 -> Node51 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node51 [label="PHPExcel_Writer_Excel2007\l_Chart\\writeChart",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___writer___excel2007___chart.html#a1357cd7f946c0d463cea7efb61c029e3"];
+  Node46 -> Node52 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node52 [label="PHPExcel_Chart_GridLines\l\\setLineColorProperties",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___chart___grid_lines.html#a0bc795ab0ed1e94db3aac12710e9b268"];
+}

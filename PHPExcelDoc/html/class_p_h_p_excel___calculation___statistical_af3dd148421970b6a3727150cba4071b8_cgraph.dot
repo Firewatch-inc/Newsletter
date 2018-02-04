@@ -1,0 +1,20 @@
+digraph "NEGBINOMDIST"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node249 [label="NEGBINOMDIST",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node249 -> Node250 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node250 [label="PHPExcel_Calculation\l_Functions\\flattenSingleValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation___functions.html#acaf2a2e8a02edcc96314474aa06d8550"];
+  Node249 -> Node251 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node251 [label="PHPExcel_Calculation\l_Functions\\NaN",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation___functions.html#ad35ef66aa71a12a3f978b34c0e595a89"];
+  Node249 -> Node252 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node252 [label="PHPExcel_Calculation\l_Functions\\getCompatibilityMode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation___functions.html#a90371057b06045a2318f8e85c3115e88"];
+  Node249 -> Node253 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node253 [label="PHPExcel_Calculation\l_MathTrig\\COMBIN",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation___math_trig.html#a749200dc830f248ae55825d81f933ace"];
+  Node253 -> Node250 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node253 -> Node251 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node253 -> Node254 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node254 [label="PHPExcel_Calculation\l_Functions\\VALUE",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation___functions.html#a2cc495b625ec296fd11527f968a37698"];
+  Node249 -> Node254 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

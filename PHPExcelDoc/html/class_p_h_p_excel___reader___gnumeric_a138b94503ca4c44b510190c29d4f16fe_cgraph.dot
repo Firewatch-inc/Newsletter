@@ -1,0 +1,19 @@
+digraph "load"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node16 [label="load",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node16 -> Node17 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 [label="loadIntoExisting",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___reader___gnumeric.html#af6c531fcaf9c3c83abf91d6ac048b186"];
+  Node17 -> Node18 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node18 [label="PHPExcel_Reader_Abstract\l\\securityScan",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___reader___abstract.html#aa67490da9755835fd16df194cab68d0b"];
+  Node17 -> Node19 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node19 [label="PHPExcel_Settings\\getLib\lXmlLoaderOptions",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___settings.html#aab0e46bef6b830bdb82228d72c349c9a"];
+  Node17 -> Node20 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node20 [label="PHPExcel_Cell\\stringFrom\lColumnIndex",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___cell.html#ab5501b4cf2f8cd0af389ad4096fb9387"];
+  Node17 -> Node21 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node21 [label="PHPExcel_Reader_Abstract\l\\getReadFilter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___reader___abstract.html#abe90e2c64af2e5fbcd07da932986b785"];
+  Node17 -> Node22 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node22 [label="PHPExcel_Shared_Date\l\\isDateTimeFormatCode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___shared___date.html#a978e89e27c6f4bdc2e817cc2566779a7"];
+}

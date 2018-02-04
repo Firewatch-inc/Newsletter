@@ -1,0 +1,17 @@
+digraph "DSTDEV"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node32 [label="DSTDEV",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node32 -> Node33 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node33 [label="PHPExcel_Calculation\l_Statistical\\STDEV",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation___statistical.html#af0d983ba4377112d039b24f6f7f72cdb"];
+  Node33 -> Node34 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node34 [label="PHPExcel_Calculation\l_Functions\\flattenArrayIndexed",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation___functions.html#a2f612e5daa00e1549da5ba44112329ca"];
+  Node33 -> Node35 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node35 [label="PHPExcel_Calculation\l_Functions\\isCellValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation___functions.html#a4c7ac49d2bed94232f736f219e23bedb"];
+  Node33 -> Node36 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node36 [label="PHPExcel_Calculation\l_Functions\\getCompatibilityMode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation___functions.html#a90371057b06045a2318f8e85c3115e88"];
+  Node33 -> Node37 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node37 [label="PHPExcel_Calculation\l_Functions\\DIV0",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation___functions.html#afbbf614e7e549a2baf4a57ca1aa14b52"];
+}

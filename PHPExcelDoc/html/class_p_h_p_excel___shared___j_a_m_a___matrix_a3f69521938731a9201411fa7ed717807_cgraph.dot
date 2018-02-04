@@ -1,0 +1,15 @@
+digraph "minusEquals"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node79 [label="minusEquals",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node79 -> Node80 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node80 [label="checkMatrixDimensions",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___shared___j_a_m_a___matrix.html#a65b2d9645d8635073f90adfea1dc6589"];
+  Node79 -> Node81 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node81 [label="PHPExcel_Shared_String\l\\convertToNumberIfFraction",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___shared___string.html#a213492f004f36e26ad8186a85937c073"];
+  Node81 -> Node82 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node82 [label="PHPExcel_Calculation\l\\getInstance",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation.html#a8bfbadeff4d146fadfef867cd1f5526d"];
+  Node79 -> Node83 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node83 [label="PHPExcel_Calculation\l_Functions\\NaN",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation___functions.html#ad35ef66aa71a12a3f978b34c0e595a89"];
+}

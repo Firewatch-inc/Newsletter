@@ -1,0 +1,32 @@
+digraph "getDefaultRowHeightByFont"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node36 [label="getDefaultRowHeightByFont",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node36 -> Node37 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node37 [label="PHPExcel_Writer_HTML\l\\buildCSS",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___writer___h_t_m_l.html#a3f8fdb7ac7b7089f7b8ca365afbba79f"];
+  Node37 -> Node38 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node38 [label="PHPExcel_Writer_HTML\\save",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___writer___h_t_m_l.html#a47cf44d053426c59c85d31f37744687c"];
+  Node37 -> Node39 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node39 [label="PHPExcel_Writer_HTML\l\\generateStyles",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___writer___h_t_m_l.html#ae6002be0e346a33c8f65d034dc93158e"];
+  Node39 -> Node40 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node40 [label="PHPExcel_Writer_HTML\l\\generateHTMLHeader",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___writer___h_t_m_l.html#a4290ffdb5e8165cee74ba333620f56e9"];
+  Node40 -> Node38 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node40 -> Node41 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node41 [label="PHPExcel_Writer_PDF\l_DomPDF\\save",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___writer___p_d_f___dom_p_d_f.html#a47cf44d053426c59c85d31f37744687c"];
+  Node40 -> Node42 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node42 [label="PHPExcel_Writer_PDF\l_mPDF\\save",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___writer___p_d_f__m_p_d_f.html#a47cf44d053426c59c85d31f37744687c"];
+  Node40 -> Node43 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node43 [label="PHPExcel_Writer_PDF\l_tcPDF\\save",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___writer___p_d_f__tc_p_d_f.html#a47cf44d053426c59c85d31f37744687c"];
+  Node37 -> Node44 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node44 [label="PHPExcel_Writer_PDF\l_Core\\prepareForSave",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___writer___p_d_f___core.html#a8f7146ac1b3765494f558fe3a7cc35e6"];
+  Node36 -> Node45 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node45 [label="PHPExcel_Shared_Excel5\l\\sizeRow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___shared___excel5.html#a920a5f25b4b102e58e59bd041c53f2cd"];
+  Node45 -> Node46 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node46 [label="PHPExcel_Reader_Excel5\\load",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___reader___excel5.html#a138b94503ca4c44b510190c29d4f16fe"];
+  Node45 -> Node47 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node47 [label="PHPExcel_Writer_Excel5\l_Worksheet\\positionImage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___writer___excel5___worksheet.html#aafac3fd0b5a1f03de888741119506ab9"];
+  Node47 -> Node48 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node48 [label="PHPExcel_Writer_Excel5\l_Worksheet\\insertBitmap",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___writer___excel5___worksheet.html#a4c47849fa53830375c3c3282138682b9"];
+}

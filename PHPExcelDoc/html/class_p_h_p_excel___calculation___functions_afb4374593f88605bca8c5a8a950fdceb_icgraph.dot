@@ -1,0 +1,19 @@
+digraph "ifCondition"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node423 [label="ifCondition",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node423 -> Node424 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node424 [label="PHPExcel_Calculation\l_MathTrig\\SUMIF",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation___math_trig.html#a6967ca6622debdbea7b3a7fe19ccd8f2"];
+  Node423 -> Node425 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node425 [label="PHPExcel_Calculation\l_MathTrig\\SUMIFS",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation___math_trig.html#a087747e29eeff4b091ef9c306f0ba20a"];
+  Node423 -> Node426 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node426 [label="PHPExcel_Calculation\l_Statistical\\AVERAGEIF",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation___statistical.html#a6378d623e08a644327866956bad72460"];
+  Node423 -> Node427 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node427 [label="PHPExcel_Calculation\l_Statistical\\COUNTIF",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation___statistical.html#a86f3642ecc8c7b833bf74bc596a3805b"];
+  Node423 -> Node428 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node428 [label="PHPExcel_Calculation\l_Statistical\\MAXIF",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation___statistical.html#a2f0a3c10e2fe947ff133ae290647b034"];
+  Node423 -> Node429 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node429 [label="PHPExcel_Calculation\l_Statistical\\MINIF",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation___statistical.html#a7295f4bb06ab1c609e44335826d977fc"];
+}

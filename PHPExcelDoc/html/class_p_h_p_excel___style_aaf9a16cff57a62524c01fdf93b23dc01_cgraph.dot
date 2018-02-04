@@ -1,0 +1,12 @@
+digraph "setConditionalStyles"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node88 [label="setConditionalStyles",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node88 -> Node89 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node89 [label="PHPExcel_Style_Supervisor\l\\getActiveSheet",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___style___supervisor.html#aec8f52691db1a69bb76b089bdae0c8e6"];
+  Node88 -> Node90 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node90 [label="PHPExcel_Style_Supervisor\l\\getSelectedCells",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___style___supervisor.html#ab17aa77ef10e750a08120fbf6f965eb2"];
+  Node90 -> Node89 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

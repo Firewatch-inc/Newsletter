@@ -1,0 +1,33 @@
+digraph "CountCharacters"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node35 [label="CountCharacters",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node35 -> Node36 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node36 [label="PHPExcel_Calculation\l_TextData\\SEARCHSENSITIVE",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation___text_data.html#aa2d36eb4a671d8d1aeeaf73df709f5eb"];
+  Node35 -> Node37 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node37 [label="PHPExcel_Calculation\l_TextData\\SEARCHINSENSITIVE",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation___text_data.html#a9721beab9c264c94a8c064b27c0f112e"];
+  Node35 -> Node38 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node38 [label="PHPExcel_Reader_Excel5\\load",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___reader___excel5.html#a138b94503ca4c44b510190c29d4f16fe"];
+  Node35 -> Node39 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node39 [label="PHPExcel_Shared_Font\l\\getTextWidthPixelsApprox",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___shared___font.html#a4e43780de673d6ec4d30ce569bf52d85"];
+  Node35 -> Node40 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node40 [label="PHPExcel_Worksheet\l\\getInvalidCharacters",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___worksheet.html#acfe8d5b9143967cba1475c9811aab5c8"];
+  Node35 -> Node41 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node41 [label="PHPExcel_Worksheet\l\\setTitle",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___worksheet.html#a1eae9d3f95e07d330846afef55ef67ff"];
+  Node41 -> Node42 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node42 [label="PHPExcel_Worksheet\l\\__construct",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___worksheet.html#aaa48e2ffa7f73575c9e3381337434316"];
+  Node35 -> Node43 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node43 [label="PHPExcel_Worksheet\l\\setCodeName",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___worksheet.html#addc3b51bdbcad4fb6f979aa442870138"];
+  Node43 -> Node42 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node35 -> Node44 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node44 [label="PHPExcel_Writer_Excel5\l_Worksheet\\close",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___writer___excel5___worksheet.html#aa69c8bf1f1dcf4e72552efff1fe3e87e"];
+  Node35 -> Node45 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node45 [label="PHPExcel_Writer_Excel5\l_Worksheet\\writeUrlInternal",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___writer___excel5___worksheet.html#a14a92dd0e2fa8a0b1a6121485d14ac54"];
+  Node45 -> Node46 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node46 [label="PHPExcel_Writer_Excel5\l_Worksheet\\writeUrlRange",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___writer___excel5___worksheet.html#a28135390c214c0a8d35116149d82d1ec"];
+  Node46 -> Node47 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node47 [label="PHPExcel_Writer_Excel5\l_Worksheet\\writeBlank",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___writer___excel5___worksheet.html#a3a7ae50c1e55da42b92c09b85530bbac"];
+  Node47 -> Node44 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

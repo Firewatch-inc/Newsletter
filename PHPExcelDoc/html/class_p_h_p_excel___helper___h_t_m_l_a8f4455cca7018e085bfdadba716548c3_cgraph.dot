@@ -1,0 +1,22 @@
+digraph "toRichTextObject"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node77 [label="toRichTextObject",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node77 -> Node78 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node78 [label="initialise",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___helper___h_t_m_l.html#add9ac7773eb89aae31cd23749e15d817"];
+  Node77 -> Node79 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node79 [label="parseElements",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___helper___h_t_m_l.html#a83711da092d266bb48aa51cf9d4cc5ad"];
+  Node79 -> Node80 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node80 [label="parseTextNode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___helper___h_t_m_l.html#acdc856a9115c2b8595c84180e7379a34"];
+  Node80 -> Node81 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node81 [label="buildTextRun",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___helper___h_t_m_l.html#ac002b2a6a632f1122efa5d695903c933"];
+  Node79 -> Node82 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node82 [label="parseElementNode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___helper___h_t_m_l.html#a41e9fa69cb9057fc7e5a5fda2d6a4603"];
+  Node82 -> Node83 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node83 [label="handleCallback",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___helper___h_t_m_l.html#a18918430df1206deb1b55d710cb014e3"];
+  Node82 -> Node79 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node77 -> Node84 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node84 [label="cleanWhitespace",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___helper___h_t_m_l.html#a54f16bbb6f56a575cfd591330dda603c"];
+}

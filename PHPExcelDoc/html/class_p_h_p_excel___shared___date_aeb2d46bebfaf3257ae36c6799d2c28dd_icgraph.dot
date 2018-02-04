@@ -1,0 +1,29 @@
+digraph "FormattedPHPToExcel"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node52 [label="FormattedPHPToExcel",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node52 -> Node53 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node53 [label="PHPExcel_Calculation\l_DateTime\\DATE",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation___date_time.html#a03b0fe170b61e5a1c2029cb36c862c73"];
+  Node52 -> Node54 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node54 [label="PHPExcel_Calculation\l_DateTime\\TIME",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation___date_time.html#a9e7e0f08b762776c916a9a539400452d"];
+  Node52 -> Node55 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node55 [label="PHPExcel_Calculation\l_DateTime\\DATEVALUE",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation___date_time.html#a8984d40537ff269263bce62c77541136"];
+  Node55 -> Node56 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node56 [label="PHPExcel_Calculation\l_TextData\\TEXTFORMAT",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation___text_data.html#a11a84a98b2a37f90f41d975b1a786152"];
+  Node55 -> Node57 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node57 [label="PHPExcel_Calculation\l_TextData\\VALUE",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation___text_data.html#af45b37c89e6fe7a632f42934bd4c1a09"];
+  Node55 -> Node58 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node58 [label="stringToExcel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___shared___date.html#ad963c59456cdaa66a2a61437fa5fa462"];
+  Node58 -> Node59 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node59 [label="PHPExcel_Cell_AdvancedValue\lBinder\\bindValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___cell___advanced_value_binder.html#a39b388668f7555fba29bd979a6ed9dc4"];
+  Node52 -> Node60 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node60 [label="PHPExcel_Calculation\l_DateTime\\TIMEVALUE",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation___date_time.html#a6211ca53e1f0762c7c73d04f4e98c816"];
+  Node60 -> Node57 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node60 -> Node58 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node52 -> Node61 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node61 [label="PHPExcel_Reader_OOCalc\l\\loadIntoExisting",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___reader___o_o_calc.html#af6c531fcaf9c3c83abf91d6ac048b186"];
+  Node61 -> Node62 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node62 [label="PHPExcel_Reader_OOCalc\\load",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___reader___o_o_calc.html#a138b94503ca4c44b510190c29d4f16fe"];
+}

@@ -1,0 +1,41 @@
+digraph "splitRange"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node373 [label="splitRange",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node373 -> Node374 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node374 [label="PHPExcel_Calculation\l\\extractNamedRange",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation.html#a25face12130e4c51ed2994a8124c3f24"];
+  Node374 -> Node375 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node375 [label="PHPExcel_Calculation\l\\_calculateFormulaValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation.html#ad1aef41691363540e51e0a585e111eaa"];
+  Node375 -> Node376 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node376 [label="PHPExcel_Calculation\l\\calculateCellValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation.html#a99d9fd18681a10516af2c86721a39dee"];
+  Node376 -> Node377 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node377 [label="PHPExcel_Calculation\l\\calculate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation.html#aebaa9815d4d23c1958b93dafa720b362"];
+  Node375 -> Node378 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node378 [label="PHPExcel_Calculation\l\\calculateFormula",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation.html#afc1160d65c63b9bffa861c57eb77fed1"];
+  Node373 -> Node379 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node379 [label="isMergeRangeValueCell",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___cell.html#a2758fcf1c03895a01b7309aceeaa4042"];
+  Node373 -> Node380 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node380 [label="PHPExcel_Writer_HTML\l\\formatColor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___writer___h_t_m_l.html#af27ebb46f8805f393438ce2230de1984"];
+  Node373 -> Node381 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node381 [label="PHPExcel_ReferenceHelper\l\\updateNamedFormulas",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___reference_helper.html#a4640e1489e49432d1528bc4d5e03b922"];
+  Node373 -> Node382 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node382 [label="PHPExcel_Worksheet\l\\setSelectedCells",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___worksheet.html#a7b67ebc034957fdc207aebf2b103f3df"];
+  Node382 -> Node383 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node383 [label="PHPExcel_Worksheet\l\\getStyle",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___worksheet.html#a998f2b3b40d8e703c48e56d0893b62fe"];
+  Node383 -> Node384 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node384 [label="PHPExcel_Worksheet\l\\getStyleByColumnAndRow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___worksheet.html#acad77dcf4ccdcffc44390c9b3e144e45"];
+  Node383 -> Node385 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node385 [label="PHPExcel_Worksheet\l\\duplicateStyleArray",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___worksheet.html#a815dcbf63bfe60bb5d04f431e5269b5f"];
+  Node382 -> Node386 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node386 [label="PHPExcel_Worksheet\l\\setSelectedCell",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___worksheet.html#a31a9421382490c7e14edbc7c6ed7a7b1"];
+  Node382 -> Node387 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node387 [label="PHPExcel_Worksheet\l\\setSelectedCellByColumnAndRow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___worksheet.html#a84ce3640c8c7af1589becfab855ff292"];
+  Node373 -> Node388 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node388 [label="PHPExcel_Writer_Excel2007\l_Worksheet\\writeWorksheet",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___writer___excel2007___worksheet.html#a9adbdd202d536935ff25eb87c99fa7e9"];
+  Node373 -> Node389 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node389 [label="PHPExcel_Writer_Excel2007\l_Workbook\\writeWorkbook",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___writer___excel2007___workbook.html#a343d0a978a1f0c64c373e0b3cb898ad6"];
+  Node373 -> Node390 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node390 [label="PHPExcel_Writer_Excel5\l_Workbook\\writeWorkbook",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___writer___excel5___workbook.html#af80277839176b576655d2805029dabd7"];
+}

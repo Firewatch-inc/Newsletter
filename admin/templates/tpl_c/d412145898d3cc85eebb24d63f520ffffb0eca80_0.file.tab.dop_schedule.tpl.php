@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-12-02 11:05:25
+/* Smarty version 3.1.29, created on 2018-02-04 15:15:01
   from "E:\OpenServer\domains\Newsletter.mgutm\admin\templates\tpl\tabs\tab.dop_schedule.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5a225ec50bd9b3_65025845',
+  'unifunc' => 'content_5a76f945f21be5_73391644',
   'file_dependency' => 
   array (
     'd412145898d3cc85eebb24d63f520ffffb0eca80' => 
     array (
       0 => 'E:\\OpenServer\\domains\\Newsletter.mgutm\\admin\\templates\\tpl\\tabs\\tab.dop_schedule.tpl',
-      1 => 1512153311,
+      1 => 1512499232,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_5a225ec50bd9b3_65025845 ($_smarty_tpl) {
+function content_5a76f945f21be5_73391644 ($_smarty_tpl) {
 ?>
 <div class="ui stackable grid">
     <div class="row">
@@ -27,7 +27,7 @@ function content_5a225ec50bd9b3_65025845 ($_smarty_tpl) {
             <?php if ($_smarty_tpl->tpl_vars['courses']->value != NULL) {?>
                 <form name="removeCoursesForm" method="POST">
                     <div class="actions">
-                        <input type="submit" name="removeCourseButton" value="Удалить" class="ui red button">
+                        <input type="submit" name="removeCourseButton" value="Удалить" class="ui red button" style="width: 100%;">
                     </div>
                     <table class="ui table">
                         <thead>
@@ -63,7 +63,7 @@ $__foreach_course_0_saved_local_item = $_smarty_tpl->tpl_vars['course'];
 </td>
                                     <td><?php echo $_smarty_tpl->tpl_vars['course']->value->contactor();?>
 </td>
-                                    <td>
+                                    <td style="text-align: center;"> <!-- FIXME: -->
                                         <div class="ui checkbox">
                                             <input type="checkbox" name="courses[]" value="<?php echo $_smarty_tpl->tpl_vars['course']->value->id();?>
 ">

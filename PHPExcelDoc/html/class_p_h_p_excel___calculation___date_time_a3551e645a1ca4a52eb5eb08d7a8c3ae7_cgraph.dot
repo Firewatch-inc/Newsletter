@@ -1,0 +1,17 @@
+digraph "SECONDOFMINUTE"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node120 [label="SECONDOFMINUTE",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node120 -> Node121 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node121 [label="PHPExcel_Calculation\l_Functions\\flattenSingleValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation___functions.html#acaf2a2e8a02edcc96314474aa06d8550"];
+  Node120 -> Node122 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node122 [label="PHPExcel_Calculation\l_Functions\\getCompatibilityMode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation___functions.html#a90371057b06045a2318f8e85c3115e88"];
+  Node120 -> Node123 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node123 [label="PHPExcel_Calculation\l_Functions\\VALUE",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation___functions.html#a2cc495b625ec296fd11527f968a37698"];
+  Node120 -> Node124 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node124 [label="PHPExcel_Calculation\l_Functions\\NaN",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation___functions.html#ad35ef66aa71a12a3f978b34c0e595a89"];
+  Node120 -> Node125 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node125 [label="PHPExcel_Shared_Date\l\\ExcelToPHP",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___shared___date.html#ab3a3b4e49c69828f06866f2e2fbf0fc9"];
+}

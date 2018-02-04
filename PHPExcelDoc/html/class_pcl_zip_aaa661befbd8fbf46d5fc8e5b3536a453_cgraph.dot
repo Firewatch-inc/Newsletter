@@ -1,0 +1,17 @@
+digraph "properties"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node227 [label="properties",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node227 -> Node228 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node228 [label="privErrorReset",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_pcl_zip.html#ac5af7b6471e22f647ccbdb69e9ebbcf6"];
+  Node227 -> Node229 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node229 [label="privDisableMagicQuotes",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_pcl_zip.html#a846e6d140e69138a93ed841df99d4fe1"];
+  Node227 -> Node230 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node230 [label="privCheckFormat",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_pcl_zip.html#a73f73a0ca89cba89a5f38bff918b609a"];
+  Node227 -> Node231 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node231 [label="privSwapBackMagicQuotes",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_pcl_zip.html#a564776cffdcda27ecfd4d64fd997dd2d"];
+  Node227 -> Node232 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node232 [label="privErrorLog",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_pcl_zip.html#ae93909de718392884b09bd46fb8f7249"];
+}

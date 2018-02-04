@@ -1,0 +1,13 @@
+digraph "TREND"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node376 [label="TREND",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node376 -> Node377 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node377 [label="PHPExcel_Calculation\l_Functions\\flattenArray",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation___functions.html#a727bb3f815b719448bf2e7fd464c4542"];
+  Node376 -> Node378 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node378 [label="PHPExcel_Calculation\l_Functions\\flattenSingleValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation___functions.html#acaf2a2e8a02edcc96314474aa06d8550"];
+  Node376 -> Node379 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node379 [label="trendClass\\calculate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classtrend_class.html#a855aeaa233467dc3cb191c60fb6db1d9"];
+}

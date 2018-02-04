@@ -3,7 +3,6 @@
         Основное расписание
     </div>
     <div class="content">
-{*
         <form name="showMainScheduleForm" method="POST" class="ui form">
             {if $institutes != NULL && $courses != NULL && $groups != NULL}
                 <div class="field">
@@ -42,7 +41,5 @@
                 <input type="submit" name="showMainScheduleButton" value="Показать" id="showMainSchedule"  class="ui primary button">
             </div>
         </form>
-	*}
-<h2 align="center">Расписание находиться на модерации</h2>
     </div>
 </div>

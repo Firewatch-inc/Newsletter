@@ -1,0 +1,15 @@
+digraph "STEYX"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node360 [label="STEYX",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node360 -> Node361 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node361 [label="PHPExcel_Calculation\l_Functions\\VALUE",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation___functions.html#a2cc495b625ec296fd11527f968a37698"];
+  Node360 -> Node362 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node362 [label="PHPExcel_Calculation\l_Functions\\NA",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation___functions.html#a48b30b27e546966a7a89d8e4946a2479"];
+  Node360 -> Node363 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node363 [label="PHPExcel_Calculation\l_Functions\\DIV0",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation___functions.html#afbbf614e7e549a2baf4a57ca1aa14b52"];
+  Node360 -> Node364 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node364 [label="trendClass\\calculate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classtrend_class.html#a855aeaa233467dc3cb191c60fb6db1d9"];
+}

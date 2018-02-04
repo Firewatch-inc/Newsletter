@@ -1,0 +1,41 @@
+digraph "getTRUE"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node215 [label="getTRUE",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node215 -> Node216 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node216 [label="PHPExcel_Calculation\l_Logical\\LOGICAL_AND",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation___logical.html#a6831077d297ca6b4439bf70db9c4a983"];
+  Node215 -> Node217 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node217 [label="PHPExcel_Calculation\l_Logical\\LOGICAL_OR",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation___logical.html#abc3c304531b94d60e84f40b67e41c0a2"];
+  Node215 -> Node218 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node218 [label="PHPExcel_Calculation\l_Logical\\NOT",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation___logical.html#a7a6f23e559e942bac40fecf6ce19efb5"];
+  Node215 -> Node219 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node219 [label="PHPExcel_Calculation\l_TextData\\TRIMNONPRINTABLE",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation___text_data.html#ac060e87b67613b7a7b7dca2cb52f8dfe"];
+  Node215 -> Node220 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node220 [label="PHPExcel_Calculation\l_TextData\\TRIMSPACES",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation___text_data.html#a729d2faeaffe2cdde8f5a390bdf779b8"];
+  Node215 -> Node221 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node221 [label="PHPExcel_Calculation\l_TextData\\ASCIICODE",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation___text_data.html#a0f1faee190ce2c8d84a8781d7a20de66"];
+  Node215 -> Node222 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node222 [label="PHPExcel_Calculation\l_TextData\\CONCATENATE",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation___text_data.html#a52eddebd8dbdc3d6953a40526b256d5f"];
+  Node215 -> Node223 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node223 [label="PHPExcel_Calculation\l_TextData\\SEARCHSENSITIVE",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation___text_data.html#aa2d36eb4a671d8d1aeeaf73df709f5eb"];
+  Node215 -> Node224 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node224 [label="PHPExcel_Calculation\l_TextData\\SEARCHINSENSITIVE",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation___text_data.html#a9721beab9c264c94a8c064b27c0f112e"];
+  Node215 -> Node225 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node225 [label="PHPExcel_Calculation\l_TextData\\LEFT",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation___text_data.html#acd3815682b30f35e4d71c1047b1d5877"];
+  Node215 -> Node226 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node226 [label="PHPExcel_Calculation\l_TextData\\MID",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation___text_data.html#a9a3d47b818dfeed297e24599c155c502"];
+  Node215 -> Node227 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node227 [label="PHPExcel_Calculation\l_TextData\\RIGHT",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation___text_data.html#a013441c0de2bbe3dcb395bdaac7c436f"];
+  Node215 -> Node228 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node228 [label="PHPExcel_Calculation\l_TextData\\STRINGLENGTH",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation___text_data.html#a436e45225b0405e5b21f6636fc4b4a86"];
+  Node215 -> Node229 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node229 [label="PHPExcel_Calculation\l_TextData\\LOWERCASE",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation___text_data.html#ae30737d36e00fdde4aaeea98391db488"];
+  Node215 -> Node230 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node230 [label="PHPExcel_Calculation\l_TextData\\UPPERCASE",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation___text_data.html#a30e0edf9e172f0a6e4067dbd087fe20a"];
+  Node215 -> Node231 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node231 [label="PHPExcel_Calculation\l_TextData\\PROPERCASE",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation___text_data.html#a3560063d7b1147cde33d11bdde7c7251"];
+  Node215 -> Node232 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node232 [label="PHPExcel_Cell_AdvancedValue\lBinder\\bindValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___cell___advanced_value_binder.html#a39b388668f7555fba29bd979a6ed9dc4"];
+}

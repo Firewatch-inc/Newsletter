@@ -1,0 +1,31 @@
+digraph "getHighestDataColumn"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node298 [label="getHighestDataColumn",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node298 -> Node299 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node299 [label="calculateWorksheetDataDimension",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___worksheet.html#ae5db495551fbade4558a343aba4d52cb"];
+  Node298 -> Node300 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node300 [label="getHighestColumn",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___worksheet.html#ad3c18234404cb06b8ee10126a0091aeb"];
+  Node300 -> Node301 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node301 [label="PHPExcel_Writer_HTML\l\\generateHTMLFooter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___writer___h_t_m_l.html#a388332afad5cf5a153a179c4a83e4bae"];
+  Node301 -> Node302 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node302 [label="PHPExcel_Writer_HTML\\save",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___writer___h_t_m_l.html#a47cf44d053426c59c85d31f37744687c"];
+  Node301 -> Node303 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node303 [label="PHPExcel_Writer_PDF\l_DomPDF\\save",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___writer___p_d_f___dom_p_d_f.html#a47cf44d053426c59c85d31f37744687c"];
+  Node301 -> Node304 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node304 [label="PHPExcel_Writer_PDF\l_mPDF\\save",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___writer___p_d_f__m_p_d_f.html#a47cf44d053426c59c85d31f37744687c"];
+  Node301 -> Node305 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node305 [label="PHPExcel_Writer_PDF\l_tcPDF\\save",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___writer___p_d_f__tc_p_d_f.html#a47cf44d053426c59c85d31f37744687c"];
+  Node300 -> Node306 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node306 [label="calculateWorksheetDimension",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___worksheet.html#a732c887e9481aebcc5938a7458ae038a"];
+  Node300 -> Node307 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node307 [label="toArray",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___worksheet.html#a1605df08d923e8b20f855ddee439d032"];
+  Node300 -> Node308 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node308 [label="shrinkRangeToFit",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___worksheet.html#a6e68fafc733299430420ae0af18cf1b8"];
+  Node298 -> Node309 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node309 [label="removeColumn",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___worksheet.html#a66221af8ec8a8473168f0d301ee8053e"];
+  Node309 -> Node310 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node310 [label="removeColumnByIndex",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___worksheet.html#a9157768a5a901db6c6c1ce8b81ae9f5c"];
+}

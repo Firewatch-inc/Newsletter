@@ -1,0 +1,28 @@
+digraph "getRight"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node63 [label="getRight",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node63 -> Node64 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node64 [label="PHPExcel_Writer_HTML\l\\buildCSS",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___writer___h_t_m_l.html#a3f8fdb7ac7b7089f7b8ca365afbba79f"];
+  Node64 -> Node65 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node65 [label="PHPExcel_Writer_HTML\\save",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___writer___h_t_m_l.html#a47cf44d053426c59c85d31f37744687c"];
+  Node64 -> Node66 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node66 [label="PHPExcel_Writer_HTML\l\\generateStyles",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___writer___h_t_m_l.html#ae6002be0e346a33c8f65d034dc93158e"];
+  Node66 -> Node67 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node67 [label="PHPExcel_Writer_HTML\l\\generateHTMLHeader",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___writer___h_t_m_l.html#a4290ffdb5e8165cee74ba333620f56e9"];
+  Node67 -> Node65 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node67 -> Node68 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node68 [label="PHPExcel_Writer_PDF\l_DomPDF\\save",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___writer___p_d_f___dom_p_d_f.html#a47cf44d053426c59c85d31f37744687c"];
+  Node67 -> Node69 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node69 [label="PHPExcel_Writer_PDF\l_mPDF\\save",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___writer___p_d_f__m_p_d_f.html#a47cf44d053426c59c85d31f37744687c"];
+  Node67 -> Node70 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node70 [label="PHPExcel_Writer_PDF\l_tcPDF\\save",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___writer___p_d_f__tc_p_d_f.html#a47cf44d053426c59c85d31f37744687c"];
+  Node64 -> Node71 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node71 [label="PHPExcel_Writer_PDF\l_Core\\prepareForSave",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___writer___p_d_f___core.html#a8f7146ac1b3765494f558fe3a7cc35e6"];
+  Node63 -> Node72 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node72 [label="applyFromArray",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___style___borders.html#adf38c8e6ab006ca15f50964882386acf"];
+  Node63 -> Node73 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node73 [label="getHashCode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___style___borders.html#a565572289c60df45d1198602c6f93a8a"];
+}

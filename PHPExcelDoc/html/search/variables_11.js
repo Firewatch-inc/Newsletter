@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['readorder_5fcontext',['READORDER_CONTEXT',['../class_p_h_p_excel___style___alignment.html#a15b1b3f93ad7d02afd9cee33ccb14e1d',1,'PHPExcel_Style_Alignment']]],
+  ['readorder_5fltr',['READORDER_LTR',['../class_p_h_p_excel___style___alignment.html#ad460942a1c62e912fab631df5bf702f3',1,'PHPExcel_Style_Alignment']]],
+  ['readorder_5frtl',['READORDER_RTL',['../class_p_h_p_excel___style___alignment.html#ad7a8db8cd5dcf1411d232124e5d5ad35',1,'PHPExcel_Style_Alignment']]],
+  ['refhelper_5fregexp_5fcellrange',['REFHELPER_REGEXP_CELLRANGE',['../class_p_h_p_excel___reference_helper.html#a1ec40d599b7cad2f62a558616f618efd',1,'PHPExcel_ReferenceHelper']]],
+  ['refhelper_5fregexp_5fcellref',['REFHELPER_REGEXP_CELLREF',['../class_p_h_p_excel___reference_helper.html#a1a2c15c3d9afb2ebe4e859a4ecaf268a',1,'PHPExcel_ReferenceHelper']]],
+  ['refhelper_5fregexp_5fcolrange',['REFHELPER_REGEXP_COLRANGE',['../class_p_h_p_excel___reference_helper.html#abf114297039975e9e242075339d58dce',1,'PHPExcel_ReferenceHelper']]],
+  ['refhelper_5fregexp_5frowrange',['REFHELPER_REGEXP_ROWRANGE',['../class_p_h_p_excel___reference_helper.html#abcf0c9212e0c76e64e2c824dee7006ca',1,'PHPExcel_ReferenceHelper']]],
+  ['regex_5fsheet_5ftitle_5fquoted',['REGEX_SHEET_TITLE_QUOTED',['../class_p_h_p_excel___writer___excel5___parser.html#a704df039618a88aae58f9e89750901d8',1,'PHPExcel_Writer_Excel5_Parser']]],
+  ['regex_5fsheet_5ftitle_5funquoted',['REGEX_SHEET_TITLE_UNQUOTED',['../class_p_h_p_excel___writer___excel5___parser.html#ab2a0024af17ff0d4f3c3720a46c0cf72',1,'PHPExcel_Writer_Excel5_Parser']]],
+  ['rekey_5fblock',['REKEY_BLOCK',['../class_p_h_p_excel___reader___excel5.html#a8df44b1f4970a0d02e18fdc7d90af0eb',1,'PHPExcel_Reader_Excel5']]],
+  ['rendering_5fdefault',['RENDERING_DEFAULT',['../class_p_h_p_excel___worksheet___memory_drawing.html#a5cc4a7ae803234e0ea76af56da435d71',1,'PHPExcel_Worksheet_MemoryDrawing']]],
+  ['rendering_5fgif',['RENDERING_GIF',['../class_p_h_p_excel___worksheet___memory_drawing.html#a88b3461567f96131e1b72dbc00c02338',1,'PHPExcel_Worksheet_MemoryDrawing']]],
+  ['rendering_5fjpeg',['RENDERING_JPEG',['../class_p_h_p_excel___worksheet___memory_drawing.html#a545a4fa8a92aa0f5659dde30a07fa9af',1,'PHPExcel_Worksheet_MemoryDrawing']]],
+  ['rendering_5fpng',['RENDERING_PNG',['../class_p_h_p_excel___worksheet___memory_drawing.html#aabf970dcc394c414a3c8d3bf977089e0',1,'PHPExcel_Worksheet_MemoryDrawing']]],
+  ['return',['return',['../class_p_h_p_excel___writer___excel5___worksheet.html#a9717e7bbecb906637e86cef6da3d83c2',1,'PHPExcel_Writer_Excel5_Worksheet']]],
+  ['return_5farray_5fas_5farray',['RETURN_ARRAY_AS_ARRAY',['../class_p_h_p_excel___calculation.html#a998999d40e33a27f8b37af5369f4603b',1,'PHPExcel_Calculation']]],
+  ['return_5farray_5fas_5ferror',['RETURN_ARRAY_AS_ERROR',['../class_p_h_p_excel___calculation.html#a1b0f84f03fdc1041fdfd0e3a634d48ed',1,'PHPExcel_Calculation']]],
+  ['return_5farray_5fas_5fvalue',['RETURN_ARRAY_AS_VALUE',['../class_p_h_p_excel___calculation.html#a313687324c71e2556ae4ef9089e96857',1,'PHPExcel_Calculation']]],
+  ['returndate_5fexcel',['RETURNDATE_EXCEL',['../class_p_h_p_excel___calculation___functions.html#a8a64a446b25b03a49bc247274e2a71ad',1,'PHPExcel_Calculation_Functions']]],
+  ['returndate_5fphp_5fnumeric',['RETURNDATE_PHP_NUMERIC',['../class_p_h_p_excel___calculation___functions.html#a6901af1343fc28474e3b38c8e4894095',1,'PHPExcel_Calculation_Functions']]],
+  ['returndate_5fphp_5fobject',['RETURNDATE_PHP_OBJECT',['../class_p_h_p_excel___calculation___functions.html#aa7cda5c46ef87cc5592c6fcc6c5c81d4',1,'PHPExcel_Calculation_Functions']]],
+  ['root_5fstart_5fblock_5fpos',['ROOT_START_BLOCK_POS',['../class_p_h_p_excel___shared___o_l_e_read.html#aaffcf0fd3eff260a9f034385924e3224',1,'PHPExcel_Shared_OLERead']]],
+  ['row_5flength_5fexception',['ROW_LENGTH_EXCEPTION',['../_error_8php.html#a7cc63379aa1e1391c639cb8d8da964b2',1,'Error.php']]]
+];

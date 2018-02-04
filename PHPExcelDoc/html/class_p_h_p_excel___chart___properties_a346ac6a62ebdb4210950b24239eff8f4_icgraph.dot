@@ -1,0 +1,17 @@
+digraph "getLineStyleArrowSize"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node24 [label="getLineStyleArrowSize",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node24 -> Node25 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node25 [label="PHPExcel_Chart_Axis\l\\getLineStyleArrowWidth",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___chart___axis.html#aa8bc48c935e572b9b4c374651986df71"];
+  Node25 -> Node26 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node26 [label="PHPExcel_Writer_Excel2007\l_Chart\\writeChart",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___writer___excel2007___chart.html#a1357cd7f946c0d463cea7efb61c029e3"];
+  Node24 -> Node27 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node27 [label="PHPExcel_Chart_Axis\l\\getLineStyleArrowLength",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___chart___axis.html#a37fa26c1b48d1f4285250bf9dfe84114"];
+  Node27 -> Node26 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node24 -> Node28 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node28 [label="PHPExcel_Chart_GridLines\l\\getLineStyleArrowParameters",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___chart___grid_lines.html#aea8f1ef13e9676b2f270b6b2be60111f"];
+  Node28 -> Node26 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

@@ -1,0 +1,26 @@
+digraph "getExcelPointsWidth"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node13 [label="getExcelPointsWidth",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node13 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="PHPExcel_Chart_Axis\l\\setLineStyleProperties",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___chart___axis.html#ab0e3ca9466591ef50cddfbc1ba81c7da"];
+  Node13 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="PHPExcel_Chart_Axis\l\\setShadowProperties",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___chart___axis.html#a7b5e7738f6f9043a714a35d2ba1aef6c"];
+  Node13 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="PHPExcel_Chart_Axis\l\\getGlowProperty",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___chart___axis.html#a332f285b9e38cb4bfe0df86a4c799c42"];
+  Node16 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 [label="PHPExcel_Writer_Excel2007\l_Chart\\writeChart",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___writer___excel2007___chart.html#a1357cd7f946c0d463cea7efb61c029e3"];
+  Node13 -> Node18 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node18 [label="PHPExcel_Chart_Axis\l\\setSoftEdges",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___chart___axis.html#aa5386852aee5c3f3aae565b8eed5c86a"];
+  Node13 -> Node19 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node19 [label="PHPExcel_Chart_GridLines\l\\setLineStyleProperties",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___chart___grid_lines.html#ab0e3ca9466591ef50cddfbc1ba81c7da"];
+  Node13 -> Node20 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node20 [label="PHPExcel_Chart_GridLines\l\\getGlowSize",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___chart___grid_lines.html#a3568a301d6f6ed7c40442508f46cc5ca"];
+  Node20 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 -> Node21 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node21 [label="PHPExcel_Chart_GridLines\l\\setShadowProperties",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___chart___grid_lines.html#a7b5e7738f6f9043a714a35d2ba1aef6c"];
+  Node13 -> Node22 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node22 [label="PHPExcel_Chart_GridLines\l\\setSoftEdgesSize",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___chart___grid_lines.html#a890e402609bcb40b098bdc2c07f0d325"];
+}

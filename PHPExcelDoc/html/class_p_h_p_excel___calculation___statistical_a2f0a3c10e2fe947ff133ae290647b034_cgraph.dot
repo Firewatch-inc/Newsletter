@@ -1,0 +1,20 @@
+digraph "MAXIF"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node216 [label="MAXIF",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node216 -> Node217 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node217 [label="PHPExcel_Calculation\l_Functions\\flattenArray",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation___functions.html#a727bb3f815b719448bf2e7fd464c4542"];
+  Node216 -> Node218 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node218 [label="PHPExcel_Calculation\l_Functions\\ifCondition",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation___functions.html#afb4374593f88605bca8c5a8a950fdceb"];
+  Node218 -> Node219 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node219 [label="PHPExcel_Calculation\l_Functions\\flattenSingleValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation___functions.html#acaf2a2e8a02edcc96314474aa06d8550"];
+  Node218 -> Node220 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node220 [label="PHPExcel_Calculation\l\\wrapResult",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation.html#a0cdf7d55a4c688f39925a5c1c5d7db90"];
+  Node220 -> Node221 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node221 [label="PHPExcel_Calculation\l_Functions\\NaN",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation___functions.html#ad35ef66aa71a12a3f978b34c0e595a89"];
+  Node216 -> Node220 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node216 -> Node222 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node222 [label="PHPExcel_Calculation\l\\getInstance",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation.html#a8bfbadeff4d146fadfef867cd1f5526d"];
+}

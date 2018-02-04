@@ -1,0 +1,32 @@
+digraph "isCellValue"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node452 [label="isCellValue",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node452 -> Node453 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node453 [label="PHPExcel_Calculation\l_Statistical\\AVEDEV",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation___statistical.html#a81f54874286d08a0fe5567ba181db106"];
+  Node452 -> Node454 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node454 [label="PHPExcel_Calculation\l_Statistical\\AVERAGE",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation___statistical.html#aa0bdeecbec2bd1bfe81efd35aec58d2c"];
+  Node454 -> Node455 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node455 [label="PHPExcel_Calculation\l_Database\\DAVERAGE",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation___database.html#ae6b7487cfdef582b5fb63b6c6c680f03"];
+  Node454 -> Node456 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node456 [label="PHPExcel_Calculation\l_MathTrig\\SUBTOTAL",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation___math_trig.html#a2cd50b7ac6e844f6edc43ee7138a6d3c"];
+  Node452 -> Node457 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node457 [label="PHPExcel_Calculation\l_Statistical\\COUNT",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation___statistical.html#ad2a07df65e397b11dfb293be3e7d9de2"];
+  Node457 -> Node458 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node458 [label="PHPExcel_Calculation\l_Database\\DCOUNT",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation___database.html#aa379b585e6a4dd6664e3f083295f0fb4"];
+  Node457 -> Node456 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node452 -> Node459 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node459 [label="PHPExcel_Calculation\l_Statistical\\DEVSQ",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation___statistical.html#a2431bc60f9b1f272c6c0865e6818d4f8"];
+  Node452 -> Node460 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node460 [label="PHPExcel_Calculation\l_Statistical\\STDEV",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation___statistical.html#af0d983ba4377112d039b24f6f7f72cdb"];
+  Node460 -> Node461 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node461 [label="PHPExcel_Calculation\l_Database\\DSTDEV",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation___database.html#a6bf57c72f66f55fc879e2116cc037143"];
+  Node460 -> Node456 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node452 -> Node462 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node462 [label="PHPExcel_Calculation\l_Statistical\\STDEVP",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation___statistical.html#a1078483bf68e8556e4cf5b64400b8ea0"];
+  Node462 -> Node463 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node463 [label="PHPExcel_Calculation\l_Database\\DSTDEVP",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation___database.html#aeafa2a3ca6acb5c7d8c42b34432d6aa0"];
+  Node462 -> Node456 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

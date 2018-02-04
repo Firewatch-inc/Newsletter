@@ -1,0 +1,21 @@
+digraph "isMatrixValue"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node465 [label="isMatrixValue",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node465 -> Node466 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node466 [label="PHPExcel_Calculation\l_Statistical\\AVERAGEA",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation___statistical.html#aae53c9742d45ba38b8a12666221e138b"];
+  Node465 -> Node467 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node467 [label="PHPExcel_Calculation\l_Statistical\\KURT",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation___statistical.html#ae1bbc87db48d3f16872f496b17c3ca4b"];
+  Node465 -> Node468 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node468 [label="PHPExcel_Calculation\l_Statistical\\SKEW",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation___statistical.html#a4e8225a49b4903221b4fc02b83d55382"];
+  Node465 -> Node469 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node469 [label="PHPExcel_Calculation\l_Statistical\\STDEVA",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation___statistical.html#a40f726b9cef2f1c12df5049a6b626811"];
+  Node465 -> Node470 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node470 [label="PHPExcel_Calculation\l_Statistical\\STDEVPA",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation___statistical.html#a727f3b1ce2fc86d88647445f2aa8b3dc"];
+  Node465 -> Node471 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node471 [label="PHPExcel_Calculation\l_Statistical\\VARA",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation___statistical.html#ae7b5677f8214043933383c48dbb22846"];
+  Node465 -> Node472 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node472 [label="PHPExcel_Calculation\l_Statistical\\VARPA",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation___statistical.html#aa547947042bee93f770df36282e160d3"];
+}

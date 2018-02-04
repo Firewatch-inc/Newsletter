@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Пространство имен PHPExcel_Worksheet</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Пространство имен PHPExcel_Worksheet</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><dl class="section copyright"><dt>Авторство</dt><dd>Copyright (c) 2006 - 2015 <a class="el" href="namespace_p_h_p_excel.html">PHPExcel</a> (<a href="http://www.codeplex.com/PHPExcel">http://www.codeplex.com/PHPExcel</a>)  <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt">http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt</a> LGPL </dd></dl>
+<dl class="section version"><dt>Версия</dt><dd>##VERSION##, ##DATE##</dd></dl>
+<dl class="section copyright"><dt>Авторство</dt><dd>Copyright (c) 2006 - 2015 <a class="el" href="namespace_p_h_p_excel.html">PHPExcel</a> (<a href="http://www.codeplex.com/PHPExcel">http://www.codeplex.com/PHPExcel</a>)  <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt">http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt</a> LGPL </dd></dl>
+<dl class="section version"><dt>Версия</dt><dd>##VERSION##, ##DATE##</dd></dl>
+<p><code> Header/Footer Formatting Syntax taken from Office Open XML Part 4 - Markup Language Reference, page 1970:</code></p>
+<p><code>There are a number of formatting codes that can be written inline with the actual header / footer text, which affect the formatting in the header or footer.</code></p>
+<p><code>Example: This example shows the text "Center Bold Header" on the first line (center section), and the date on the second line (center section). &amp;CCenter &amp;"-,Bold"Bold&amp;"-,Regular"Header_x000A_&amp;D</code></p>
+<p><code>General Rules: There is no required order in which these codes must appear.</code></p>
+<p><code>The first occurrence of the following codes turns the formatting ON, the second occurrence turns it OFF again:</p><ul>
+<li>strikethrough</li>
+<li>superscript</li>
+<li>subscript Superscript and subscript cannot both be ON at same time. Whichever comes first wins and the other is ignored, while the first is ON. &amp;L - code for "left section" (there are three header / footer locations, "left", "center", and "right"). When two or more occurrences of this section marker exist, the contents from all markers are concatenated, in the order of appearance, and placed into the left section. &amp;P - code for "current page #" &amp;N - code for "total pages" &amp;font size - code for "text font size", where font size is a font size in points. &amp;K - code for "text font color" RGB Color is specified as RRGGBB Theme Color is specifed as TTSNN where TT is the theme color Id, S is either "+" or "-" of the tint/shade value, NN is the tint/shade value. &amp;S - code for "text strikethrough" on / off &amp;X - code for "text super script" on / off &amp;Y - code for "text subscript" on / off &amp;C - code for "center section". When two or more occurrences of this section marker exist, the contents from all markers are concatenated, in the order of appearance, and placed into the center section.</li>
+</ul>
+<p></code></p>
+<p><code>&amp;D - code for "date" &amp;T - code for "time" &amp;G - code for "picture as background" &amp;U - code for "text single underline" &amp;E - code for "double underline" &amp;R - code for "right section". When two or more occurrences of this section marker exist, the contents from all markers are concatenated, in the order of appearance, and placed into the right section. &amp;Z - code for "this workbook's file path" &amp;F - code for "this workbook's file name" &amp;A - code for "sheet tab name" &amp;+ - code for add to page #. &amp;- - code for subtract from page #. &amp;"font name,font type" - code for "text font name" and "text font type", where font name and font type are strings specifying the name and type of the font, separated by a comma. When a hyphen appears in font name, it means "none specified". Both of font name and font type can be localized values. &amp;"-,Bold" - code for "bold font style" &amp;B - also means "bold font style". &amp;"-,Regular" - code for "regular font style" &amp;"-,Italic" - code for "italic font style" &amp;I - also means "italic font style" &amp;"-,Bold Italic" code for "bold italic font style" &amp;O - code for "outline style" &amp;H - code for "shadow style" </code></p>
+<dl class="section copyright"><dt>Авторство</dt><dd>Copyright (c) 2006 - 2015 <a class="el" href="namespace_p_h_p_excel.html">PHPExcel</a> (<a href="http://www.codeplex.com/PHPExcel">http://www.codeplex.com/PHPExcel</a>) </dd></dl>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

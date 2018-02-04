@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-12-03 13:09:21
+/* Smarty version 3.1.29, created on 2018-02-04 16:11:20
   from "E:\OpenServer\domains\Newsletter.mgutm\templates\tpl\main_schedule.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5a23cd512181a5_01567464',
+  'unifunc' => 'content_5a7706788f8928_39588392',
   'file_dependency' => 
   array (
     'bd1434573de9c3ff49208a57c56711805184360e' => 
     array (
       0 => 'E:\\OpenServer\\domains\\Newsletter.mgutm\\templates\\tpl\\main_schedule.tpl',
-      1 => 1512295760,
+      1 => 1517749879,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:html/end.tpl' => 1,
   ),
 ),false)) {
-function content_5a23cd512181a5_01567464 ($_smarty_tpl) {
+function content_5a7706788f8928_39588392 ($_smarty_tpl) {
 $_smarty_tpl->tpl_vars['title'] = new Smarty_Variable("Newsletter | Основное расписание", null);
 $_smarty_tpl->ext->_updateScope->updateScope($_smarty_tpl, 'title', 0);
 $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:html/begin.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
@@ -46,7 +46,676 @@ $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:html/begin.t
         </div>
         <div class="row">
             <div class="sixteen wide column">
-                <?php
+                <div class="ui styled accordion">
+                    <div class="title">
+                        Новая форма расписания
+                    </div>
+                    <div class="content">
+                        <table class="ui selectable celled table">
+                            <thead>
+                                <tr>
+                                    <th colspan="2">3 курс ОФО</th>
+                                    <th colspan="7">Понедельник</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Время</td>
+                                    <td>Неделя</td>
+                                    <td>38.03.02 ПМ</td>
+                                    <td>38.03.02 ГМУ</td>
+                                    <td>38.03.04 РУ</td>
+                                    <td>38.03.01 БУ</td>
+                                    <td>38.03.01 ЭО</td>
+                                    <td>38.03.01 ФиК</td>
+                                    <td>40.03.01</td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">9.00-10.30</td>
+                                    <td>Нечётная</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Чётная</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">10.40-12.10</td>
+                                    <td>Нечётная</td>
+                                    <td rowspan="2" colspan="2">Финансовый менеджмент (лекции) ауд.1202-5 12.02-11.06 доц.Кроткова Т.А.</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Чётная</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">12.40-14.10</td>
+                                    <td>Нечётная</td>
+                                    <td rowspan="2" colspan="2">Финансовый менеджмент (лекции) ауд.1202-5 12.02-11.06 доц.Кроткова Т.А.</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Чётная</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">14.20-15.50</td>
+                                    <td>Нечётная</td>
+                                    <td rowspan="2">Управление качеством (лекции) ауд.1402-5 12.02-09.04 доц. Пластинина И.П.</td>
+                                    <td>Таможенные пошлины и расчеты (лекции) ауд. 1202-5 09.02-11.06 доц. Кроткова Т.А.</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Чётная</td>
+                                    <td>Муниципальное хозяйство (лекции) ауд.1202-5 12.02-07.05 ст. пр. Шовунова Н.Ю.</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">16.20-17.50</td>
+                                    <td>Нечётная</td>
+                                    <td rowspan="2">Управление качеством (лекции) ауд.1402-5 12.02-09.04 доц. Пластинина И.П.</td>
+                                    <td>Таможенные пошлины и расчеты (лекции) ауд. 1202-5 09.02-11.06 доц. Кроткова Т.А.</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Чётная</td>
+                                    <td>Муниципальное хозяйство (лекции) ауд.1202-5 12.02-07.05 ст. пр. Шовунова Н.Ю.</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th colspan="2">3 курс ОФО</th>
+                                    <th colspan="7">Вторник</th>
+                                </tr>
+                                <tr>
+                                    <td>Время</td>
+                                    <td>Неделя</td>
+                                    <td>38.03.02 ПМ</td>
+                                    <td>38.03.02 ГМУ</td>
+                                    <td>38.03.04 РУ</td>
+                                    <td>38.03.01 БУ</td>
+                                    <td>38.03.01 ЭО</td>
+                                    <td>38.03.01 ФиК</td>
+                                    <td>40.03.01</td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">9.00-10.30</td>
+                                    <td>Нечётная</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Чётная</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">10.40-12.10</td>
+                                    <td>Нечётная</td>
+                                    <td rowspan="2" colspan="2">Проектирование (практика) ауд 412-5 15.02-16.05 проф. Рябова Т.Ф.</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Чётная</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">12.40-14.10</td>
+                                    <td>Нечётная</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Чётная</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th colspan="2">3 курс ОФО</th>
+                                    <th colspan="7">Среда</th>
+                                </tr>
+                                <tr>
+                                    <td>Время</td>
+                                    <td>Неделя</td>
+                                    <td>38.03.02 ПМ</td>
+                                    <td>38.03.02 ГМУ</td>
+                                    <td>38.03.04 РУ</td>
+                                    <td>38.03.01 БУ</td>
+                                    <td>38.03.01 ЭО</td>
+                                    <td>38.03.01 ФиК</td>
+                                    <td>40.03.01</td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">9.00-10.30</td>
+                                    <td>Нечётная</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Чётная</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">10.40-12.10</td>
+                                    <td>Нечётная</td>
+                                    <td rowspan="2" colspan="2">Инвестиционный анализ (лекции) ауд.1202-5 14.02-16.05 доц. Немченко В.А.</td>
+                                    <td>Государственные и муниципальные финансы (лекции) ауд.505-5 21.02-13.06 доц. Штрикунова М.М.</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Чётная</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">12.40-14.10</td>
+                                    <td>Нечётная</td>
+                                    <td rowspan="2" colspan="2">Инвестиционный анализ (лекции) ауд.1202-5 14.02-16.05 доц. Немченко В.А.</td>
+                                    <td>Государственные и муниципальные финансы (лекции) ауд.505-5 21.02-13.06 доц. Штрикунова М.М.</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Чётная</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">14.20-15.50</td>
+                                    <td>Нечётная</td>
+                                    <td rowspan="2">Инновационный менеджмент (лекции) ауд.1202-5 14.02-28.03 проф. Женжебир В.Н.</td>
+                                    <td></td>
+                                    <td rowspan="2">Инновационный менеджмент (лекции) ауд.1202-5 14.02-28.03 проф. Женжебир В.Н.</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Чётная</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">16.20-17.50</td>
+                                    <td>Нечётная</td>
+                                    <td rowspan="2">Инновационный менеджмент (лекции) ауд.1202-5 14.02-28.03 проф. Женжебир В.Н.</td>
+                                    <td></td>
+                                    <td rowspan="2">Инновационный менеджмент (лекции) ауд.1202-5 14.02-28.03 проф. Женжебир В.Н.</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Чётная</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th colspan="2">3 курс ОФО</th>
+                                    <th colspan="7">Четверг</th>
+                                </tr>
+                                <tr>
+                                    <td>Время</td>
+                                    <td>Неделя</td>
+                                    <td>38.03.02 ПМ</td>
+                                    <td>38.03.02 ГМУ</td>
+                                    <td>38.03.04 РУ</td>
+                                    <td>38.03.01 БУ</td>
+                                    <td>38.03.01 ЭО</td>
+                                    <td>38.03.01 ФиК</td>
+                                    <td>40.03.01</td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">9.00-10.30</td>
+                                    <td>Нечётная</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td colspan="2">Элективные модули по физической культуре и спорту спорт.площадка-5 22.03-03.05 ст.пр. Щепелев А.А.</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Чётная</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">10.40-12.10</td>
+                                    <td>Нечётная</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td rowspan="2">Этика государственной и муниципальной службы (лекции) ауд.300-1* 15.02-14.06 доц. Полетаева Л.П.</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Чётная</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">12.40-14.10</td>
+                                    <td>Нечётная</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td rowspan="2">Этика государственной и муниципальной службы (лекции) ауд.300-1* 15.02-14.06 доц. Полетаева Л.П.</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Чётная</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">14.20-15.50</td>
+                                    <td>Нечётная</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td rowspan="2">Стратегический менеджмент (практика) ауд.300-1 15.02-10.05 доц. Воробьев Д.И.</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Чётная</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">16.20-17.50</td>
+                                    <td>Нечётная</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td rowspan="2">Стратегический менеджмент (практика) ауд.300-1 15.02-10.05 доц. Воробьев Д.И.</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Чётная</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th colspan="2">3 курс ОФО</th>
+                                    <th colspan="7">Пятница</th>
+                                </tr>
+                                <tr>
+                                    <td>Время</td>
+                                    <td>Неделя</td>
+                                    <td>38.03.02 ПМ</td>
+                                    <td>38.03.02 ГМУ</td>
+                                    <td>38.03.04 РУ</td>
+                                    <td>38.03.01 БУ</td>
+                                    <td>38.03.01 ЭО</td>
+                                    <td>38.03.01 ФиК</td>
+                                    <td>40.03.01</td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">9.00-10.30</td>
+                                    <td>Нечётная</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Чётная</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">10.40-12.10</td>
+                                    <td>Нечётная</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td rowspan="2" colspan="2">Старославянский язык</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Чётная</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">12.40-14.10</td>
+                                    <td>Нечётная</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Чётная</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">14.20-15.50</td>
+                                    <td>Нечётная</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Чётная</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">16.20-17.50</td>
+                                    <td>Нечётная</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Чётная</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th colspan="2">3 курс ОФО</th>
+                                    <th colspan="7">Суббота</th>
+                                </tr>
+                                <tr>
+                                    <td>Время</td>
+                                    <td>Неделя</td>
+                                    <td>38.03.02 ПМ</td>
+                                    <td>38.03.02 ГМУ</td>
+                                    <td>38.03.04 РУ</td>
+                                    <td>38.03.01 БУ</td>
+                                    <td>38.03.01 ЭО</td>
+                                    <td>38.03.01 ФиК</td>
+                                    <td>40.03.01</td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">9.00-10.30</td>
+                                    <td>Нечётная</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Чётная</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">10.40-12.10</td>
+                                    <td>Нечётная</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Чётная</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">12.40-14.10</td>
+                                    <td>Нечётная</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Чётная</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">14.20-15.50</td>
+                                    <td>Нечётная</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Чётная</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">16.20-17.50</td>
+                                    <td>Нечётная</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Чётная</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="ui styled accordion">
+                    <div class="title">
+                        Старая форма вывода расписания
+                    </div>
+                    <div class="content"><?php
 $_from = $_smarty_tpl->tpl_vars['days']->value;
 if (!is_array($_from) && !is_object($_from)) {
 settype($_from, 'array');
@@ -58,40 +727,31 @@ foreach ($_from as $_smarty_tpl->tpl_vars['day']->value) {
 $_smarty_tpl->tpl_vars['day']->_loop = true;
 $__foreach_day_0_saved_local_item = $_smarty_tpl->tpl_vars['day'];
 ?>
-                    <div class="ui styled accordion">
-                        <div class="active title">
-                            <?php echo $_smarty_tpl->tpl_vars['day']->value->caption();?>
+                            <div class="ui styled accordion">
+                                <div class="active title">
+                                    <?php echo $_smarty_tpl->tpl_vars['day']->value->caption();?>
 
-                        </div>
-                        <div class="active content">
-                            <table class="ui fixed table">
-                                <thead>
-                                <tr>
-                                    <th>Пара</th>
-                                    <th>
-                                        <table class="ui table">
-                                            <thead>
-                                                <tr>
-                                                    <th colspan="2">Предмет</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr style="text-align: center;">
-                                                    <td>
-                                                        Чётная
-                                                    </td>
-                                                    <td>
-                                                        Нечётная
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </th>
-                                    <th>Аудитория</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                    <?php
+                                </div>
+                                <div class="active content">
+                                    <table class="ui fixed celled table">
+                                        <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th colspan="3">Нечётная</th>
+                                                <th colspan="3">Чётная</th>
+                                            </tr>
+                                            <tr> <!-- FIXME -->
+                                                <th>Пара</th>
+                                                <th>Предмет</th>
+                                                <th>Аудитория</th>
+                                                <th>Преподаватель</th>
+                                                <th>Предмет</th>
+                                                <th>Аудитория</th>
+                                                <th>Преподаватель</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php
 $_from = $_smarty_tpl->tpl_vars['pairs']->value;
 if (!is_array($_from) && !is_object($_from)) {
 settype($_from, 'array');
@@ -103,59 +763,51 @@ foreach ($_from as $_smarty_tpl->tpl_vars['pair']->value) {
 $_smarty_tpl->tpl_vars['pair']->_loop = true;
 $__foreach_pair_1_saved_local_item = $_smarty_tpl->tpl_vars['pair'];
 ?>
-                                        <tr>
-                                            <td><?php echo $_smarty_tpl->tpl_vars['pair']->value->number();?>
+                                                <tr>
+                                                    <!-- FIXME: -->
+                                                    <td style="text-align: center;"><?php echo $_smarty_tpl->tpl_vars['pair']->value->number();?>
  (<?php echo $_smarty_tpl->tpl_vars['pair']->value->startTime();?>
  - <?php echo $_smarty_tpl->tpl_vars['pair']->value->endTime();?>
 )</td>
-                                            <td class="ui form">
-                                                <?php if ($_smarty_tpl->tpl_vars['main_schedule']->value[$_smarty_tpl->tpl_vars['day']->value->id()][$_smarty_tpl->tpl_vars['pair']->value->number()] != NULL) {?>
-                                                    <?php $_smarty_tpl->tpl_vars['subj_1'] = new Smarty_Variable($_smarty_tpl->tpl_vars['main_schedule']->value[$_smarty_tpl->tpl_vars['day']->value->id()][$_smarty_tpl->tpl_vars['pair']->value->number()]->first_subject()->caption(), null);
+                                                    <?php if ($_smarty_tpl->tpl_vars['main_schedule']->value[$_smarty_tpl->tpl_vars['day']->value->id()][$_smarty_tpl->tpl_vars['pair']->value->number()-1] != NULL) {?>
+                                                        <?php $_smarty_tpl->tpl_vars['subj_1'] = new Smarty_Variable($_smarty_tpl->tpl_vars['main_schedule']->value[$_smarty_tpl->tpl_vars['day']->value->id()][$_smarty_tpl->tpl_vars['pair']->value->number()-1]->first_subject()->caption(), null);
 $_smarty_tpl->ext->_updateScope->updateScope($_smarty_tpl, 'subj_1', 0);?>
-                                                    <?php $_smarty_tpl->tpl_vars['subj_2'] = new Smarty_Variable($_smarty_tpl->tpl_vars['main_schedule']->value[$_smarty_tpl->tpl_vars['day']->value->id()][$_smarty_tpl->tpl_vars['pair']->value->number()]->second_subject()->caption(), null);
+                                                        <?php $_smarty_tpl->tpl_vars['subj_2'] = new Smarty_Variable($_smarty_tpl->tpl_vars['main_schedule']->value[$_smarty_tpl->tpl_vars['day']->value->id()][$_smarty_tpl->tpl_vars['pair']->value->number()-1]->second_subject()->caption(), null);
 $_smarty_tpl->ext->_updateScope->updateScope($_smarty_tpl, 'subj_2', 0);?>
-
-                                                    <?php if ($_smarty_tpl->tpl_vars['subj_1']->value === $_smarty_tpl->tpl_vars['subj_2']->value) {?>
-                                                        <div class="field">
-                                                            <?php echo $_smarty_tpl->tpl_vars['subj_1']->value;?>
-
-                                                        </div>
-                                                    <?php } else { ?>
-                                                        <div class="two fields">
-                                                            <div class="field">
-                                                                <?php echo $_smarty_tpl->tpl_vars['subj_1']->value;?>
-
-                                                            </div>
-                                                            <div class="field">
-                                                                <?php echo $_smarty_tpl->tpl_vars['subj_2']->value;?>
-
-                                                            </div>
-                                                        </div>
+                                                        <td><?php echo $_smarty_tpl->tpl_vars['subj_1']->value;?>
+</td>
+                                                        <td><?php echo $_smarty_tpl->tpl_vars['main_schedule']->value[$_smarty_tpl->tpl_vars['day']->value->id()][$_smarty_tpl->tpl_vars['pair']->value->number()-1]->lectureHall_1();?>
+</td>
+                                                        <td><?php echo $_smarty_tpl->tpl_vars['main_schedule']->value[$_smarty_tpl->tpl_vars['day']->value->id()][$_smarty_tpl->tpl_vars['pair']->value->number()-1]->teacher_1();?>
+</td>
+                                                        <td><?php echo $_smarty_tpl->tpl_vars['subj_2']->value;?>
+</td>
+                                                        <td><?php echo $_smarty_tpl->tpl_vars['main_schedule']->value[$_smarty_tpl->tpl_vars['day']->value->id()][$_smarty_tpl->tpl_vars['pair']->value->number()-1]->lectureHall_2();?>
+</td>
+                                                        <td><?php echo $_smarty_tpl->tpl_vars['main_schedule']->value[$_smarty_tpl->tpl_vars['day']->value->id()][$_smarty_tpl->tpl_vars['pair']->value->number()-1]->teacher_2();?>
+</td>
                                                     <?php }?>
-                                                <?php }?>
-                                            </td>
-                                            <td>
-
-                                            </td>
-                                        </tr>
-                                    <?php
+                                                </tr>
+                                            <?php
 $_smarty_tpl->tpl_vars['pair'] = $__foreach_pair_1_saved_local_item;
 }
 if ($__foreach_pair_1_saved_item) {
 $_smarty_tpl->tpl_vars['pair'] = $__foreach_pair_1_saved_item;
 }
 ?>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                <?php
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        <?php
 $_smarty_tpl->tpl_vars['day'] = $__foreach_day_0_saved_local_item;
 }
 if ($__foreach_day_0_saved_item) {
 $_smarty_tpl->tpl_vars['day'] = $__foreach_day_0_saved_item;
 }
 ?>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="row">

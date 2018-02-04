@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-12-02 11:05:25
+/* Smarty version 3.1.29, created on 2018-02-04 15:15:02
   from "E:\OpenServer\domains\Newsletter.mgutm\admin\templates\tpl\tabs\tab.groups.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5a225ec51138c4_42295925',
+  'unifunc' => 'content_5a76f946087784_67125888',
   'file_dependency' => 
   array (
     'a6690aca2fbda4671889c90e4c8dfd05332fa7e7' => 
     array (
       0 => 'E:\\OpenServer\\domains\\Newsletter.mgutm\\admin\\templates\\tpl\\tabs\\tab.groups.tpl',
-      1 => 1512153311,
+      1 => 1517681388,
       2 => 'file',
     ),
   ),
@@ -19,138 +19,238 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_5a225ec51138c4_42295925 ($_smarty_tpl) {
+function content_5a76f946087784_67125888 ($_smarty_tpl) {
 ?>
 <div class="ui stackable grid">
     <div class="row">
         <div class="ten wide column">
-            <?php if ($_smarty_tpl->tpl_vars['courses']->value != NULL) {?>
-                <form name="removeCoursesForm" method="POST">
-                    <div class="actions">
-                        <input type="submit" name="removeCourseButton" value="Удалить" class="ui red button">
+            <?php if ($_smarty_tpl->tpl_vars['groups']->value != NULL) {?>
+                <form name="removeGroupsForm" method="POST" class="ui form">
+                    <div class="field">
+                        <div class="actions"> <!--  -->
+                            <input type="submit" name="removeGroupButton" value="Удалить" class="ui red button" style="width: 100%">
+                        </div>
                     </div>
-                    <table class="ui table">
-                        <thead>
-                            <tr>
-                                <th>№</th>
-                                <th>Название курса</th>
-                                <th>Адрес</th>
-                                <th>Ответственный</th>
-                                <th>Выбрать</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php $_smarty_tpl->tpl_vars['i'] = new Smarty_Variable(1, null);
-$_smarty_tpl->ext->_updateScope->updateScope($_smarty_tpl, 'i', 0);?>
-                            <?php
+                    <div class="field">
+                        <?php
+$_from = $_smarty_tpl->tpl_vars['groups']->value;
+if (!is_array($_from) && !is_object($_from)) {
+settype($_from, 'array');
+}
+$__foreach_courses_0_saved_item = isset($_smarty_tpl->tpl_vars['courses']) ? $_smarty_tpl->tpl_vars['courses'] : false;
+$__foreach_courses_0_saved_key = isset($_smarty_tpl->tpl_vars['institute']) ? $_smarty_tpl->tpl_vars['institute'] : false;
+$_smarty_tpl->tpl_vars['courses'] = new Smarty_Variable();
+$_smarty_tpl->tpl_vars['institute'] = new Smarty_Variable();
+$_smarty_tpl->tpl_vars['courses']->_loop = false;
+foreach ($_from as $_smarty_tpl->tpl_vars['institute']->value => $_smarty_tpl->tpl_vars['courses']->value) {
+$_smarty_tpl->tpl_vars['courses']->_loop = true;
+$__foreach_courses_0_saved_local_item = $_smarty_tpl->tpl_vars['courses'];
+?>
+                            <div class="ui styled accordion">
+                                <div class="title">
+                                    <b><?php echo $_smarty_tpl->tpl_vars['institute']->value;?>
+</b>
+                                </div>
+                                <div class="content">
+                                    <?php
 $_from = $_smarty_tpl->tpl_vars['courses']->value;
 if (!is_array($_from) && !is_object($_from)) {
 settype($_from, 'array');
 }
-$__foreach_course_0_saved_item = isset($_smarty_tpl->tpl_vars['course']) ? $_smarty_tpl->tpl_vars['course'] : false;
+$__foreach_groups_1_saved_item = isset($_smarty_tpl->tpl_vars['groups']) ? $_smarty_tpl->tpl_vars['groups'] : false;
+$__foreach_groups_1_saved_key = isset($_smarty_tpl->tpl_vars['course']) ? $_smarty_tpl->tpl_vars['course'] : false;
+$_smarty_tpl->tpl_vars['groups'] = new Smarty_Variable();
 $_smarty_tpl->tpl_vars['course'] = new Smarty_Variable();
-$_smarty_tpl->tpl_vars['course']->_loop = false;
-foreach ($_from as $_smarty_tpl->tpl_vars['course']->value) {
-$_smarty_tpl->tpl_vars['course']->_loop = true;
-$__foreach_course_0_saved_local_item = $_smarty_tpl->tpl_vars['course'];
+$_smarty_tpl->tpl_vars['groups']->_loop = false;
+foreach ($_from as $_smarty_tpl->tpl_vars['course']->value => $_smarty_tpl->tpl_vars['groups']->value) {
+$_smarty_tpl->tpl_vars['groups']->_loop = true;
+$__foreach_groups_1_saved_local_item = $_smarty_tpl->tpl_vars['groups'];
 ?>
-                                <tr>
-                                    <td><?php echo $_smarty_tpl->tpl_vars['i']->value;?>
-</td>
-                                    <td><?php echo $_smarty_tpl->tpl_vars['course']->value->caption();?>
-</td>
-                                    <td><?php echo $_smarty_tpl->tpl_vars['course']->value->address();?>
-</td>
-                                    <td><?php echo $_smarty_tpl->tpl_vars['course']->value->contactor();?>
-</td>
-                                    <td>
-                                        <div class="ui checkbox">
-                                            <input type="checkbox" name="courses[]" value="<?php echo $_smarty_tpl->tpl_vars['course']->value->id();?>
-">
-                                            <label></label>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <?php $_smarty_tpl->tpl_vars['i'] = new Smarty_Variable($_smarty_tpl->tpl_vars['i']->value+1, null);
+                                        <fieldset>
+                                            <legend><u><?php echo $_smarty_tpl->tpl_vars['course']->value;?>
+</u> курс</legend>
+                                            <table class="ui table">
+                                                <thead>
+                                                <tr>
+                                                    <th>№</th>
+                                                    <th>Шифр группы</th>
+                                                    <th>Специальность</th>
+                                                    <th>Форма обучения</th>
+                                                    <th>Выбрать</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <?php $_smarty_tpl->tpl_vars['i'] = new Smarty_Variable(1, null);
 $_smarty_tpl->ext->_updateScope->updateScope($_smarty_tpl, 'i', 0);?>
-                            <?php
-$_smarty_tpl->tpl_vars['course'] = $__foreach_course_0_saved_local_item;
+                                                <?php
+$_from = $_smarty_tpl->tpl_vars['groups']->value;
+if (!is_array($_from) && !is_object($_from)) {
+settype($_from, 'array');
 }
-if ($__foreach_course_0_saved_item) {
-$_smarty_tpl->tpl_vars['course'] = $__foreach_course_0_saved_item;
+$__foreach_g_2_saved_item = isset($_smarty_tpl->tpl_vars['g']) ? $_smarty_tpl->tpl_vars['g'] : false;
+$_smarty_tpl->tpl_vars['g'] = new Smarty_Variable();
+$_smarty_tpl->tpl_vars['g']->_loop = false;
+foreach ($_from as $_smarty_tpl->tpl_vars['g']->value) {
+$_smarty_tpl->tpl_vars['g']->_loop = true;
+$__foreach_g_2_saved_local_item = $_smarty_tpl->tpl_vars['g'];
+?>
+                                                    <tr>
+                                                        <td><?php echo $_smarty_tpl->tpl_vars['i']->value;?>
+</td>
+                                                        <td><?php echo $_smarty_tpl->tpl_vars['g']->value->caption();?>
+</td>
+                                                        <td><?php echo $_smarty_tpl->tpl_vars['g']->value->specialty();?>
+</td>
+                                                        <td><?php echo $_smarty_tpl->tpl_vars['g']->value->educationForm();?>
+</td>
+                                                        <td style="text-align: center"> <!-- FIXME:  -->
+                                                            <div class="ui checkbox">
+                                                                <input type="checkbox" name="groups[]" value="<?php echo $_smarty_tpl->tpl_vars['g']->value->id();?>
+">
+                                                                <label></label>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <?php $_smarty_tpl->tpl_vars['i'] = new Smarty_Variable($_smarty_tpl->tpl_vars['i']->value+1, null);
+$_smarty_tpl->ext->_updateScope->updateScope($_smarty_tpl, 'i', 0);?>
+                                                <?php
+$_smarty_tpl->tpl_vars['g'] = $__foreach_g_2_saved_local_item;
+}
+if ($__foreach_g_2_saved_item) {
+$_smarty_tpl->tpl_vars['g'] = $__foreach_g_2_saved_item;
 }
 ?>
-                        </tbody>
-                    </table>
+                                                </tbody>
+                                            </table>
+                                        </fieldset>
+                                    <?php
+$_smarty_tpl->tpl_vars['groups'] = $__foreach_groups_1_saved_local_item;
+}
+if ($__foreach_groups_1_saved_item) {
+$_smarty_tpl->tpl_vars['groups'] = $__foreach_groups_1_saved_item;
+}
+if ($__foreach_groups_1_saved_key) {
+$_smarty_tpl->tpl_vars['course'] = $__foreach_groups_1_saved_key;
+}
+?>
+                                </div>
+                            </div>
+                            <br>
+                        <?php
+$_smarty_tpl->tpl_vars['courses'] = $__foreach_courses_0_saved_local_item;
+}
+if ($__foreach_courses_0_saved_item) {
+$_smarty_tpl->tpl_vars['courses'] = $__foreach_courses_0_saved_item;
+}
+if ($__foreach_courses_0_saved_key) {
+$_smarty_tpl->tpl_vars['institute'] = $__foreach_courses_0_saved_key;
+}
+?>
+                    </div>
                 </form>
             <?php } else { ?>
-                <h1 align="center">Курсов нет</h1>
+                <h1 align="center">Групп нет</h1>
             <?php }?>
         </div>
         <div class="six wide column">
             <fieldset>
-                <legend>Добавление группы</legend>
-                <form name="addCourseForm" class="ui form" method="POST">
+                <legend><b>Добавление группы</b></legend>
+                <form name="addGroupForm" method="POST" class="ui form">
                     <div class="field">
                         <label>Название</label>
                         <input type="text" name="caption" required>
                     </div>
                     <div class="field">
-                        <label>Специализация</label>
-                        <section>
+                        <label>Институты</label>
+                        <select name="institute">
                             <?php
-$_from = $_smarty_tpl->tpl_vars['specialties']->value;
+$_from = $_smarty_tpl->tpl_vars['institutes']->value;
 if (!is_array($_from) && !is_object($_from)) {
 settype($_from, 'array');
 }
-$__foreach_specialty_1_saved_item = isset($_smarty_tpl->tpl_vars['specialty']) ? $_smarty_tpl->tpl_vars['specialty'] : false;
-$_smarty_tpl->tpl_vars['specialty'] = new Smarty_Variable();
-$_smarty_tpl->tpl_vars['specialty']->_loop = false;
-foreach ($_from as $_smarty_tpl->tpl_vars['specialty']->value) {
-$_smarty_tpl->tpl_vars['specialty']->_loop = true;
-$__foreach_specialty_1_saved_local_item = $_smarty_tpl->tpl_vars['specialty'];
+$__foreach_institute_3_saved_item = isset($_smarty_tpl->tpl_vars['institute']) ? $_smarty_tpl->tpl_vars['institute'] : false;
+$_smarty_tpl->tpl_vars['institute'] = new Smarty_Variable();
+$_smarty_tpl->tpl_vars['institute']->_loop = false;
+foreach ($_from as $_smarty_tpl->tpl_vars['institute']->value) {
+$_smarty_tpl->tpl_vars['institute']->_loop = true;
+$__foreach_institute_3_saved_local_item = $_smarty_tpl->tpl_vars['institute'];
 ?>
-
+                                <option value="<?php echo $_smarty_tpl->tpl_vars['institute']->value->id();?>
+"><?php echo $_smarty_tpl->tpl_vars['institute']->value->caption();?>
+</option>
                             <?php
-$_smarty_tpl->tpl_vars['specialty'] = $__foreach_specialty_1_saved_local_item;
+$_smarty_tpl->tpl_vars['institute'] = $__foreach_institute_3_saved_local_item;
 }
-if ($__foreach_specialty_1_saved_item) {
-$_smarty_tpl->tpl_vars['specialty'] = $__foreach_specialty_1_saved_item;
+if ($__foreach_institute_3_saved_item) {
+$_smarty_tpl->tpl_vars['institute'] = $__foreach_institute_3_saved_item;
 }
 ?>
-                        </section>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label>Направление подготовки</label>
+                        <input type="text" name="educaionDirection">
+                    </div>
+                    <div class="field">
+                        <label>Специализация</label>
+                        <input type="text" name="specialty">
                     </div>
                     <div class="field">
                         <label>Форма обучения</label>
-                        <section>
+                        <select name="educationForm">
                             <?php
-$_from = $_smarty_tpl->tpl_vars['education_forms']->value;
+$_from = $_smarty_tpl->tpl_vars['educationForms']->value;
 if (!is_array($_from) && !is_object($_from)) {
 settype($_from, 'array');
 }
-$__foreach_education_form_2_saved_item = isset($_smarty_tpl->tpl_vars['education_form']) ? $_smarty_tpl->tpl_vars['education_form'] : false;
-$_smarty_tpl->tpl_vars['education_form'] = new Smarty_Variable();
-$_smarty_tpl->tpl_vars['education_form']->_loop = false;
-foreach ($_from as $_smarty_tpl->tpl_vars['education_form']->value) {
-$_smarty_tpl->tpl_vars['education_form']->_loop = true;
-$__foreach_education_form_2_saved_local_item = $_smarty_tpl->tpl_vars['education_form'];
+$__foreach_educationForm_4_saved_item = isset($_smarty_tpl->tpl_vars['educationForm']) ? $_smarty_tpl->tpl_vars['educationForm'] : false;
+$_smarty_tpl->tpl_vars['educationForm'] = new Smarty_Variable();
+$_smarty_tpl->tpl_vars['educationForm']->_loop = false;
+foreach ($_from as $_smarty_tpl->tpl_vars['educationForm']->value) {
+$_smarty_tpl->tpl_vars['educationForm']->_loop = true;
+$__foreach_educationForm_4_saved_local_item = $_smarty_tpl->tpl_vars['educationForm'];
 ?>
-
+                                <option value="<?php echo $_smarty_tpl->tpl_vars['educationForm']->value->id();?>
+"><?php echo $_smarty_tpl->tpl_vars['educationForm']->value->caption();?>
+</option>
                             <?php
-$_smarty_tpl->tpl_vars['education_form'] = $__foreach_education_form_2_saved_local_item;
+$_smarty_tpl->tpl_vars['educationForm'] = $__foreach_educationForm_4_saved_local_item;
 }
-if ($__foreach_education_form_2_saved_item) {
-$_smarty_tpl->tpl_vars['education_form'] = $__foreach_education_form_2_saved_item;
+if ($__foreach_educationForm_4_saved_item) {
+$_smarty_tpl->tpl_vars['educationForm'] = $__foreach_educationForm_4_saved_item;
 }
 ?>
-                        </section>
+                        </select>
                     </div>
                     <div class="field">
                         <label>Курс</label>
-                        
+                        <select name="educationCourse">
+                            <?php
+$_from = $_smarty_tpl->tpl_vars['educationCourses']->value;
+if (!is_array($_from) && !is_object($_from)) {
+settype($_from, 'array');
+}
+$__foreach_educationCourse_5_saved_item = isset($_smarty_tpl->tpl_vars['educationCourse']) ? $_smarty_tpl->tpl_vars['educationCourse'] : false;
+$_smarty_tpl->tpl_vars['educationCourse'] = new Smarty_Variable();
+$_smarty_tpl->tpl_vars['educationCourse']->_loop = false;
+foreach ($_from as $_smarty_tpl->tpl_vars['educationCourse']->value) {
+$_smarty_tpl->tpl_vars['educationCourse']->_loop = true;
+$__foreach_educationCourse_5_saved_local_item = $_smarty_tpl->tpl_vars['educationCourse'];
+?>
+                                <option value="<?php echo $_smarty_tpl->tpl_vars['educationCourse']->value->id();?>
+"><?php echo $_smarty_tpl->tpl_vars['educationCourse']->value->number();?>
+</option>
+                            <?php
+$_smarty_tpl->tpl_vars['educationCourse'] = $__foreach_educationCourse_5_saved_local_item;
+}
+if ($__foreach_educationCourse_5_saved_item) {
+$_smarty_tpl->tpl_vars['educationCourse'] = $__foreach_educationCourse_5_saved_item;
+}
+?>
+                        </select>
                     </div>
                     <div class="field">
-                        <input type="submit" name="addCourseButton" value="Добавить" class="ui primary button">
+                        <input type="submit" name="addGroupButton" value="Добавить" class="ui primary button">
                     </div>
                 </form>
             </fieldset>

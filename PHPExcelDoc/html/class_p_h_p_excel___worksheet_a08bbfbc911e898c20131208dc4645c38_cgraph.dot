@@ -1,0 +1,27 @@
+digraph "mergeCells"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node471 [label="mergeCells",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node471 -> Node472 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node472 [label="PHPExcel_Cell\\extractAll\lCellReferencesInRange",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___cell.html#a63dc6fc782cd5373ee465863213dabdb"];
+  Node471 -> Node473 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node473 [label="cellExists",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___worksheet.html#ae812f150807c66b8ef0d9cd35e3a859e"];
+  Node473 -> Node474 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node474 [label="extractSheetTitle",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___worksheet.html#af647112824779ee4dd97cb9ff63926bd"];
+  Node473 -> Node475 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node475 [label="PHPExcel_NamedRange\l\\resolveRange",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___named_range.html#abcf033bf855d17978f0ae3f631da7180"];
+  Node475 -> Node476 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node476 [label="getParent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___worksheet.html#a95ecaee3537b1ad29b04ef383a57bbae"];
+  Node473 -> Node477 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node477 [label="getHashCode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___worksheet.html#a565572289c60df45d1198602c6f93a8a"];
+  Node473 -> Node478 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node478 [label="getTitle",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___worksheet.html#a95e859a4588a39a1824b717378a84c29"];
+  Node473 -> Node479 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node479 [label="PHPExcel_Cell\\coordinate\lFromString",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___cell.html#a81e3469df94f7b5a1f5d9064575280a3"];
+  Node471 -> Node480 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node480 [label="getCell",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___worksheet.html#a5e123e9c143c05385794d280bbd5dd0c"];
+  Node480 -> Node474 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node480 -> Node475 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

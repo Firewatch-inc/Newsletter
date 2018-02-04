@@ -1,0 +1,25 @@
+digraph "getSlope"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node51 [label="getSlope",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node51 -> Node52 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node52 [label="PHPExcel_Linear_Best\l_Fit\\getValueOfYForX",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___linear___best___fit.html#a0166e34b8a912b4ddf624660852345ec"];
+  Node51 -> Node53 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node53 [label="PHPExcel_Linear_Best\l_Fit\\getValueOfXForY",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___linear___best___fit.html#ae806bb042d6c95387e82c6feb5d178a5"];
+  Node51 -> Node54 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node54 [label="PHPExcel_Linear_Best\l_Fit\\getEquation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___linear___best___fit.html#a015c81d685693d7575b997328ff5930f"];
+  Node51 -> Node55 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node55 [label="PHPExcel_Logarithmic\l_Best_Fit\\getValueOfYForX",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___logarithmic___best___fit.html#a0166e34b8a912b4ddf624660852345ec"];
+  Node51 -> Node56 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node56 [label="PHPExcel_Logarithmic\l_Best_Fit\\getValueOfXForY",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___logarithmic___best___fit.html#ae806bb042d6c95387e82c6feb5d178a5"];
+  Node51 -> Node57 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node57 [label="PHPExcel_Logarithmic\l_Best_Fit\\getEquation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___logarithmic___best___fit.html#a015c81d685693d7575b997328ff5930f"];
+  Node51 -> Node58 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node58 [label="PHPExcel_Power_Best\l_Fit\\getValueOfYForX",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___power___best___fit.html#a0166e34b8a912b4ddf624660852345ec"];
+  Node51 -> Node59 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node59 [label="PHPExcel_Power_Best\l_Fit\\getValueOfXForY",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___power___best___fit.html#ae806bb042d6c95387e82c6feb5d178a5"];
+  Node51 -> Node60 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node60 [label="PHPExcel_Power_Best\l_Fit\\getEquation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___power___best___fit.html#a015c81d685693d7575b997328ff5930f"];
+}

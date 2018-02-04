@@ -1,0 +1,40 @@
+digraph "generateHTMLFooter"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node48 [label="generateHTMLFooter",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node48 -> Node49 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node49 [label="PHPExcel_Worksheet\l\\getParent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___worksheet.html#a95ecaee3537b1ad29b04ef383a57bbae"];
+  Node48 -> Node50 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node50 [label="PHPExcel_Worksheet\l\\getShowGridlines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___worksheet.html#a3d6aee32f8f9567bf787f48c887079d7"];
+  Node48 -> Node51 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node51 [label="PHPExcel_Cell\\columnIndex\lFromString",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___cell.html#a492724422ceefe1d16ed2a8997a0a489"];
+  Node48 -> Node52 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node52 [label="PHPExcel_Worksheet\l\\getHighestColumn",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___worksheet.html#ad3c18234404cb06b8ee10126a0091aeb"];
+  Node52 -> Node53 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node53 [label="PHPExcel_Worksheet\l\\getHighestDataColumn",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___worksheet.html#a4a525e1230b2c33af19870dc22519c21"];
+  Node48 -> Node54 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node54 [label="PHPExcel_Worksheet\l\\getBreaks",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___worksheet.html#a78b2e2949be23b7c9a4357e0af1768e2"];
+  Node48 -> Node55 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node55 [label="PHPExcel_Worksheet\l\\getCell",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___worksheet.html#a5e123e9c143c05385794d280bbd5dd0c"];
+  Node55 -> Node56 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node56 [label="PHPExcel_Worksheet\l\\extractSheetTitle",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___worksheet.html#af647112824779ee4dd97cb9ff63926bd"];
+  Node55 -> Node57 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node57 [label="PHPExcel_NamedRange\l\\resolveRange",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___named_range.html#abcf033bf855d17978f0ae3f631da7180"];
+  Node57 -> Node49 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node48 -> Node58 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node58 [label="PHPExcel_Cell\\stringFrom\lColumnIndex",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___cell.html#ab5501b4cf2f8cd0af389ad4096fb9387"];
+  Node48 -> Node59 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node59 [label="PHPExcel_Style_NumberFormat\l\\toFormattedString",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___style___number_format.html#a78fee7c5b1981f509fa3bc02864722c0"];
+  Node59 -> Node60 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node60 [label="PHPExcel_Shared_String\l\\getDecimalSeparator",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___shared___string.html#a9508b69d0dcef67c5189fa6e0b602443"];
+  Node59 -> Node61 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node61 [label="PHPExcel_Shared_String\l\\getThousandsSeparator",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___shared___string.html#a58c3a485683aeb388f90fde3226b473a"];
+  Node59 -> Node62 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node62 [label="PHPExcel_Shared_String\l\\getCurrencyCode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___shared___string.html#aaba192253f94bbad45870587c5a6cf47"];
+  Node48 -> Node63 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node63 [label="PHPExcel_Worksheet\l\\hyperlinkExists",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___worksheet.html#a1cecf182df6af784494ec64989e54bd0"];
+  Node48 -> Node64 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node64 [label="PHPExcel_Worksheet\l\\getHyperlink",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___worksheet.html#aff848793bf723d7f3c97ff71082c7fd8"];
+}

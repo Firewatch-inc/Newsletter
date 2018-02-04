@@ -1,0 +1,24 @@
+digraph "writeDrawings"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node15 [label="writeDrawings",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node15 -> Node16 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="PHPExcel_Writer_Excel2007\l_WriterPart\\getParentWriter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___writer___excel2007___writer_part.html#a6b374226d45ae9a51dddc29aadae8b33"];
+  Node15 -> Node17 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 [label="writeDrawing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___writer___excel2007___drawing.html#a6415c9eac484563fadf06ac57984b255"];
+  Node17 -> Node18 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node18 [label="PHPExcel_Cell\\coordinate\lFromString",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___cell.html#a81e3469df94f7b5a1f5d9064575280a3"];
+  Node17 -> Node19 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node19 [label="PHPExcel_Cell\\columnIndex\lFromString",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___cell.html#a492724422ceefe1d16ed2a8997a0a489"];
+  Node17 -> Node20 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node20 [label="PHPExcel_Shared_Drawing\l\\pixelsToEMU",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___shared___drawing.html#a5ec038dbe86bc2adbf7657d662588b46"];
+  Node17 -> Node21 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node21 [label="PHPExcel_Shared_Drawing\l\\degreesToAngle",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___shared___drawing.html#af228ca4239f7764fe58163cf50204343"];
+  Node15 -> Node22 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node22 [label="writeChart",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___writer___excel2007___drawing.html#a8ddb149f9cd4266c206340e9336e1f99"];
+  Node22 -> Node18 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node22 -> Node19 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node22 -> Node20 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

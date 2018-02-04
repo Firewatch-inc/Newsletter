@@ -1,0 +1,33 @@
+digraph "getValueOfYForX"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node72 [label="getValueOfYForX",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node72 -> Node73 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node73 [label="calculateGoodnessOfFit",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___best___fit.html#a9cfe93e3963b7e0f164f8da7cf3d5c45"];
+  Node73 -> Node74 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node74 [label="leastSquareFit",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___best___fit.html#aab4e87ee56975d2aa3f808429d179505"];
+  Node74 -> Node75 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node75 [label="PHPExcel_Exponential\l_Best_Fit\\getIntersect",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___exponential___best___fit.html#a129dafd5e95206e355ab0734bc5e9bea"];
+  Node75 -> Node76 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node76 [label="PHPExcel_Exponential\l_Best_Fit\\getValueOfYForX",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___exponential___best___fit.html#a0166e34b8a912b4ddf624660852345ec"];
+  Node75 -> Node77 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node77 [label="PHPExcel_Exponential\l_Best_Fit\\getValueOfXForY",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___exponential___best___fit.html#ae806bb042d6c95387e82c6feb5d178a5"];
+  Node75 -> Node78 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node78 [label="PHPExcel_Exponential\l_Best_Fit\\getEquation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___exponential___best___fit.html#a015c81d685693d7575b997328ff5930f"];
+  Node74 -> Node79 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node79 [label="PHPExcel_Linear_Best\l_Fit\\getEquation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___linear___best___fit.html#a015c81d685693d7575b997328ff5930f"];
+  Node74 -> Node80 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node80 [label="PHPExcel_Logarithmic\l_Best_Fit\\getEquation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___logarithmic___best___fit.html#a015c81d685693d7575b997328ff5930f"];
+  Node74 -> Node81 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node81 [label="PHPExcel_Power_Best\l_Fit\\getIntersect",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___power___best___fit.html#a129dafd5e95206e355ab0734bc5e9bea"];
+  Node81 -> Node82 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node82 [label="PHPExcel_Power_Best\l_Fit\\getValueOfYForX",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___power___best___fit.html#a0166e34b8a912b4ddf624660852345ec"];
+  Node81 -> Node83 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node83 [label="PHPExcel_Power_Best\l_Fit\\getValueOfXForY",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___power___best___fit.html#ae806bb042d6c95387e82c6feb5d178a5"];
+  Node81 -> Node84 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node84 [label="PHPExcel_Power_Best\l_Fit\\getEquation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___power___best___fit.html#a015c81d685693d7575b997328ff5930f"];
+  Node73 -> Node85 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node85 [label="PHPExcel_Polynomial\l_Best_Fit\\getCoefficients",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___polynomial___best___fit.html#a10f4618687cea0c64ce7fc136ada6958"];
+}

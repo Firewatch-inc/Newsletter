@@ -1,0 +1,28 @@
+var searchData=
+[
+  ['tbilleq',['TBILLEQ',['../class_p_h_p_excel___calculation___financial.html#afd7ceb3016eb48e33f6e34a7b5af3f07',1,'PHPExcel_Calculation_Financial']]],
+  ['tbillprice',['TBILLPRICE',['../class_p_h_p_excel___calculation___financial.html#a5356036e1c98b4493a8065ef50fd8e50',1,'PHPExcel_Calculation_Financial']]],
+  ['tbillyield',['TBILLYIELD',['../class_p_h_p_excel___calculation___financial.html#a8fe657aa4bb5095433d3821e4ce39139',1,'PHPExcel_Calculation_Financial']]],
+  ['tdist',['TDIST',['../class_p_h_p_excel___calculation___statistical.html#a05b7951d842c5cd9a785705fb359f791',1,'PHPExcel_Calculation_Statistical']]],
+  ['testcolumninrange',['testColumnInRange',['../class_p_h_p_excel___worksheet___auto_filter.html#acd05ab5de2fc1020a3b086a38861f79c',1,'PHPExcel_Worksheet_AutoFilter']]],
+  ['teststringasnumeric',['testStringAsNumeric',['../class_p_h_p_excel___shared___string.html#a438e2c6b87640e6e83f7ac4daf137bed',1,'PHPExcel_Shared_String']]],
+  ['textformat',['TEXTFORMAT',['../class_p_h_p_excel___calculation___text_data.html#a11a84a98b2a37f90f41d975b1a786152',1,'PHPExcel_Calculation_TextData']]],
+  ['time',['TIME',['../class_p_h_p_excel___calculation___date_time.html#a9e7e0f08b762776c916a9a539400452d',1,'PHPExcel_Calculation_DateTime']]],
+  ['times',['times',['../class_p_h_p_excel___shared___j_a_m_a___matrix.html#a5d998200a799a98b641d44ce0576a33d',1,'PHPExcel_Shared_JAMA_Matrix']]],
+  ['timevalue',['TIMEVALUE',['../class_p_h_p_excel___calculation___date_time.html#a6211ca53e1f0762c7c73d04f4e98c816',1,'PHPExcel_Calculation_DateTime']]],
+  ['tinv',['TINV',['../class_p_h_p_excel___calculation___statistical.html#a9e9f062f3304311ebaa031a87675e44c',1,'PHPExcel_Calculation_Statistical']]],
+  ['toarray',['toArray',['../class_p_h_p_excel___hash_table.html#a658defb34762c8f40085aec87e16ba1a',1,'PHPExcel_HashTable\toArray()'],['../class_p_h_p_excel___worksheet.html#a1605df08d923e8b20f855ddee439d032',1,'PHPExcel_Worksheet\toArray()']]],
+  ['toformattedstring',['toFormattedString',['../class_p_h_p_excel___style___number_format.html#a78fee7c5b1981f509fa3bc02864722c0',1,'PHPExcel_Style_NumberFormat']]],
+  ['toreversepolish',['toReversePolish',['../class_p_h_p_excel___writer___excel5___parser.html#a3bbc2d15a99f5c454211993d84c422b5',1,'PHPExcel_Writer_Excel5_Parser']]],
+  ['torichtextobject',['toRichTextObject',['../class_p_h_p_excel___helper___h_t_m_l.html#a8f4455cca7018e085bfdadba716548c3',1,'PHPExcel_Helper_HTML']]],
+  ['trace',['trace',['../class_p_h_p_excel___shared___j_a_m_a___matrix.html#adf6e151f76b1209e675d2f0e7c506397',1,'PHPExcel_Shared_JAMA_Matrix']]],
+  ['translateseparator',['translateSeparator',['../class_p_h_p_excel___calculation.html#a1866836ce8a020deec24f19b5be74917',1,'PHPExcel_Calculation']]],
+  ['transpose',['TRANSPOSE',['../class_p_h_p_excel___calculation___lookup_ref.html#ad3bcc327a2fc8a6678d8ecfe2ffdb896',1,'PHPExcel_Calculation_LookupRef\TRANSPOSE()'],['../class_p_h_p_excel___shared___j_a_m_a___matrix.html#a66491f281b2dea60b17f584178c62a8b',1,'PHPExcel_Shared_JAMA_Matrix\transpose()']]],
+  ['trend',['TREND',['../class_p_h_p_excel___calculation___statistical.html#a20eba8bf30d60010237d7e603572ec91',1,'PHPExcel_Calculation_Statistical']]],
+  ['trimmean',['TRIMMEAN',['../class_p_h_p_excel___calculation___statistical.html#ad5e3f016fe621e19bb7aed8641db1f9e',1,'PHPExcel_Calculation_Statistical']]],
+  ['trimnonprintable',['TRIMNONPRINTABLE',['../class_p_h_p_excel___calculation___text_data.html#ac060e87b67613b7a7b7dca2cb52f8dfe',1,'PHPExcel_Calculation_TextData']]],
+  ['trimspaces',['TRIMSPACES',['../class_p_h_p_excel___calculation___text_data.html#a729d2faeaffe2cdde8f5a390bdf779b8',1,'PHPExcel_Calculation_TextData']]],
+  ['true',['TRUE',['../class_p_h_p_excel___calculation___logical.html#ac6f0a7dfbe86e540a0fe9021a3962fac',1,'PHPExcel_Calculation_Logical']]],
+  ['trunc',['TRUNC',['../class_p_h_p_excel___calculation___math_trig.html#add0947e2427f6992e73feb6431d37f8d',1,'PHPExcel_Calculation_MathTrig']]],
+  ['type',['TYPE',['../class_p_h_p_excel___calculation___functions.html#a6ba64a3c3bf68274d43f875a86f05e2f',1,'PHPExcel_Calculation_Functions']]]
+];

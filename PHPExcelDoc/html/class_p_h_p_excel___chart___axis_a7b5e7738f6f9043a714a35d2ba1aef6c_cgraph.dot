@@ -1,0 +1,17 @@
+digraph "setShadowProperties"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node60 [label="setShadowProperties",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node60 -> Node61 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node61 [label="PHPExcel_Chart_Properties\l\\getShadowPresetsMap",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___chart___properties.html#aa3f73c1af6a26b5e8cb2b088ca07eb1d"];
+  Node60 -> Node62 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node62 [label="PHPExcel_Chart_Properties\l\\setColorProperties",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___chart___properties.html#aa5c82a2ae20ca784a61ef0b9ef788923"];
+  Node62 -> Node63 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node63 [label="PHPExcel_Chart_Properties\l\\getTrueAlpha",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___chart___properties.html#ac203a99fc1ce483ab369da946f496d32"];
+  Node60 -> Node64 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node64 [label="PHPExcel_Chart_Properties\l\\getExcelPointsWidth",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___chart___properties.html#a0970ba6b277368288bfd6ca2dbd88d5c"];
+  Node60 -> Node65 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node65 [label="PHPExcel_Chart_Properties\l\\getExcelPointsAngle",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___chart___properties.html#ab2f54eb6d1057bd036079697dea998c4"];
+}

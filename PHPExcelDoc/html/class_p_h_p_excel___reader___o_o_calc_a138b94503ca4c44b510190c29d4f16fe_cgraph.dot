@@ -1,0 +1,29 @@
+digraph "load"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node20 [label="load",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node20 -> Node21 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node21 [label="loadIntoExisting",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___reader___o_o_calc.html#af6c531fcaf9c3c83abf91d6ac048b186"];
+  Node21 -> Node22 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node22 [label="PHPExcel_Settings\\getZip\lClass",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___settings.html#ab762d975fa2aefcbd1e0c33af7167299"];
+  Node21 -> Node23 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node23 [label="PHPExcel_Reader_Abstract\l\\securityScan",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___reader___abstract.html#aa67490da9755835fd16df194cab68d0b"];
+  Node21 -> Node24 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node24 [label="PHPExcel_Settings\\getLib\lXmlLoaderOptions",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___settings.html#aab0e46bef6b830bdb82228d72c349c9a"];
+  Node21 -> Node25 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node25 [label="PHPExcel_DocumentProperties\l\\convertProperty",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___document_properties.html#aee4af87c994093fc6ae5e479c9570f6e"];
+  Node21 -> Node26 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node26 [label="PHPExcel_Reader_Abstract\l\\getReadFilter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___reader___abstract.html#abe90e2c64af2e5fbcd07da932986b785"];
+  Node21 -> Node27 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node27 [label="PHPExcel_Shared_Date\l\\FormattedPHPToExcel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___shared___date.html#aeb2d46bebfaf3257ae36c6799d2c28dd"];
+  Node21 -> Node28 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node28 [label="PHPExcel_Shared_Date\l\\PHPToExcel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___shared___date.html#a18486a897b4ae116d7f4cc55eb4937d5"];
+  Node21 -> Node29 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node29 [label="PHPExcel_Calculation\l\\translateSeparator",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation.html#a1866836ce8a020deec24f19b5be74917"];
+  Node21 -> Node30 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node30 [label="PHPExcel_Cell\\stringFrom\lColumnIndex",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___cell.html#ab5501b4cf2f8cd0af389ad4096fb9387"];
+  Node21 -> Node31 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node31 [label="PHPExcel_Cell\\columnIndex\lFromString",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___cell.html#a492724422ceefe1d16ed2a8997a0a489"];
+}

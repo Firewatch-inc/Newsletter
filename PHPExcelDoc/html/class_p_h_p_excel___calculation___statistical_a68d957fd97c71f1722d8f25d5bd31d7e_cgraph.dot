@@ -1,0 +1,15 @@
+digraph "SLOPE"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node318 [label="SLOPE",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node318 -> Node319 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node319 [label="PHPExcel_Calculation\l_Functions\\VALUE",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation___functions.html#a2cc495b625ec296fd11527f968a37698"];
+  Node318 -> Node320 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node320 [label="PHPExcel_Calculation\l_Functions\\NA",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation___functions.html#a48b30b27e546966a7a89d8e4946a2479"];
+  Node318 -> Node321 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node321 [label="PHPExcel_Calculation\l_Functions\\DIV0",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_h_p_excel___calculation___functions.html#afbbf614e7e549a2baf4a57ca1aa14b52"];
+  Node318 -> Node322 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node322 [label="trendClass\\calculate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classtrend_class.html#a855aeaa233467dc3cb191c60fb6db1d9"];
+}
